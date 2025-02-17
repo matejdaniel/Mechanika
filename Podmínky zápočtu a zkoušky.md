@@ -28,13 +28,12 @@ s maximálním ziskem 40 bodů. Ze 40 možných bodů je nutné získat alespoň
 3. Ústní část. Lze získat 20 bodů. Při špatně zodpovězené otázce a prokázání neznalosti ztráta max. 20 bodů.
 
 Součtem bodů ze zápočtového testu a ze všech částí zkoušky vznikne výsledná známka. 
----
+
 | Součet bodů | Výsledná známka|
----
+--- | --- |
 |90-100 |A – výborně|
 |80-89| B – velmi dobře|
 |70-79| C – dobře|
 |60-69| D – uspokojivě|
 |50-59| E – dostatečně|
 |<50| F|
----

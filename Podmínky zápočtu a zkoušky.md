@@ -7,9 +7,9 @@
 * Podmínkou získání zápočtu je úspěšné absolvování každého zápočtového testu s minimálním celkovým ziskem 50% bodů (maximum 20
 bodů, minimum 10 bodů). Účast na testech je povinná.
 
-* Každý student má právo absolvovat test jedenkrát znovu (tj. jeden opravný test).
+* Každý student má právo absolvovat test jedenkrát znovu (tj. jeden opravný test). Opravné testy proběhnou v zápočtovém týdnu.
 
-* Pokud se student nemohl z vážných důvodů (nemoc) testu zúčastnit, písemně se omluvil před termínem testu vyučujícímu a doložil oprávněnost své absence (lékařským potvrzením), může psát test v náhradním termínu. O oprávněnosti omluvy rozhoduje přednášející.
+* Pokud se student nemohl z vážných důvodů (nemoc) testu zúčastnit, písemně se omluvil před termínem testu vyučujícímu a doložil oprávněnost své absence (lékařským potvrzením), může psát test v náhradním termínu. O oprávněnosti omluvy a termínu náhradného testu rozhoduje přednášející.
 
 * Pokuď student nesplní miniální podmínku u maximálně jednoho zápočtového testu ani u opravného termínu, je možné nahradit chybějící body vypracováním domácího úkolu.
 

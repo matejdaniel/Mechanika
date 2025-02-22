@@ -1,0 +1,21 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: O předmětu
+    chapters:
+    - file: Misc/Podmínky_zápočtu_a_zkoušky
+    - file: Misc/Sylabus_LS2025
+  - caption: Přednášky
+    chapters:
+    - file: Prednasky/0_1_Definice_a_historie_mechaniky
+    - file: Prednasky/0_2_Skaláry_a_vektory
+    - file: Prednasky/0_3_Souřadnicové_systémy
+    - file: Prednasky/1_1_Stupeň_volnosti
+      sections:
+      - file: Prednasky/2_Pohyb_v_1D
+  - caption: Cvičení
+    chapters:
+    - file: Cviceni/C1

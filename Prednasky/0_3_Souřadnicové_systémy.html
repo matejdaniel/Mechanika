@@ -1,0 +1,1148 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Souřadnicové systémy &#8212; Mechanika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/0_3_Souřadnicové_systémy';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Stupně volnosti" href="1_1_Stupe%C5%88_volnosti.html" />
+    <link rel="prev" title="Skalár a vektor" href="0_2_Skal%C3%A1ry_a_vektory.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Mechanika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">O předmětu</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Podm%C3%ADnky_z%C3%A1po%C4%8Dtu_a_zkou%C5%A1ky.html">Zápočet:</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Sylabus_LS2025.html">Mechanika FBMI sylabus LS 2024/2025</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0_1_Definice_a_historie_mechaniky.html">Úvod do mechaniky</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="0_2_Skal%C3%A1ry_a_vektory.html">Skalár a vektor</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Souřadnicové systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_1_Stupe%C5%88_volnosti.html">Stupně volnosti</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C1.html">1. cvičení</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPrednasky/0_3_Souřadnicové_systémy.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Prednasky/0_3_Souřadnicové_systémy.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Souřadnicové systémy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#souradnicova-soustava-pro-analyzu-lidskeho-pohybu">Souřadnicová soustava pro analýzu lidského pohybu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#baze-souradnicoveho-systemu">Báze souřadnicového systému</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ortogonalni-a-ortonormalni-baze">Ortogonální a ortonormální báze</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kartezsky-souradnicovy-system">Kartézský souřadnicový systém</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#urceni-souradnicoveho-systemu">Určení souřadnicového systému</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definice-baze">Definice báze</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pouziti-vektoroveho-soucinu">Použití vektorového součinu</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definice-pocatku">Definice počátku</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vizualizace-souradnicoveho-systemu">Vizualizace souřadnicového systému</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gramuvschmidtuv-proces">Gramův–Schmidtův proces</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Vizualizace souřadnicového systému</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sfericky-souradnicovy-system">Sférický souřadnicový systém</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cylindricke-souradnice">Cylindrické souřadnice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dalsi-cteni">Další čtení</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#video-prednasky-na-internetu">Video přednášky na internetu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problemy">Problémy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="souradnicove-systemy">
+<h1>Souřadnicové systémy<a class="headerlink" href="#souradnicove-systemy" title="Link to this heading">#</a></h1>
+<p>Pohyb (změna polohy v prostoru v závislosti na čase) není absolutní pojem; je potřeba referenční bod, vůči kterému popisujeme pohyb objektu. Stejně tak stav této reference nemůže být absolutní v prostoru, a proto je pohyb relativní.</p>
+<p>Referenční soustava je místo, vzhledem k němuž si volíme popis pohybu objektu. V této referenční soustavě definujeme soustavu souřadnic (soubor os), ve které měříme pohyb objektu (ale pojmy referenční soustava a soustava souřadnic se často používají zaměnitelně).</p>
+<p>Volba referenční soustavy a souřadného systému je často věcí úsudku a praktičnosti. Existuje však důležitý rozdíl mezi referenčními soustavami, když se zabýváme dynamikou pohybu, kde nás zajímají síly související s pohybem objektu. V dynamice hovoříme o inerciální soustavě (také známé jako Galileova soustava), když Newtonovy pohybové zákony v jejich jednoduché formě v této soustavě platí, a o neinerciální soustavě (také známé jako neinerciální referenční soustava), když Newtonovy zákony v jejich jednoduché formě neplatí (v takové soustavě se objevují zdánlivé zrychlení/síly). Inerciální soustava je v klidu nebo se pohybuje konstantní rychlostí (protože neexistuje absolutní klid!), zatímco neinerciální soustava je zrychlena (vzhledem k inerciální soustavě).</p>
+<p>Pojem referenční soustavy se od dob Aristotela, Galileiho, Newtona a Einsteina výrazně změnil. Více o tom a filozofických implikacích si můžete přečíst v článku <a class="reference external" href="http://plato.stanford.edu/entries/spacetime-iframes/">Space and Time: Inertial Frames</a>.</p>
+<section id="souradnicova-soustava-pro-analyzu-lidskeho-pohybu">
+<h2>Souřadnicová soustava pro analýzu lidského pohybu<a class="headerlink" href="#souradnicova-soustava-pro-analyzu-lidskeho-pohybu" title="Link to this heading">#</a></h2>
+<p>V anatomii používáme zjednodušenou referenční soustavu složenou z kolmých rovin, abychom poskytli standardní referenci pro kvalitativní popis struktur a pohybů lidského těla, jak je znázorněno na dalším obrázku.</p>
+<div class='center-align'><figure><img src="http://upload.wikimedia.org/wikipedia/commons/3/34/BodyPlanes.jpg" width="300" alt="Anatomická poloha těla"/><figcaption><center><i>Obrázek. Anatomická poloha těla a tělesné roviny (<a href="http://en.wikipedia.org/wiki/Human_anatomical_terms" target="_blank">obrázek z Wikipedie</a>).</i></center></figcaption> </figure></div></section>
+<section id="baze-souradnicoveho-systemu">
+<h2>Báze souřadnicového systému<a class="headerlink" href="#baze-souradnicoveho-systemu" title="Link to this heading">#</a></h2>
+<p><strong>Báze souřadnicového systému</strong> je množina vektorů, které nám umožňují jednoznačně popsat polohu libovolného bodu v prostoru. Představte si to jako soustavu os, které se vzájemně protínají v jednom bodě (počátku) a určují směry, ve kterých měříme vzdálenosti.</p>
+<p><strong>Proč potřebujeme bázi?</strong></p>
+<ul class="simple">
+<li><p><strong>Jednoznačný popis polohy:</strong> Díky bázi můžeme každý bod v prostoru jednoznačně identifikovat pomocí souřadnic, které udávají, jak daleko je tento bod od počátku ve směru jednotlivých os.</p></li>
+<li><p><strong>Zjednodušení výpočtů:</strong> Báze nám umožňuje převést geometrické problémy na algebraické, což výrazně usnadňuje jejich řešení.</p></li>
+<li><p><strong>Standardizace:</strong> Báze nám poskytuje společný jazyk pro popis prostorových vztahů.</p></li>
+</ul>
+<p><strong>Jak vypadá báze?</strong></p>
+<ul class="simple">
+<li><p><strong>V rovině:</strong> Bázi tvoří dva lineárně nezávislé vektory, které určují směr os x a y. Nejčastěji se používá kartézská soustava souřadnic, kde jsou osy x a y kolmé na sebe a mají stejnou jednotku.</p></li>
+<li><p><strong>V prostoru:</strong> Bázi tvoří tři lineárně nezávislé vektory, které určují směr os x, y a z. Opět se nejčastěji používá kartézská soustava souřadnic, kde jsou osy vzájemně kolmé a mají stejnou jednotku.</p></li>
+</ul>
+<p><strong>Vlastnosti báze:</strong></p>
+<ul class="simple">
+<li><p><strong>Lineární nezávislost:</strong> Žádný vektor báze nesmí být lineární kombinací ostatních vektorů báze.</p></li>
+<li><p><strong>Rozsah:</strong> Počet vektorů v bázi se rovná dimenzi prostoru. V rovině jsou to dva vektory, v prostoru tři.</p></li>
+</ul>
+</section>
+<section id="ortogonalni-a-ortonormalni-baze">
+<h2>Ortogonální a ortonormální báze<a class="headerlink" href="#ortogonalni-a-ortonormalni-baze" title="Link to this heading">#</a></h2>
+<p><strong>Ortogonální báze</strong> je speciální typ báze vektorového prostoru, kde jsou všechny vektory vzájemně kolmé. To znamená, že skalární součin libovolných dvou různých vektorů z této báze je roven nule.</p>
+<p><strong>Proč je ortogonální báze výhodná?</strong></p>
+<ul class="simple">
+<li><p><strong>Jednodušší výpočty:</strong> Mnohé výpočty, jako například projekce vektorů nebo hledání souřadnic vektoru vzhledem k bázi, jsou pro ortogonální báze výrazně jednodušší.</p></li>
+<li><p><strong>Geometrická interpretace:</strong> Ortogonálnost vektorů má přímou geometrickou interpretaci - vektory svírají pravý úhel.</p></li>
+</ul>
+<p><strong>Ortonormální báze</strong> je ještě speciálnější případ ortogonální báze. Kromě toho, že jsou všechny vektory v této bázi vzájemně kolmé, mají také jednotkovou délku (tj. jejich velikost je rovna jedné).</p>
+<p><strong>Proč je ortonormální báze výhodná?</strong></p>
+<ul class="simple">
+<li><p><strong>Normalizace:</strong> Jednotková délka vektorů zjednodušuje mnohé výpočty, zejména při práci s normami a vzdálenostmi.</p></li>
+<li><p><strong>Ortogonalita:</strong> Zachovává všechny výhody ortogonální báze.</p></li>
+</ul>
+<p><strong>Druhy bází</strong></p>
+<ul class="simple">
+<li><p><strong>Kartézská báze:</strong> Nejběžnější typ báze, kde osy jsou vzájemně kolmé a mají stejnou jednotku.</p></li>
+<li><p><strong>Sférická báze:</strong> Používá se pro popis polohy bodů ve sférických souřadnicích (poloměr, úhel v horizontální rovině, úhel od vertikály).</p></li>
+<li><p><strong>Cylindrická báze:</strong> Používá se pro popis polohy bodů v cylindrických souřadnicích (poloměr, úhel, výška).</p></li>
+</ul>
+</section>
+<section id="kartezsky-souradnicovy-system">
+<h2>Kartézský souřadnicový systém<a class="headerlink" href="#kartezsky-souradnicovy-system" title="Link to this heading">#</a></h2>
+<p>Protože okolní prostor vnímáme jako trojrozměrný, vhodný souřadnicový systém je <a class="reference external" href="http://en.wikipedia.org/wiki/Cartesian_coordinate_system">Kartézsky souřadnicový systém</a> v <a class="reference external" href="http://en.wikipedia.org/wiki/Cartesian_coordinate_system">Kartézkom souřadnicovém systému</a> se třemi ortogonálními osami, jak je znázorněno níže. Ortogonalita kartézského souřadnicového systému je vhodná pro jeho použití v klasické mechanice, většinou se předpokládá, že struktura prostoru má <a class="reference external" href="http://en.wikipedia.org/wiki/Cartesian_coordinate_system">Cartesian coordinate system</a> a v důsledku toho jsou pohyby v různých směrech na sobě nezávislé.</p>
+<div class='center-align'><figure><img src="https://raw.githubusercontent.com/demotu/BMC/master/images/CCS.png" width=350/><figcaption><center><i>Obrázek. Bod v trojrozměrném euklidovském prostoru popsaný v kartézském souřadnicovém systému.</i></center></figcaption> </figure></div><p>Další iniciativa pro standardizaci referenčních rámců pochází z projektu <a class="reference external" href="https://github.com/BMClab/BMC/blob/master/courses/refs/VAKHUM.pdf">Virtual Animation of the Kinematics of the Human for Industrial, Educational and Research Purposes (VAKHUM)</a>.</p>
+</section>
+<section id="urceni-souradnicoveho-systemu">
+<h2>Určení souřadnicového systému<a class="headerlink" href="#urceni-souradnicoveho-systemu" title="Link to this heading">#</a></h2>
+<p>Nejčastěji používáme kartézskou soustavu souřadnic, která využívá tři vzájemně kolmé osy (x, y, z) a počátek. Každý bod v prostoru můžeme jednoznačně určit pomocí tří čísel, které udávají vzdálenosti od těchto os.</p>
+<div class='center-align'><figure><img src="https://raw.githubusercontent.com/demotu/BMC/master/images/vector3Dijk.png" width=350/><figcaption><center><i>Obrázek. Zobrazení bodu <b>P</b> a jeho polohového vektoru $\overrightarrow{\mathbf{r}}$ v kartézském souřadnicovém systému. Báze $\vec{\mathbf{i}}, \vec{\mathbf{j}}, \vec{\mathbf{k}}$ tvoří základ tohoto souřadnicového systému a jsou obvykle reprezentovány v barevné sekvenci RGB (červená, zelená, modrá) pro snadnější vizualizaci.</i></center></figcaption></figure></div>
+<p>Je vidět, že verzory báze zobrazené na obrázku výše mají v kartézském souřadnicovém systému následující souřadnice:
+<br>
+<span class="notranslate">
+\begin{equation}
+\hat{\mathbf{i}} = \begin{bmatrix}1\0\0 \end{bmatrix}, \quad \hat{\mathbf{j}} = \begin{bmatrix}0\1\0 \end{bmatrix}, \quad \hat{\mathbf{k}} = \begin{bmatrix} 0 \ 0 \ 1 \end{bmatrix}
+\end{equation}
+</span></p>
+<p>Pomocí zápisu popsaného na obrázku výše lze poziční vektor <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{r}}\)</span> (nebo bod <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{P}}\)</span>) vyjádřit jako:
+<br>
+<span class="notranslate">
+\begin{equation}
+\overrightarrow{\mathbf{r}} = x \vec{\mathbf{i}} + y \vec{\mathbf{j}} + z\vec{\mathbf{k}}
+\end{equation}
+</span></p>
+<section id="definice-baze">
+<h3>Definice báze<a class="headerlink" href="#definice-baze" title="Link to this heading">#</a></h3>
+<p>Matematickým problémem určení souřadnicového systému je najít pro něj základ a počátek (základ je pouze množina vektorů bez počátku). Existují různé metody pro výpočet základny dané množinou bodů (souřadnic), například pro tento problém lze použít skalární součin nebo  vektorový součin.</p>
+<section id="pouziti-vektoroveho-soucinu">
+<h4>Použití vektorového součinu<a class="headerlink" href="#pouziti-vektoroveho-soucinu" title="Link to this heading">#</a></h4>
+<p>Pojďme nyní definovat základ pomocí běžné metody v analýze pohybu (za použití vektorového součinu):
+Vzhledem k souřadnicím tří nekolineárních bodů ve 3D prostoru (body, které neleží všechny na stejné přímce), <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{m}}_1, \overrightarrow{\mathbf{m}}_2, \overrightarrow{\mathbf{m}}_3\)</span>, které mohou představovat např. polohu značek zachycených z relace analýzy pohybu, lze na základě následujících kroků:</p>
+<ol class="arabic simple">
+<li><p>První osa, <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{v}}_1\)</span>, vektor <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{m}}_2-\overrightarrow{\mathbf{m}}_1\)</span> (nebo jakýkoli jiný vektorový rozdíl);</p></li>
+<li><p>Druhá osa, <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{v}}_2\)</span>, vektorový součin mezi vektory <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{v}}_1\)</span> a <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{m}}_3-\overrightarrow{\mathbf{m}}_1\)</span> (nebo <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{m}}_3-\overrightarrow{\mathbf{m}}_2\)</span>);</p></li>
+<li><p>Třetí osa, <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{v}}_3\)</span>, vektorový součin mezi vektory <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{v}}_1\)</span> a <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{v}}_2\)</span>; a</p></li>
+<li><p>Normalizace vektorů tak, aby měly normu 1, dělení každého vektoru jeho normou.</p></li>
+</ol>
+<p>Polohy bodů použitých ke konstrukci souřadnicového systému musí být podle definice specifikovány ve vztahu k již existujícímu souřadnicovému systému. Při analýze pohybu je tento souřadnicový systém souřadnicovým systémem ze systému zachycení pohybu a je stanoven ve fázi kalibrace. V této fázi jsou pozice značek umístěných na objektu s kolmými osami a známými vzdálenostmi mezi značkami zachyceny a použity jako referenční (laboratorní) souřadnicový systém.</p>
+<p>Například vzhledem k pozicím <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{m}}_1 = [1,2,5], \overrightarrow{\mathbf{m}}_2 = [2,3,3], \overrightarrow{\mathbf{m}}_3 = [4,0,2]\)</span> lze nalézt základ s:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">m1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">m3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="n">v1</span> <span class="o">=</span> <span class="n">m2</span> <span class="o">-</span> <span class="n">m1</span>                <span class="c1"># první osa</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">m3</span> <span class="o">-</span> <span class="n">m1</span><span class="p">)</span>  <span class="c1"># druhá osa</span>
+<span class="n">v3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">)</span>       <span class="c1"># třetí osa</span>
+
+<span class="c1"># Vektorová normalizace</span>
+<span class="n">e1</span> <span class="o">=</span> <span class="n">v1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span>
+<span class="n">e2</span> <span class="o">=</span> <span class="n">v2</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
+<span class="n">e3</span> <span class="o">=</span> <span class="n">v3</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Verzory:&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">e1 =&#39;</span><span class="p">,</span> <span class="n">e1</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">e2 =&#39;</span><span class="p">,</span> <span class="n">e2</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">e3 =&#39;</span><span class="p">,</span> <span class="n">e3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Norm of každého z verzorů:&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">||e1|| =&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">e1</span><span class="p">),</span>
+      <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">||e2|| =&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">e2</span><span class="p">),</span>
+      <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">||e3|| =&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">e3</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Test of ortogonality (pomocí vektorového součinu):&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">e1 x e2:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">)),</span>
+      <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">e1 x e3:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e3</span><span class="p">)),</span>
+      <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">e2 x e3:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">e2</span><span class="p">,</span> <span class="n">e3</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Verzory: 
+e1 = [ 0.40824829  0.40824829 -0.81649658] 
+e2 = [-0.76834982 -0.32929278 -0.5488213 ] 
+e3 = [-0.49292179  0.85141036  0.17924429]
+
+Norm of každého z verzorů: 
+||e1|| = 1.0 
+||e2|| = 1.0 
+||e3|| = 1.0
+
+Test of ortogonality (pomocí vektorového součinu): 
+e1 x e2: 1.0 
+e1 x e3: 1.0000000000000002 
+e2 x e3: 0.9999999999999999
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kvůli chybám zaokrouhlování (<a class="reference external" href="https://en.wikipedia.org/wiki/Round-off_error">blíže tady</a>) a nepřesnosti výpočtu s desetinnými čísly s plovoucí desetinnou čárkou (<a class="reference external" href="https://en.wikipedia.org/wiki/Round-off_error">blíže tady</a>) se normy přesně nerovnají 1.
+V případě potřeby můžeme výsledek zaokrouhlit:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Test of orthogonality (pomocí vektorového součinu):&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">e1 x e2:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">))</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
+      <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">e1 x e3:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e3</span><span class="p">))</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
+      <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">e2 x e3:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">e2</span><span class="p">,</span> <span class="n">e3</span><span class="p">))</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test of orthogonality (pomocí vektorového součinu): 
+e1 x e2: 1.0 
+e1 x e3: 1.0 
+e2 x e3: 1.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nebo formátujte text představující výsledek:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Test of orthogonality (pomocí vektorového součinu):&#39;</span><span class="p">,</span>
+      <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">e1 x e2: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span><span class="w"> </span><span class="n">e2</span><span class="p">))</span><span class="si">:</span><span class="s1">g</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+      <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">e1 x e3: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span><span class="w"> </span><span class="n">e3</span><span class="p">))</span><span class="si">:</span><span class="s1">g</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+      <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">e2 x e3: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">e2</span><span class="p">,</span><span class="w"> </span><span class="n">e3</span><span class="p">))</span><span class="si">:</span><span class="s1">g</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test of orthogonality (pomocí vektorového součinu): 
+e1 x e2: 1 
+e1 x e3: 1 
+e2 x e3: 1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kde jsme použili <code class="docutils literal notranslate"><span class="pre">f'{:.g}'</span></code> k formátování čísla na řetězec (<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#printf-style-string-formatting">blíže tady</a> <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#printf-style-string-formatting">nebo tady</a>).</p>
+<p>Pro trvalou změnu bychom mohli použít numpy nastavení pro reprezentaci přesnosti desetinné čárky s funkcí <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.set_printoptions.html"><code class="docutils literal notranslate"><span class="pre">np.set_printoptions</span></code></a>, ale ta funguje pouze pro numpy pole, ne s čísly. Nebo použijte kouzelný příkaz IPython <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.set_printoptions.html"><code class="docutils literal notranslate"><span class="pre">np.set_printoptions</span></code></a>, ale v tomto případě nemůžete použít funkci print pro zobrazení výsledku.</p>
+</section>
+</section>
+<section id="definice-pocatku">
+<h3>Definice počátku<a class="headerlink" href="#definice-pocatku" title="Link to this heading">#</a></h3>
+<p>Abychom mohli definovat souřadnicový systém pomocí vypočítané báze, musíme také definovat počátek. V zásadě bychom mohli jako počátek použít jakýkoli bod, ale pokud by se měl vypočítaný souřadnicový systém řídit anatomickými konvencemi, např. počátek souřadnicového systému by měl být ve středu kloubu, budeme muset vypočítat bázi a počátek podle standardů používaných v analýze pohybu.</p>
+<p>Pokud je souřadnicový systém technickým základem a nikoli anatomickým, běžným postupem při analýze pohybu je definovat počátek souřadnicového systému jako těžiště (průměrnou) polohu mezi značkami v referenčním rámci. Použití průměrné polohy napříč značkami potenciálně snižuje vliv šumu (například z artefaktu měkkých tkání) na výpočet.</p>
+<p>Pro značky ve výše uvedeném příkladu bude počátek souřadného systému:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">origin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">,</span> <span class="n">m3</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Počátek: &#39;</span><span class="p">,</span> <span class="n">origin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Počátek:  [2.33333333 1.66666667 3.33333333]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nakreslete souřadnicový systém a základ pomocí vlastní funkce Pythonu <code class="docutils literal notranslate"><span class="pre">CCS.py</span></code>.
+Můžeme sem zkopírovat a vložit obsah souboru <code class="docutils literal notranslate"><span class="pre">CCS.py</span></code> (a spustit buňku) nebo můžeme funkci načíst z adresáře, udělejme to. Nejprve vytvořte složku “functions” a umístěte do ní soubor <code class="docutils literal notranslate"><span class="pre">CCS.py</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path2</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;./functions&#39;</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">path2</span><span class="p">)</span>  <span class="c1"># přidat do pythonpath</span>
+<span class="kn">from</span> <span class="nn">CCS</span> <span class="kn">import</span> <span class="n">CCS</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_14167</span><span class="o">/</span><span class="mf">3498384649.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">sys</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">path2</span><span class="p">)</span>  <span class="c1"># přidat do pythonpath</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">CCS</span> <span class="kn">import</span> <span class="n">CCS</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;CCS&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">markers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">,</span> <span class="n">m3</span><span class="p">))</span>
+<span class="n">basis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">,</span> <span class="n">e3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="vizualizace-souradnicoveho-systemu">
+<h4>Vizualizace souřadnicového systému<a class="headerlink" href="#vizualizace-souradnicoveho-systemu" title="Link to this heading">#</a></h4>
+<p>Abychom měli interaktivní graf matplotlib, musíme před prvním použitím nainstalovat knihovnu <code class="docutils literal notranslate"><span class="pre">ipympl</span></code> a restartovat prostředí Google Colab.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip3<span class="w"> </span>install<span class="w"> </span>-q<span class="w"> </span>ipympl
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget  
+
+<span class="n">CCS</span><span class="p">(</span><span class="n">xyz</span><span class="o">=</span><span class="p">[],</span> <span class="n">Oijk</span><span class="o">=</span><span class="n">origin</span><span class="p">,</span> <span class="n">ijk</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span> <span class="n">point</span><span class="o">=</span><span class="n">markers</span><span class="p">,</span> <span class="n">vector</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "c7573726916b45ebac628380022b0715", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+</section>
+</section>
+<section id="gramuvschmidtuv-proces">
+<h3>Gramův–Schmidtův proces<a class="headerlink" href="#gramuvschmidtuv-proces" title="Link to this heading">#</a></h3>
+<p>Další klasický postup v matematice, využívající skalární součin, je známý jako <a class="reference external" href="http://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process">Gram–Schmidt process</a>. Podívejte se na wikipedii <a class="reference external" href="http://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process">Gram–Schmidt process</a>, kde je ukázka Gram–Schmidtova procesu a jak jej implementovat v Pythonu.</p>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process">Gram–Schmidt process</a> je metoda pro ortonormalizaci (ortogonální jednotkové versory) sady vektorů pomocí skalárního součinu. Gram-Schmidtův proces funguje pro libovolný počet vektorů.</p>
+<p>Například za předpokladu tří vektorů <span class="notranslate">
+<span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{a}}, \overrightarrow{\mathbf{b}}, \overrightarrow{\mathbf{c}}\)</span></span>, ve 3D prostoru lze základ <span class="math notranslate nohighlight">\(\{\vec{e}_a, \vec{e}_b, \vec{e}_c\}\)</span> nalézt pomocí procesu Gram–Schmidta</p>
+<p>První versor je v <span class="notranslate">
+<span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{a}}\)</span></span> směr (nebo ve směru kteréhokoli z dalších vektorů):
+<br>
+<span class="notranslate">
+\begin{equation}
+\vec{e}_a = \frac{\overrightarrow{\mathbf{a}}}{||\overrightarrow{\mathbf{a}}||}
+\end{equation}
+</span></p>
+<p>Druhý versor, ortogonální k <span class="math notranslate nohighlight">\(\vec{e}_a\)</span>, lze nalézt za předpokladu, že můžeme vyjádřit vektor <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{b}}\)</span> ve směru <span class="math notranslate nohighlight">\(\vec{e}_a\)</span> jako:
+<br>
+<span class="notranslate">
+\begin{equation}
+\overrightarrow{\mathbf{b}} = \overrightarrow{\mathbf{b}}^| + \overrightarrow{\mathbf{b}}^\bot
+\end{equation}
+</span></p>
+<p>Pak:</p>
+<span class="notranslate">
+\begin{equation}
+\overrightarrow{\mathbf{b}}^\bot = \overrightarrow{\mathbf{b}} - \overrightarrow{\mathbf{b}}^\| = \overrightarrow{\mathbf{b}} - (\overrightarrow{\mathbf{b}} \cdot \vec{e}_a ) \vec{e}_a
+\end{equation}
+</span>
+<p>Konečně:</p>
+<span class="notranslate">
+\begin{equation}
+\vec{e}_b = \frac{\overrightarrow{\mathbf{b}}^\bot}{||\overrightarrow{\mathbf{b}}^\bot||}
+\end{equation}
+</span><p>Třetí versor, ortogonální k <span class="math notranslate nohighlight">\(\{\vec{e}_a, \vec{e}_b\}\)</span>, lze nalézt vyjadřující vektor <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{C}}\)</span> ve směrech <span class="math notranslate nohighlight">\(\vec{e}_a\)</span> a <span class="math notranslate nohighlight">\(\vec{e}_b\)</span> jako:
+<br>
+<span class="notranslate">
+\begin{equation}
+\overrightarrow{\mathbf{c}} = \overrightarrow{\mathbf{c}}^| + \overrightarrow{\mathbf{c}}^\bot
+\end{equation}
+</span></p>
+<p>Pak:
+<span class="notranslate">
+\begin{equation}
+\overrightarrow{\mathbf{c}}^\bot = \overrightarrow{\mathbf{c}} - \overrightarrow{\mathbf{c}}^|
+\end{equation}
+</span></p>
+<p>Kde:
+<span class="notranslate">
+\begin{equation}
+\overrightarrow{\mathbf{c}}^| = (\overrightarrow{\mathbf{c}} \cdot \vec{e}_a ) \hat{e}_a + (\overrightarrow{\mathbf{c}} \cdot \vec{e}_b ) \hat{e}_b
+\end{equation}
+</span></p>
+<p>Konečně:
+<span class="notranslate">
+\begin{equation}
+\vec{e}_c = \frac{\overrightarrow{\mathbf{c}}^\bot}{||\overrightarrow{\mathbf{c}}^\bot||}
+\end{equation}
+</span></p>
+<p>A animace probíhajícího Gram-Schmidtova procesu:</p>
+<div class='center-align'><figure><img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Gram-Schmidt_orthonormalization_process.gif" width=450/><figcaption><center><i>Obrázek. Gram-Schmidtův proces se provádí na třech vektorech základu pro R3 (<a href="https://commons.wikimedia.org/w/index.php?curid=24396471">obrázek z Wikipedie</a>).</i></center></figcaption></figure></div><p>Pojďme implementovat Gram–Schmidtův proces v Pythonu.</p>
+<p>Například vzhledem k pozicím, které jsme viděli dříve, <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{m}}_1 = [1,2,5], \overrightarrow{\mathbf{m}}_2 = [2,3,3], \overrightarrow{\mathbf{m}}_3 = [4,0,2]\)</span>, základ lze nalézt s:</p>
+<p>První verze je:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ea</span> <span class="o">=</span> <span class="n">m1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ea</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.18257419 0.36514837 0.91287093]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Druhý versor je:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eb</span> <span class="o">=</span> <span class="n">m2</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">m2</span><span class="p">,</span> <span class="n">ea</span><span class="p">)</span><span class="o">*</span><span class="n">ea</span>
+<span class="n">eb</span> <span class="o">=</span> <span class="n">eb</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">eb</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eb</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0.59020849  0.70186955 -0.39878952]
+</pre></div>
+</div>
+</div>
+</div>
+<p>A třetí verzor je:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ec</span> <span class="o">=</span> <span class="n">m3</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">m3</span><span class="p">,</span> <span class="n">ea</span><span class="p">)</span><span class="o">*</span><span class="n">ea</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">m3</span><span class="p">,</span> <span class="n">eb</span><span class="p">)</span><span class="o">*</span><span class="n">eb</span>
+<span class="n">ec</span> <span class="o">=</span> <span class="n">ec</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0.78633365 -0.61159284  0.08737041]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pojďme zkontrolovat ortonormalitu mezi těmito versory:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Versors:&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">ea =&quot;</span><span class="p">,</span> <span class="n">ea</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">eb =&quot;</span><span class="p">,</span> <span class="n">eb</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">ec =&quot;</span><span class="p">,</span> <span class="n">ec</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Norma každého verzoru:&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> ||ea|| =&quot;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">ea</span><span class="p">),</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> ||eb|| =&quot;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">eb</span><span class="p">),</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> ||ec|| =&quot;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">ec</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Test ortogonality (skalární součin):&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> ea . eb:&quot;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">ea</span><span class="p">,</span> <span class="n">eb</span><span class="p">),</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> eb . ec:&quot;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">eb</span><span class="p">,</span> <span class="n">ec</span><span class="p">),</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> ec . ea:&quot;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">ea</span><span class="p">),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Versors: 
+ea = [0.18257419 0.36514837 0.91287093] 
+eb = [ 0.59020849  0.70186955 -0.39878952] 
+ec = [ 0.78633365 -0.61159284  0.08737041]
+
+ Norma každého verzoru: 
+ ||ea|| = 1.0 
+ ||eb|| = 1.0 
+ ||ec|| = 1.0
+
+ Test ortogonality (skalární součin): 
+ ea . eb: -3.3306690738754696e-16 
+ eb . ec: 6.245004513516506e-17 
+ ec . ea: 8.326672684688674e-17
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id1">
+<h4>Vizualizace souřadnicového systému<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># zkus to sám</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="sfericky-souradnicovy-system">
+<h2>Sférický souřadnicový systém<a class="headerlink" href="#sfericky-souradnicovy-system" title="Link to this heading">#</a></h2>
+<p><strong>Souřadnice sférické</strong> jsou trojrozměrný souřadnicový systém, který využívá k určení polohy bodu v prostoru:</p>
+<ul class="simple">
+<li><p><strong>Radiální vzdálenost (<span class="math notranslate nohighlight">\(\rho\)</span>):</strong> Vzdálenost bodu od počátku souřadnic.</p></li>
+<li><p><strong>Azimutální úhel (<span class="math notranslate nohighlight">\(\theta\)</span>):</strong> Úhel v rovině xy mezi kladnou osou x a projekcí bodu do této roviny.</p></li>
+<li><p><strong>Zenitový úhel (<span class="math notranslate nohighlight">\(\phi\)</span>):</strong> Úhel mezi kladnou osou z a spojnicí bodu s počátkem.</p></li>
+</ul>
+<p><img alt="Sférický souřadnicový systém" src="https://cdn1.byjus.com/wp-content/uploads/2019/09/Spherical-coordinate-system.png" /></p>
+<p><strong>Báze sférických souřadnic</strong></p>
+<p>Bázi sférických souřadnic tvoří tři jednotkové vektory:</p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(\vec{\mathbf{e}}_\rho\)</span>:</strong> Směřuje radiálně od počátku k bodu.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(\vec{\mathbf{e}}_\theta\)</span>:</strong> Směřuje ve směru rostoucího azimutálního úhlu <span class="math notranslate nohighlight">\(\theta\)</span>.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(\vec{\mathbf{e}}_\varphi\)</span>:</strong> Směřuje ve směru rostoucího zenitového úhlu <span class="math notranslate nohighlight">\(\varphi\)</span>.</p></li>
+</ul>
+<p>Tato báze je ortonormální, což znamená, že vektory jsou vzájemně kolmé a mají jednotkovou velikost.</p>
+<p><strong>Transformace z kartézských souřadnic</strong></p>
+<p>Pro převod kartézských souřadnic (<span class="math notranslate nohighlight">\(x, y, z\)</span>) na sférické souřadnice (<span class="math notranslate nohighlight">\(\rho, \theta, \varphi\)</span>) platí následující vztahy:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\rho = \sqrt{x^2 + y^2 + z^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta = \arctan{\frac{y}{x}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\varphi = \arccos{\frac{z}{\rho}}\)</span></p></li>
+</ul>
+<p><strong>Transformace do kartézských souřadnic</strong></p>
+<p>Pro převod sférických souřadnic na kartézské souřadnice platí následující vztahy:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x = \rho \sin{\varphi} \cos{\theta}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y = \rho \sin{\varphi} \sin{\theta}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(z = \rho \cos{\varphi}\)</span></p></li>
+</ul>
+<p><strong>Výhody sférických souřadnic:</strong></p>
+<ul class="simple">
+<li><p><strong>Symetrie:</strong> Využívají se výhodně pro problémy s kulovou symetrií (např. gravitační pole, elektrostatické pole).</p></li>
+<li><p><strong>Zjednodušení výpočtů:</strong> V některých případech mohou zjednodušit řešení fyzikálních problémů.</p></li>
+</ul>
+<p><strong>Nevýhody sférických souřadnic:</strong></p>
+<ul class="simple">
+<li><p><strong>Složitější derivace:</strong> Výpočet gradientu, divergence a rotace v sférických souřadnicích je složitější než v kartézských.</p></li>
+<li><p><strong>Singularity:</strong> V počátku souřadnic (ρ = 0) a na pólech (φ = 0, π) mohou nastat singularity.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;https://www.geogebra.org/classic/c5nsjx3t?embed&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_28856</span><span class="o">/</span><span class="mf">37843828.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;https://www.geogebra.org/classic/c5nsjx3t?embed&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;IFrame&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="cylindricke-souradnice">
+<h2>Cylindrické souřadnice<a class="headerlink" href="#cylindricke-souradnice" title="Link to this heading">#</a></h2>
+<p>Cylindrické souřadnice jsou vhodné pro systémy s válcovou symetrií. Používají se tři souřadnice:</p>
+<ul class="simple">
+<li><p><strong>Radiální vzdálenost (ρ):</strong> Vzdálenost bodu od osy z.</p></li>
+<li><p><strong>Azimutální úhel (θ):</strong> Úhel v rovině xy měřený od kladné osy x.</p></li>
+<li><p><strong>Výška (z):</strong> Vzdálenost bodu od roviny xy (stejná jako v kartézských souřadnicích).</p></li>
+</ul>
+<p><img alt="Cylindrické souřadnice" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Coord_system_CY_1.svg" /></p>
+<p><strong>Transformační vztahy:</strong></p>
+<ul class="simple">
+<li><p><strong>Z cylindrických do kartézských:</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(x = \rho \cos{\theta}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y = \rho \sin{\theta}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(z = z\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>Z kartézských do cylindrických:</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\rho = \sqrt{x^2 + y^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta = \arctan{\frac{y}{x}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(z = z\)</span></p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;https://www.geogebra.org/classic/X3j28ZkC?embed&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Srovnání:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Vlastnost</p></th>
+<th class="head"><p>Kartézské</p></th>
+<th class="head"><p>Sférické</p></th>
+<th class="head"><p>Cylindrické</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Symetrie</p></td>
+<td><p>Obdélníková</p></td>
+<td><p>Kulová</p></td>
+<td><p>Válcová</p></td>
+</tr>
+<tr class="row-odd"><td><p>Souřadnice</p></td>
+<td><p>x, y, z</p></td>
+<td><p>ρ, θ, φ</p></td>
+<td><p>ρ, θ, z</p></td>
+</tr>
+<tr class="row-even"><td><p>Použití</p></td>
+<td><p>Obecné</p></td>
+<td><p>Kulová symetrie</p></td>
+<td><p>Válcová symetrie</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Kdy použít který systém?</strong></p>
+<ul class="simple">
+<li><p><strong>Kartézské:</strong> Většina každodenních problémů, lineární pohyb.</p></li>
+<li><p><strong>Sférické:</strong> Problémy s kulovou symetrií (např. gravitace, elektrostatika).</p></li>
+<li><p><strong>Cylindrické:</strong> Problémy s válcovou symetrií (např. proudění tekutin v potrubí).</p></li>
+</ul>
+<p><strong>Proč používat jiné souřadnicové systémy než kartézské?</strong></p>
+<ul class="simple">
+<li><p><strong>Zjednodušení výpočtů:</strong> Problémy s určitou symetrií mohou být v jiných souřadnicových systémech jednodušší.</p></li>
+<li><p><strong>Přirozenější popis:</strong> Některé fyzikální jevy jsou přirozeněji popsány v jiných souřadnicových systémech.</p></li>
+</ul>
+</section>
+<section id="dalsi-cteni">
+<h2>Další čtení<a class="headerlink" href="#dalsi-cteni" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.researchgate.net/publication/267761615_The_right_frame_of_reference_makes_it_simple_An_example_of_introductory_mechanics_supported_by_video_analysis_of_motion">The right frame of reference makes it simple: An example of introductory mechanics supported by video analysis of motion</a></p></li>
+</ul>
+</section>
+<section id="video-prednasky-na-internetu">
+<h2>Video přednášky na internetu<a class="headerlink" href="#video-prednasky-na-internetu" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.khanacademy.org/science/physics/one-dimensional-motion/displacement-velocity-time/v/introduction-to-reference-frames">Introduction to reference - Khan Academy</a></p></li>
+<li><p><a class="reference external" href="https://www.khanacademy.org/math/linear-algebra/alternate-bases/orthonormal-basis/v/linear-algebra-introduction-to-orthonormal-bases">Introduction to orthonormal bases - Khan Academy</a></p></li>
+<li><p><a class="reference external" href="https://www.khanacademy.org/math/linear-algebra/alternate-bases/orthonormal-basis/v/linear-algebra-the-gram-schmidt-process">The Gram-Schmidt process - Khan Academy</a></p></li>
+<li><p><a class="reference external" href="https://youtu.be/ctwoH59Obew">Biomechanics of Movement | Demo: Motion Capture Placement and Reference Frames</a></p></li>
+</ul>
+</section>
+<section id="problemy">
+<h2>Problémy<a class="headerlink" href="#problemy" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Jak rychle se právě teď pohybujete? Ve své odpovědi zvažte svůj pohyb ve vztahu k Zemi a ve vztahu ke Slunci.</p></li>
+<li><p>Přejděte na webovou stránku <a class="reference external" href="http://www.wisc-online.com/Objects/ViewObject.aspx?ID=AP15305">http://www.wisc-online.com/Objects/ViewObject.aspx?ID=AP15305</a> a dokončete interaktivní lekci, kde se dozvíte o anatomické terminologii pro popis relativní polohy v lidském těle.</p></li>
+<li><p>Chcete-li se dozvědět více o kartézských souřadnicových systémech, přejděte na webovou stránku <a class="reference external" href="http://www.mathsisfun.com/data/cartesian-coordinates.html">http://www.mathsisfun.com/data/cartesian-coordinates.html</a>, prostudujte si materiál a odpovězte na 10 otázek na konci.</p></li>
+<li><p>Zadané body v 3D prostoru, m1 = [2, 2, 0], m2 = [0, 1, 1], m3 = [1, 2, 0], najděte ortonormální bázi.</p></li>
+<li><p>Určete, zda následující body tvoří základ v 3D prostoru, m1 = [2, 2, 0], m2 = [1, 1, 1], m3 = [1, 1, 0].</p></li>
+<li><p>Odvoďte výrazy pro tři osy páneve s ohledem na konvenci projektu <a class="reference external" href="https://github.com/BMClab/BMC/blob/master/courses/refs/VAKHUM.pdf">Virtual Animation of the Kinematics of the Human for Industrial, Educational and Research Purposes (VAKHUM)</a> (každý použijte RASIS, LASIS, RPSIS a LPSIS jako názvy pro axi orientační bod pánve a výraz).</p></li>
+<li><p>Určete vektorovou bázi pro pánev podle konvence projektu <a class="reference external" href="https://github.com/BMClab/BMC/blob/master/courses/refs/VAKHUM.pdf">Virtual Animation of the Kinematics of the Human for Industrial, Educational and Research Purposes (VAKHUM)</a> pro následující polohy anatomických orientačních bodů (jednotky v metrech): RASIS=[0.5, 4] 0.8, 70 . 0,1], RPSIS = [0,3, 0,85, 0,2], LPSIS = [0,29, 0,78, 0,3].</p></li>
+</ol>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Corke P (2017) <a class="reference external" href="https://petercorke.com/RVC/">Robotics, Vision and Control: Fundamental Algorithms in MATLAB</a>. 2. vyd. Springer-Verlag Berlín.</p></li>
+<li><p><a class="reference external" href="https://isbweb.org/activities/standards">Standards - International Society of Biomechanics</a>.</p></li>
+<li><p>Stanfordská encyklopedie filozofie. <a class="reference external" href="http://plato.stanford.edu/entries/spacetime-iframes/">Space and Time: Inertial Frames</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/BMClab/BMC/blob/master/courses/refs/VAKHUM.pdf">Virtual Animation of the Kinematics of the Human for Industrial, Educational and Research Purposes (VAKHUM)</a>.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Prednasky"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="0_2_Skal%C3%A1ry_a_vektory.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Skalár a vektor</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1_1_Stupe%C5%88_volnosti.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Stupně volnosti</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#souradnicova-soustava-pro-analyzu-lidskeho-pohybu">Souřadnicová soustava pro analýzu lidského pohybu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#baze-souradnicoveho-systemu">Báze souřadnicového systému</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ortogonalni-a-ortonormalni-baze">Ortogonální a ortonormální báze</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kartezsky-souradnicovy-system">Kartézský souřadnicový systém</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#urceni-souradnicoveho-systemu">Určení souřadnicového systému</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definice-baze">Definice báze</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pouziti-vektoroveho-soucinu">Použití vektorového součinu</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definice-pocatku">Definice počátku</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vizualizace-souradnicoveho-systemu">Vizualizace souřadnicového systému</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gramuvschmidtuv-proces">Gramův–Schmidtův proces</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Vizualizace souřadnicového systému</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sfericky-souradnicovy-system">Sférický souřadnicový systém</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cylindricke-souradnice">Cylindrické souřadnice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dalsi-cteni">Další čtení</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#video-prednasky-na-internetu">Video přednášky na internetu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problemy">Problémy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

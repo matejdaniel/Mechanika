@@ -1,0 +1,1284 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Skalár a vektor &#8212; Mechanika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/0_2_Skaláry_a_vektory';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Souřadnicové systémy" href="0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html" />
+    <link rel="prev" title="Úvod do mechaniky" href="0_1_Definice_a_historie_mechaniky.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Mechanika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">O předmětu</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Podm%C3%ADnky_z%C3%A1po%C4%8Dtu_a_zkou%C5%A1ky.html">Zápočet:</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Sylabus_LS2025.html">Mechanika FBMI sylabus LS 2024/2025</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0_1_Definice_a_historie_mechaniky.html">Úvod do mechaniky</a></li>
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Skalár a vektor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html">Souřadnicové systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_1_Stupe%C5%88_volnosti.html">Stupně volnosti</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C1.html">1. cvičení</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPrednasky/0_2_Skaláry_a_vektory.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Prednasky/0_2_Skaláry_a_vektory.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Skalár a vektor</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nastaveni-pythonu">Nastavení Pythonu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skalarni-velicina">Skalární veličina</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#skalarni-operace-v-pythonu">Skalární operace v Pythonu</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extenzivni-a-intenzivni-veliciny">Extenzivní a intenzivní veličiny</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extenzivni-veliciny">Extenzivní veličiny</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intenzivni-veliciny">Intenzivní veličiny</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vztah-mezi-extenzivnimi-a-intenzivnimi-velicinami">Vztah mezi extenzivními a intenzivními veličinami</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prakticky-vyznam">Praktický význam</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor">Vektor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nasobeni-vektoru-skalarem">Násobení vektoru skalárem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velikost-delka-nebo-norma-vektoru">Velikost (délka nebo norma) vektoru</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scitani-a-odecitani-vektoru">Sčítání a odečítání vektorů</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor-mezi-dvema-danymi-body">Vektor mezi dvěma danými body</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skalarni-soucin">Skalární součin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektorovy-soucin">Vektorový součin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dalsi-cteni">Další čtení</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#video-prednasky-na-internetu">Video přednášky na internetu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problemy">Problémy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="skalar-a-vektor">
+<h1>Skalár a vektor<a class="headerlink" href="#skalar-a-vektor" title="Link to this heading">#</a></h1>
+<p>připraveno na základě podkladů <a class="reference external" href="https://nbviewer.org/github/BMClab/BMC/blob/master/notebooks/ScalarVector.ipynb">Marcos Duarte, Renato Naville Watanabe, Laboratory of Biomechanics and Motor Control</a></p>
+<p>Python velmi dobře zpracovává všechny matematické operace s číselnými skaláry a vektory a pro podobné věci můžete použít <a class="reference external" href="http://sympy.org">Sympy</a>, ale s abstraktními symboly. Podívejme se stručně skaláry a vektory a ukážeme, jak používat Python pro numerický výpočet.</p>
+<p>Přehled o skalárech a vektorech viz kapitola 2 <a class="reference external" href="http://ruina.tam.cornell.edu/Book/index.html">Andy Ruina and Rudra Pratap: Introduction to Statics and Dynamics</a>.</p>
+<section id="nastaveni-pythonu">
+<h2>Nastavení Pythonu<a class="headerlink" href="#nastaveni-pythonu" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="skalarni-velicina">
+<h2>Skalární veličina<a class="headerlink" href="#skalarni-velicina" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Skalární veličina</strong> je fyzikální veličina, která je plně určena jediným číselným údajem a jednotkou. To znamená, že k jejímu popisu stačí uvést, jaká je její velikost. Na rozdíl od vektorových veličin, které mají kromě velikosti také směr, skaláry nemají žádné směrové vlastnosti.</p>
+</div></blockquote>
+<p><strong>Příklady skalárních veličin:</strong></p>
+<ul class="simple">
+<li><p>Délka: Například délka tužky je 15 cm.</p></li>
+<li><p>Hmotnost: Hmotnost knihy je 500 gramů.</p></li>
+<li><p>Čas: Doba trvání filmu je 2 hodiny.</p></li>
+<li><p>Teplota: Teplota vody je 20 stupňů Celsia.</p></li>
+<li><p>Energie: Kinetická energie pohybujícího se tělesa je 100 Joule.</p></li>
+</ul>
+<p><strong>Grafické znázornění skalárů</strong>
+Skaláry se obvykle graficky znázorňují pouze jako čísla s příslušnou jednotkou. Na rozdíl od vektorů, které se znázorňují jako úsečky s orientací, skaláry nemají žádný směr, a proto je jejich grafické znázornění jednoduché.</p>
+<section id="skalarni-operace-v-pythonu">
+<h3>Skalární operace v Pythonu<a class="headerlink" href="#skalarni-operace-v-pythonu" title="Link to this heading">#</a></h3>
+<p>Jednoduché aritmetické operace se skaláry jsou skutečně jednoduché:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;, b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a + b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a - b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a * b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a / b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a ** b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">**</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;sqrt(b) =&#39;</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = 2 , b = 5
+a + b = 7
+a - b = -3
+a * b = 10
+a / b = 0.4
+a ** b = 32
+sqrt(b) = 2.23606797749979
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pokud máte sadu čísel nebo pole, je pravděpodobně lepší použít NUMPY; Bude to rychlejší pro velké soubory dat a v kombinaci se Scipy, má mnohem více matematických funkcí.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;, b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a + b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a - b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a * b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a / b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a ** b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">**</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;np.sqrt(b) =&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>  <span class="c1"># Použijte funkce numpy pro numpy pole</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = 2 , b = [3 4 5 6 7 8]
+a + b = [ 5  6  7  8  9 10]
+a - b = [-1 -2 -3 -4 -5 -6]
+a * b = [ 6  8 10 12 14 16]
+a / b = [0.66666667 0.5        0.4        0.33333333 0.28571429 0.25      ]
+a ** b = [  8  16  32  64 128 256]
+np.sqrt(b) = [1.73205081 2.         2.23606798 2.44948974 2.64575131 2.82842712]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Numpy provádí aritmetické operace jediného čísla v <code class="docutils literal notranslate"><span class="pre">a</span></code> se všemi čísly pole<code class="docutils literal notranslate"> <span class="pre">b</span></code>. Tomu se říká v informatice pojmem <em>broadcasting</em>.
+I když máte dvě pole (ale musí mít stejnou velikost), Numpy pravidla platí pro vás:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;, b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a + b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a - b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a * b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a / b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a ** b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">**</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = [1 2 3] , b = [4 5 6]
+a + b = [5 7 9]
+a - b = [-3 -3 -3]
+a * b = [ 4 10 18]
+a / b = [0.25 0.4  0.5 ]
+a ** b = [  1  32 729]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="extenzivni-a-intenzivni-veliciny">
+<h2>Extenzivní a intenzivní veličiny<a class="headerlink" href="#extenzivni-a-intenzivni-veliciny" title="Link to this heading">#</a></h2>
+<p>V termodynamice a fyzice obecně rozlišujeme dva základní typy veličin: extenzivní a intenzivní. Toto rozdělení je důležité pro pochopení chování systémů a jejich vlastností.</p>
+<section id="extenzivni-veliciny">
+<h3>Extenzivní veličiny<a class="headerlink" href="#extenzivni-veliciny" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Definice:</strong> Extenzivní veličiny jsou takové, jejichž hodnota závisí na velikosti systému, tedy na množství látky nebo hmotnosti. Pokud zdvojnásobíme množství látky v systému, zdvojnásobí se i hodnota extenzivní veličiny.</p></li>
+<li><p><strong>Příklady:</strong></p>
+<ul>
+<li><p><strong>Hmotnost (m):</strong> Celková hmotnost tělesa.</p></li>
+<li><p><strong>Objem (V):</strong> Prostor, který těleso zabírá.</p></li>
+<li><p><strong>Energie (E):</strong> Celková energie systému (vnitřní energie, kinetická energie, potenciální energie).</p></li>
+<li><p><strong>Entropie (S):</strong> Míra neuspořádanosti systému.</p></li>
+<li><p><strong>Náboj (Q):</strong> Celkový elektrický náboj.</p></li>
+<li><p><strong>Délka (l):</strong> Rozměr tělesa.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="intenzivni-veliciny">
+<h3>Intenzivní veličiny<a class="headerlink" href="#intenzivni-veliciny" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Definice:</strong> Intenzivní veličiny jsou takové, jejichž hodnota nezávisí na velikosti systému. Zůstávají stejné, i když změníme množství látky v systému.</p></li>
+<li><p><strong>Příklady:</strong></p>
+<ul>
+<li><p><strong>Teplota (T):</strong> Míra horkosti nebo chladu.</p></li>
+<li><p><strong>Tlak (p):</strong> Síla působící na jednotku plochy.</p></li>
+<li><p><strong>Hustota (ρ):</strong> Hmotnost na jednotku objemu.</p></li>
+<li><p><strong>Měrná tepelná kapacita (c):</strong> Množství tepla potřebné k ohřátí jednotky hmotnosti o 1 stupeň.</p></li>
+<li><p><strong>Koncentrace (c):</strong> Množství látky v daném objemu.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="vztah-mezi-extenzivnimi-a-intenzivnimi-velicinami">
+<h3>Vztah mezi extenzivními a intenzivními veličinami<a class="headerlink" href="#vztah-mezi-extenzivnimi-a-intenzivnimi-velicinami" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Poměr dvou extenzivních veličin dává často intenzivní veličinu (např. hustota = hmotnost/objem).</p></li>
+<li><p>Intenzivní veličiny jsou “kvalitativní” vlastnosti, zatímco extenzivní veličiny jsou “kvantitativní”.</p></li>
+</ul>
+</section>
+<section id="prakticky-vyznam">
+<h3>Praktický význam<a class="headerlink" href="#prakticky-vyznam" title="Link to this heading">#</a></h3>
+<p>Rozlišení mezi extenzivními a intenzivními veličinami je klíčové pro správné pochopení a popis termodynamických systémů a procesů. Umožňuje nám například:</p>
+<ul class="simple">
+<li><p>Vytvářet termodynamické modely a rovnice.</p></li>
+<li><p>Porovnávat vlastnosti různých látek.</p></li>
+<li><p>Předpovídat chování systémů při změnách podmínek.</p></li>
+</ul>
+</section>
+</section>
+<section id="vektor">
+<h2>Vektor<a class="headerlink" href="#vektor" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Vektorová veličina</strong> je fyzikální veličina, která je charakterizována nejen svou velikostí, ale také směrem.</p>
+</div></blockquote>
+<p>Co to znamená?</p>
+<p><strong>Velikost</strong>: Určuje “intenzitu” nebo “množství” této veličiny. Například rychlost 50 km/h udává velikost rychlosti.
+<strong>Směr</strong>: Určuje, kam veličina “směřuje” nebo “působí”. Například rychlost 50 km/h na východ udává jak velikost, tak i směr pohybu.
+Grafické znázornění:</p>
+<p>Vektor se graficky znázorňuje jako <strong>orientovaná úsečka</strong>.</p>
+<p>Délka úsečky představuje velikost vektoru.
+Směr úsečky (a šipka na jejím konci) představuje směr vektoru.</p>
+<p>Symboly pro vektory jsou obvykle v knihách tištěny tučně, jako <strong>a</strong>. Mezi další zvyklosti označování patří <span class="math notranslate nohighlight">\(\vec {a}\)</span>. Aby jsme předešli nedorozumění budeme v našem kurzu označovat vektory <span class="math notranslate nohighlight">\(\vec{\mathbf{a}}\)</span>.</p>
+<p>Například zvažte polohu bodu v prostoru představovaném vektorem:</p>
+<p><img alt="image.png" src="https://fyzweb.cz/materialy/sily/sourad/sourad1.gif" /></p>
+<p>Pozice bodu představovaného vektorem v karteziánském souřadném systému.</p>
+<p>Poloha bodu (vektor) výše může být reprezentována jako n -tice hodnot:</p>
+<div class="math notranslate nohighlight">
+\[ (x,\: y,\: z) \; \Rightarrow \; (5, 3, -2) \]</div>
+<p>nebo ve formě matice:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{bmatrix} x \\y \\z \end{bmatrix} \;\; \Rightarrow  \;\; \begin{bmatrix} 1 \\3 \\2 \end{bmatrix}\end{split}\]</div>
+<p>Můžeme použít pole Numpy k reprezentaci komponent vektorů.
+Například pro výše uvedený vektor je vyjádřen v Pythonu jako:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = [1 3 2]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vektor může být také reprezentován jako:
+$<span class="math notranslate nohighlight">\( \overrightarrow{\mathbf{a}} = a_x\hat{\mathbf{i}} + a_y\hat{\mathbf{j}} + a_z\hat{\mathbf{k}} \)</span>$</p>
+<p>kde vektory <span class = "notranSlate"> <span class="math notranslate nohighlight">\( \vec{\mathbf{i}}, \, \vec{\mathbf{j}}, \, \vec{\mathbf{k}} \, \)</span> jsou jednotkové vektory ve směru jednotlivých souřadnicových os a jsou obvykle reprezentovány v barevné sekvenci <strong>rgb</strong> (červená, zelená, modrá) pro snadnější vizualizaci. Násobek <span class="math notranslate nohighlight">\(a_x \vec{\mathbf{i}}, \: a_y \vec{\mathbf{j}}, \: a_z \vec{\mathbf{k}} \)</span> jsou vektorové komponenty vektoru  <span class="math notranslate nohighlight">\(\vec{\mathbf{a}}\)</span> .</p>
+<p>Jednotkový vektor (můžete se setkat také s označením verzor) je vektor, jehož délka (nebo norma) je 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;https://www.geogebra.org/classic/ydu8a7t7?embed&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="100%"
+            height="500"
+            src="https://www.geogebra.org/classic/ydu8a7t7?embed"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+</section>
+<section id="nasobeni-vektoru-skalarem">
+<h2>Násobení vektoru skalárem<a class="headerlink" href="#nasobeni-vektoru-skalarem" title="Link to this heading">#</a></h2>
+<p>U složek vektoru <span class="math notranslate nohighlight">\({a_x}\vec{\mathbf{i}}\)</span> jsme již využili násobení vektoru <span class="math notranslate nohighlight">\(\vec{\mathbf{i}}\)</span> číslem <span class="math notranslate nohighlight">\(a_x\)</span>.</p>
+<blockquote>
+<div><p>Násobení vektoru skalárem je operace, která mění velikost vektoru, ale ne jeho směr. Můžeme si to představit jako “natažení” nebo “zkrácení” vektoru.</p>
+</div></blockquote>
+<p><strong>Jak to funguje</strong>:</p>
+<ul class="simple">
+<li><p><strong>Zvětšení:</strong> Když násobíme vektor kladným skalárem (číslem větším než 1), zvětšíme jeho velikost. Je to jako bychom vektor “natahovali”.</p></li>
+<li><p><strong>Zmenšení:</strong> Když násobíme vektor kladným skalárem mezi 0 a 1, zmenšíme jeho velikost. Je to jako bychom vektor “zkracovali”.</p></li>
+<li><p><strong>Změna směru:</strong> Když násobíme vektor záporným skalárem, změníme jeho směr na opačný. Je to jako bychom vektor “otočili” o 180 stupňů. Velikost vektoru se přitom může také změnit v závislosti na absolutní hodnotě skaláru.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">d</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a * b =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a * b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a * d =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a * b = [4 2]
+a * b = [1.  0.5]
+a * d = [-2 -1]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;https://www.geogebra.org/classic/HYZXHadK?embed&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="100%"
+            height="500"
+            src="https://www.geogebra.org/classic/HYZXHadK?embed"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<p>Jestliže máme vektor <span class="math notranslate nohighlight">\(\vec{{\mathbf{a}}}\)</span>, existuje k němu opačný vektor <span class="math notranslate nohighlight">\(-\vec{{\mathbf{a}}}\)</span>. Pro tento vektor platí:
+$<span class="math notranslate nohighlight">\(\vec{{\mathbf{a}}} + (-\vec{{\mathbf{a}}}) = \vec{{\mathbf{0}}}\)</span><span class="math notranslate nohighlight">\(
+kde \)</span>\vec}<span class="math notranslate nohighlight">\( je nulový vektor \)</span>\vec} = (0,0,0)$.</p>
+<p>Násobení skalárem funguje v Pythonu jednoduše jako násobení pole. Protože však nyní jednáme s vektory, nyní některé operace nedávají smysl. Například pro dvojici vektorů neexistují žádné násobení, dělení, síla a druhou odmocninu ve způsobu, jakým jsme vypočítali.</p>
+<p>Jednotkový vektor <span class="math notranslate nohighlight">\(\vec{\mathbf{u}}\)</span> nenulového vektoru <span class="math notranslate nohighlight">\(\vec{\mathbf{a}}\)</span> je jednotkový vektor se stejným směrem:</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{\vec{u}} = \frac{\overrightarrow{\mathbf{a}}}{||\overrightarrow{\mathbf{a}}||} = \frac{a_x\,\hat{\mathbf{i}} + a_y\,\vec{\mathbf{j}} + a_z\, \vec{\mathbf{k}}}{\sqrt{a_x^2+a_y^2+a_z^2}} \]</div>
+<section id="velikost-delka-nebo-norma-vektoru">
+<h3>Velikost (délka nebo norma) vektoru<a class="headerlink" href="#velikost-delka-nebo-norma-vektoru" title="Link to this heading">#</a></h3>
+<p>Velikost (délka) vektoru je často reprezentována symbolem <span class="math notranslate nohighlight">\( || \; || \)</span>, také známou jako norma (nebo euklidovská norma) vektoru a je definována jako:
+$<span class="math notranslate nohighlight">\( ||\overrightarrow{\mathbf{a}}|| = \sqrt{a_x^2+a_y^2+a_z^2} \)</span>$
+Funkce <code class="docutils literal notranslate"><span class="pre">numpy.linalg.norm</span></code> počítá normu:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.7416573867739413
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nebo můžeme definici použít přímo a spočítat:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.7416573867739413
+</pre></div>
+</div>
+</div>
+</div>
+<p>Poté, verzor (jedotkový vektor) pro vektor <span class="math notranslate nohighlight">\( \overrightarrow{\mathbf{a}} = (1, 2, 3)\)</span> je:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;u =&#39;</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>u = [0.26726124 0.53452248 0.80178373]
+</pre></div>
+</div>
+</div>
+</div>
+<p>A můžeme ověřit, že jeho velikost je skutečně 1:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ale reprezentace vektoru jako n-tice hodnot je platná pouze pro vektor s jeho působištěm, který se shoduje s počátkem souřadnicového systému <span class="math notranslate nohighlight">\( (0, 0, 0) \)</span>.
+Například zvažte následující vektor:
+<img alt="vektor v prostoru" src="https://images.nagwa.com/figures/explainers/694162356987/6.svg" /></p>
+<p>Takový vektor nelze reprezentovat <span class="math notranslate nohighlight">\((B_x, B_y, B_z)\)</span>, protože by to bylo pro vektor od původu do bodu B., aby přesně reprezentoval tento vektor, který potřebujeme dva vektory <span class="math notranslate nohighlight">\(\vec{OB}\)</span> a <span class="math notranslate nohighlight">\(\vec{OA}\)</span>. Tato skutečnost je důležitá, když provádíme některé výpočty v mechanice.</p>
+</section>
+<section id="scitani-a-odecitani-vektoru">
+<h3>Sčítání a odečítání vektorů<a class="headerlink" href="#scitani-a-odecitani-vektoru" title="Link to this heading">#</a></h3>
+<p>Sčítáním dvou vektorů získáme další vektor:
+$<span class="math notranslate nohighlight">\( \overrightarrow{\mathbf{a}} + \overrightarrow{\mathbf{b}} = (a_x\vec{\mathbf{i}} + a_y\vec{\mathbf{j}} + a_z\vec{\mathbf{k}}) + (b_x\vec{\mathbf{i}} + b_y\vec{\mathbf{j}} + b_z\vec{\mathbf{k}}) = 
+(a_x+b_x)\vec{\mathbf{i}} + (a_y+b_y)\vec{\mathbf{j}} + (a_z+b_z)\vec{\mathbf{k}} \)</span>$</p>
+<p>V maticovém zápisu to bude vypadat:
+$<span class="math notranslate nohighlight">\(\begin{bmatrix} a_x \\ a_y \\ a_z \end{bmatrix}  +  \begin{bmatrix} b_x \\ b_y \\ b_z \end{bmatrix} = \begin{bmatrix} a_x + b_x \\ a_y + b_y \\ a_z + b_z \end{bmatrix}\)</span>$</p>
+<p>Metoda rovnoběžníku je grafická metoda, která nám umožňuje názorně sčítat dva vektory.</p>
+<p><strong>Postup:</strong></p>
+<ol class="arabic simple">
+<li><p>Nakreslení vektorů: Oba vektory, které chceme sčítat, nakreslíme tak, aby jejich počáteční body splývaly.</p></li>
+<li><p>Sestrojení rovnoběžníku: Z koncových bodů obou vektorů sestrojíme rovnoběžníky. Tj. z koncového bodu prvního vektoru sestrojíme přímku rovnoběžnou s druhým vektorem a naopak. Tím vznikne rovnoběžník.</p></li>
+<li><p>Výsledný vektor: Úhlopříčka rovnoběžníku, která vychází z bodu, kde se oba vektory setkávají, představuje výsledný vektor (vektorový součet).</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;https://www.geogebra.org/classic/FCknj7c3?embed&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="100%"
+            height="500"
+            src="https://www.geogebra.org/classic/FCknj7c3?embed"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<p>V prostoru metoda rovnoběžníku funguje stejně, ale musíme jeho konstrukci provést v rovině určené oběma vektory. Proto se v prostoru raděi spoléháme na výpočet</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;https://www.geogebra.org/classic/gkhaxb2b?embed&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="100%"
+            height="500"
+            src="https://www.geogebra.org/classic/gkhaxb2b?embed"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<p>Odčítání dvou vektorů je také dalším vektorem:</p>
+<div class="math notranslate nohighlight">
+\[ \overrightarrow{\mathbf{a}} - \overrightarrow{\mathbf{b}} = (a_x\vec{\mathbf{i}} + a_y\vec{\mathbf{j}} + a_z\vec{\mathbf{k}}) - (b_x\vec{\mathbf{i}} + b_y\vec{\mathbf{j}} + b_z\vec{\mathbf{k}}) = 
+(a_x-b_x)\vec{\mathbf{i}} + (a_y-b_y)\vec{\mathbf{j}} + (a_z-b_z)\vec{\mathbf{k}} \]</div>
+<p>V maticovém zápisu to bude vypadat:
+$<span class="math notranslate nohighlight">\(\begin{bmatrix} a_x \\ a_y \\ a_z \end{bmatrix}  -  \begin{bmatrix} b_x \\ b_y \\ b_z \end{bmatrix} = \begin{bmatrix} a_x - b_x \\ a_y - b_y \\ a_z - b_z \end{bmatrix}\)</span>$</p>
+<p>Zvažte dvě 2D pole (řádky a sloupce) představující polohu dvou objektů pohybujících se v prostoru. Sloupce představují vektorové komponenty a řádky hodnot polohového vektoru v různých okamžicích. Je snadné provést sčítání a odčítání s těmito vektory:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a + b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a - b =&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = [[1 2 3]
+ [1 1 1]] 
+b = [[4 5 6]
+ [7 8 9]]
+a + b = [[ 5  7  9]
+ [ 8  9 10]]
+a - b = [[-3 -3 -3]
+ [-6 -7 -8]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Numpy zvládne n-dimenzionální pole s velikostí omezenou dostupnou pamětí v počítači.</p>
+<p>A můžeme provádět operace na každém vektoru, například vypočítat normu každého z nich.
+Nejprve zkontrolujeme tvar proměnné <code class="docutils literal notranslate"><span class="pre">a</span></code> pomocí metody„ tvar “nebo funkce<code class="docutils literal notranslate"> <span class="pre">numpy.shape</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 3)
+(2, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<p>To znamená, že proměnná <code class="docutils literal notranslate"><span class="pre">A</span></code> má 2 řádky a 3 sloupce.
+Musíme sdělit funkci <code class="docutils literal notranslate"><span class="pre">numpy.norm</span></code> pro výpočet normy pro každý vektor, tj. Abychom fungovali skrz sloupce proměnné<code class="docutils literal notranslate"> <span class="pre">a</span></code> pomocí paraneter <code class="docutils literal notranslate"><span class="pre">osy</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3.74165739, 1.73205081])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="vektor-mezi-dvema-danymi-body">
+<h3>Vektor mezi dvěma danými body<a class="headerlink" href="#vektor-mezi-dvema-danymi-body" title="Link to this heading">#</a></h3>
+<p>podle <a class="reference external" href="https://www.nagwa.com/en/explainers/694162356987/">Lesson Explainer: Vectors in Space</a></p>
+<p>Začněme uvažováním dvou odlišných bodů a v prostoru, jak je znázorněno na obrázku.
+<img alt="body AB" src="https://images.nagwa.com/figures/explainers/694162356987/5.svg" /></p>
+<p>Chceme sestrojit vektor z <span class="math notranslate nohighlight">\(A\)</span> do <span class="math notranslate nohighlight">\(B\)</span>, který je označen <span class="math notranslate nohighlight">\(\vec{AB}\)</span>
+<img alt="vektor AB" src="https://images.nagwa.com/figures/explainers/694162356987/6.svg" /></p>
+<p>Abychom toho dosáhli, můžeme cestovat přes počátek, jak je znázorněno na obrázku níže. Můžeme jít z bodu <span class="math notranslate nohighlight">\(O\)</span> do bodu <span class="math notranslate nohighlight">\(A\)</span> a pak z bodu <span class="math notranslate nohighlight">\(O\)</span> do bodu
+<span class="math notranslate nohighlight">\(B\)</span>.
+<img alt="vektor AB" src="https://images.nagwa.com/figures/explainers/694162356987/7.svg" /></p>
+<p>To lze zapsat jako následující rovnici pomocí vektorů:
+$<span class="math notranslate nohighlight">\(\vec{AB} = \vec{AO} + \vec{OB} \)</span><span class="math notranslate nohighlight">\(
+Pro jakýkoli bod \)</span>A<span class="math notranslate nohighlight">\( platí
+\)</span><span class="math notranslate nohighlight">\(\vec{AO} = - \vec{OA}\)</span><span class="math notranslate nohighlight">\(
+Tuto vlastnost můžeme použít k přepsání naší rovnice takto: 
+\)</span><span class="math notranslate nohighlight">\(\vec{AB} = -\vec{OA} + \vec{BO} \)</span><span class="math notranslate nohighlight">\(
+Vektor \)</span>\vec{AB}$ je tak možné vyjádřit</p>
+<p>$<span class="math notranslate nohighlight">\(\vec{AB} =  \vec{BO} - \vec{OA}  = \vec{\mathbf{B}} - \vec{\mathbf{A}}\)</span>$<br />
+Vektor mezi dvěma body můžeme získat tak, že od polohového vektoru konečného bodu odčítáme polohový vektor počátečního bodu.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;https://www.geogebra.org/classic/NrzgxrQa?embed&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="100%"
+            height="500"
+            src="https://www.geogebra.org/classic/NrzgxrQa?embed"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+</section>
+</section>
+<section id="skalarni-soucin">
+<h2>Skalární součin<a class="headerlink" href="#skalarni-soucin" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Skalární součin je operace, která přiřazuje dvěma vektorům jediné číslo (skalár).</p>
+</div></blockquote>
+<p>Toto číslo nám poskytuje informaci o tom, jak moc jsou tyto dva vektory “souhlasné” neboli jak moc “směřují stejným směrem”. Skalární součin umožňuje vypočítat projekci jednoho vektoru na druhý. Tato projekce nám říká, jak velká část jednoho vektoru “směřuje” ve směru druhého vektoru.</p>
+<p><strong>Matematický zápis</strong>
+Skalární součin vektorů <span class="math notranslate nohighlight">\(\vec{\mathbf{u}}\)</span> a <span class="math notranslate nohighlight">\(\vec{\mathbf{v}}\)</span> se značí <span class="math notranslate nohighlight">\(\vec{\mathbf{u}} \cdot \vec{\mathbf{u}}\)</span>.</p>
+<p>Definujme skalární součin jednotkových vektorů v pravoúhlém souřadnicovém systému.
+$<span class="math notranslate nohighlight">\( \vec{\mathbf{i}} \cdot \vec{\mathbf{i}} = \vec{\mathbf{j}} \cdot \vec{\mathbf{j}} = \vec{\mathbf{k}} \cdot \vec{\mathbf{k}}= 1 \quad \text{a} \quad \vec{\mathbf{i}} \cdot \vec{\mathbf{j}} = \vec{\mathbf{i}} \cdot \vec{\mathbf{k}} = \vec{\mathbf{j}} \cdot \vec{\mathbf{k}} = 0 \)</span>$</p>
+<p>PSkalární součin mezi dvěma vektory je matematická operace algebraicky definovaná jako součet násobků jednotlivých složek (v každém směru) obou vektorů.
+$<span class="math notranslate nohighlight">\( \overrightarrow{\mathbf{a}} \cdot \overrightarrow{\mathbf{b}} = (a_x\,\vec{\mathbf{i}}+a_y\,\vec{\mathbf{j}}+a_z\,\vec{\mathbf{k}}) \cdot (b_x\,\vec{\mathbf{i}}+b_y\,\vec{\mathbf{j}}+b_z\,\vec{\mathbf{k}}) = a_x b_x + a_y b_y + a_z b_z \)</span>$</p>
+<p>Geometrický ekvivalent skalární součinu je násobek velikostí dvou vektorů a kosinunu úhlu mezi nimi:
+$<span class="math notranslate nohighlight">\( \overrightarrow{\mathbf{a}} \cdot \overrightarrow{\mathbf{b}} = ||\overrightarrow{\mathbf{a}}||\:||\overrightarrow{\mathbf{b}}||\:cos(\theta) \)</span>$</p>
+<p>Což je také ekvivalentní tomu, že skalární součin vektoru  <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{a}}\)</span> and <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{b}}\)</span> je velikostí vektoru <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{a}}\)</span>  a velikostí složky <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{b}}\)</span>  paralelní s <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{a}}\)</span></p>
+<p>V maticovém zápisu můžeme zapsat jako násobení dvojice vektorů
+$<span class="math notranslate nohighlight">\( \overrightarrow{\mathbf{a}} \cdot \overrightarrow{\mathbf{b}} =  \begin{bmatrix} a_x \\ a_y \\ a_z \end{bmatrix}  \begin{bmatrix} b_x \\ b_y \\ b_z \end{bmatrix}^T = \begin{bmatrix} a_x \\ a_y \\ a_z \end{bmatrix} [b_x, b_y, b_z]\)</span>$</p>
+<p>V této interaktivní animaci lze vizualizovat skalární součin mezi dvěma vektory:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;https://www.geogebra.org/classic/ncdf2jsw?embed&#39;</span><span class="p">,</span>
+       <span class="n">width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="100%"
+            height="500"
+            src="https://www.geogebra.org/classic/ncdf2jsw?embed"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<p>Numpy funkce pro skalární součin je <code class="docutils literal notranslate"><span class="pre">numpy.dot</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;np.dot(a, b) =&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = [1 2 3] 
+b = [4 5 6]
+np.dot(a, b) = 32
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nebo můžeme definici použít přímo a spočítat přímo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pro 2D pole vykonává funkce <code class="docutils literal notranslate"><span class="pre">numpy.dot</span></code> spíše násobení než skalárního součinu; Pojďme tedy použít funkci <code class="docutils literal notranslate"><span class="pre">numpy.sum</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
+<span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([32, 24])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="vektorovy-soucin">
+<h2>Vektorový součin<a class="headerlink" href="#vektorovy-soucin" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Vektorový součin je binární operace definovaná ve třírozměrném euklidovském prostoru, která přiřadí dvěma vektorům nový vektor, který je na ně oba kolmý. Na rozdíl od skalárního součinu, jehož výsledkem je číslo (skalár), výsledkem vektorového součinu je opět vektor.</p>
+</div></blockquote>
+<p><strong>Matematický zápis</strong>
+Vektorový součin vektorů <span class="math notranslate nohighlight">\(\vec{\mathbf{a}}\)</span> a <span class="math notranslate nohighlight">\(\vec{\mathbf{b}}\)</span> se značí <span class="math notranslate nohighlight">\(\vec{\mathbf{a}} \times \vec{\mathbf{b}}\)</span>.</p>
+<p><strong>Geometrická interpretace</strong></p>
+<ul class="simple">
+<li><p><strong>Směr</strong>: Výsledný vektor je kolmý k rovině určené vektory <span class="math notranslate nohighlight">\(\vec{\mathbf{a}}\)</span> a <span class="math notranslate nohighlight">\(\vec{\mathbf{b}}\)</span>. Jeho směr se určuje pomocí pravidla pravé ruky: Pokud prsty pravé ruky ohneme od vektoru u k vektoru v, ukazuje nám palec směr výsledného vektoru.</p></li>
+</ul>
+<p><img alt="pravidlo pravé ruky" src="https://www.ck12.org//flx/show/THUMB_POSTCARD/image/user%3Af99688690816/28.43.2.png" /></p>
+<ul>
+<li><p><strong>Velikost</strong>: Velikost výsledného vektoru je rovna ploše rovnoběžníku určeného vektory <span class="math notranslate nohighlight">\(\vec{\mathbf{a}}\)</span> a <span class="math notranslate nohighlight">\(\vec{\mathbf{b}}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ \overrightarrow{\mathbf{a}} \times \overrightarrow{\mathbf{b}} = ||\overrightarrow{\mathbf{a}}||\:||\overrightarrow{\mathbf{b}}||\:sin(\theta) \]</div>
+</li>
+</ul>
+<br>
+<figure><img src="http://upload.wikimedia.org/wikipedia/commons/4/4e/Cross_product_parallelogram.svg" width=160 alt="Vector subtraction"/><figcaption><i>Obr. Plocha rovnoběžníku je rovna velikosti vektorového součinu(zdroj Wikipedia).</i>
+</figcaption></figure>
+<p><strong>Analytické vyjádření</strong></p>
+<p>Definujme vektorový součin jednotkových vektorů:
+$<span class="math notranslate nohighlight">\( \begin{array}{l l}
+\vec{\mathbf{i}} \times \vec{\mathbf{i}} = \vec{\mathbf{j}} \times \vec{\mathbf{j}} = \vec{\mathbf{k}} \times \vec{\mathbf{k}} = 0 \\
+\vec{\mathbf{i}} \times \vec{\mathbf{j}} = \vec{\mathbf{k}}, \quad \vec{\mathbf{k}} \times \vec{\mathbf{k}} = \vec{\mathbf{i}}, \quad \vec{\mathbf{k}} \times \vec{\mathbf{i}} = \vec{\mathbf{j}} \\
+\vec{\mathbf{j}} \times \vec{\mathbf{i}} = -\vec{\mathbf{k}}, \quad \vec{\mathbf{k}} \times \vec{\mathbf{j}}= -\vec{\mathbf{i}}, \quad \vec{\mathbf{i}} \times \vec{\mathbf{k}} = -\vec{\mathbf{j}}
+\end{array} \)</span>$</p>
+<p>získáme pak</p>
+<div class="math notranslate nohighlight">
+\[ \overrightarrow{\mathbf{a}} \times \overrightarrow{\mathbf{b}} = (a_x\,\vec{\mathbf{i}} + a_y\,\vec{\mathbf{j}} + a_z\,\vec{\mathbf{k}}) \times (b_x\,\vec{\mathbf{i}}+b_y\,\vec{\mathbf{j}}+b_z\,\vec{\mathbf{k}}) = (a_y b_z-a_z b_y)\vec{\mathbf{i}} + (a_z b_x-a_x b_z)\vec{\mathbf{j}}+(a_x b_y- a_y b_x)\vec{\mathbf{k}} \]</div>
+<p>Vektorový součin lze také vypočítat jako determinant matice:
+$<span class="math notranslate nohighlight">\( \overrightarrow{\mathbf{a}} \times \overrightarrow{\mathbf{b}} = \left| \begin{array}{ccc}
+\vec{\mathbf{i}} &amp; \vec{\mathbf{j}} &amp; \vec{\mathbf{k}} \\
+a_x &amp; a_y &amp; a_z \\
+b_x &amp; b_y &amp; b_z 
+\end{array} \right|
+= a_y b_z \vec{\mathbf{i}} + a_z b_x \vec{\mathbf{j}} +  a_x b_y \vec{\mathbf{k}} - a_y b_x \vec{\mathbf{k}}-a_z b_y \vec{\mathbf{i}} - a_x b_z \vec{\mathbf{j}} \)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{a}} \times \overrightarrow{\mathbf{b}} = (a_y b_z-a_z b_y)\vec{\mathbf{i}} + (a_z b_x-a_x b_z)\vec{\mathbf{j}} + (a_x b_y-a_y b_x)\vec{\mathbf{k}} \)</span>$</p>
+<p>V této interaktivní animaci lze vizualizovat vektorový součin mezi dvěma vektory:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;https://www.geogebra.org/classic/cz6v2U99?embed&#39;</span><span class="p">,</span>
+       <span class="n">width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="100%"
+            height="500"
+            src="https://www.geogebra.org/classic/cz6v2U99?embed"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<p>Numpy funkce pro křížový produkt je <code class="docutils literal notranslate"><span class="pre">numpy.cross</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;np.cross(a, b) =&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = [0, 0, 5] 
+ b = [3, 0, 0]
+np.cross(a, b) = [ 0 15  0]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pro 2D pole s vektory v různých řádcích:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
+<span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-3,  6, -3],
+       [ 1, -2,  1]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dalsi-cteni">
+<h2>Další čtení<a class="headerlink" href="#dalsi-cteni" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Přečtěte si stránky 44-92 první kapitoly <a class="reference external" href="http://ruina.tam.cornell.edu/Book/index.html">Ruina and Rudra’s book</a> o skalárech a vektorech v mechanice.</p></li>
+</ul>
+</section>
+<section id="video-prednasky-na-internetu">
+<h2>Video přednášky na internetu<a class="headerlink" href="#video-prednasky-na-internetu" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Khan Academy: <a class="reference external" href="https://www.khanacademy.org/math/algebra-home/alg-vectors">Vectors</a></p></li>
+<li><p><a class="reference external" href="https://youtu.be/fNk_zzaMoSs">Vectors, what even are they?</a></p></li>
+<li><p><a class="reference external" href="https://is.muni.cz/do/rect/el/estud/prif/js17/pocetni_praktikum1/web/ch02.html">Základy vektorové a tenzorové algebry</a></p></li>
+</ul>
+</section>
+<section id="problemy">
+<h2>Problémy<a class="headerlink" href="#problemy" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Vzhledem k vektorům, <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{a}}=[1, 0, 0]\)</span> a <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{b}}=[1, 1, 1]\)</span>, vypočítejte jejich skalární a vektorový součin.</p></li>
+<li><p>Vypočítejte jednotkové vektory pro <span class="math notranslate nohighlight">\( [2, −2, 3] \)</span> a <span class="math notranslate nohighlight">\( [3, −3, 2] \)</span> a určete ortogonální vektor těchto dvou vektorů.</p></li>
+<li><p>Vzhledem k vektorům <span class="math notranslate nohighlight">\(a = [1, 0, 0]\)</span> a <span class="math notranslate nohighlight">\(b = [1, 1, 1]\)</span>, vypočítejte <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{a}} \times \overrightarrow{\mathbf{b}}\)</span>  a ověřte, že tento vektor je ortogonální na původní vektory. Vypočítejte také  <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{b}} \times \overrightarrow{\mathbf{a}}\)</span> a porovnejte s  <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{a}} \times \overrightarrow{\mathbf{b}}\)</span>.</p></li>
+<li><p>Vzhledem k vektorům <span class="math notranslate nohighlight">\( [1, 1, 0]; [1, 0, 1]; [0, 1, 1] \)</span>, vypočítejte ortonormální bázi souřadnicového systému.</p></li>
+<li><p>Vyřešte úlohy  <strong>1.1</strong> až <strong>1.9</strong>, <strong>1.11</strong> (pomocí Pythonu), <strong>1.12</strong>, <strong>1.14</strong>, <strong>1.17</strong>, <strong>1.18</strong> do <strong>1.24</strong> knihy Ruiny a Rudry</p></li>
+<li><p>Z knihy Ruiny a Rudry vyřešte problémy <strong>1.1.1</strong> do <strong>1.3.16</strong>.</p></li>
+</ol>
+<p>Pokud si nejste jisti ve skalárech a vektorech, měli byste tyto problémy vyřešit nejprve ručně a poté pomocí Pythonu zkontrolovat odpovědi.Znalost vektorového počtu je nezbytná pro další zvládnutí mechaniky.</p>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Ruina A, Rudra P (2019) <a class="reference external" href="http://ruina.tam.cornell.edu/Book/index.html">Introduction to Statics and Dynamics</a>. Oxford University Press.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Prednasky"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="0_1_Definice_a_historie_mechaniky.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Úvod do mechaniky</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Souřadnicové systémy</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nastaveni-pythonu">Nastavení Pythonu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skalarni-velicina">Skalární veličina</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#skalarni-operace-v-pythonu">Skalární operace v Pythonu</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extenzivni-a-intenzivni-veliciny">Extenzivní a intenzivní veličiny</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extenzivni-veliciny">Extenzivní veličiny</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intenzivni-veliciny">Intenzivní veličiny</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vztah-mezi-extenzivnimi-a-intenzivnimi-velicinami">Vztah mezi extenzivními a intenzivními veličinami</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prakticky-vyznam">Praktický význam</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor">Vektor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nasobeni-vektoru-skalarem">Násobení vektoru skalárem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velikost-delka-nebo-norma-vektoru">Velikost (délka nebo norma) vektoru</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scitani-a-odecitani-vektoru">Sčítání a odečítání vektorů</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor-mezi-dvema-danymi-body">Vektor mezi dvěma danými body</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skalarni-soucin">Skalární součin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektorovy-soucin">Vektorový součin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dalsi-cteni">Další čtení</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#video-prednasky-na-internetu">Video přednášky na internetu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problemy">Problémy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

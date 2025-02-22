@@ -1,0 +1,126 @@
+Traceback (most recent call last):
+  File "/home/madan/.local/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/madan/.local/lib/python3.10/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/madan/.local/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/madan/.local/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/madan/.local/lib/python3.10/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/madan/.local/lib/python3.10/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+xs_ncf_ = np.concatenate([xs_ncf[:1]]*20+[xs_ncf]+[xs_ncf[-1:]]*20 )
+make_video(t, xs_ncf_, path='static/tutorial_ncf.mp4', color='green', interval=80)
+
+mp4 = open('static/tutorial_ncf.mp4','rb').read()
+data_url = "data:video/mp4;base64," + b64encode(mp4).decode()
+HTML('<video width=300 controls><source src="{}" type="video/mp4"></video>'.format(data_url))
+------------------
+
+----- stderr -----
+MovieWriter stderr:
+static/tutorial_ncf.mp4: No such file or directory
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mBrokenPipeError[0m                           Traceback (most recent call last)
+[0;32m/usr/lib/python3/dist-packages/matplotlib/animation.py[0m in [0;36msaving[0;34m(self, fig, outfile, dpi, *args, **kwargs)[0m
+[1;32m    235[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 236[0;31m             [0;32myield[0m [0mself[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    237[0m         [0;32mfinally[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3/dist-packages/matplotlib/animation.py[0m in [0;36msave[0;34m(self, filename, writer, fps, dpi, codec, bitrate, extra_args, metadata, extra_anim, savefig_kwargs, progress_callback)[0m
+[1;32m   1094[0m                         [0mframe_number[0m [0;34m+=[0m [0;36m1[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1095[0;31m                 [0mwriter[0m[0;34m.[0m[0mgrab_frame[0m[0;34m([0m[0;34m**[0m[0msavefig_kwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1096[0m [0;34m[0m[0m
+
+[0;32m/usr/lib/python3/dist-packages/matplotlib/animation.py[0m in [0;36mgrab_frame[0;34m(self, **savefig_kwargs)[0m
+[1;32m    352[0m         [0;31m# Save the figure data to the sink, using the frame format and dpi.[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 353[0;31m         self.fig.savefig(self._proc.stdin, format=self.frame_format,
+[0m[1;32m    354[0m                          dpi=self.dpi, **savefig_kwargs)
+
+[0;32m/usr/lib/python3/dist-packages/matplotlib/figure.py[0m in [0;36msavefig[0;34m(self, fname, transparent, **kwargs)[0m
+[1;32m   3018[0m [0;34m[0m[0m
+[0;32m-> 3019[0;31m             [0mself[0m[0;34m.[0m[0mcanvas[0m[0;34m.[0m[0mprint_figure[0m[0;34m([0m[0mfname[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   3020[0m [0;34m[0m[0m
+
+[0;32m/usr/lib/python3/dist-packages/matplotlib/backend_bases.py[0m in [0;36mprint_figure[0;34m(self, filename, dpi, facecolor, edgecolor, orientation, format, bbox_inches, pad_inches, bbox_extra_artists, backend, **kwargs)[0m
+[1;32m   2318[0m                 [0;32mwith[0m [0mcbook[0m[0;34m.[0m[0m_setattr_cm[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mfigure[0m[0;34m,[0m [0mdpi[0m[0;34m=[0m[0mdpi[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 2319[0;31m                     result = print_method(
+[0m[1;32m   2320[0m                         [0mfilename[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3/dist-packages/matplotlib/backend_bases.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
+[1;32m   1647[0m [0;34m[0m[0m
+[0;32m-> 1648[0;31m         [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1649[0m [0;34m[0m[0m
+
+[0;32m/usr/lib/python3/dist-packages/matplotlib/_api/deprecation.py[0m in [0;36mwrapper[0;34m(*inner_args, **inner_kwargs)[0m
+[1;32m    411[0m                 **kwargs)
+[0;32m--> 412[0;31m         [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0minner_args[0m[0;34m,[0m [0;34m**[0m[0minner_kwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    413[0m [0;34m[0m[0m
+
+[0;32m/usr/lib/python3/dist-packages/matplotlib/backends/backend_agg.py[0m in [0;36mprint_raw[0;34m(self, filename_or_obj, *args)[0m
+[1;32m    485[0m         [0;32mwith[0m [0mcbook[0m[0;34m.[0m[0mopen_file_cm[0m[0;34m([0m[0mfilename_or_obj[0m[0;34m,[0m [0;34m"wb"[0m[0;34m)[0m [0;32mas[0m [0mfh[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 486[0;31m             [0mfh[0m[0;34m.[0m[0mwrite[0m[0;34m([0m[0mrenderer[0m[0;34m.[0m[0mbuffer_rgba[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    487[0m [0;34m[0m[0m
+
+[0;31mBrokenPipeError[0m: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+[0;31mCalledProcessError[0m                        Traceback (most recent call last)
+[0;32m/tmp/ipykernel_14211/1214280299.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0mxs_ncf_[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0mconcatenate[0m[0;34m([0m[0;34m[[0m[0mxs_ncf[0m[0;34m[[0m[0;34m:[0m[0;36m1[0m[0;34m][0m[0;34m][0m[0;34m*[0m[0;36m20[0m[0;34m+[0m[0;34m[[0m[0mxs_ncf[0m[0;34m][0m[0;34m+[0m[0;34m[[0m[0mxs_ncf[0m[0;34m[[0m[0;34m-[0m[0;36m1[0m[0;34m:[0m[0;34m][0m[0;34m][0m[0;34m*[0m[0;36m20[0m [0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0mmake_video[0m[0;34m([0m[0mt[0m[0;34m,[0m [0mxs_ncf_[0m[0;34m,[0m [0mpath[0m[0;34m=[0m[0;34m'static/tutorial_ncf.mp4'[0m[0;34m,[0m [0mcolor[0m[0;34m=[0m[0;34m'green'[0m[0;34m,[0m [0minterval[0m[0;34m=[0m[0;36m80[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      3[0m [0;34m[0m[0m
+[1;32m      4[0m [0mmp4[0m [0;34m=[0m [0mopen[0m[0;34m([0m[0;34m'static/tutorial_ncf.mp4'[0m[0;34m,[0m[0;34m'rb'[0m[0;34m)[0m[0;34m.[0m[0mread[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0mdata_url[0m [0;34m=[0m [0;34m"data:video/mp4;base64,"[0m [0;34m+[0m [0mb64encode[0m[0;34m([0m[0mmp4[0m[0;34m)[0m[0;34m.[0m[0mdecode[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/tmp/ipykernel_14211/1349614390.py[0m in [0;36mmake_video[0;34m(t, xs, path, interval, color, mode, **kwargs)[0m
+[1;32m     13[0m         [0mcamera[0m[0;34m.[0m[0msnap[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     14[0m     [0manim[0m [0;34m=[0m [0mcamera[0m[0;34m.[0m[0manimate[0m[0;34m([0m[0mblit[0m[0;34m=[0m[0;32mTrue[0m[0;34m,[0m [0minterval[0m[0;34m=[0m[0minterval[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 15[0;31m     [0manim[0m[0;34m.[0m[0msave[0m[0;34m([0m[0mpath[0m[0;34m)[0m [0;34m;[0m [0mplt[0m[0;34m.[0m[0mclose[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m/usr/lib/python3/dist-packages/matplotlib/animation.py[0m in [0;36msave[0;34m(self, filename, writer, fps, dpi, codec, bitrate, extra_args, metadata, extra_anim, savefig_kwargs, progress_callback)[0m
+[1;32m   1071[0m         [0;31m# callback a no-op; canvas.manager = None prevents resizing the GUI[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1072[0m         [0;31m# widget (both are likewise done in savefig()).[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1073[0;31m         [0;32mwith[0m [0mmpl[0m[0;34m.[0m[0mrc_context[0m[0;34m([0m[0;34m{[0m[0;34m'savefig.bbox'[0m[0;34m:[0m [0;32mNone[0m[0;34m}[0m[0;34m)[0m[0;34m,[0m[0;31m [0m[0;31m\[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1074[0m              [0mwriter[0m[0;34m.[0m[0msaving[0m[0;34m([0m[0mself[0m[0;34m.[0m[0m_fig[0m[0;34m,[0m [0mfilename[0m[0;34m,[0m [0mdpi[0m[0;34m)[0m[0;34m,[0m[0;31m [0m[0;31m\[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1075[0m              cbook._setattr_cm(self._fig.canvas,
+
+[0;32m/usr/lib/python3.10/contextlib.py[0m in [0;36m__exit__[0;34m(self, typ, value, traceback)[0m
+[1;32m    151[0m                 [0mvalue[0m [0;34m=[0m [0mtyp[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    152[0m             [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 153[0;31m                 [0mself[0m[0;34m.[0m[0mgen[0m[0;34m.[0m[0mthrow[0m[0;34m([0m[0mtyp[0m[0;34m,[0m [0mvalue[0m[0;34m,[0m [0mtraceback[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    154[0m             [0;32mexcept[0m [0mStopIteration[0m [0;32mas[0m [0mexc[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    155[0m                 [0;31m# Suppress StopIteration *unless* it's the same exception that[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3/dist-packages/matplotlib/animation.py[0m in [0;36msaving[0;34m(self, fig, outfile, dpi, *args, **kwargs)[0m
+[1;32m    236[0m             [0;32myield[0m [0mself[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    237[0m         [0;32mfinally[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 238[0;31m             [0mself[0m[0;34m.[0m[0mfinish[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    239[0m [0;34m[0m[0m
+[1;32m    240[0m [0;34m[0m[0m
+
+[0;32m/usr/lib/python3/dist-packages/matplotlib/animation.py[0m in [0;36mfinish[0;34m(self)[0m
+[1;32m    342[0m             [0moverridden_cleanup[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    343[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 344[0;31m             [0mself[0m[0;34m.[0m[0m_cleanup[0m[0;34m([0m[0;34m)[0m  [0;31m# Inline _cleanup() once cleanup() is removed.[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    345[0m [0;34m[0m[0m
+[1;32m    346[0m     [0;32mdef[0m [0mgrab_frame[0m[0;34m([0m[0mself[0m[0;34m,[0m [0;34m**[0m[0msavefig_kwargs[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3/dist-packages/matplotlib/animation.py[0m in [0;36m_cleanup[0;34m(self)[0m
+[1;32m    373[0m                 "MovieWriter stderr:\n%s", err)
+[1;32m    374[0m         [0;32mif[0m [0mself[0m[0;34m.[0m[0m_proc[0m[0;34m.[0m[0mreturncode[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 375[0;31m             raise subprocess.CalledProcessError(
+[0m[1;32m    376[0m                 self._proc.returncode, self._proc.args, out, err)
+[1;32m    377[0m [0;34m[0m[0m
+
+[0;31mCalledProcessError[0m: Command '['ffmpeg', '-f', 'rawvideo', '-vcodec', 'rawvideo', '-s', '600x600', '-pix_fmt', 'rgba', '-r', '12.5', '-loglevel', 'error', '-i', 'pipe:', '-vcodec', 'h264', '-pix_fmt', 'yuv420p', '-y', 'static/tutorial_ncf.mp4']' returned non-zero exit status 1.
+

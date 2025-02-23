@@ -65,7 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/1_2_Kinematika_v_1D';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Pohyb s jedným stupněm volnosti" href="2_Pohyb_v_1D.html" />
+    <link rel="next" title="Dynamika" href="1_3_Dynamika_pohybu_v_1D.html" />
     <link rel="prev" title="Stupně volnosti" href="1_1_Stupe%C5%88_volnosti.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -181,11 +181,12 @@
 <li class="toctree-l1"><a class="reference internal" href="0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html">Souřadnicové systémy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_1_Stupe%C5%88_volnosti.html">Stupně volnosti</a></li>
 
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Kinematika v 1DOF prostoru</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="2_Pohyb_v_1D.html">Pohyb s jedným stupněm volnosti</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Kinematika v 1DOF prostoru</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_3_Dynamika_pohybu_v_1D.html">Dynamika</a></li>
 
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="1_4_Energie.html">Mechanická práce</a></li>
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
 <ul class="nav bd-sidenav">
@@ -560,11 +561,16 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>V mechanice se často setkáváme s časovými derivacemi, tedy derivacemi funkcí, které závisí na čase. Pro zjednodušení zápisu a usnadnění práce s těmito derivacemi se používá speciální značení pomocí teček nad symbolem veličiny. Toto značení zavedl <strong>Isaac Newton</strong>.</p>
+<ul>
+<li><p><strong>První časová derivace:</strong> Značí se jednou tečkou nad symbolem veličiny. Například, pokud <span class="math notranslate nohighlight">\(x\)</span> značí polohu, pak <span class="math notranslate nohighlight">\(\dot{x}\)</span> (x s tečkou) značí její první časovou derivaci, tedy rychlost:</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} = \frac{dx}{dt}\]</div>
+</li>
+<li><p><strong>Druhá časová derivace:</strong> Značí se dvěma tečkami nad symbolem veličiny. Například, <span class="math notranslate nohighlight">\(\ddot{x}\)</span> (x se dvěma tečkami) značí druhou časovou derivaci polohy, tedy zrychlení:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\ddot{x} = \frac{d^2x}{dt^2} = \frac{d}{dt}\left(\frac{dx}{dt}\right) = \frac{d\dot{x}}{dt}\]</div>
 <ul class="simple">
-<li><p><strong>První časová derivace:</strong> Značí se jednou tečkou nad symbolem veličiny. Například, pokud <span class="math notranslate nohighlight">\(x\)</span> značí polohu, pak <span class="math notranslate nohighlight">\(\dot{x}\)</span> (x s tečkou) značí její první časovou derivaci, tedy rychlost:
-$<span class="math notranslate nohighlight">\(\dot{x} = \frac{dx}{dt}\)</span>$</p></li>
-<li><p><strong>Druhá časová derivace:</strong> Značí se dvěma tečkami nad symbolem veličiny. Například, <span class="math notranslate nohighlight">\(\ddot{x}\)</span> (x se dvěma tečkami) značí druhou časovou derivaci polohy, tedy zrychlení:
-$<span class="math notranslate nohighlight">\(\ddot{x} = \frac{d^2x}{dt^2} = \frac{d}{dt}\left(\frac{dx}{dt}\right) = \frac{d\dot{x}}{dt}\)</span>$</p></li>
 <li><p><strong>Třetí a vyšší časové derivace:</strong> Značí se třemi a více tečkami nad symbolem veličiny. Vyšší časové derivace se používají méně často, ale mohou se objevit například při popisu dynamiky pohybu.</p></li>
 </ul>
 </div>
@@ -782,8 +788,6 @@ $<span class="math notranslate nohighlight">\(\ddot{x} = \frac{d^2x}{dt^2} = \fr
         </div></div>
 </div>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -826,11 +830,11 @@ $<span class="math notranslate nohighlight">\(\ddot{x} = \frac{d^2x}{dt^2} = \fr
       </div>
     </a>
     <a class="right-next"
-       href="2_Pohyb_v_1D.html"
+       href="1_3_Dynamika_pohybu_v_1D.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Pohyb s jedným stupněm volnosti</p>
+        <p class="prev-next-title">Dynamika</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -15,8 +15,9 @@ parts:
     - file: Prednasky/0_3_Souřadnicové_systémy
     - file: Prednasky/1_1_Stupeň_volnosti
     - file: Prednasky/1_2_Kinematika_v_1D
-      sections:
-      - file: Prednasky/2_Pohyb_v_1D
+    sections:
+      - file: Prednasky/1_3_Dynamika_pohybu_v_1D
+      - file: Prednasky/1_4_Energie
   - caption: Cvičení
     chapters:
     - file: Cviceni/C1

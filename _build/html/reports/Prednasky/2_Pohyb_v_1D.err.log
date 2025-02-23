@@ -75,14 +75,14 @@ static/tutorial_ncf.mp4: No such file or directory
 During handling of the above exception, another exception occurred:
 
 [0;31mCalledProcessError[0m                        Traceback (most recent call last)
-[0;32m/tmp/ipykernel_14211/1214280299.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_306677/1214280299.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0mxs_ncf_[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0mconcatenate[0m[0;34m([0m[0;34m[[0m[0mxs_ncf[0m[0;34m[[0m[0;34m:[0m[0;36m1[0m[0;34m][0m[0;34m][0m[0;34m*[0m[0;36m20[0m[0;34m+[0m[0;34m[[0m[0mxs_ncf[0m[0;34m][0m[0;34m+[0m[0;34m[[0m[0mxs_ncf[0m[0;34m[[0m[0;34m-[0m[0;36m1[0m[0;34m:[0m[0;34m][0m[0;34m][0m[0;34m*[0m[0;36m20[0m [0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 2[0;31m [0mmake_video[0m[0;34m([0m[0mt[0m[0;34m,[0m [0mxs_ncf_[0m[0;34m,[0m [0mpath[0m[0;34m=[0m[0;34m'static/tutorial_ncf.mp4'[0m[0;34m,[0m [0mcolor[0m[0;34m=[0m[0;34m'green'[0m[0;34m,[0m [0minterval[0m[0;34m=[0m[0;36m80[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      3[0m [0;34m[0m[0m
 [1;32m      4[0m [0mmp4[0m [0;34m=[0m [0mopen[0m[0;34m([0m[0;34m'static/tutorial_ncf.mp4'[0m[0;34m,[0m[0;34m'rb'[0m[0;34m)[0m[0;34m.[0m[0mread[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      5[0m [0mdata_url[0m [0;34m=[0m [0;34m"data:video/mp4;base64,"[0m [0;34m+[0m [0mb64encode[0m[0;34m([0m[0mmp4[0m[0;34m)[0m[0;34m.[0m[0mdecode[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/tmp/ipykernel_14211/1349614390.py[0m in [0;36mmake_video[0;34m(t, xs, path, interval, color, mode, **kwargs)[0m
+[0;32m/tmp/ipykernel_306677/1349614390.py[0m in [0;36mmake_video[0;34m(t, xs, path, interval, color, mode, **kwargs)[0m
 [1;32m     13[0m         [0mcamera[0m[0;34m.[0m[0msnap[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m     14[0m     [0manim[0m [0;34m=[0m [0mcamera[0m[0;34m.[0m[0manimate[0m[0;34m([0m[0mblit[0m[0;34m=[0m[0;32mTrue[0m[0;34m,[0m [0minterval[0m[0;34m=[0m[0minterval[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0;32m---> 15[0;31m     [0manim[0m[0;34m.[0m[0msave[0m[0;34m([0m[0mpath[0m[0;34m)[0m [0;34m;[0m [0mplt[0m[0;34m.[0m[0mclose[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m

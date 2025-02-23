@@ -14,6 +14,7 @@ parts:
     - file: Prednasky/0_2_Skaláry_a_vektory
     - file: Prednasky/0_3_Souřadnicové_systémy
     - file: Prednasky/1_1_Stupeň_volnosti
+    - file: Prednasky/1_2_Kinematika_v_1D
       sections:
       - file: Prednasky/2_Pohyb_v_1D
   - caption: Cvičení

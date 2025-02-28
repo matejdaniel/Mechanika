@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Mechanická práce &#8212; Mechanika</title>
+    <title>Mechanické vlastnosti materiálu &#8212; Mechanika</title>
   
   
   
@@ -60,9 +60,7 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/1_4_Energie';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/2_1_Mechanické_vlastnosti_materiálu';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -263,7 +261,7 @@
       
       
       
-      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/1_4_Energie.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/2_1_Mechanické_vlastnosti_materiálu.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +291,7 @@
       
       
       
-      <li><a href="../_sources/Prednasky/1_4_Energie.ipynb" target="_blank"
+      <li><a href="../_sources/Prednasky/2_1_Mechanické_vlastnosti_materiálu.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -369,7 +367,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Mechanická práce</h1>
+    <h1>Mechanické vlastnosti materiálu</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -379,16 +377,10 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Mechanická práce</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#energie">Energie</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kineticka-energie">Kinetická energie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potencialni-energie">Potenciální energie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prace-a-energie">Práce a energie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prehled-mechanickych-vlastnosti-materialu">Přehled mechanických vlastností materiálu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prehled-technologickych-vlastnosti-materialu">Přehled technologických vlastností materiálu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#urcovani-mechanickych-a-technologickych-vlastnosti">Určování mechanických a technologických vlastností</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vykon">Výkon</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -399,103 +391,94 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="mechanicka-prace">
-<h1>Mechanická práce<a class="headerlink" href="#mechanicka-prace" title="Link to this heading">#</a></h1>
-<blockquote>
-<div><p>Pohybuje-li se těleso působením síly, koná se mechanická práce.</p>
-</div></blockquote>
-<p><strong>Značení:</strong></p>
-<ul class="simple">
-<li><p>Mechanická práce se obvykle značí písmenem <strong>W</strong> (z anglického “work”).</p></li>
-</ul>
-<p><strong>Jednotka:</strong></p>
-<ul class="simple">
-<li><p>V soustavě SI (Mezinárodní soustava jednotek) je jednotkou mechanické práce <strong>joule</strong> (čti džaul).</p></li>
-<li><p>Značka joulu je <strong>J</strong>.</p></li>
-</ul>
-<p><strong>Definice joulu:</strong></p>
-<ul class="simple">
-<li><p>1 joule (1 J) je práce vykonaná silou 1 newtonu (1 N) při posunutí tělesa o 1 metr (1 m) ve směru působící síly.</p></li>
-<li><p>Matematicky: 1 J = 1 N ⋅ m</p></li>
-</ul>
-<p><strong>Další jednotky (méně časté):</strong></p>
-<ul class="simple">
-<li><p><strong>erg</strong>: Používá se v soustavě CGS (centimetr-gram-sekunda). 1 erg = 10⁻⁷ J.</p></li>
-<li><p><strong>kilowatthodina (kWh)</strong>: Používá se pro měření spotřeby elektrické energie. 1 kWh = 3,6 × 10⁶ J.</p></li>
-</ul>
-<ol class="arabic">
-<li><p><strong>Síla působí ve stejném směru jako pohyb tělesa</strong></p>
-<div class="math notranslate nohighlight">
-\[W = F s \]</div>
-<p>kde <span class="math notranslate nohighlight">\(F\)</span> je velikost síly a <span class="math notranslate nohighlight">\(s\)</span> délka dráhy</p>
-</li>
-<li><p><strong>Síla působí v jiném směru než pohyb tělesa</strong></p>
-<div class="math notranslate nohighlight">
-\[W = \vec{\mathbf{F}} \cdot \vec{\mathbf{s}} \]</div>
-<p>kde <span class="math notranslate nohighlight">\(\vec{\mathbf{F}}\)</span> je vektor síly a <span class="math notranslate nohighlight">\(\vec{\mathbf{s}}\)</span> je vektor posunutí. Jinými slovy práci koná složka síly rovnoběžná s trajektorií tělesa. V případě, že je síla konstatní a trajektorie je úsečka můžeme vyjádřit.</p>
-<div class="math notranslate nohighlight">
-\[W = F s \cos \alpha\]</div>
-<p>kde <span class="math notranslate nohighlight">\(\alpha\)</span> je je úhel mezi silou a trajektorií pohybu.</p>
-</li>
-<li><p><strong>Síla se mění nebo dráha je zakřivena</strong></p></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="mechanicke-vlastnosti-materialu">
+<h1>Mechanické vlastnosti materiálu<a class="headerlink" href="#mechanicke-vlastnosti-materialu" title="Link to this heading">#</a></h1>
+<section id="prehled-mechanickych-vlastnosti-materialu">
+<h2>Přehled mechanických vlastností materiálu<a class="headerlink" href="#prehled-mechanickych-vlastnosti-materialu" title="Link to this heading">#</a></h2>
+<p>Mechanické vlastnosti charakterizují chování materiálů při působení vnějších sil. Mají rozhodující význam pro výpočet strojních součástí. Patří sem pevnost, houževnatost, tvrdost a pružnost.</p>
+<ol class="arabic simple">
+<li><p><strong>Pevnost</strong> je schopnost materiálu odolávat mechanickým silám, rozlišujeme pevnost v tahu, tlaku, krutu, smyku/střihu a ohybu. Je definována jako největší napětí, které je třeba k porušení materiálu. Za porušení materiálu se považuje nejen rozdělení materiálu na dvě části, ale i vznik trhlin. Pevnost zkoušíme pomocí tzv. statické tahové zkoušky, při které zatěžujeme vzorek pozvolna se zvětšující silou a zkoumáme, při jaké velikosti síly se zkušební vzorek poruší.</p></li>
+<li><p><strong>Pružnost</strong> je schopnost materiálu deformovat se působením vnějších sil a po odstranění těchto sil se vrátit do původního stavu. Pružným materiálem je např. guma (pryž).</p></li>
+<li><p><strong>Pružnost</strong> je schopnost materiálu odolávat rázům. Je definována jako velikost práce, která je nutná k rozdělení materiálu na dvě části. Opakem houževnatosti je křehkost. Křehký materiál je např. sklo, houževnatý materiál je např. ocel. Houževnatost se zkoumá tím, že vzorek vystavíme rázu. Při přeražení zkušební tyče se spotřebuje určité množství práce, velikost této práce dokážeme spočítat.</p></li>
+<li><p><strong>Tvrdost</strong> je odpor materiálu proti vnikání cizího tělesa. Zjišťuje se vtlačováním tvrdého tělíska do zkoušeného materiálu a měřením hloubky popř. šířky vtisku. Tvrdost zvyšujeme u kovů kalením – to je ohřátím na určitou teplotu a prudkým ochlazením. Takto se např. zpracovávají kalené kuličky do kuličkových ložisek.</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[W = \int\limits_0^s \vec{\mathbf{F}} \cdot \mathrm{d}\vec{\mathbf{s}}  \]</div>
 </section>
-<section id="energie">
-<h1>Energie<a class="headerlink" href="#energie" title="Link to this heading">#</a></h1>
-<section id="kineticka-energie">
-<h2>Kinetická energie<a class="headerlink" href="#kineticka-energie" title="Link to this heading">#</a></h2>
-<p>Kinetická energie je energie spojená s pohybem objektu. Těleso v pohybu má kinetickou energii. Kinetická energie částice o hmotnosti m pohybující se rychlostí v je dána vztahem:</p>
-<div class="math notranslate nohighlight">
-\[E_k = \frac{1}{2} m \vec{\mathbf{v}} \cdot \vec{\mathbf{v}}= \frac{1}{2} m v^2\]</div>
-<p>kde <span class="math notranslate nohighlight">\(v=|∣\vec{\mathbf{v}}∣|\)</span> je velikost rychlosti. Pro systém částic je celková kinetická energie součtem kinetických energií všech jednotlivých částic:</p>
-<div class="math notranslate nohighlight">
-\[E_k = \sum_i \frac{1}{2} m_i \dot{\vec{\mathbf{r}}}_i \cdot \dot{\vec{\mathbf{r}}}_i = \sum_i \frac{1}{2} m_i v_i^2\]</div>
-<p>kde <span class="math notranslate nohighlight">\(m_i\)</span> je hmotnost <span class="math notranslate nohighlight">\(i\)</span>-té částice a <span class="math notranslate nohighlight">\(\dot{\vec{\mathbf{r}}_i}\)</span> je její rychlost</p>
+<section id="prehled-technologickych-vlastnosti-materialu">
+<h2>Přehled technologických vlastností materiálu<a class="headerlink" href="#prehled-technologickych-vlastnosti-materialu" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Tvárnost</strong>  je vhodnost materiálu ke zpracování pomocí tváření. V tuhém stavu materiál změní působením vnějších sil svůj tvar, ale přitom se neporuší soudržnost - tj. v materiálu nevzniknou trhlinky. Tvar vzniklý působením vnějších sil zůstaně zachovaný i po odstranění působících sil. Tato vlastnost je typická pro kovy a je důležitá pro kování, válcování, lisování.</p></li>
+<li><p><strong>Obrobitelnost</strong> je způsobilost materiálu pro třískové obrábění (soustružení, frézování apod.). Posuzuje se podle mechanických vlastností, podle řezného odporu a podle způsobu tvorby třísky.</p></li>
+<li><p><strong>Slévatelnost</strong> je soubor vlastností nutných pro vytvoření kvalitního odlitku. Ovlivňují ji teplota tání a tuhnutí, tepelná vodivost, viskozita, tepelná roztažnost a smrštivost.</p></li>
+<li><p><strong>Svařitelnost</strong> je schopnost materiálu vytvořit pomocí svařování ze dvou částí jeden nerozebíratelný celek.</p></li>
+<li><p><strong>Odolnost proti opotřebení</strong> proti opotřebení je odolnost proti působení vnějších sil, které způsobují postupné ubývání materiálu.</p></li>
+</ol>
 </section>
-<section id="potencialni-energie">
-<h2>Potenciální energie<a class="headerlink" href="#potencialni-energie" title="Link to this heading">#</a></h2>
-<p>Potenciální energie je energie spojená s konfigurací systému objektů. Představuje schopnost konat práci v důsledku polohy objektu v silovém poli. Potenciální energie je často spojena s konzervativními silami. Síla <span class="math notranslate nohighlight">\(F\)</span> je konzervativní, pokud práce vykonaná touto silou na částici pohybující se mezi dvěma body nezávisí na dráze.</p>
-<p>Potenciální energie <span class="math notranslate nohighlight">\(U\)</span> spojená s konzervativní silou <span class="math notranslate nohighlight">\(F\)</span> je definována tak, že:</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{\vec{F}} = -\nabla U\]</div>
-<p>kde <span class="math notranslate nohighlight">\(\nabla\)</span> je operátor gradientu. To znamená, že síla je záporný gradient potenciální energie. Změna potenciální energie mezi dvěma body se rovná záporné práci vykonané konzervativní silou při pohybu mezi těmito body.</p>
-<p>Mezi běžné příklady potenciální energie patří:</p>
-<ul>
-<li><p><strong>Gravitační potenciální energie:</strong> Pro objekt o hmotnosti m blízko povrchu Země je gravitační potenciální energie:</p>
-<div class="math notranslate nohighlight">
-\[E_p = mgh\]</div>
-</li>
+<section id="urcovani-mechanickych-a-technologickych-vlastnosti">
+<h2>Určování mechanických a technologických vlastností<a class="headerlink" href="#urcovani-mechanickych-a-technologickych-vlastnosti" title="Link to this heading">#</a></h2>
+<p><strong>Normy</strong> pro testování materiálů, včetně norem ISO, poskytují pokyny a specifikace pro hodnocení mechanických vlastností materiálů. Tyto normy jsou klíčové pro zajištění konzistence a spolehlivosti při používání materiálů a testovacích metodik napříč různými průmyslovými odvětvími. Testy a postupy vhodné pro měření různých vlastností materiálů, jako je pevnost, odolnost a další charakteristiky, jsou součástí těchto norem. Tyto testy se provádějí s využitím univerzálních testovacích strojů.</p>
+<img alt="https://barrus-testing.com/wp-content/uploads/2024/02/barrus_astm_iso-768x331.jpg" src="https://barrus-testing.com/wp-content/uploads/2024/02/barrus_astm_iso-768x331.jpg" />
+<p>Tyto normy jsou vyvíjeny a publikovány známými organizacemi, jako jsou <strong>ASTM</strong> (American Society for Testing and Materials), <strong>ISO</strong> (International Organization for Standardization) a dalšími subjekty. Existují také regionální a národní doporučení, jako například:</p>
+<ul class="simple">
+<li><p>EN – Euronorm – evropské normy</p></li>
+<li><p>DIN – Deutsches Institut für Normung, německá národní normalizační organizace</p></li>
+<li><p>ČSN - české technické normy</p></li>
 </ul>
-<p>kde <span class="math notranslate nohighlight">\(g\)</span> je zrychlení v důsledku gravitace a <span class="math notranslate nohighlight">\(h\)</span> je výška nad referenční úrovní.</p>
-<ul>
-<li><p><strong>Elastická potenciální energie:</strong> Pro pružinu s konstantou tuhosti <span class="math notranslate nohighlight">\(k\)</span> protaženou nebo stlačenou o vzdálenost <span class="math notranslate nohighlight">\(x\)</span> z její rovnovážné polohy je elastická potenciální energie:</p>
-<div class="math notranslate nohighlight">
-\[U_e = \frac{1}{2} k x^2\]</div>
-</li>
-</ul>
+<p>Vzhledem k tomu, že jsou tato doporučení harmonizována, jsou dnes obecně totožná. Tyto organizace zajišťují univerzální použitelnost a přijetí těchto norem. Normy pro testování materiálů definují testovací postupy, zařízení, přípravu vzorků, rozměry vzorků, vlastnosti a metody vyhodnocování výsledků. Obecně přijaté testovací metody usnadňují srovnatelnost výsledků.</p>
+<p>Srovnatelnost je klíčová v těměř každém průmyslovém odvětví, včetně letectví, automobilového průmyslu, stavebnictví a zdravotnických zařízení, kde selhání materiálu může mít závažné následky. Během vývoje nových materiálů nebo produktů poskytují normy pro testování materiálů referenční hodnoty pro hodnocení nových materiálů oproti stávajícím.</p>
+<p>Zkoušky materálu můžeme rozdělit do dvou skupin: destruktivní a nedestruktivní. Při použití destruktivní metody zkoušení se zkušební vzorek poruší. Při použití nedestruktivní metody zkoušení zkušbní vzorek zůstává v původním tvaru.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Norma ISO</p></th>
+<th class="head"><p>Norma ASTM</p></th>
+<th class="head"><p>Název normy</p></th>
+<th class="head"><p>Popis zkoušek</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ISO 6892-1</p></td>
+<td><p>ASTM E8 / E8M</p></td>
+<td><p>Tahové testování při pokojové teplotě</p></td>
+<td><p>Stanovuje metody testování pevnosti v tahu, meze kluzu, deformace a zmenšení průřezu kovů. Definuje postup tahových testů na standardizovaných vzorcích kovů při pokojové teplotě a umožňuje stanovení důležitých mechanických vlastností.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ISO 6892-2</p></td>
+<td><p>ASTM E21</p></td>
+<td><p>Tahové testování při vysokých teplotách</p></td>
+<td><p>Definuje tahové testy na kovech při vysokých teplotách.</p></td>
+</tr>
+<tr class="row-even"><td><p>ISO 148-1</p></td>
+<td><p>ASTM E23</p></td>
+<td><p>Rázová zkouška Charpy</p></td>
+<td><p>Popisuje metodu Charpyho rázové zkoušky kovů. Test měří pevnost a odolnost materiálu při nárazu.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ISO 12135</p></td>
+<td><p>ASTM E399</p></td>
+<td><p>Test odolnosti proti iniciaci a růstu trhlin</p></td>
+<td><p>Stanovuje metodu určování vlastností iniciace a růstu trhlin v kovech.</p></td>
+</tr>
+<tr class="row-even"><td><p>ISO 6508</p></td>
+<td><p>ASTM E18</p></td>
+<td><p>Zkouška tvrdosti Rockwell</p></td>
+<td><p>Popisuje zkoušku tvrdosti kovových materiálů metodou Rockwell.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ISO 6507</p></td>
+<td><p>ASTM E384</p></td>
+<td><p>Zkouška tvrdosti Vickers</p></td>
+<td><p>Popisuje zkoušku tvrdosti kovových materiálů metodou Vickers.</p></td>
+</tr>
+<tr class="row-even"><td><p>-</p></td>
+<td><p>ASTM E92</p></td>
+<td><p>Zkouška tvrdosti Vickers &amp; Knoop</p></td>
+<td><p>Popisuje zkoušku tvrdosti kovových materiálů metodami Vickers a Knoop.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ISO 6506</p></td>
+<td><p>ASTM E10</p></td>
+<td><p>Zkouška tvrdosti Brinell</p></td>
+<td><p>Popisuje zkoušku tvrdosti kovových materiálů metodou Brinell.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
-<section id="prace-a-energie">
-<h2>Práce a energie<a class="headerlink" href="#prace-a-energie" title="Link to this heading">#</a></h2>
-<p>Práce <span class="math notranslate nohighlight">\(W\)</span> vykonaná výslednou silou na částici, když se pohybuje z bodu A do bodu B, se rovná změně její kinetické energie:</p>
-<div class="math notranslate nohighlight">
-\[ W = \Delta E_k = E_{kB} - E_{kA} \]</div>
-<p>Pokud práci konají pouze konzervativní síly, pak můžeme práci spojit i se změnou potenciální energie:</p>
-<div class="math notranslate nohighlight">
-\[ W = -\Delta U = -(U_B - U_A) = U_A - U_B\]</div>
-<p>Kombinací těchto vztahů získáme zákon zachování mechanické energie:</p>
-<div class="math notranslate nohighlight">
-\[\Delta T + \Delta U = 0  \quad \text{nebo} \quad T_A + U_A =T_B + U_B\]</div>
-<p>To znamená, že celková mechanická energie (<span class="math notranslate nohighlight">\(E=T+U\)</span>) systému zůstává konstantní, pokud práci konají pouze konzervativní síly.</p>
-</section>
-</section>
-<section id="vykon">
-<h1>Výkon<a class="headerlink" href="#vykon" title="Link to this heading">#</a></h1>
-<p>Výkon (<span class="math notranslate nohighlight">\(P\)</span>) je definován jako rychlost, s jakou je konána práce nebo se přenáší energie:</p>
-<div class="math notranslate nohighlight">
-\[P = \frac{dW}{dt} = \vec{\mathbf{F}} \cdot \vec{\mathbf{v}}\]</div>
-<p>Výkon se měří ve wattech (W), kde 1 W = 1 J/s.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -545,16 +528,10 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Mechanická práce</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#energie">Energie</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kineticka-energie">Kinetická energie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potencialni-energie">Potenciální energie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prace-a-energie">Práce a energie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prehled-mechanickych-vlastnosti-materialu">Přehled mechanických vlastností materiálu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prehled-technologickych-vlastnosti-materialu">Přehled technologických vlastností materiálu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#urcovani-mechanickych-a-technologickych-vlastnosti">Určování mechanických a technologických vlastností</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vykon">Výkon</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>

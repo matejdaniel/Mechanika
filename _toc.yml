@@ -21,3 +21,4 @@ parts:
   - caption: Cvičení
     chapters:
     - file: Cviceni/C1
+    - file: Cviceni/C2

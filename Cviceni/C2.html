@@ -1,0 +1,887 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2. cvičení &#8212; Mechanika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Cviceni/C2';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="1. cvičení" href="C1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Mechanika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Kurz mechaniky
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">O předmětu</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Podm%C3%ADnky_z%C3%A1po%C4%8Dtu_a_zkou%C5%A1ky.html">Zápočet:</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Sylabus_LS2025.html">Mechanika FBMI sylabus LS 2024/2025</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Prednasky/0_1_Definice_a_historie_mechaniky.html">Úvod do mechaniky</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../Prednasky/0_2_Skal%C3%A1ry_a_vektory.html">Skalár a vektor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prednasky/0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html">Souřadnicové systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prednasky/1_1_Stupe%C5%88_volnosti.html">Stupně volnosti</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Prednasky/1_2_Kinematika_v_1D.html">Kinematika v 1DOF prostoru</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="C1.html">1. cvičení</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. cvičení</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FCviceni/C2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Cviceni/C2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>2. cvičení</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuhost">Tuhost</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tahovy-diagram">Tahový diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#napeti-a-dimenzovani">Napětí a dimenzování</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hooekuv-zakon">Hooekův zákon</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cast-i-ocel">Část I - Ocel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cast-ii-ocel">Část II - Ocel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cast-iii-hlinik">Část III - Hliník</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komplexni-priklad">Komplexní příklad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#staticky-neurcity-problem">Staticky neurčitý problém</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="cviceni">
+<h1>2. cvičení<a class="headerlink" href="#cviceni" title="Link to this heading">#</a></h1>
+<section id="tuhost">
+<h2>Tuhost<a class="headerlink" href="#tuhost" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Jakou silou je potřeba natáhnout ideální pružinu s konstantou pružiny 120 N/m pro dsažení prodloužení
+30 cm?</p></li>
+<li><p>Pružina s tuhostí 600 N/m se používá pro váhu k vážení ryb. Jaká je
+hmotnost ryby, která by natáhla pružinu o 7,5 cm od její normální délky?</p></li>
+<li><p>Pružina v pogo-sticku je stlačena o 12 cm, když na ní stojí 40 kg vážící dívka. Jaká je
+tuhost pružiny pro pružinu pogo-stick?</p></li>
+<li><p>Pružina se při působení síly 13 N natáhne o 8,0 cm. Jak daleko se táhne, když působí síla 26 N?</p></li>
+<li><p>Elastická šňůra je dlouhá 80 cm, když na ní visí hmota 10 kg. Po přidání dalších 4,0 kg je šňůra dlouhá 82,5 cm. Jak velká je tuhost pružiny.</p></li>
+<li><p>Pružina s tuhostí 50 N/m visí na stojanu. Druhá pružina s tuhostí 100. N/m visí z první pružiny. Jak daleko se táhnou, pokud je závaží
+0,50 kg je zavěšeno na spodní pružině? Jaká je tuhost soustavy pružin? Jak se změní tuhost, když pružiny zavěsíme vedle sebe a jak velkou zátěž přenáší každá z pružin.</p></li>
+</ol>
+</section>
+<section id="tahovy-diagram">
+<h2>Tahový diagram<a class="headerlink" href="#tahovy-diagram" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Z naměřených dat v experimentu na obrázku určete tuhost pružiny. Vysvětlete průběh naměřené křivky.</p>
+<img alt="https://ivypanda.com/essays/wp-content/uploads/2022/12/316038_1.png" src="https://ivypanda.com/essays/wp-content/uploads/2022/12/316038_1.png" />
+</li>
+<li><p>Při zkoušce různých slitin hliníku jsme získali následující smluvný tahový diagram. Popište</p>
+<ul class="simple">
+<li><p>která slitina vydrží největší napětí</p>
+<ul>
+<li><p>do porušení</p></li>
+<li><p>do tvárné deformace</p></li>
+</ul>
+</li>
+<li><p>která slitina bude mít najvětší prodloužení</p></li>
+<li><p>jak se liší Youngův modul pružnosti mezi slitinami</p></li>
+</ul>
+</li>
+</ol>
+<img alt="https://www.researchgate.net/publication/342717016/figure/fig1/AS:910329273917440&#64;1594050820232/Example-of-true-stress-strain-curves-of-some-aluminum-alloys-data-from-Reference-50.ppm" src="https://www.researchgate.net/publication/342717016/figure/fig1/AS:910329273917440&#64;1594050820232/Example-of-true-stress-strain-curves-of-some-aluminum-alloys-data-from-Reference-50.ppm" />
+<ol class="arabic simple" start="3">
+<li><p>Během tahové zkoušky ocelové tyče o průměru 14 mm byly zaznamenány následující údaje. Měřená délka byla 50 mm.</p></li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Zatížení (N)</p></th>
+<th class="head"><p>Prodloužení (mm)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>6310</p></td>
+<td><p>0.010</p></td>
+</tr>
+<tr class="row-even"><td><p>12600</p></td>
+<td><p>0.020</p></td>
+</tr>
+<tr class="row-odd"><td><p>18800</p></td>
+<td><p>0.030</p></td>
+</tr>
+<tr class="row-even"><td><p>25100</p></td>
+<td><p>0.040</p></td>
+</tr>
+<tr class="row-odd"><td><p>31300</p></td>
+<td><p>0.050</p></td>
+</tr>
+<tr class="row-even"><td><p>37900</p></td>
+<td><p>0.060</p></td>
+</tr>
+<tr class="row-odd"><td><p>40100</p></td>
+<td><p>0.163</p></td>
+</tr>
+<tr class="row-even"><td><p>41600</p></td>
+<td><p>0.433</p></td>
+</tr>
+<tr class="row-odd"><td><p>46200</p></td>
+<td><p>1.25</p></td>
+</tr>
+<tr class="row-even"><td><p>52400</p></td>
+<td><p>2.50</p></td>
+</tr>
+<tr class="row-odd"><td><p>58500</p></td>
+<td><p>4.50</p></td>
+</tr>
+<tr class="row-even"><td><p>68000</p></td>
+<td><p>7.50</p></td>
+</tr>
+<tr class="row-odd"><td><p>59000</p></td>
+<td><p>12.5</p></td>
+</tr>
+<tr class="row-even"><td><p>67800</p></td>
+<td><p>15.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>65000</p></td>
+<td><p>20.0</p></td>
+</tr>
+<tr class="row-even"><td><p>65500</p></td>
+<td><p>porušení</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Určete:</p>
+<ul class="simple">
+<li><p>mez úmeřnosti</p></li>
+<li><p>Youngův modul pružnosti</p></li>
+<li><p>mez kluzu</p></li>
+<li><p>mez pevnosti</p></li>
+<li><p>hodnotu napětí při porušení</p></li>
+</ul>
+<p><a class="reference external" href="https://mathalino.com/reviewer/mechanics-and-strength-of-materials/solution-to-problem-203-stress-strain-diagram"><strong>Řešení</strong></a></p>
+</section>
+<section id="napeti-a-dimenzovani">
+<h2>Napětí a dimenzování<a class="headerlink" href="#napeti-a-dimenzovani" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Socha o hmotnosti 10 000 N spočívá na vodorovném povrchu na vrcholu 6,0 m vysokého svislého pilíře. Plocha průřezu pilíře je 0,20 m<span class="math notranslate nohighlight">\(^2\)</span>  a je vyrobena ze žuly o hustotě 2700 kg/m3.
+Najděte tlakové napětí v průřezu umístěném 3,0 m pod vrcholem pilíře a hodnotu tlakového přetvoření (relativního napětí) horního 3,0m segmentu pilíře. Výsledek uveďte včetně znaménka.</p></li>
+</ol>
+<img alt="https://openstax.org/apps/archive/20250116.201611/resources/de9eae8883d3b53efdf04199a4d44020b9be8d09" src="https://openstax.org/apps/archive/20250116.201611/resources/de9eae8883d3b53efdf04199a4d44020b9be8d09" />
+<p><a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus#CNX_UPhysics_12_03_Nelson"><strong>Řešení</strong></a></p>
+<ol class="arabic simple" start="2">
+<li><p>Jakou nejtěžší sochu je možné umístnit na pylon pred Fakultou informačních technologií ČVUT v Dejvicích. Potřebné informace odhadněte nebo dohledejte. Informace o pylonu <a class="reference external" href="https://cs.wikipedia.org/wiki/Sloup_%E2%80%93_obelisk">tady</a>.</p></li>
+</ol>
+<img alt="https://old.fit.cvut.cz/fakulta/budovy/image-thumb__295__Block2Image/nova-budova-hq.jpeg" src="https://old.fit.cvut.cz/fakulta/budovy/image-thumb__295__Block2Image/nova-budova-hq.jpeg" />
+<ol class="arabic simple" start="3">
+<li><p>Navrhněte minimální průměr ocelového prutu, který bude přenášet tahové zatížení 50 kN. Materiál prutu je nízkouhlíková ocel s mezí kluzu 235 MPa a bezpečnostním součinitelem 1,5.</p></li>
+</ol>
+</section>
+<section id="hooekuv-zakon">
+<h2>Hooekův zákon<a class="headerlink" href="#hooekuv-zakon" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Je dán jednostranně vetknutý prut sestavený ze 3 částí o různých rozměrech a mechanických vlastnostech (viz. obrázek dole) zatížený třemi silami <span class="math notranslate nohighlight">\(F_1\)</span>, <span class="math notranslate nohighlight">\(F_2\)</span> a <span class="math notranslate nohighlight">\(F_3\)</span> a změnou teploty <span class="math notranslate nohighlight">\(\Delta T\)</span>, která působí jen na části II a III.</p></li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parametr</p></th>
+<th class="head"><p>Hodnota</p></th>
+<th class="head"><p>Jednotka</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(F_1\)</span></p></td>
+<td><p>25</p></td>
+<td><p>kN</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(F_2\)</span></p></td>
+<td><p>10</p></td>
+<td><p>kN</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(F_3\)</span></p></td>
+<td><p>15</p></td>
+<td><p>kN</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Delta T\)</span></p></td>
+<td><p>10</p></td>
+<td><p>K</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="cast-i-ocel">
+<h3>Část I - Ocel<a class="headerlink" href="#cast-i-ocel" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parametr</p></th>
+<th class="head"><p>Hodnota</p></th>
+<th class="head"><p>Jednotka</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td><p>1</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(E_I\)</span></p></td>
+<td><p>210</p></td>
+<td><p>GPa</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\alpha_I\)</span></p></td>
+<td><p>1.0E-5</p></td>
+<td><p>K⁻¹</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(A_I\)</span></p></td>
+<td><p>0.01</p></td>
+<td><p>m²</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="cast-ii-ocel">
+<h3>Část II - Ocel<a class="headerlink" href="#cast-ii-ocel" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parametr</p></th>
+<th class="head"><p>Hodnota</p></th>
+<th class="head"><p>Jednotka</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(b\)</span></p></td>
+<td><p>0.6</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(E_{II}\)</span></p></td>
+<td><p>210</p></td>
+<td><p>GPa</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\alpha_{II}\)</span></p></td>
+<td><p>1.0E-5</p></td>
+<td><p>K⁻¹</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(A_{II}\)</span></p></td>
+<td><p>0.0025</p></td>
+<td><p>m²</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="cast-iii-hlinik">
+<h3>Část III - Hliník<a class="headerlink" href="#cast-iii-hlinik" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parametr</p></th>
+<th class="head"><p>Hodnota</p></th>
+<th class="head"><p>Jednotka</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(c\)</span></p></td>
+<td><p>0.8</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(E_{III}\)</span></p></td>
+<td><p>70</p></td>
+<td><p>GPa</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\alpha_{III}\)</span></p></td>
+<td><p>2.3E-5</p></td>
+<td><p>K⁻¹</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(A_{III}\)</span></p></td>
+<td><p>0.0025</p></td>
+<td><p>m²</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li><p>Určete reakční sílu N ve vetknutí.</p></li>
+<li><p>Určete velikosti napětí v řezech, které jsou dány rovinami β, γ, δ a η.</p></li>
+<li><p>Určete o kolik se prodlouží prut vlivem působení sil a vlivem změny teploty <span class="math notranslate nohighlight">\(\Delta T\)</span>.</p></li>
+</ul>
+<img alt="https://euler.fav.zcu.cz/kmet/ppe/obr/13_tt_p01_01.png" src="https://euler.fav.zcu.cz/kmet/ppe/obr/13_tt_p01_01.png" />
+<p><a class="reference external" href="https://euler.fav.zcu.cz/kmet/ppe/13_tt_p01.php?action=add"><strong>Kontrola výsledků</strong></a></p>
+<ol class="arabic simple" start="2">
+<li><p>Bronzová tyč je upevněna mezi ocelovou tyčí a hliníkovou tyčí, jak je znázorněno na obrázku. V uvedených polohách působí axiální zatížení. Najděte největší hodnotu <span class="math notranslate nohighlight">\(P\)</span>, která nepřekročí celkovou deformaci 3,0 mm nebo následující napětí: 140 MPa v oceli, 120 MPa v bronzu a 80 MPa v hliníku. Předpokládejme, že sestava je vhodně vyztužena, aby se zabránilo vybočení. Použijte E<span class="math notranslate nohighlight">\(_\mathrm{ocel}\)</span> = 200 GPa, E<span class="math notranslate nohighlight">\(_\mathrm{hlinik}\)</span> = 70 GPa a E<span class="math notranslate nohighlight">\(_\mathrm{bronz}\)</span> = 83 GPa.</p></li>
+</ol>
+<img alt="https://mathalino.com/sites/default/files/reviewer-strength/02-strain/211-steel-bronze-aluminum.jpg" src="https://mathalino.com/sites/default/files/reviewer-strength/02-strain/211-steel-bronze-aluminum.jpg" />
+<p><a class="reference external" href="https://mathalino.com/reviewer/mechanics-and-strength-of-materials/solution-to-problem-211-axial-deformation"><strong>Řešení</strong></a></p>
+</section>
+</section>
+<section id="komplexni-priklad">
+<h2>Komplexní příklad<a class="headerlink" href="#komplexni-priklad" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Důlní šachtový výtah je zavěšen na ocelovém laně o průměru 2,5 cm. Celková hmotnost kabiny a přepravovaných osob je 650 kg. Jak se lano prodlužuje a jaká je hmotnost lana, když</p>
+<ul class="simple">
+<li><p>v první aproximace zanedbáme hmotnost lana  a</p>
+<ul>
+<li><p>výtah je na povrchu 12 m pod motorem výtahu?</p></li>
+<li><p>je na dně šachty hluboké 350 m?</p></li>
+</ul>
+</li>
+<li><p>hmotnost lana nezanedbáme.</p></li>
+</ul>
+</li>
+</ol>
+<img alt="https://cdn.wander-book.com/images/vizitky/detail/hornicky-skanzen-mayrau-ve-vinaricich-2616.jpg" src="https://cdn.wander-book.com/images/vizitky/detail/hornicky-skanzen-mayrau-ve-vinaricich-2616.jpg" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Materiálové vlastnosti oceli</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Vlastnost</p></th>
+<th class="head"><p>Hodnota</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Hustota</p></td>
+<td><p>7 850 kg/m³</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pevnost v tahu</p></td>
+<td><p>400 - 550 MPa</p></td>
+</tr>
+<tr class="row-even"><td><p>Mez kluzu</p></td>
+<td><p>250 - 350 MPa</p></td>
+</tr>
+<tr class="row-odd"><td><p>Modul pružnosti</p></td>
+<td><p>200 GPa</p></td>
+</tr>
+<tr class="row-even"><td><p>Tvrdost (Rockwell)</p></td>
+<td><p>50 - 80 HRB</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tvrdost (Brinell)</p></td>
+<td><p>120 - 180 HB</p></td>
+</tr>
+<tr class="row-even"><td><p>Tvrdost (Vickers)</p></td>
+<td><p>140 - 190 HV</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tepelná vodivost</p></td>
+<td><p>45 - 60 W/m·K</p></td>
+</tr>
+<tr class="row-even"><td><p>Koeficient tepelné roztažnosti</p></td>
+<td><p>11 - 13 µm/m·K</p></td>
+</tr>
+<tr class="row-odd"><td><p>Elektrická vodivost</p></td>
+<td><p>6 - 10 MS/m</p></td>
+</tr>
+<tr class="row-even"><td><p>Bod tavení</p></td>
+<td><p>1539 °C</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><a class="reference external" href="https://physicstasks.eu/1289/mine-shaft-elevator?context=5"><strong>Částečné řešení</strong></a>
+<a class="reference external" href="https://mathalino.com/reviewer/mechanics-and-strength-of-materials/solution-to-problem-205-axial-deformation"><strong>Řešení s vlastní váhou</strong></a></p>
+<ol class="arabic simple" start="2">
+<li><p>Jaká je maximální možná hloubka šachty z předešlého příkladu.</p></li>
+<li><p>Jak by mělo vypadat lano, kdyby jsme chtěli dosáhnout vyvrtat šachtu do středu Země.</p>
+<ol class="arabic simple">
+<li><p>Uvažujte konstatní gravitační zrychlení.</p></li>
+<li><p>Uvažujte změnu gravitačního zrychlení s hloubkou šachty.</p></li>
+<li><p>O kolik se prodlouží lano v důsledku vlastní váhy když dosáhne do středu Země.</p></li>
+<li><p>O kolik se prodlouží lano v důsledku změny teploty? Je reálné vytvořit takéto lano?</p></li>
+</ol>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Gravitační zrychlení pod povrchem Země.</p>
+<p>Gravitační zrychlení pod povrchem Země je možné odhadnout jako</p>
+<div class="math notranslate nohighlight">
+\[g = \frac{-G M(r)}{r^2} = \frac{- 4 \pi G \rho r}{3} \]</div>
+<p>kde <span class="math notranslate nohighlight">\(\rho\)</span> je průměrná hustota Země (<span class="math notranslate nohighlight">\(5500 \)</span> kg/m<span class="math notranslate nohighlight">\(^3\)</span>), <span class="math notranslate nohighlight">\(G\)</span> je gravitační konstanta (6.6743 × 10<span class="math notranslate nohighlight">\(^{-11}\)</span> m<span class="math notranslate nohighlight">\(^3\)</span> kg<span class="math notranslate nohighlight">\(^{-1}\)</span> s<span class="math notranslate nohighlight">\(^{-2}\)</span>) a <span class="math notranslate nohighlight">\(r\)</span> je vzdálenost o středu Země. Pro více informací <a class="reference external" href="https://en.wikipedia.org/wiki/Shell_theorem">Shell theorem</a>.</p>
+<p>Teplota pod povrchem Země narůstá v tzv. geotermálním gradientu přibližně 25–30 °C/km. Pro přesnější popis se podívejte na <a class="reference external" href="https://en.wikipedia.org/wiki/Geothermal_gradient">geootermální gradient na wikipedii</a>.</p>
+</div>
+</section>
+<section id="staticky-neurcity-problem">
+<h2>Staticky neurčitý problém<a class="headerlink" href="#staticky-neurcity-problem" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Kruhovou ocelovou tyč o délce 1 m a průměru 10 cm vložíme mezi dva pevné podpěry. Jak se změní napětí v tyči když zvýšíme teplotu o 50 K.</p></li>
+</ol>
+<img alt="https://www.purdue.edu/freeform/me323/wp-content/uploads/sites/2/2021/08/Untitled-2-6-768x330.jpg" src="https://www.purdue.edu/freeform/me323/wp-content/uploads/sites/2/2021/08/Untitled-2-6-768x330.jpg" />
+<p><a class="reference external" href="https://www.purdue.edu/freeform/me323/animations-and-demonstrations/thermal-strains-and-stresses/"><strong>Řešení</strong></a></p>
+<ol class="arabic simple" start="2">
+<li><p>Tyč složená s několika materiálů o různých průřezech je bez pnutí před působením axiálního zatížení <span class="math notranslate nohighlight">\(P_1\)</span> a <span class="math notranslate nohighlight">\(P_2\)</span>. Za předpokladu, že stěny jsou tuhé, vypočítejte napětí v každém materiálu, pokud <span class="math notranslate nohighlight">\(P_1\)</span> = 150 kN a <span class="math notranslate nohighlight">\(P_2\)</span> = 90 kN.</p></li>
+</ol>
+<img alt="https://mathalino.com/sites/default/files/images/247-aluminum-steel-bronze.jpg" src="https://mathalino.com/sites/default/files/images/247-aluminum-steel-bronze.jpg" />
+<p><a class="reference external" href="https://mathalino.com/reviewer/mechanics-and-strength-of-materials/solution-to-problem-247-statically-indeterminate"><strong>Řešení</strong></a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Cviceni"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="C1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">1. cvičení</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuhost">Tuhost</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tahovy-diagram">Tahový diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#napeti-a-dimenzovani">Napětí a dimenzování</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hooekuv-zakon">Hooekův zákon</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cast-i-ocel">Část I - Ocel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cast-ii-ocel">Část II - Ocel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cast-iii-hlinik">Část III - Hliník</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komplexni-priklad">Komplexní příklad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#staticky-neurcity-problem">Staticky neurčitý problém</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

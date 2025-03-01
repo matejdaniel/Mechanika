@@ -12,12 +12,20 @@ parts:
     chapters:
     - file: Prednasky/0_1_Definice_a_historie_mechaniky
     - file: Prednasky/0_2_Skaláry_a_vektory
-    - file: Prednasky/0_3_Souřadnicové_systémy
-    - file: Prednasky/1_1_Stupeň_volnosti
+      sections:
+      - file: Prednasky/0_3_Souřadnicové_systémy
+      - file: Prednasky/1_1_Stupeň_volnosti
     - file: Prednasky/1_2_Kinematika_v_1D
-    sections:
+      sections:
       - file: Prednasky/1_3_Dynamika_pohybu_v_1D
       - file: Prednasky/1_4_Energie
+      - file: Prednasky/1_5_Lagrange_Eulerovy_rovnice
+    - file: Prednasky/2_1_Mechanické_vlastnosti_materiálu
+      sections:
+      - file: Prednasky/2_2_Hookeův_zákon
+      - file: Prednasky/2_3_Tahová_zkouška
+      - file: Prednasky/2_4_Přehled_mechanických_vlastností
+      - file: Prednasky/2_5_Příklad _tahové_zkoušky
   - caption: Cvičení
     chapters:
     - file: Cviceni/C1

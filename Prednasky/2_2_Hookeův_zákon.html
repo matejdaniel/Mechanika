@@ -1,0 +1,819 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hookeův zákon &#8212; Mechanika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/2_2_Hookeův_zákon';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tahová zkouška" href="2_3_Tahov%C3%A1_zkou%C5%A1ka.html" />
+    <link rel="prev" title="Mechanické vlastnosti materiálu" href="2_1_Mechanick%C3%A9_vlastnosti_materi%C3%A1lu.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Mechanika - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Mechanika - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Kurz mechaniky
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">O předmětu</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Podm%C3%ADnky_z%C3%A1po%C4%8Dtu_a_zkou%C5%A1ky.html">Zápočet:</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Sylabus_LS2025.html">Mechanika FBMI sylabus LS 2024/2025</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0_1_Definice_a_historie_mechaniky.html">Úvod do mechaniky</a></li>
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="0_2_Skal%C3%A1ry_a_vektory.html">Skalár a vektor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html">Souřadnicové systémy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_1_Stupe%C5%88_volnosti.html">Stupně volnosti</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1_2_Kinematika_v_1D.html">Kinematika v 1DOF prostoru</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_3_Dynamika_pohybu_v_1D.html">Dynamika</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="1_4_Energie.html">Mechanická práce</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="1_5_Lagrange_Eulerovy_rovnice.html">Princip minimální akce a Lagrange-Eulerovy rovnice</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="2_1_Mechanick%C3%A9_vlastnosti_materi%C3%A1lu.html">Mechanické vlastnosti materiálu</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Hookeův zákon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_3_Tahov%C3%A1_zkou%C5%A1ka.html">Tahová zkouška</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="2_4_P%C5%99ehled_mechanick%C3%BDch_vlastnost%C3%AD.html">Přehled mechanických vlastností vybraných materiálů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_5_P%C5%99%C3%ADklad%20_tahov%C3%A9_zkou%C5%A1ky.html">Analýza dat z tahového diagramu</a></li>
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C1.html">1. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C2.html">2. cvičení</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/2_2_Hookeův_zákon.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Prednasky/2_2_Hookeův_zákon.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Hookeův zákon</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prechod-od-pohybovych-sil-ke-zmenam-tvaru">Přechod od pohybových sil ke změnám tvaru</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#na-cem-zalezi-tuhost">Na čem záleží tuhost?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#napeti-stress">Napětí (<em>stress</em>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pomerne-prodlouzeni-strain">Poměrné prodloužení (<em>strain</em>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#younguv-modul-pruznosti-modul-pruznosti-v-tahu">Youngův modul pružnosti (modul pružnosti v tahu)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="hookeuv-zakon">
+<h1>Hookeův zákon<a class="headerlink" href="#hookeuv-zakon" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="prechod-od-pohybovych-sil-ke-zmenam-tvaru">
+<h2>Přechod od pohybových sil ke změnám tvaru<a class="headerlink" href="#prechod-od-pohybovych-sil-ke-zmenam-tvaru" title="Link to this heading">#</a></h2>
+<p>Nyní se přesuneme od úvah o silách, které ovlivňují pohyb objektu (například tření a odpor vzduchu), k těm, které ovlivňují tvar objektu. V případě působení velkých sil dojde ke změně tvaru objektu. Například když silně zatlačíme na hřebík, nepohne se z místa ale působící síla změní jeho tvar. Změna tvaru v důsledku působení síly se nazývá <strong>deformace</strong>.</p>
+<img alt="https://breakingmuscle.com/wp-content/uploads/2015/11/bracedbending2-scaled.jpg" src="https://breakingmuscle.com/wp-content/uploads/2015/11/bracedbending2-scaled.jpg" />
+<p>Zároveň k deformacím dochází také při působení velmi malých sil. Tyto deformace jsou mnohem menší a platí pro ně dvě důležité charakteristiky:</p>
+<ol class="arabic simple">
+<li><p><strong>Elasticita</strong> – Objekt se po odstranění síly vrátí do svého původního tvaru, tedy deformace je elastická.</p></li>
+<li><p><strong>Proporcionalita</strong> – Velikost deformace je úměrná působící síle, což znamená, že pro malé deformace platí <strong>Hookeův zákon</strong>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hookeův zákon
+Hookeův zákon je pojmenován po britském fyzikovi Robertu Hookovi ze 17. století a poprvé byl formulován v roce 1676 jako latinská anagramová hádanka <em>“ceiiinosssttuv”</em>. Její řešení Hooke zveřejnil v roce 1678 ve formě věty <em>Ut tensio, sic vis</em>, což znamená “Jaké prodloužení, taková síla.”</p>
+</div>
+<p>Matematicky lze Hookeův zákon vyjádřit jako:</p>
+<div class="math notranslate nohighlight">
+\[
+F = k \Delta l
+\]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Delta l\)</span> je velikost deformace (například změna délky),</p></li>
+<li><p><span class="math notranslate nohighlight">\(F\)</span> je působící síla,</p></li>
+<li><p><span class="math notranslate nohighlight">\(k\)</span> je konstanta úměrnosti závislá na tvaru a materiálu objektu. Tuto konstantu úměrnosti označujeme jako <strong>tuhost</strong> (<em>stiffness</em>). Tuhost  je fyzikální veličina charakterizující odpor tělesa nebo materiálu vůči deformaci při působení síly. Vyjadřuje, jak velká síla je potřebná k vyvolání určité deformace. Jednotkou tuhosti je N/m.</p></li>
+</ul>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Elastická síla není konstatní
+Je důležité si uvědomit, že tato síla působí proti působící vnější síle podobně jako síla tření a závisí na deformaci <span class="math notranslate nohighlight">\(\Delta l\)</span> – není konstantní jako síla tření.</p>
+</div>
+<p>Přepíšeme-li rovnici do tvaru:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta l = \frac{F}{k}
+\]</div>
+<p>je jasné, že deformace je přímo úměrná aplikované síle (<em>Ut tensio, sic vis</em>). Převrácená hodnota tuhosti se označuje jako <strong>poddajnost</strong> (<em>compliance</em>). Poddajnost je fyzikální veličina vyjadřující schopnost tělesa nebo materiálu podléhat deformaci při působení síly.</p>
+<div class="math notranslate nohighlight">
+\[
+C = \frac{1}{k}
+\]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(C\)</span> je poddajnost [m/N],</p></li>
+<li><p><span class="math notranslate nohighlight">\(k\)</span> je tuhost [N/m]).</p></li>
+</ul>
+<p>Vztah mezi deformací <span class="math notranslate nohighlight">\(\Delta l\)</span> a aplikovanou silou  <span class="math notranslate nohighlight">\(F\)</span> lze vyjádřit jako:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta l = C F
+\]</div>
+<p>Tento vztah ale neplatí pro libovolné síly.  Na obrázku je graf deformace <span class="math notranslate nohighlight">\(\Delta l\)</span> versus aplikovaná síla <span class="math notranslate nohighlight">\(F\)</span>. Přímý úsek představuje lineární oblast, kde platí Hookeův zákon. Sklon tohoto přímého úseku je <span class="math notranslate nohighlight">\(1/k\)</span>. Při větších silách se graf zakřivuje, ale deformace je stále elastická—po odstranění síly se <span class="math notranslate nohighlight">\(\Delta l\)</span> vrátí na nulu. Při ještě větších silách dochází k trvalé deformaci objektu, která nakonec vede k jeho zlomu. Všimněte si, že v tomto grafu se těsně před zlomením sklon zvětšuje, což znamená, že malý nárůst síly <span class="math notranslate nohighlight">\(F\)</span> způsobuje výrazné prodloužení <span class="math notranslate nohighlight">\(\Delta l\)</span> v blízkosti zlomu.</p>
+<img alt="https://openstax.org/apps/archive/20250116.201611/resources/b1cae2957bab746ebaf065bd43f567509a446c3b" src="https://openstax.org/apps/archive/20250116.201611/resources/b1cae2957bab746ebaf065bd43f567509a446c3b" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s2">&quot;https://www.geogebra.org/classic/tb98aHHz?embed&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;800&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;600&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="800"
+            height="600"
+            src="https://www.geogebra.org/classic/tb98aHHz?embed"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+</section>
+<section id="na-cem-zalezi-tuhost">
+<h2>Na čem záleží tuhost?<a class="headerlink" href="#na-cem-zalezi-tuhost" title="Link to this heading">#</a></h2>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Tuhost je vlastnost tělesa
+Tuhost závisí nejen na <strong>materiálových vlastnostech</strong>, ale také na <strong>geometrii objektu</strong> (např. průřezu nebo délce). Proto mají dva objekty ze stejného materiálu různou tuhost, pokud mají odlišné rozměry nebo tvar.</p>
+</div>
+<p>Z Hookeova zákona plyne, že prodloužení <span class="math notranslate nohighlight">\(\Delta l\)</span> je funkcí působící síly. Na čem ale závisí samotná tuhost objektu. Přčdepokládejme, že na gitarové struny působíme stejnou sílou. Stejná síla, v tomto případě tíha <span class="math notranslate nohighlight">\(W\)</span>, vede k různé výslední deformaci. Výsledné deformace jsou na obrázku níže znázorněny jako šedé segmenty.</p>
+<img alt="https://pressbooks.bccampus.ca/introductorygeneralphysics1phys1107/wp-content/uploads/sites/80/2017/04/Figure_06_03_02a-1.jpg" src="https://pressbooks.bccampus.ca/introductorygeneralphysics1phys1107/wp-content/uploads/sites/80/2017/04/Figure_06_03_02a-1.jpg" />
+<ul class="simple">
+<li><p>Struna vlevo je <strong>tenká nylonová</strong> - pozorujeme velkou deformaci.</p></li>
+<li><p>Struna uprostřed je <strong>tlustší nylonová</strong> - pozorujeme menší deformaci.</p></li>
+<li><p>Struna vpravo je <strong>ocelová</strong> - deformaci téměř nepozorujeme.</p></li>
+</ul>
+<p>Každá struna se deformuje jinak, což ukazuje, že tuhost závisí na:</p>
+<ul class="simple">
+<li><p><strong>Materiálu</strong> – Ocelová struna má vyšší modul pružnosti než nylonová, a proto se méně deformuje.</p></li>
+<li><p><strong>Průměru (ploše průřezu)</strong> – Tlustší nylonová struna je tužší než tenčí, protože větší průřez zvyšuje odpor vůči deformaci.</p></li>
+<li><p><strong>Délce</strong> – I když v tomto případě jsou všechny struny stejně dlouhé, obecně platí, že delší objekty mají menší tuhost (při stejné síle se více deformují).</p></li>
+</ul>
+<p>V případě, že by jsme zkoušeli struny různé délky, zjistili by jsme, že celkové prodloužení závisí na velikosti původní délky:</p>
+<div class="math notranslate nohighlight">
+\[\Delta l \propto l\]</div>
+<p>Dále by jsme mohli zjistit, že prodloužení je menší u materiálů s větším průřezem</p>
+<div class="math notranslate nohighlight">
+\[\Delta l \propto \frac{1}{A}\]</div>
+<p>Když tyto závislosti vložíme do Hookeova zákona zjistíme</p>
+<div class="math notranslate nohighlight">
+\[\Delta l = E \frac{l}{A} \]</div>
+<p>nebo můžeme přepsat do tvaru</p>
+<div class="math notranslate nohighlight">
+\[\sigma = E \varepsilon \]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span> je napětí, [ N/m<span class="math notranslate nohighlight">\(^2\)</span>]</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon\)</span> je poměrné prodloužení, [1]</p></li>
+<li><p><span class="math notranslate nohighlight">\(E\)</span> je Youngův modul pružnosti, [Pa]</p></li>
+</ul>
+<p>Hookův zákon v tomto tvaru bývá také označován jako <strong>elementární Hookův zákon</strong> a můžeme ho formulovat:</p>
+<blockquote>
+<div><p>Normálové napětí je přímo úměrné relativnímu prodloužení.</p>
+<div class="math notranslate nohighlight">
+\[ \sigma = E \varepsilon \]</div>
+</div></blockquote>
+</section>
+<section id="napeti-stress">
+<h2>Napětí (<em>stress</em>)<a class="headerlink" href="#napeti-stress" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Napětí</strong> vyjadřuje vnitřní sílu působící v materiálu v důsledku vnějšího zatížení. Udává, jak velká síla působí na jednotkovou plochu průřezu.</p>
+</div></blockquote>
+<p>Matematicky je definováno vztahem:</p>
+<div class="math notranslate nohighlight">
+\[ \sigma = \frac{F}{A}\]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span> je normálové napětí [Pa = N/m^2],</p></li>
+<li><p><span class="math notranslate nohighlight">\(F\)</span> je působící síla [N],</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span> je plocha průřezu [m<span class="math notranslate nohighlight">\(^2\)</span>].</p></li>
+</ul>
+<p>Napětí může být:</p>
+<ul class="simple">
+<li><p><strong>Tahové</strong> (<span class="math notranslate nohighlight">\(\sigma &gt; 0\)</span>) – materiál se prodlužuje.</p></li>
+<li><p><strong>Tlakové</strong> (<span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>) – materiál se zkracuje.</p></li>
+</ul>
+<a class="reference internal image-reference" href="https://www.bu.edu/moss/files/2015/01/normalstress.jpg"><img alt="https://www.bu.edu/moss/files/2015/01/normalstress.jpg" src="https://www.bu.edu/moss/files/2015/01/normalstress.jpg" style="width: 500px;" /></a>
+<p>V rámci tohoto kurzu budeme předpokládat, že všechny materiály jsou <strong>homogenní, izotropní a elastické</strong>. Také budeme uvažovat, že objekt je <strong>prizmatický</strong> – to znamená, že průřez je po celé délce stejný (například banán je přibližně prizmatický, zatímco jablko není). Tyto předpoklady nám umožňují říci, že objekt se bude <strong>deformovat rovnoměrně</strong> v každém bodě svého průřezu a napětí je konstatní.</p>
+<p>V případě, že napětí v průřezu není konstatní přenáší malá plocha průřezu <span class="math notranslate nohighlight">\(\Delta A\)</span> malou sílu <span class="math notranslate nohighlight">\(\Delta F\)</span> a můžeme definovat napětí v bodě, když dané plochy a síly budeme zmenšovat:</p>
+<div class="math notranslate nohighlight">
+\[ 
+p = \lim\limits_{\Delta A \rightarrow 0} \frac{\Delta F}{\Delta A} = \frac{\mathrm{d}F}{\mathrm{d}A}
+\]</div>
+<p>a součet všech těchto sil musí být roven <strong>výsledné vnitřní síle</strong> <span class="math notranslate nohighlight">\(F\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ 
+F = \int\limits_A p \mathrm{d}A
+\]</div>
+<p>Tento vztah vyjadřuje <strong>průměrné normálové napětí</strong>, protože jsme vnitřní síly zprůměrovali po celém průřezu.</p>
+<p>Napětí je často obtížné pochopit, protože není přímo viditelné. Existuje však metoda, která umožňuje <strong>vizualizaci napětí</strong> – pozorováním průhledného z určitých materiálů objektu v <strong>polarizovaném světle</strong>. Tento jev je známý jako <strong>fotoelasticita</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;MhcsqX9u1pU&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/MhcsqX9u1pU"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<p>Napětí může v materiálu existovat i bez působícího zatížení. Tomu se říká <strong>zbytkové napětí</strong>, které může být výhodné pro zvýšení pevnosti materiálů – například při výrobě japonských katan. Naopak, nežádoucí zbytková napětí mohou podporovat růst trhlin a vést k <strong>porušení materiálu</strong>. Příkladem je zhroucení mostu Silver Bridge v Západní Virginii v roce 1967.</p>
+<p>Jedním z nejzajímavějších příkladů zbytkového napětí je fenomén rychlého ochlazování roztaveného skla, známý jako Prince Rupert’s Drop.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;xe-f4gokRBs&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/xe-f4gokRBs"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+</section>
+<section id="pomerne-prodlouzeni-strain">
+<h2>Poměrné prodloužení (<em>strain</em>)<a class="headerlink" href="#pomerne-prodlouzeni-strain" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Poměrné prodloužení</strong> je bezrozměrná veličina, která vyjadřuje relativní změnu délky materiálu při deformaci.</p>
+</div></blockquote>
+<img alt="https://www.simscale.com/wp-content/uploads/2022/12/simwiki-stress-strain-elongation.png" src="https://www.simscale.com/wp-content/uploads/2022/12/simwiki-stress-strain-elongation.png" />
+<p>Matematicky se definuje jako:</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon = \frac{\Delta L}{L_0}
+\]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varepsilon \)</span> je poměrné prodloužení [-],</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta l \)</span> je změna délky tělesa [m],</p></li>
+<li><p><span class="math notranslate nohighlight">\(l_0 \)</span> je původní délka tělesa [m].</p></li>
+</ul>
+<p>Poměrné prodloužení je <strong>kladné</strong> při <strong>tahu</strong> a <strong>záporné</strong> při <strong>tlaku</strong>.</p>
+<p>Na rozdíl od napětí, je možné deformace přímo vidět a měřit. V elastické oblasti jsou ale běžné deformace malé pro inženýrské materiály, typicky v rozsahu mikrometrů. Pro měření proto využíváme senzor, který se označuje pojmem <strong>tenzometr</strong>.</p>
+<p>Příkladem může být <strong>odporový tenzometr</strong>, u kterého při deformaci dochází ke změně elektrického odporu, což lze přesně změřit.  Tenzometr pracuje na základě <strong>závislosti elektrického odporu vodiče na jeho délce a průřezu</strong>. Elektrický odpor vodiče je dán vztahem:</p>
+<div class="math notranslate nohighlight">
+\[
+R = \rho \frac{L}{A}
+\]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R\)</span> je elektrický odpor [<span class="math notranslate nohighlight">\(\Omega\)</span>],</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> je měrný elektrický odpor materiálu [<span class="math notranslate nohighlight">\(\Omega\)</span> m],</p></li>
+<li><p><span class="math notranslate nohighlight">\(L\)</span> je délka vodiče [m],</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span> je plocha průřezu vodiče [m<span class="math notranslate nohighlight">\(^2\)</span>].</p></li>
+</ul>
+<p>Při <strong>natažení</strong> tenzometru se délka vodiče zvětší a průřez zmenší, což vede k <strong>zvýšení odporu</strong>. Naopak při <strong>stlačení</strong> se odpor sníží. Změna odporu <span class="math notranslate nohighlight">\(\Delta R\)</span> je úměrná poměrnému prodloužení podle vztahu:</p>
+<img alt="https://www.semiki.com/storage/2024/08/kyowa-strain-gages-semiki-dai-ly-strain-gages-1024x426.jpg" src="https://www.semiki.com/storage/2024/08/kyowa-strain-gages-semiki-dai-ly-strain-gages-1024x426.jpg" />
+<div class="math notranslate nohighlight">
+\[
+\frac{\Delta R}{R} = K \cdot \varepsilon
+\]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(K\)</span> je <strong>tenzometrický faktor</strong> (typicky kolem 2 pro kovové tenzometry),</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon\)</span> je poměrné prodloužení [1]</p></li>
+</ul>
+</section>
+<section id="younguv-modul-pruznosti-modul-pruznosti-v-tahu">
+<h2>Youngův modul pružnosti (modul pružnosti v tahu)<a class="headerlink" href="#younguv-modul-pruznosti-modul-pruznosti-v-tahu" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Youngův modul pružnosti ( E ) charakterizuje <strong>schopnost materiálu odolávat deformaci při působení napětí</strong>.</p>
+</div></blockquote>
+<p>Youngův modul pružnosti definován jako poměr <strong>normálového napětí</strong> k odpovídající <strong>poměrné deformaci</strong> v oblasti lineární pružnosti materiálu:</p>
+<div class="math notranslate nohighlight">
+\[
+E = \frac{\sigma}{\varepsilon}
+\]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(E\)</span> je Youngův modul pružnosti (Pa, N/m²)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span> je normálové napětí (Pa, N/m²)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon\)</span> je poměrná deformace (bezrozměrná veličina)</p></li>
+</ul>
+<p>V <strong>diagramu napětí–deformace</strong> odpovídá Youngův modul pružnosti <strong>směru (sklonu) přímé části křivky</strong>, tedy oblasti, kde platí Hookeův zákon. Čím <strong>strmější</strong> je tato část křivky, tím je materiál <strong>tuhší</strong> a odolnější vůči deformaci.</p>
+<img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/ModulPruznosti2.svg/507px-ModulPruznosti2.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/ModulPruznosti2.svg/507px-ModulPruznosti2.svg.png" />
+<p>Při stejném napětí v tahu prokazuje materiál „B“ podstatně větší deformaci než materiál „A“. Materiál „A“ má tedy větší modul pružnosti v tahu než materiál „B“. Vyšší hodnota modulu pružnosti znamená, že materiál je <strong>tuhší</strong> a méně se deformuje při stejném zatížení.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Thomas Young (1773–1829)
+<a class="reference external" href="https://en.wikipedia.org/wiki/Thomas_Young_(scientist)">Thomas Young</a> byl <strong>britský fyzik, lékař a polyhistor</strong>, kterému říkali <a class="reference external" href="https://en.wikipedia.org/wiki/The_Last_Man_Who_Knew_Everything">The Last Man Who Knew Everything</a>. Popsal <strong>akomodaci oka</strong> a roli čočky při ostření obrazu a je pokládám za zakladatele fyziologie oka. Proslavil se také svým <strong>dvojštěrbinovým experimentem</strong>, který poskytl důkaz o vlnové povaze světla. Podílel se na rozluštění <strong>egyptských hieroglyfů</strong>.</p>
+<p>Young popsal charakterizaci pružnosti, která se stala známou jako Youngův modul, označovaný jako <span class="math notranslate nohighlight">\(E\)</span>, v roce 1807 a dále ji rozvinul ve svém díle <a class="reference external" href="https://archive.org/details/bub_gb_fGMSAAAAIAAJ">Course of Lectures on Natural Philosophy and the Mechanical Arts</a>. Nicméně první experimentální použití konceptu Youngova modulu provedl Giordano Riccati již v roce 1782, tedy o 25 let dříve než Young. Navíc lze tuto myšlenku vystopovat až k článku Leonarda Eulera, publikovanému v roce 1727, tedy přibližně 80 let před Youngovým článkem z roku 1807.</p>
+</div>
+<img alt="https://www.researchgate.net/publication/339329536/figure/fig4/AS:11431281179441493&#64;1691189416888/Approximate-Youngs-modulus-of-selected-biological-and-engineering-materials-Young_W640.jpg" src="https://www.researchgate.net/publication/339329536/figure/fig4/AS:11431281179441493&#64;1691189416888/Approximate-Youngs-modulus-of-selected-biological-and-engineering-materials-Young_W640.jpg" />
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Prednasky"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2_1_Mechanick%C3%A9_vlastnosti_materi%C3%A1lu.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Mechanické vlastnosti materiálu</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2_3_Tahov%C3%A1_zkou%C5%A1ka.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tahová zkouška</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prechod-od-pohybovych-sil-ke-zmenam-tvaru">Přechod od pohybových sil ke změnám tvaru</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#na-cem-zalezi-tuhost">Na čem záleží tuhost?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#napeti-stress">Napětí (<em>stress</em>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pomerne-prodlouzeni-strain">Poměrné prodloužení (<em>strain</em>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#younguv-modul-pruznosti-modul-pruznosti-v-tahu">Youngův modul pružnosti (modul pružnosti v tahu)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

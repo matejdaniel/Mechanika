@@ -25,7 +25,9 @@ parts:
       - file: Prednasky/2_2_Hookeův_zákon
       - file: Prednasky/2_3_Tahová_zkouška
       - file: Prednasky/2_4_Přehled_mechanických_vlastností
-      - file: Prednasky/2_5_Příklad _tahové_zkoušky
+      - file: Prednasky/2_7_Příklad _tahové_zkoušky
+      - file: Prednasky/2_5_Metoda_řezu
+      - file: Prednasky/2_6_Inženýrské_a_skutečné_napětí
   - caption: Cvičení
     chapters:
     - file: Cviceni/C1

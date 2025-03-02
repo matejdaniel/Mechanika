@@ -28,6 +28,7 @@ parts:
       - file: Prednasky/2_7_Příklad _tahové_zkoušky
       - file: Prednasky/2_5_Metoda_řezu
       - file: Prednasky/2_6_Inženýrské_a_skutečné_napětí
+      - file: Prednasky/2_8_Dimenzovani
   - caption: Cvičení
     chapters:
     - file: Cviceni/C1

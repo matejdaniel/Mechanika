@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Stupně volnosti &#8212; Mechanika</title>
+    <title>Dimenzování součástí namáhaných v tahu a tlaku &#8212; Mechanika</title>
   
   
   
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,11 +60,13 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/1_1_Stupeň_volnosti';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/2_8_Dimenzovani';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Kinematika v 1DOF prostoru" href="1_2_Kinematika_v_1D.html" />
-    <link rel="prev" title="Souřadnicové systémy" href="0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html" />
+    <link rel="next" title="1. cvičení" href="../Cviceni/C1.html" />
+    <link rel="prev" title="Skutečné a smluvní napětí a deformace" href="2_6_In%C5%BEen%C3%BDrsk%C3%A9_a_skute%C4%8Dn%C3%A9_nap%C4%9Bt%C3%AD.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -181,9 +183,9 @@
 
 
 
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="0_2_Skal%C3%A1ry_a_vektory.html">Skalár a vektor</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="0_2_Skal%C3%A1ry_a_vektory.html">Skalár a vektor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html">Souřadnicové systémy</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Stupně volnosti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_1_Stupe%C5%88_volnosti.html">Stupně volnosti</a></li>
 
 </ul>
 </details></li>
@@ -196,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="1_5_Lagrange_Eulerovy_rovnice.html">Princip minimální akce a Lagrange-Eulerovy rovnice</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="2_1_Mechanick%C3%A9_vlastnosti_materi%C3%A1lu.html">Mechanické vlastnosti materiálu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="2_1_Mechanick%C3%A9_vlastnosti_materi%C3%A1lu.html">Mechanické vlastnosti materiálu</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="2_2_Hooke%C5%AFv_z%C3%A1kon.html">Hookeův zákon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2_3_Tahov%C3%A1_zkou%C5%A1ka.html">Tahová zkouška</a></li>
 
@@ -208,7 +210,7 @@
 <li class="toctree-l2"><a class="reference internal" href="2_5_Metoda_%C5%99ezu.html">Určení vnitřních sil a napětí - metoda řezun</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="2_6_In%C5%BEen%C3%BDrsk%C3%A9_a_skute%C4%8Dn%C3%A9_nap%C4%9Bt%C3%AD.html">Skutečné a smluvní napětí a deformace</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2_8_Dimenzovani.html">Dimenzování součástí namáhaných v tahu a tlaku</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Dimenzování součástí namáhaných v tahu a tlaku</a></li>
 </ul>
 </details></li>
 </ul>
@@ -292,7 +294,7 @@
       
       
       
-      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/1_1_Stupeň_volnosti.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/2_8_Dimenzovani.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -322,7 +324,7 @@
       
       
       
-      <li><a href="../_sources/Prednasky/1_1_Stupeň_volnosti.ipynb" target="_blank"
+      <li><a href="../_sources/Prednasky/2_8_Dimenzovani.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -398,7 +400,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Stupně volnosti</h1>
+    <h1>Dimenzování součástí namáhaných v tahu a tlaku</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -408,17 +410,13 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Stupně volnosti</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vazba">Vazba</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#priklady-vazeb">Příklady vazeb</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleni-vazeb">Dělení vazeb</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#staticky-urcity-a-neurcity-system">Staticky určitý a neurčitý systém</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principy-dimenzovani">Principy dimenzování</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimenzovani-na-zatizeni"><strong>Dimenzování na zatížení</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimenzovani-na-prurez"><strong>Dimenzování na průřez</strong></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#koeficient-bezpecnosti">Koeficient bezpečnosti</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -429,164 +427,75 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="stupne-volnosti">
-<h1>Stupně volnosti<a class="headerlink" href="#stupne-volnosti" title="Link to this heading">#</a></h1>
-<blockquote>
-<div><p><strong>Stupeň volnosti</strong> (DOF, degrees of freedom) je v mechanice počet nezávislých parametrů, které definují konfiguraci mechanického systému. Jinými slovy, je to počet nezávislých pohybů, které může těleso vykonávat.</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>V ploše má bod dva stupně volnosti</p>
-<ul>
-<li><p>posun podél osy x a podél osy y</p></li>
-</ul>
-</li>
-<li><p>V ploše má těleso pak tři stupně volnosti</p>
-<ul>
-<li><p>posun podél osy x, osy y</p></li>
-<li><p>otočení kolem bodu.</p></li>
-</ul>
-</li>
-</ul>
-<a class="reference internal image-reference" href="https://engineeringstatics.org/external/images/DOF-2d.svg"><img alt="Těleso v rovině" class="align-center" src="https://engineeringstatics.org/external/images/DOF-2d.svg" style="width: 200px;" /></a>
-<ul class="simple">
-<li><p>V prostoru má bod tři stupně volnosti</p>
-<ul>
-<li><p>posuny podél os x, y, z</p></li>
-</ul>
-</li>
-<li><p>V trojrozměrném prostoru má tuhé těleso 6 stupňů volnosti:</p>
-<ul>
-<li><p>3 posuvné (pohyb podél os x, y, z)</p></li>
-<li><p>3 rotační (rotace kolem os x, y, z)</p></li>
-</ul>
-</li>
-</ul>
-<a class="reference internal image-reference" href="https://engineeringstatics.org/external/images/DOF-3d.svg"><img alt="Těleso v prostoru" class="align-center" src="https://engineeringstatics.org/external/images/DOF-3d.svg" style="width: 200px;" /></a>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Dimenzionalita</p></th>
-<th class="head"><p>Objekt</p></th>
-<th class="head"><p>Počet stupňů volnosti</p></th>
-<th class="head"><p>Popis</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>2D</p></td>
-<td><p>Bod</p></td>
-<td><p>2</p></td>
-<td><p>Posunutí v ose x a y</p></td>
-</tr>
-<tr class="row-odd"><td><p>2D</p></td>
-<td><p>Těleso</p></td>
-<td><p>3</p></td>
-<td><p>Posunutí v ose x a y, rotace kolem osy z</p></td>
-</tr>
-<tr class="row-even"><td><p>3D</p></td>
-<td><p>Bod</p></td>
-<td><p>3</p></td>
-<td><p>Posunutí v ose x, y a z</p></td>
-</tr>
-<tr class="row-odd"><td><p>3D</p></td>
-<td><p>Těleso</p></td>
-<td><p>6</p></td>
-<td><p>Posunutí v ose x, y a z, rotace kolem os x, y a z</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="vazba">
-<h1>Vazba<a class="headerlink" href="#vazba" title="Link to this heading">#</a></h1>
-<blockquote>
-<div><p><strong>Vazba</strong> je omezení, které omezuje nebo zakazuje některé stupně volnosti tělesa.</p>
-</div></blockquote>
-<ul class="simple">
-<li><p><strong>Geometrická omezení</strong>: Pevné spojení mezi tělesy, kontaktní plochy, klouby.</p></li>
-<li><p><strong>Silová omezení</strong>: Působení vnějších sil, které omezují pohyb (např. tíhová síla).</p></li>
-<li><p><strong>Kinematická omezení</strong>: Omezení daná předepsaným pohybem částí systému.</p></li>
-</ul>
-<section id="priklady-vazeb">
-<h2>Příklady vazeb<a class="headerlink" href="#priklady-vazeb" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Kloub</strong>: Kloub umožňuje rotaci kolem jedné osy, ale omezuje posunutí v ostatních směrech. Příkladem je kloub dveří nebo kloub v koleni.</p></li>
-<li><p><strong>Posuvné uložení</strong>: Posuvné uložení umožňuje posunutí v jednom směru, ale omezuje posunutí v ostatních směrech a rotaci. Příkladem je píst v motoru.</p></li>
-<li><p><strong>Vetknutí</strong>: Vetknutí omezuje všechny posuvy a rotace v daném bodě. Příkladem je trám vetknutý do zdi.</p></li>
-<li><p><strong>Lano</strong>: Lano omezuje posunutí ve směru tahu lana, ale neomezuje posunutí v kolmém směru.</p></li>
-<li><p><strong>Podpora</strong>: Podpora omezuje posunutí v jednom nebo více směrech, v závislosti na typu podpory. Příkladem je podpora mostu.</p></li>
-<li><p><strong>Kontaktní plocha</strong>: Kontaktní plocha mezi dvěma tělesy omezuje posunutí ve směru kolmém k ploše.</p></li>
-</ul>
-<img alt="https://www.researchgate.net/publication/360839815/figure/fig3/AS:11431281245062021&#64;1716029495485/Common-mechanical-joints-supported-by-our-computational-approach-R-DOF-and-T-DOF-below_W640.jpg" src="https://www.researchgate.net/publication/360839815/figure/fig3/AS:11431281245062021&#64;1716029495485/Common-mechanical-joints-supported-by-our-computational-approach-R-DOF-and-T-DOF-below_W640.jpg" />
-</section>
-<section id="deleni-vazeb">
-<h2>Dělení vazeb<a class="headerlink" href="#deleni-vazeb" title="Link to this heading">#</a></h2>
-<p>Vazby můžeme dělit podle různých kritérií:</p>
-<ul class="simple">
-<li><p><strong>Podle způsobu omezení</strong>:</p>
-<ul>
-<li><p><strong>Holonomní vazby</strong>: Omezují polohu tělesa.</p></li>
-<li><p><strong>Neholonomní vazby</strong>: Omezují rychlost nebo zrychlení tělesa.</p></li>
-<li><p><strong>Skleronomní vazby</strong>: Nezávisejí na čase.</p></li>
-<li><p><strong>Reonomní vazby</strong>: Závisejí na čase.</p></li>
-</ul>
-</li>
-<li><p><strong>Podle disipace energie</strong>:</p>
-<ul>
-<li><p><strong>Ideální vazby</strong>: Nevykonávají práci.</p></li>
-<li><p><strong>Reálné vazby</strong>: Vykonávají práci (např. tření).</p></li>
-</ul>
-</li>
-<li><p><strong>Podle počtu omezení</strong>:</p>
-<ul>
-<li><p><strong>Jednostranné vazby</strong>: Omezují pohyb pouze v jednom směru.</p></li>
-<li><p><strong>Oboustranné vazby</strong>: Omezují pohyb v obou směrech.</p></li>
-</ul>
-</li>
-</ul>
-<section id="staticky-urcity-a-neurcity-system">
-<h3>Staticky určitý a neurčitý systém<a class="headerlink" href="#staticky-urcity-a-neurcity-system" title="Link to this heading">#</a></h3>
-<p>Pro to, aby těleso bylo ve statické rovnováze, musí být všechny možné pohyby adekvátně omezeny. Pokud stupeň volnosti není omezen, těleso je v nestabilním stavu a může se volně pohybovat jedním nebo více způsoby. Stabilita je velmi žádoucí z důvodů bezpečnosti a tělesa jsou často omezena redundantními omezeními, takže i kdyby jedno selhalo, těleso by stále zůstalo stabilní.  Pokud jsou omezení správně interpretována, pak rovné počty omezení a stupňů volnosti vytvářejí stabilní systém a hodnoty reakčních sil a momentů lze určit pomocí rovnic rovnováhy. Pokud počet omezení překračuje počet stupňů volnosti, těleso je v rovnováze, ale k určení reakcí budete potřebovat techniky, které jdou za rámec rovnic rovnováhy ve statice.</p>
-<p>V mechanice rozlišujeme dva základní typy statických systémů podle vztahu mezi počtem neznámých reakcí a počtem rovnic statické rovnováhy:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="dimenzovani-soucasti-namahanych-v-tahu-a-tlaku">
+<h1>Dimenzování součástí namáhaných v tahu a tlaku<a class="headerlink" href="#dimenzovani-soucasti-namahanych-v-tahu-a-tlaku" title="Link to this heading">#</a></h1>
+<p>Dimenzování součástí namáhaných na tah a tlak se provádí tak, aby součást byla schopna bezpečně přenášet dané zatížení bez plastické deformace nebo lomu. Hlavními kritérii jsou <strong>mechanická pevnost materiálu</strong>, <strong>koeficient bezpečnosti</strong> a <strong>mezní stavy součásti</strong>.</p>
+<section id="principy-dimenzovani">
+<h2>Principy dimenzování<a class="headerlink" href="#principy-dimenzovani" title="Link to this heading">#</a></h2>
+<p>Při dimenzování součástí se používají dvě základní metody:</p>
 <ol class="arabic simple">
-<li><p><strong>Staticky určitý systém</strong></p>
-<ul class="simple">
-<li><p><strong>Definice:</strong> Systém, kde počet neznámých reakčních sil a momentů je <strong>roven</strong> počtu rovnic statické rovnováhy.</p></li>
-<li><p><strong>Řešení:</strong> Všechny neznámé reakce lze stanovit pouze pomocí rovnic statické rovnováhy.</p></li>
-<li><p><strong>Příklad:</strong> Prostý nosník s jednou kloubovou a jednou posuvnou podporou.</p></li>
-</ul>
-</li>
-<li><p><strong>Staticky neurčitý systém</strong></p>
-<ul class="simple">
-<li><p><strong>Definice:</strong> Systém, kde počet neznámých reakčních sil a momentů je <strong>větší</strong> než počet rovnic statické rovnováhy.</p></li>
-<li><p><strong>Řešení:</strong> K stanovení všech neznámých reakcí nestačí pouze rovnice statické rovnováhy. Je nutné zohlednit deformační chování materiálu a geometrii systému.</p></li>
-<li><p><strong>Metody řešení:</strong> rovnice komtabilitiy, metoda konečných prvků.</p></li>
-<li><p><strong>Příklad:</strong> Spojitý nosník s více podporami.</p></li>
-<li><p><strong>Stupeň statické neurčitosti:</strong> Rozdíl mezi počtem neznámých a počtem rovnic.</p></li>
-</ul>
-</li>
+<li><p><strong>Dimenzování na zatížení</strong> – určujeme maximální přípustnou sílu, kterou součást může přenášet.</p></li>
+<li><p><strong>Dimenzování na průřez</strong> – navrhujeme odpovídající průřez součásti tak, aby při dané síle nepřekročilo napětí přípustnou hodnotu.</p></li>
 </ol>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Typ systému</p></th>
-<th class="head"><p>Charakteristika</p></th>
-<th class="head"><p>Řešení</p></th>
-<th class="head"><p>Příklady</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Staticky určitý</p></td>
-<td><p>Počet neznámých = počet rovnic</p></td>
-<td><p>Rovnice rovnováhy stačí</p></td>
-<td><p>Prostý nosník s 2 podporami</p></td>
-</tr>
-<tr class="row-odd"><td><p>Staticky neurčitý</p></td>
-<td><p>Počet neznámých &gt; počet rovnic</p></td>
-<td><p>Nutné deformační podmínky</p></td>
-<td><p>Vetknutý nosník s podpěrou</p></td>
-</tr>
-</tbody>
-</table>
-</div>
+<section id="dimenzovani-na-zatizeni">
+<h3><strong>Dimenzování na zatížení</strong><a class="headerlink" href="#dimenzovani-na-zatizeni" title="Link to this heading">#</a></h3>
+<p>Dimenzování na sílu spočívá v určení maximální přípustné síly <span class="math notranslate nohighlight">\(F_{\text{max}}\)</span>, kterou součást snese bez porušení.</p>
+<p>Ze základního vztahu pro normálové napětí:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma = \frac{F}{A}
+\]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span> je normálové napětí [Pa],</p></li>
+<li><p><span class="math notranslate nohighlight">\(F\)</span> je působící síla [N],</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span> je plocha průřezu součásti [m²].</p></li>
+</ul>
+<p>Maximální přípustná síla je dána vztahem:</p>
+<div class="math notranslate nohighlight">
+\[
+F_{\text{max}} = \sigma_\text{dov} A
+\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\sigma_{\text{dov}}\)</span> je dovolené napětí materiálu, které závisí na pevnosti materiálu a koeficientu bezpečnosti.</p>
 </section>
+<section id="dimenzovani-na-prurez">
+<h3><strong>Dimenzování na průřez</strong><a class="headerlink" href="#dimenzovani-na-prurez" title="Link to this heading">#</a></h3>
+<p>Při dimenzování na průřez určujeme potřebnou plochu průřezu <span class="math notranslate nohighlight">\(A_{\text{min}}\)</span>, která zajistí, že při působení dané síly nebude překročeno dovolené napětí:</p>
+<div class="math notranslate nohighlight">
+\[
+A_{\text{min}} = \frac{F}{\sigma_{\text{dov}}}
+\]</div>
+<p>Zvolený průřez musí být dostatečně velký, aby součást byla bezpečně namáhána.</p>
+</section>
+</section>
+<section id="koeficient-bezpecnosti">
+<h2>Koeficient bezpečnosti<a class="headerlink" href="#koeficient-bezpecnosti" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Koeficient bezpečnosti <span class="math notranslate nohighlight">\(K\)</span> je poměr mezi mezní pevností materiálu a skutečným nebo dovoleným napětím:</p>
+<div class="math notranslate nohighlight">
+\[K = \frac{\sigma_{\text{mez}}}{\sigma_{\text{dov}}}\]</div>
+</div></blockquote>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sigma_{\text{mez}}\)</span> je pevnostní mez materiálu (mez kluzu nebo mez pevnosti),</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma_{\text{dov}}\)</span> je dovolené napětí, při kterém by nemělo dojít k porušení součásti.</p></li>
+</ul>
+<p>Koeficient bezpečnosti zohledňuje nejistoty v návrhu, například:</p>
+<ul class="simple">
+<li><p>výrobní tolerance,</p></li>
+<li><p>variabilitu materiálových vlastností,</p></li>
+<li><p>dynamické zatížení a únavu materiálu,</p></li>
+<li><p>bezpečnostní požadavky v provozu.</p></li>
+</ul>
+<p>Dovolené napětí se stanovuje podle vztahu:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_{\text{dov}} = \frac{\sigma_{\text{mez}}}{K}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Čím vyšší je koeficient bezpečnosti, tím je návrh konzervativnější, ale zároveň vede k robustnějším a těžším součástem.</p>
+</div>
 </section>
 </section>
 
@@ -621,20 +530,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html"
+       href="2_6_In%C5%BEen%C3%BDrsk%C3%A9_a_skute%C4%8Dn%C3%A9_nap%C4%9Bt%C3%AD.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Souřadnicové systémy</p>
+        <p class="prev-next-title">Skutečné a smluvní napětí a deformace</p>
       </div>
     </a>
     <a class="right-next"
-       href="1_2_Kinematika_v_1D.html"
+       href="../Cviceni/C1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Kinematika v 1DOF prostoru</p>
+        <p class="prev-next-title">1. cvičení</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -655,17 +564,13 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Stupně volnosti</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vazba">Vazba</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#priklady-vazeb">Příklady vazeb</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleni-vazeb">Dělení vazeb</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#staticky-urcity-a-neurcity-system">Staticky určitý a neurčitý systém</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principy-dimenzovani">Principy dimenzování</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimenzovani-na-zatizeni"><strong>Dimenzování na zatížení</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimenzovani-na-prurez"><strong>Dimenzování na průřez</strong></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#koeficient-bezpecnosti">Koeficient bezpečnosti</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>

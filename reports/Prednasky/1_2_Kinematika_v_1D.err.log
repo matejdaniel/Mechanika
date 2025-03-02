@@ -17,6 +17,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 ------------------
 import numpy as np
 import matplotlib.pyplot as plt
+from IPython.display import IFrame
 ------------------
 
 ----- stderr -----
@@ -74,7 +75,7 @@ Traceback (most recent call last):  File "/usr/lib/python3.10/runpy.py", line 19
     if (await self.run_code(code, result,  async_=asy)):
   File "/usr/lib/python3/dist-packages/IPython/core/interactiveshell.py", line 3457, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "/tmp/ipykernel_618012/550901145.py", line 2, in <module>
+  File "/tmp/ipykernel_617830/3544641292.py", line 2, in <module>
     import matplotlib.pyplot as plt
   File "/usr/lib/python3/dist-packages/matplotlib/__init__.py", line 109, in <module>
     from . import _api, _version, cbook, docstring, rcsetup
@@ -92,10 +93,11 @@ Traceback (most recent call last):  File "/usr/lib/python3.10/runpy.py", line 19
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mImportError[0m                               Traceback (most recent call last)
-[0;32m/tmp/ipykernel_618012/550901145.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_617830/3544641292.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 2[0;31m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
-[0m
+[0m[1;32m      3[0m [0;32mfrom[0m [0mIPython[0m[0;34m.[0m[0mdisplay[0m [0;32mimport[0m [0mIFrame[0m[0;34m[0m[0;34m[0m[0m
+
 [0;32m/usr/lib/python3/dist-packages/matplotlib/__init__.py[0m in [0;36m<module>[0;34m[0m
 [1;32m    107[0m [0;31m# cbook must import matplotlib only within function[0m[0;34m[0m[0;34m[0m[0m
 [1;32m    108[0m [0;31m# definitions, so it is safe to import from it here.[0m[0;34m[0m[0;34m[0m[0m

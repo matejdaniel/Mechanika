@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -443,27 +443,31 @@
 <p>Ze základního vztahu pro normálové napětí:</p>
 <div class="math notranslate nohighlight">
 \[
-\sigma = \frac{F}{A}
+\sigma = \frac{N}{A}
 \]</div>
 <p>kde:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\sigma\)</span> je normálové napětí [Pa],</p></li>
-<li><p><span class="math notranslate nohighlight">\(F\)</span> je působící síla [N],</p></li>
+<li><p><span class="math notranslate nohighlight">\(N\)</span> je působící vnitřní síla [N],</p></li>
 <li><p><span class="math notranslate nohighlight">\(A\)</span> je plocha průřezu součásti [m²].</p></li>
 </ul>
 <p>Maximální přípustná síla je dána vztahem:</p>
 <div class="math notranslate nohighlight">
 \[
-F_{\text{max}} = \sigma_\text{dov} A
+N_{\text{max}} = \sigma_\text{dov} A
 \]</div>
 <p>kde <span class="math notranslate nohighlight">\(\sigma_{\text{dov}}\)</span> je dovolené napětí materiálu, které závisí na pevnosti materiálu a koeficientu bezpečnosti.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>V případě proměnného zatížení a průřezu v průběhu prutu musí podmínku pevnosti splnit všechny části.</p>
+</div>
 </section>
 <section id="dimenzovani-na-prurez">
 <h3><strong>Dimenzování na průřez</strong><a class="headerlink" href="#dimenzovani-na-prurez" title="Link to this heading">#</a></h3>
 <p>Při dimenzování na průřez určujeme potřebnou plochu průřezu <span class="math notranslate nohighlight">\(A_{\text{min}}\)</span>, která zajistí, že při působení dané síly nebude překročeno dovolené napětí:</p>
 <div class="math notranslate nohighlight">
 \[
-A_{\text{min}} = \frac{F}{\sigma_{\text{dov}}}
+A_{\text{min}} = \frac{N}{\sigma_{\text{dov}}}
 \]</div>
 <p>Zvolený průřez musí být dostatečně velký, aby součást byla bezpečně namáhána.</p>
 </section>

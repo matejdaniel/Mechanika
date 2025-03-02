@@ -16,7 +16,7 @@ Traceback (most recent call last):
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 import numpy as np
-import pandas as pdb
+import pandas as pd
 import matplotlib.pyplot as plt
 from lmfit import Model
 %matplotlib inline
@@ -77,8 +77,8 @@ Traceback (most recent call last):  File "/usr/lib/python3.10/runpy.py", line 19
     if (await self.run_code(code, result,  async_=asy)):
   File "/usr/lib/python3/dist-packages/IPython/core/interactiveshell.py", line 3457, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "/tmp/ipykernel_363360/44817807.py", line 2, in <module>
-    import pandas as pdb
+  File "/tmp/ipykernel_595213/3603000141.py", line 2, in <module>
+    import pandas as pd
   File "/home/madan/.local/lib/python3.10/site-packages/pandas/__init__.py", line 49, in <module>
     from pandas.core.api import (
   File "/home/madan/.local/lib/python3.10/site-packages/pandas/core/api.py", line 28, in <module>
@@ -158,8 +158,8 @@ Traceback (most recent call last):  File "/usr/lib/python3.10/runpy.py", line 19
     if (await self.run_code(code, result,  async_=asy)):
   File "/usr/lib/python3/dist-packages/IPython/core/interactiveshell.py", line 3457, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "/tmp/ipykernel_363360/44817807.py", line 2, in <module>
-    import pandas as pdb
+  File "/tmp/ipykernel_595213/3603000141.py", line 2, in <module>
+    import pandas as pd
   File "/home/madan/.local/lib/python3.10/site-packages/pandas/__init__.py", line 49, in <module>
     from pandas.core.api import (
   File "/home/madan/.local/lib/python3.10/site-packages/pandas/core/api.py", line 28, in <module>
@@ -235,7 +235,7 @@ Traceback (most recent call last):  File "/usr/lib/python3.10/runpy.py", line 19
     if (await self.run_code(code, result,  async_=asy)):
   File "/usr/lib/python3/dist-packages/IPython/core/interactiveshell.py", line 3457, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "/tmp/ipykernel_363360/44817807.py", line 3, in <module>
+  File "/tmp/ipykernel_595213/3603000141.py", line 3, in <module>
     import matplotlib.pyplot as plt
   File "/usr/lib/python3/dist-packages/matplotlib/__init__.py", line 109, in <module>
     from . import _api, _version, cbook, docstring, rcsetup
@@ -253,9 +253,9 @@ Traceback (most recent call last):  File "/usr/lib/python3.10/runpy.py", line 19
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mImportError[0m                               Traceback (most recent call last)
-[0;32m/tmp/ipykernel_363360/44817807.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_595213/3603000141.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      2[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpdb[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      2[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 3[0;31m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      4[0m [0;32mfrom[0m [0mlmfit[0m [0;32mimport[0m [0mModel[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      5[0m [0mget_ipython[0m[0;34m([0m[0;34m)[0m[0;34m.[0m[0mrun_line_magic[0m[0;34m([0m[0;34m'matplotlib'[0m[0;34m,[0m [0;34m'inline'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m

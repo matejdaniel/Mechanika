@@ -1,0 +1,877 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Nucené kmitání &#8212; Mechanika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '3_4_Nucené_harmonické_kmitání';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Mechanika - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Mechanika - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Kurz mechaniky
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">O předmětu</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Misc/Podm%C3%ADnky_z%C3%A1po%C4%8Dtu_a_zkou%C5%A1ky.html">Zápočet:</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Misc/Sylabus_LS2025.html">Mechanika FBMI sylabus LS 2024/2025</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Prednasky/0_1_Definice_a_historie_mechaniky.html">Úvod do mechaniky</a></li>
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="Prednasky/0_2_Skal%C3%A1ry_a_vektory.html">Skalár a vektor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html">Souřadnicové systémy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/1_1_Stupe%C5%88_volnosti.html">Stupně volnosti</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Prednasky/1_2_Kinematika_v_1D.html">Kinematika v 1DOF prostoru</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/1_3_Dynamika_pohybu_v_1D.html">Dynamika</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/1_4_Energie.html">Mechanická práce</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/1_5_Lagrange_Eulerovy_rovnice.html">Princip minimální akce a Lagrange-Eulerovy rovnice</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Prednasky/2_1_Mechanick%C3%A9_vlastnosti_materi%C3%A1lu.html">Mechanické vlastnosti materiálu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/2_2_Hooke%C5%AFv_z%C3%A1kon.html">Hookeův zákon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/2_3_Tahov%C3%A1_zkou%C5%A1ka.html">Tahová zkouška</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/2_4_P%C5%99ehled_mechanick%C3%BDch_vlastnost%C3%AD.html">Přehled mechanických vlastností vybraných materiálů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/2_7_P%C5%99%C3%ADklad%20_tahov%C3%A9_zkou%C5%A1ky.html">Analýza dat z tahového diagramu</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/2_5_Metoda_%C5%99ezu.html">Určení vnitřních sil a napětí - metoda řezun</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/2_6_In%C5%BEen%C3%BDrsk%C3%A9_a_skute%C4%8Dn%C3%A9_nap%C4%9Bt%C3%AD.html">Skutečné a smluvní napětí a deformace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/2_8_Dimenzovani.html">Dimenzování součástí namáhaných v tahu a tlaku</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Prednasky/3_1_Kmitani.html">Kmitání</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/3_2_Dynamika_oscil%C3%A1toru.html">Dynamika oscilátoru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/3_3_Tlumen%C3%A9_vibrace.html">Tlumené vibrace</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="Prednasky/3_4_Nucen%C3%A9_harmonick%C3%A9_kmit%C3%A1n%C3%AD.html">Nucené kmitání</a></li>
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Cviceni/C1.html">1. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cviceni/C2.html">2. cvičení</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2F3_4_Nucené_harmonické_kmitání.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/3_4_Nucené_harmonické_kmitání.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Nucené kmitání</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Nucené kmitání</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Nucené kmitání</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonicka-excitace">Harmonická excitace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohybova-rovnice-pro-netlumene-harmonicke-kmitani">Pohybová rovnice pro netlumené harmonické kmitání</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-pohybove-rovnice-pro-netlumene-harmonicke-kmitani">Řešení pohybové rovnice pro netlumené harmonické kmitání</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#celkove-reseni">Celkové řešení</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rezonance">Rezonance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jednoduche-odvozeni-rezonance">Jednoduché odvození rezonance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tlumene-nucene-kmity">Tlumené nucené kmity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-rovnice">Řešení rovnice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenni-reseni">Homogenní řešení</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partikularni-reseni">Partikulární řešení</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Celkové řešení</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="nucene-kmitani">
+<h1>Nucené kmitání<a class="headerlink" href="#nucene-kmitani" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Nucené kmitání<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p><strong>Nucené kmitání</strong> je druh mechanického kmitání, které vzniká působením vnější síly na oscilující systém. Na rozdíl od volného kmitání, kde systém kmitá pouze pod vlivem počátečních podmínek, u nuceného kmitání existuje vnější excitace, která udržuje pohyb.</p>
+<section id="harmonicka-excitace">
+<h2>Harmonická excitace<a class="headerlink" href="#harmonicka-excitace" title="Link to this heading">#</a></h2>
+<p>Nejčastěji uvažovaným typem excitace je <strong>harmonická síla</strong>, která má tvar sinusové nebo kosinusové funkce času:</p>
+<div class="math notranslate nohighlight">
+\[
+F(t) = F_0 \cos(\omega t)
+\]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(F_0\)</span> je amplituda budicí síly,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega\)</span> je úhlová frekvence excitace,</p></li>
+<li><p><span class="math notranslate nohighlight">\(t\)</span> je čas.</p></li>
+</ul>
+<p>Tato excitace se vyskytuje například u rotačních strojů, kde dochází k periodickému působení síly.</p>
+</section>
+<section id="pohybova-rovnice-pro-netlumene-harmonicke-kmitani">
+<h2>Pohybová rovnice pro netlumené harmonické kmitání<a class="headerlink" href="#pohybova-rovnice-pro-netlumene-harmonicke-kmitani" title="Link to this heading">#</a></h2>
+<p>Uvažujme mechanický oscilátor s hmotností (m), který je připojen k pružině s tuhostí (k) a podléhá vnější harmonické síle (F(t)). Pohybová rovnice vychází z druhého Newtonova zákona:</p>
+<div class="math notranslate nohighlight">
+\[
+m \ddot{x} = -k x + F_0 \cos(\omega t)
+\]</div>
+<p>Po úpravě dostáváme diferenciální rovnici nuceného kmitání:</p>
+<div class="math notranslate nohighlight">
+\[
+m \ddot{x} + kx = F_0 \cos(\omega t)
+\]</div>
+<p>Často se zavádí vlastní úhlová frekvence oscilátoru:</p>
+<div class="math notranslate nohighlight">
+\[
+\omega_0 = \sqrt{\frac{k}{m}}
+\]</div>
+<p>a rovnice se přepíše do tvaru:</p>
+<div class="math notranslate nohighlight">
+\[
+\ddot{x} + \omega_0^2 x = \frac{F_0}{m} \cos(\omega t)
+\]</div>
+<p>Tato rovnice popisuje nucené netlumené kmitání pod vlivem harmonické excitace.</p>
+<section id="reseni-pohybove-rovnice-pro-netlumene-harmonicke-kmitani">
+<h3>Řešení pohybové rovnice pro netlumené harmonické kmitání<a class="headerlink" href="#reseni-pohybove-rovnice-pro-netlumene-harmonicke-kmitani" title="Link to this heading">#</a></h3>
+<p>Obecné řešení pohybové rovnice se skládá ze dvou částí:</p>
+<ol class="arabic">
+<li><p><strong>Obecné řešení homogenní rovnice</strong> (odpovídá volnému kmitání):</p>
+<div class="math notranslate nohighlight">
+\[
+   x_h(t) = C_1 \cos(\omega_0 t) + C_2 \sin(\omega_0 t)
+   \]</div>
+<p>kde <span class="math notranslate nohighlight">\(C_1\)</span> a <span class="math notranslate nohighlight">\(C_2\)</span> jsou integrační konstanty určené z počátečních podmínek.</p>
+</li>
+<li><p><strong>Partikulární řešení</strong> (odpovídá nucenému kmitání způsobenému vnější silou):</p>
+<p>Hledáme partikulární řešení ve tvaru:</p>
+<div class="math notranslate nohighlight">
+\[
+   x_p(t) = A \cos(\omega t) + B \sin(\omega t)
+   \]</div>
+<p>Dosazením do diferenciální rovnice:</p>
+<div class="math notranslate nohighlight">
+\[
+   -A \omega^2 \cos(\omega t) - B \omega^2 \sin(\omega t) + \omega_0^2 (A \cos(\omega t) + B \sin(\omega t)) = \frac{F_0}{m} \cos(\omega t)
+   \]</div>
+<p>Porovnáním koeficientů u (\cos(\omega t)) a (\sin(\omega t)) dostáváme soustavu:</p>
+<div class="math notranslate nohighlight">
+\[
+   (\omega_0^2 - \omega^2) A = \frac{F_0}{m}, \quad (\omega_0^2 - \omega^2) B = 0
+   \]</div>
+<p>Z druhé rovnice plyne ( B = 0 ), a tedy:</p>
+<div class="math notranslate nohighlight">
+\[
+   A = \frac{F_0 / m}{\omega_0^2 - \omega^2}
+   \]</div>
+<p>za předpokladu, že (\omega \neq \omega_0) (tj. nejsme v rezonanci).</p>
+</li>
+</ol>
+</section>
+<section id="celkove-reseni">
+<h3>Celkové řešení<a class="headerlink" href="#celkove-reseni" title="Link to this heading">#</a></h3>
+<p>Celkové řešení pohybové rovnice je dáno součtem homogenního a partikulárního řešení:</p>
+<div class="math notranslate nohighlight">
+\[
+x(t) = C_1 \cos(\omega_0 t) + C_2 \sin(\omega_0 t) + \frac{F_0 / m}{\omega_0^2 - \omega^2} \cos(\omega t).
+\]</div>
+<p>První dva členy odpovídají přechodnému stavu, který po určité době odezní, zatímco poslední člen popisuje ustálené nucené kmitání.</p>
+</section>
+</section>
+<section id="rezonance">
+<h2>Rezonance<a class="headerlink" href="#rezonance" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Rezonance</strong> je jev, který nastává, když budicí frekvence <span class="math notranslate nohighlight">\(\omega\)</span> vnější síly působící na oscilátor se rovná vlastní frekvenci systému <span class="math notranslate nohighlight">\(\omega_0\)</span>. V tomto případě dochází k prudkému nárůstu amplitudy kmitání.</p>
+</div></blockquote>
+<p>Pokud <span class="math notranslate nohighlight">\(\omega \to \omega_0\)</span>, jmenovatel ve výrazu pro amplitudu partikulárního řešení <span class="math notranslate nohighlight">\(\frac{F_0 / m}{\omega_0^2 - \omega^2}\)</span> se blíží nule, což znamená, že amplituda oscilací se teoreticky blíží nekonečnu. Tento jev se nazývá <strong>rezonance</strong> a v reálných systémech je omezován tlumením.</p>
+<section id="jednoduche-odvozeni-rezonance">
+<h3>Jednoduché odvození rezonance<a class="headerlink" href="#jednoduche-odvozeni-rezonance" title="Link to this heading">#</a></h3>
+<p>Předpokládejme, že jak síla, tak kmitání je ve fázi a kmitání oscilítoru můžeme popsat rovnicí</p>
+<div class="math notranslate nohighlight">
+\[x(t)= A \cos \omega t\]</div>
+<p>dosazením do poybové rovnice získáme</p>
+<div class="math notranslate nohighlight">
+\[
+\ddot{x} + \omega_0^2 x = \frac{F_0}{m} \cos(\omega_0 t)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+- A \omega^2 \cos \omega t + A \omega_0^2 \cos \omega t = \frac{F_0}{m} \cos(\omega_0 t)
+\]</div>
+<p>pro amplitudu kmitů v rezonanci nám plyne</p>
+<div class="math notranslate nohighlight">
+\[
+A  = \frac{F_0}{m} \frac{1}{\omega^2 - \omega_0^2}
+\]</div>
+</section>
+</section>
+<section id="tlumene-nucene-kmity">
+<h2>Tlumené nucené kmity<a class="headerlink" href="#tlumene-nucene-kmity" title="Link to this heading">#</a></h2>
+<p>Při tlumeném nuceném kmitání působí na oscilátor síla třech typů:</p>
+<ol class="arabic simple">
+<li><p><strong>Vrátná síla</strong> pružiny podle Hookova zákona: <span class="math notranslate nohighlight">\(F_k = - k x\)</span>.</p></li>
+<li><p><strong>Tlumící síla</strong> úměrná rychlosti: <span class="math notranslate nohighlight">\(F_t = - b \dot{x}\)</span>.</p></li>
+<li><p><strong>Budicí síla</strong> harmonického charakteru: <span class="math notranslate nohighlight">\(F = F_0 \cos(\omega t)\)</span>.</p></li>
+</ol>
+<p>Newtonův druhý zákon dává pohybovou rovnici:</p>
+<div class="math notranslate nohighlight">
+\[
+m \ddot{x} + b \dot{x} + k x = F_0 \cos(\omega t).
+\]</div>
+<p>Zavádíme:</p>
+<ul class="simple">
+<li><p><strong>Vlastní kruhovou frekvenci</strong> <span class="math notranslate nohighlight">\(\omega_0 = \sqrt{\frac{k}{m}}\)</span>,</p></li>
+<li><p><strong>Součinitel tlumení</strong> <span class="math notranslate nohighlight">\(\zeta = \frac{b}{2m\omega_0}\)</span>,</p></li>
+<li><p><strong>Budicí sílu na jednotku hmotnosti</strong> <span class="math notranslate nohighlight">\(f = \frac{F_0}{m}\)</span>.</p></li>
+</ul>
+<p>Pohybová rovnice se pak přepíše do tvaru:</p>
+<div class="math notranslate nohighlight">
+\[
+\ddot{x} + 2\zeta\omega_0 \dot{x} + \omega_0^2 x = f \cos(\omega t).
+\]</div>
+<section id="reseni-rovnice">
+<h3>Řešení rovnice<a class="headerlink" href="#reseni-rovnice" title="Link to this heading">#</a></h3>
+<p>Celkové řešení <span class="math notranslate nohighlight">\(x(t)\)</span> se skládá ze dvou složek:</p>
+<ol class="arabic simple">
+<li><p><strong>Homogenní řešení</strong> <span class="math notranslate nohighlight">\(x_h(t)\)</span> odpovídající volnému tlumenému kmitání.</p></li>
+<li><p><strong>Partikulární řešení</strong> <span class="math notranslate nohighlight">\(x_p(t)\)</span>, které odpovídá ustálenému nucenému pohybu.</p></li>
+</ol>
+</section>
+<section id="homogenni-reseni">
+<h3>Homogenní řešení<a class="headerlink" href="#homogenni-reseni" title="Link to this heading">#</a></h3>
+<p>Řešíme rovnici:</p>
+<div class="math notranslate nohighlight">
+\[
+\ddot{x} + 2\zeta\omega_0 \dot{x} + \omega_0^2 x = 0.
+\]</div>
+<p>Charakteristická rovnice:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda^2 + 2\zeta\omega_0 \lambda + \omega_0^2 = 0.
+\]</div>
+<p>Řešení závisí na velikosti <span class="math notranslate nohighlight">\(\zeta\)</span>:</p>
+<ul>
+<li><p><strong>Podkritické tlumení</strong> <span class="math notranslate nohighlight">\(\zeta &lt; 1\)</span>: oscilace s exponenciálním útlumem,</p>
+<div class="math notranslate nohighlight">
+\[
+  x_h(t) = e^{-\zeta \omega_0 t} (C_1 \cos(\omega_d t) + C_2 \sin(\omega_d t)),
+  \]</div>
+</li>
+</ul>
+<p>nebo
+$<span class="math notranslate nohighlight">\(
+  x_h(t) = e^{-\zeta \omega_0 t} C \cos(\omega_d t + \psi),
+  \)</span>$</p>
+<p>kde $<span class="math notranslate nohighlight">\(\omega_d = \omega_0 \sqrt{1 - \zeta^2}\)</span>$ je tlumená frekvence.</p>
+<ul class="simple">
+<li><p><strong>Kritické a nadkritické tlumení</strong>: neoscilující pohyb.</p></li>
+</ul>
+</section>
+<section id="partikularni-reseni">
+<h3>Partikulární řešení<a class="headerlink" href="#partikularni-reseni" title="Link to this heading">#</a></h3>
+<p>Hledáme ve tvaru:</p>
+<div class="math notranslate nohighlight">
+\[
+x_p(t) = A \cos(\omega t) + B \sin(\omega t).
+\]</div>
+<p>První derivace:</p>
+<div class="math notranslate nohighlight">
+\[
+\dot{x}_p(t) = -A \omega \sin(\omega t) + B \omega \cos(\omega t)
+\]</div>
+<p>Druhá derivace:</p>
+<div class="math notranslate nohighlight">
+\[
+\ddot{x}_p(t) = -A \omega^2 \cos(\omega t) - B \omega^2 \sin(\omega t).
+\]</div>
+<p>Nyní dosadíme <span class="math notranslate nohighlight">\(x_p(t)\)</span>, <span class="math notranslate nohighlight">\(\dot{x}_p(t)\)</span> a <span class="math notranslate nohighlight">\(\ddot{x}_p(t)\)</span> do rovnice:</p>
+<div class="math notranslate nohighlight">
+\[
+(-A \omega^2 \cos(\omega t) - B \omega^2 \sin(\omega t)) 
++ 2\zeta\omega_0 (-A \omega \sin(\omega t) + B \omega \cos(\omega t)) 
++ \omega_0^2 (A \cos(\omega t) + B \sin(\omega t))
+= f \cos(\omega t).
+\]</div>
+<p>Rozepíšeme členy:</p>
+<div class="math notranslate nohighlight">
+\[
+(-A \omega^2 + A \omega_0^2) \cos(\omega t) + (-B \omega^2 + B \omega_0^2) \sin(\omega t)
++ (-2\zeta\omega_0 A \omega) \sin(\omega t) + (2\zeta\omega_0 B \omega) \cos(\omega t)
+= f \cos(\omega t).
+\]</div>
+<p>Seskupíme členy podle funkcí <span class="math notranslate nohighlight">\(\cos(\omega t)\)</span> a <span class="math notranslate nohighlight">\(\sin(\omega t)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+(A (\omega_0^2 - \omega^2) + 2\zeta\omega_0 B \omega) \cos(\omega t)
++ (B (\omega_0^2 - \omega^2) - 2\zeta\omega_0 A \omega) \sin(\omega t)
+= f \cos(\omega t).
+\]</div>
+<p>Protože rovnice musí platit pro všechna ( t ), porovnáme koeficienty u (\cos(\omega t)) a (\sin(\omega t)):</p>
+<ol class="arabic">
+<li><p>Pro <span class="math notranslate nohighlight">\(\cos(\omega t)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+   A (\omega_0^2 - \omega^2) + 2\zeta\omega_0 B \omega = f
+   \]</div>
+</li>
+<li><p>Pro <span class="math notranslate nohighlight">\(\sin(\omega t)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+   B (\omega_0^2 - \omega^2) - 2\zeta\omega_0 A \omega = 0
+   \]</div>
+</li>
+</ol>
+<p>Z druhé rovnice vyjádříme <span class="math notranslate nohighlight">\(B\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+B = \frac{2\zeta\omega_0 A \omega}{\omega_0^2 - \omega^2}
+\]</div>
+<p>Dosadíme do první rovnice:</p>
+<div class="math notranslate nohighlight">
+\[
+A (\omega_0^2 - \omega^2) + 2\zeta\omega_0 \cdot \frac{2\zeta\omega_0 A \omega}{\omega_0^2 - \omega^2} \omega = f
+\]</div>
+<p>Vytkneme <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+A \left( (\omega_0^2 - \omega^2) + \frac{4\zeta^2\omega_0^2\omega^2}{\omega_0^2 - \omega^2} \right) = f
+\]</div>
+<p>Dáme na společného jmenovatele:</p>
+<div class="math notranslate nohighlight">
+\[
+A \frac{(\omega_0^2 - \omega^2)^2 + (2\zeta\omega_0\omega)^2}{\omega_0^2 - \omega^2} = f
+\]</div>
+<p>Odtud vyjádříme <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+A = \frac{f (\omega_0^2 - \omega^2)}{D},
+\]</div>
+<p>kde</p>
+<div class="math notranslate nohighlight">
+\[
+D = (\omega_0^2 - \omega^2)^2 + (2\zeta\omega_0\omega)^2.
+\]</div>
+<p>Podobně pro <span class="math notranslate nohighlight">\(B\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+B = \frac{f (2\zeta\omega_0\omega)}{D}.
+\]</div>
+<p>Celková amplituda:</p>
+<div class="math notranslate nohighlight">
+\[
+X = \frac{f}{\sqrt{(\omega_0^2 - \omega^2)^2 + (2\zeta\omega_0\omega)^2}}.
+\]</div>
+<p>Fázový posun:</p>
+<div class="math notranslate nohighlight">
+\[
+\tan \phi = \frac{2\zeta\omega_0\omega}{\omega_0^2 - \omega^2}.
+\]</div>
+</section>
+<section id="id2">
+<h3>Celkové řešení<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Celkové řešení je:</p>
+<div class="math notranslate nohighlight">
+\[
+x(t) = e^{-\zeta \omega_0 t} (C_1 \cos(\omega_d t) + C_2 \sin(\omega_d t)) + X \cos(\omega t - \phi).
+\]</div>
+<p>V ustáleném stavu převažuje nucená složka <span class="math notranslate nohighlight">\(X \cos(\omega t - \phi)\)</span>. Při rezonanci <span class="math notranslate nohighlight">\((\omega \approx \omega_0)\)</span> se amplituda maximálně zvětší, ale není nekonečná díky tlumení.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Nucené kmitání</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Nucené kmitání</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonicka-excitace">Harmonická excitace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohybova-rovnice-pro-netlumene-harmonicke-kmitani">Pohybová rovnice pro netlumené harmonické kmitání</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-pohybove-rovnice-pro-netlumene-harmonicke-kmitani">Řešení pohybové rovnice pro netlumené harmonické kmitání</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#celkove-reseni">Celkové řešení</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rezonance">Rezonance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jednoduche-odvozeni-rezonance">Jednoduché odvození rezonance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tlumene-nucene-kmity">Tlumené nucené kmity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-rovnice">Řešení rovnice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenni-reseni">Homogenní řešení</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partikularni-reseni">Partikulární řešení</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Celkové řešení</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

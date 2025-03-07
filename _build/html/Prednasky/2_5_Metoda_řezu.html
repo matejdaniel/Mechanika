@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -211,6 +211,15 @@
 
 <li class="toctree-l2"><a class="reference internal" href="2_6_In%C5%BEen%C3%BDrsk%C3%A9_a_skute%C4%8Dn%C3%A9_nap%C4%9Bt%C3%AD.html">Skutečné a smluvní napětí a deformace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2_8_Dimenzovani.html">Dimenzování součástí namáhaných v tahu a tlaku</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_1_Kmitani.html">Kmitání</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_2_Dynamika_oscil%C3%A1toru.html">Dynamika oscilátoru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_3_Tlumen%C3%A9_vibrace.html">Tlumené vibrace</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="3_4_Nucen%C3%A9_harmonick%C3%A9_kmit%C3%A1n%C3%AD.html">Nucené kmitání</a></li>
+
 </ul>
 </details></li>
 </ul>
@@ -443,7 +452,7 @@
 </div>
 <section id="normalove-sily-n-a-tahove-nebo-tlakove-napeti-sigma">
 <h2>Normálové síly (<span class="math notranslate nohighlight">\(N\)</span>) a tahové nebo tlakové napětí (<span class="math notranslate nohighlight">\(\sigma\)</span>)<a class="headerlink" href="#normalove-sily-n-a-tahove-nebo-tlakove-napeti-sigma" title="Link to this heading">#</a></h2>
-<p>Součást námánou jenom sílami v 1D, v ose součásti označujeme jako <strong>prut</strong> nebo tyč. Průřez prutu může být kruhový (u tyče), nebo mít jiný tvar. Při působení vnějších sil vnějších axiálních sil (<span class="math notranslate nohighlight">\(F\)</span>) vznikají vv prutu nitřní síly <span class="math notranslate nohighlight">\(N\)</span> jako reakční síly.</p>
+<p>Součást namáhanou pouze silami v 1D, v ose součásti, označujeme jako prut. Průřez prutu může být kruhový (u tyče) nebo mít jiný tvar. Při působení vnějších axiálních sil (F) vznikají v prutu vnitřní síly (N) jako reakční síly.</p>
 <p>Normálové (axiální) napětí <span class="math notranslate nohighlight">\(\sigma\)</span> lze obecně definovat poměrem:</p>
 <div class="math notranslate nohighlight">
 \[\sigma = \frac{N}{A}\]</div>
@@ -451,7 +460,7 @@
 <p>Protože síly a průřezy se v průběhu prutu mohou měnit, mění se také velikost vnitřních sil <span class="math notranslate nohighlight">\(N\)</span> a napětí <span class="math notranslate nohighlight">\(\sigma\)</span>. Můžeme tedy napsat</p>
 <div class="math notranslate nohighlight">
 \[N=N(x), \sigma = \sigma(x) \]</div>
-<p>kde <span class="math notranslate nohighlight">\(x\)</span> je polojová souřadnice místa působení sil a napětí.</p>
+<p>kde <span class="math notranslate nohighlight">\(x\)</span> je polohová souřadnice místa působení sil a napětí.</p>
 </section>
 <section id="metoda-rezu">
 <h2>Metoda řezu<a class="headerlink" href="#metoda-rezu" title="Link to this heading">#</a></h2>
@@ -473,14 +482,14 @@
 <p>kde:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(N\)</span> je normálová síla v řezu,</p></li>
-<li><p><span class="math notranslate nohighlight">\(F_i\)</span> jsou normálové síly působící na yvolněnou část řezu.</p></li>
+<li><p><span class="math notranslate nohighlight">\(F_i\)</span> jsou normálové síly působící na uvolněnou část řezu.</p></li>
 </ul>
 <img alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk3hmzz70ih-bgGzuydHk6keCyJNqE-sHQNVFBm62DrVT8jJ9D72O7VV0XM98DWKsF8yQ&amp;usqp=CAU" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk3hmzz70ih-bgGzuydHk6keCyJNqE-sHQNVFBm62DrVT8jJ9D72O7VV0XM98DWKsF8yQ&amp;usqp=CAU" />
 <ol class="arabic" start="5">
 <li><p><strong>Znaménková konvence</strong></p>
 <ul class="simple">
-<li><p>Tahová normálová síla  nebo napětí jsou považovány za <strong>kladné</strong>, pokud prut v daném řezu prodlužuje.</p></li>
-<li><p>Tlaková normálová síla nebo napětí jsou <strong>záporná</strong>, pokud prut v daném řezu zkracuje.</p></li>
+<li><p>Tahoé normálové síly  nebo napětí jsou považovány za <strong>kladné</strong>, pokud prut v daném řezu prodlužuje.</p></li>
+<li><p>Tlakové normálové síly nebo napětí jsou <strong>záporná</strong>, pokud prut v daném řezu zkracuje.</p></li>
 </ul>
 </li>
 <li><p><strong>Vyhodnocení vnitřních sil</strong><br />

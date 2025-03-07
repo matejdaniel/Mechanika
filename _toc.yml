@@ -29,6 +29,11 @@ parts:
       - file: Prednasky/2_5_Metoda_řezu
       - file: Prednasky/2_6_Inženýrské_a_skutečné_napětí
       - file: Prednasky/2_8_Dimenzovani
+    - file: Prednasky/3_1_Kmitani
+      sections:
+      - file: Prednasky/3_2_Dynamika_oscilátoru
+      - file: Prednasky/3_3_Tlumené_vibrace
+      - file: Prednasky/3_4_Nucené_harmonické_kmitání
   - caption: Cvičení
     chapters:
     - file: Cviceni/C1

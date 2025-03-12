@@ -1,0 +1,723 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Fiktivní síly &#8212; Mechanika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/4_4_Fiktivní_síly';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Moment síly" href="4_6_Moment_sily.html" />
+    <link rel="prev" title="Pohyb po kružnici" href="4_3_Pohyb_po_kru%C5%BEnici.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Mechanika - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Mechanika - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Kurz mechaniky
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">O předmětu</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Podm%C3%ADnky_z%C3%A1po%C4%8Dtu_a_zkou%C5%A1ky.html">Zápočet:</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Sylabus_LS2025.html">Mechanika FBMI sylabus LS 2024/2025</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0_1_Definice_a_historie_mechaniky.html">Úvod do mechaniky</a></li>
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="0_2_Skal%C3%A1ry_a_vektory.html">Skalár a vektor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html">Souřadnicové systémy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_1_Stupe%C5%88_volnosti.html">Stupně volnosti</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1_2_Kinematika_v_1D.html">Kinematika v 1DOF prostoru</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_3_Dynamika_pohybu_v_1D.html">Dynamika</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="1_4_Energie.html">Mechanická práce</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="1_5_Lagrange_Eulerovy_rovnice.html">Princip minimální akce a Lagrange-Eulerovy rovnice</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_1_Mechanick%C3%A9_vlastnosti_materi%C3%A1lu.html">Mechanické vlastnosti materiálu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_2_Hooke%C5%AFv_z%C3%A1kon.html">Hookeův zákon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_3_Tahov%C3%A1_zkou%C5%A1ka.html">Tahová zkouška</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="2_4_P%C5%99ehled_mechanick%C3%BDch_vlastnost%C3%AD.html">Přehled mechanických vlastností vybraných materiálů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_7_P%C5%99%C3%ADklad%20_tahov%C3%A9_zkou%C5%A1ky.html">Analýza dat z tahového diagramu</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="2_5_Metoda_%C5%99ezu.html">Určení vnitřních sil a napětí - metoda řezun</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="2_6_In%C5%BEen%C3%BDrsk%C3%A9_a_skute%C4%8Dn%C3%A9_nap%C4%9Bt%C3%AD.html">Skutečné a smluvní napětí a deformace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_8_Dimenzovani.html">Dimenzování součástí namáhaných v tahu a tlaku</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_1_Kmitani.html">Kmitání</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_2_Dynamika_oscil%C3%A1toru.html">Dynamika oscilátoru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_3_Tlumen%C3%A9_vibrace.html">Tlumené vibrace</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="3_4_Nucen%C3%A9_harmonick%C3%A9_kmit%C3%A1n%C3%AD.html">Nucené kmitání</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="4_1_2D_pohyb_DOF.html">Pohyb ve 2D prostoru</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html">Pohyb v gravitačním poli</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="4_3_Pohyb_po_kru%C5%BEnici.html">Pohyb po kružnici</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Fiktivní síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_6_Moment_sily.html">Moment síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_7_T%C4%9B%C5%BEi%C5%A1t%C4%9B.html">Težiště</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_8_Statick%C3%A9_rovnice_rovnov%C3%A1hy.html">Statické rovnice rovnováhy v rovině</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_5_Vazby.html">Vazby v rovině</a></li>
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C1.html">1. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C2.html">2. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C3.html">3. cvičení</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/4_4_Fiktivní_síly.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Prednasky/4_4_Fiktivní_síly.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Fiktivní síly</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inercialni-vztazna-soustava">Inerciální vztažná soustava</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-alembertuv-princip">D´Alembertův princip</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inercialni-referencni-ramec-newtonuv-zakon">Inerciální referenční rámec (Newtonův zákon)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#neinercialni-referencni-ramec-d-alembertuv-princip">Neinerciální referenční rámec (D’Alembertův princip)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotujici-souradnicove-systemy">Rotující souřadnicové systémy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coriolisova-sila-myslenkovy-experiment">Coriolisova síla - myšlenkový experiment</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="fiktivni-sily">
+<h1>Fiktivní síly<a class="headerlink" href="#fiktivni-sily" title="Link to this heading">#</a></h1>
+<p>V učebnicích se často tvrdí, že “odstředivá síla neexistuje”. Když satelit obíhá Zemi, není udržován v rovnováze mezi dvěma stejnými a opačnými silami, tedy gravitací směřující k Zemi a odstředivou silou směřující ven. Satelit má tentenci pohyvoat se přímočaře a existuje pouze jedna síla, gravitační, která zakřivuje jeho dráhu.</p>
+<p>Na druhé straně, dostředivou sílu moc necítíme ale když autem projedeme zatáčku příliš rychle a cítíme se odmrštěni od středu zakřivení naší dráhy,  a tedy působí na nás “odstředivá síla” se zdá být velmi reálná. Celý problém, který nastal je v popisu naěho vztažného systému.</p>
+<section id="inercialni-vztazna-soustava">
+<h2>Inerciální vztažná soustava<a class="headerlink" href="#inercialni-vztazna-soustava" title="Link to this heading">#</a></h2>
+<p>Jako inerciální vztažná soustava se označuje taková vztažná soustava, v níž platí zákon
+setrvačnosti. Každá vztažná soustava, je-li vzhledem k dané inerciální soustavě v klidu nebo
+pohybu rovnoměrném přímočarém, je rovněž inerciální.
+Soustavy, v nichž zákon setrvačnosti neplatí, se nazývají neinerciální. Pohybují se pohybem
+přímočarým zrychleným, zpožděným, nebo křivočarými pohyby.</p>
+</section>
+<section id="d-alembertuv-princip">
+<h2>D´Alembertův princip<a class="headerlink" href="#d-alembertuv-princip" title="Link to this heading">#</a></h2>
+<p>Podívejme se na jednodušší příklad, který nezahrnuje rotaci. Auto zrychluje zrychlením <span class="math notranslate nohighlight">\(\vec{a}\)</span> doprava.</p>
+<p>Závěsné olovnice v autě se kvůli zrychlení nenachází ve vertikální poloze. Někdo by řekl, že na olovnici působí pouze dvě síly – její váha a tah v provázku – a v důsledku toho olovnice zrychluje doprava. Pomocí vztahu <span class="math notranslate nohighlight">\(\vec{F}=m\vec{a}\)</span> lze snadno najít tah v provázku a úhel, který provázek svírá s vertikálou.</p>
+<img alt="https://phys.libretexts.org/&#64;api/deki/files/6461/figure_IV.20.png?revision=1&amp;size=bestfit&amp;width=486&amp;height=240" src="https://phys.libretexts.org/&#64;api/deki/files/6461/figure_IV.20.png?revision=1&amp;size=bestfit&amp;width=486&amp;height=240" />
+<p>Nicméně, cestující v autě vidí věci jinak. Pro cestujícího v autě se nic nezrychluje. Olovnice je pouze ve statické rovnováze působením tří sil, z nichž jedna je síla <span class="math notranslate nohighlight">\(ma\)</span> doleva.</p>
+<img alt="https://phys.libretexts.org/&#64;api/deki/files/6462/figure_IV.21..png?revision=1&amp;size=bestfit&amp;width=382&amp;height=227" src="https://phys.libretexts.org/&#64;api/deki/files/6462/figure_IV.21..png?revision=1&amp;size=bestfit&amp;width=382&amp;height=227" />
+<p>Zdá se, že ve vztažné soustavě vně auta existují pouze dvě síly, ale ve zrychlující vztažné soustavě uvnitř auta lze systém dokonale popsat postulováním existence síly <span class="math notranslate nohighlight">\(ma\)</span> táhnoucí doleva. Toto je princip klasické mechaniky, známý jako <strong>d’Alembertův princip</strong>, kdy, pokud popíšeme systém ve zrychlující vztažné soustavě, můžeme zrychlení nahradit silou v opačném směru. D’Alembertův princip, alternativní formulace druhého Newtonova pohybového zákona, byla formulovaná francouzským polymathou 18. století Jeanem Le Rondem d’Alembertem. V podstatě princip redukuje problém v dynamice na problém ve statice. Druhý zákon říká, že síla <span class="math notranslate nohighlight">\(F\)</span> působící na těleso se rovná součinu hmotnosti <span class="math notranslate nohighlight">\(m\)</span> a zrychlení a tělesa, nebo <span class="math notranslate nohighlight">\(F = ma\)</span>; v d’Alembertově formě se síla <span class="math notranslate nohighlight">\(F\)</span> plus zápor hmotnosti <span class="math notranslate nohighlight">\(m\)</span> krát zrychlení a tělesa rovná nule: <span class="math notranslate nohighlight">\(F − ma = 0\)</span>. Jinými slovy, těleso je v rovnováze pod působením skutečné síly F a fiktivní síly −ma. Fiktivní síla se také nazývá setrvačná síla a obrácená efektivní síla.</p>
+<blockquote>
+<div><p>D’Alembertův princip říká, že součet všech sil působících na systém, včetně setrvačných sil, se rovná nule. Setrvačné síly jsou fiktivní síly, které se objevují v neinerciálních (zrychlujících nebo rotujících) referenčních rámcích.</p>
+</div></blockquote>
+<p>Matematicky se dá D’Alembertův princip vyjádřit jako:</p>
+<div class="math notranslate nohighlight">
+\[\sum (\vec{F}_i - m_i \vec{a}_i) \cdot \delta \vec{r}_i = 0\]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\vec{F}_i\)</span> je výsledná vnější síla působící na i-tou částici.</p></li>
+<li><p><span class="math notranslate nohighlight">\(m_i\)</span> je hmotnost i-té částice.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{a}_i\)</span> je zrychlení i-té částice.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\delta \vec{r}_i\)</span> je virtuální posunutí i-té částice.</p></li>
+</ul>
+<p>Představte si blok na nakloněné rovině. Podle druhého Newtonova zákona se blok zrychluje dolů po rovině v důsledku gravitační síly.</p>
+<section id="inercialni-referencni-ramec-newtonuv-zakon">
+<h3>Inerciální referenční rámec (Newtonův zákon)<a class="headerlink" href="#inercialni-referencni-ramec-newtonuv-zakon" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Síly působící na blok:</p>
+<ul>
+<li><p>Gravitační síla (<span class="math notranslate nohighlight">\(\vec{F}_g\)</span>)</p></li>
+<li><p>Normálová síla (<span class="math notranslate nohighlight">\(\vec{N}\)</span>)</p></li>
+<li><p>Třecí síla (<span class="math notranslate nohighlight">\(\vec{F}_f\)</span>)</p></li>
+</ul>
+</li>
+<li><p>Výsledná síla způsobuje zrychlení bloku (<span class="math notranslate nohighlight">\(\vec{a}\)</span>).</p></li>
+</ul>
+</section>
+<section id="neinercialni-referencni-ramec-d-alembertuv-princip">
+<h3>Neinerciální referenční rámec (D’Alembertův princip)<a class="headerlink" href="#neinercialni-referencni-ramec-d-alembertuv-princip" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Síly působící na blok:</p>
+<ul>
+<li><p>Gravitační síla (<span class="math notranslate nohighlight">\(\vec{F}_g\)</span>)</p></li>
+<li><p>Normálová síla (<span class="math notranslate nohighlight">\(\vec{N}\)</span>)</p></li>
+<li><p>Třecí síla (<span class="math notranslate nohighlight">\(\vec{F}_f\)</span>)</p></li>
+<li><p>Setrvačná síla (<span class="math notranslate nohighlight">\(\vec{F}_i = -m\vec{a}\)</span>)</p></li>
+</ul>
+</li>
+<li><p>Podle D’Alembertova principu je součet těchto sil nulový, což znamená, že blok je v rovnováze.</p></li>
+</ul>
+<p>D’Alembertův princip je důležitý, protože:</p>
+<ul class="simple">
+<li><p>Umožňuje řešit složité dynamické problémy pomocí metod statiky.</p></li>
+<li><p>Je základem Lagrangeovy mechaniky, která je výkonným nástrojem pro analýzu složitých mechanických systémů.</p></li>
+<li><p>Pomáhá pochopit koncept setrvačných sil a jejich vliv na pohyb.</p></li>
+</ul>
+<p>Podobná situace je s odstředivou silou. Pokud uvažujete satelit na oběžné dráze kolem Země, někteří by řekli, že na satelit působí pouze jedna síla, gravitační síla směrem k Zemi. Satelit, který je na kruhové oběžné dráze, zrychluje směrem ke středu kruhu a vše je, jak se očekávalo - <span class="math notranslate nohighlight">\(F=ma\)</span>. Zrychlení je dostředivé zrychlení. Astronaut na palubě satelitu může mít jiný pohled. Je v konstantní vzdálenosti od Země, nezrychluje; je ve statické rovnováze a necítí na sobě žádnou výslednou sílu – cítí se beztížný. Pokud byl naučen, že Země vyvíjí gravitační sílu, pak to musí být vyváženo silou směřující od Země. Tato síla, která se projeví při popisu v rotující vztažné soustavě, je odstředivá síla.</p>
+</section>
+</section>
+<section id="rotujici-souradnicove-systemy">
+<h2>Rotující souřadnicové systémy<a class="headerlink" href="#rotujici-souradnicove-systemy" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Sigma = Oxyz\)</span> je inerciální vztažná soustava (nezrychluje ani nerotuje).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Sigma' = Ox'y'z'\)</span> je vztažná soustava, která rotuje kolem osy <span class="math notranslate nohighlight">\(z\)</span> s úhlovou rychlostí <span class="math notranslate nohighlight">\(\vec{\omega} = \omega \vec{k}\)</span>.</p></li>
+</ul>
+<p>Tři otázky:</p>
+<ol class="arabic simple">
+<li><p>Pokud je bod P pevný vzhledem k <span class="math notranslate nohighlight">\(\Sigma'\)</span>, jaká je jeho rychlost <span class="math notranslate nohighlight">\(v\)</span> vzhledem k <span class="math notranslate nohighlight">\(\Sigma\)</span>?</p></li>
+<li><p>Pokud se bod P pohybuje rychlostí <span class="math notranslate nohighlight">\(v'\)</span> vzhledem k <span class="math notranslate nohighlight">\(\Sigma'\)</span>, jaká je jeho rychlost <span class="math notranslate nohighlight">\(v\)</span> vzhledem k <span class="math notranslate nohighlight">\(\Sigma\)</span>?</p></li>
+<li><p>Pokud má bod P zrychlení <span class="math notranslate nohighlight">\(a'\)</span> vzhledem k <span class="math notranslate nohighlight">\(\Sigma'\)</span>, jaké je jeho zrychlení <span class="math notranslate nohighlight">\(a\)</span> vzhledem k <span class="math notranslate nohighlight">\(\Sigma\)</span>?</p></li>
+</ol>
+<p>Uvažujme jednoduchý 2D problém, kdy  osy <span class="math notranslate nohighlight">\(z\)</span> jsou stejné a systém se otáčí rychlostí <span class="math notranslate nohighlight">\(\vec{\omega}\)</span></p>
+<ol class="arabic">
+<li><p>Odpověď na první otázku je:</p>
+<div class="math notranslate nohighlight">
+\[\vec{v} = \vec{\omega} \times \vec{r}\]</div>
+</li>
+<li><p>Pokud se P pohybuje rychlostí <span class="math notranslate nohighlight">\(v'\)</span> vzhledem k <span class="math notranslate nohighlight">\(\Sigma'\)</span>, pak jeho rychlost <span class="math notranslate nohighlight">\(v\)</span> vzhledem k <span class="math notranslate nohighlight">\(\Sigma\)</span> je:</p>
+<div class="math notranslate nohighlight">
+\[\vec{v} = \vec{v}' + \vec{\omega} \times \vec{r}\]</div>
+<p>nebo</p>
+<div class="math notranslate nohighlight">
+\[\dot{\vec{r}} = \dot{\vec{r}}' + \vec{\omega} \times \vec{r}\]</div>
+<p>Toto ukazuje, že:</p>
+<div class="math notranslate nohighlight">
+\[\left(\frac{d}{dt}\right)_\Sigma = \left(\frac{d}{dt}\right)_{\Sigma'} + \vec{\omega} \times\]</div>
+</li>
+<li><p>Pokud P zrychluje vzhledem k <span class="math notranslate nohighlight">\(\Sigma'\)</span>, můžeme použít operátor k rovnici:</p>
+<div class="math notranslate nohighlight">
+\[{\vec{a}} = (\frac{d}{dt})_{ \Sigma^{\prime}} ({\vec v}^{\prime} + \vec \omega \times {\vec r}) + \vec \omega \times ({\vec v}^{\prime} + \vec \omega \times {\vec r})  \]</div>
+</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[= {\vec a}^{\prime} +\vec \omega \times \vec v^{\prime} + \vec \omega \times \vec v^{\prime} + \vec \omega \times ( \vec \omega \times {\vec r} ).\]</div>
+<div class="math notranslate nohighlight">
+\[\vec{a} = {\vec a}^{\prime} +  \vec \omega \times( \vec \omega \times {\vec r}) + 2 \vec \omega\times \vec{v^{\prime}}\]</div>
+<p>Pokud P nezrychluje ani se nepohybuje vzhledem k <span class="math notranslate nohighlight">\(\Sigma'\)</span>, pak:</p>
+<div class="math notranslate nohighlight">
+\[a = \omega \times (\omega \times r)\]</div>
+<p>Což je dostředivé zrychlení jak můžeme lehce dokázat podle <span class="math notranslate nohighlight">\({\bf A} \times({ \bf B} \times { \bf C} )=({ \bf A} \cdot { \bf C)B-(A\cdot B)C}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\vec a = \vec \omega \times (\vec \omega \times \vec r) = (\vec \omega \cdot \vec r)\vec \omega - \omega^2 \vec r\]</div>
+<p>Pokud se částice pohybuje rychlostí <span class="math notranslate nohighlight">\(\vec v'\)</span> vzhledem k <span class="math notranslate nohighlight">\(\Sigma'\)</span>, má dodatečné zrychlení <span class="math notranslate nohighlight">\(2\vec \omega \times \vec v'\)</span> vzhledem k <span class="math notranslate nohighlight">\(\Sigma\)</span>, což je <strong>Coriolisovo zrychlení</strong>.</p>
+<p>Inverzní rovnice je:</p>
+<div class="math notranslate nohighlight">
+\[\vec a' = \vec  a + \vec \omega \times (\vec r \times \vec \omega) + 2\vec v' \times \vec \omega\]</div>
+<div class="math notranslate nohighlight">
+\[\vec F' = \vec F + m\vec \omega \times (\vec r \times \vec \omega) + 2m \vec v' \times \vec \omega\]</div>
+<p>Coriolisova síla:</p>
+<div class="math notranslate nohighlight">
+\[F = 2m\vec v' \times \vec \omega\]</div>
+</section>
+<section id="coriolisova-sila-myslenkovy-experiment">
+<h2>Coriolisova síla - myšlenkový experiment<a class="headerlink" href="#coriolisova-sila-myslenkovy-experiment" title="Link to this heading">#</a></h2>
+<p>Nyní si představte myšlenkový experiment (<em>Gedanken Prüfung</em>). Jděte na rovník a postavte vysokou věž. Pusťte z vrcholu věže kámen. Zamyslete se nad směrem vektoru <span class="math notranslate nohighlight">\(2m\vec{v}' \times \vec{\omega}\)</span>. Opravdu se nad tím zamyslete. Nebo se zamyslete nad zákonem zachování momentu hybnosti. Kámen padá blíže k ose rotace Země. Musí zachovat moment hybnosti. Padá východně od věže (nikoli západně!).</p>
+<img alt="https://phys.libretexts.org/&#64;api/deki/files/6465/Figure_IV.24.png?revision=1&amp;size=bestfit&amp;width=578&amp;height=309" src="https://phys.libretexts.org/&#64;api/deki/files/6465/Figure_IV.24.png?revision=1&amp;size=bestfit&amp;width=578&amp;height=309" />
+<p>Na kámen působí dvě síly: jeho tíha <span class="math notranslate nohighlight">\(mg\)</span> a Coriolisova síla. Vektor rotace Země <span class="math notranslate nohighlight">\(\vec{\omega}\)</span> směřuje k severu. Coriolisova síla je kolmá k rychlosti kamene. Rozložíme-li rychlost kamene na svislou složku <span class="math notranslate nohighlight">\(\dot{y}\)</span> směřující dolů a vodorovnou složku <span class="math notranslate nohighlight">\(\dot{z}\)</span> směřující na východ, odpovídající složky Coriolisovy síly budou <span class="math notranslate nohighlight">\(2m\omega\dot{y}\)</span> na východ a <span class="math notranslate nohighlight">\(2m\omega\dot{x}\)</span> nahoru. Předpokládám však, že <span class="math notranslate nohighlight">\(\dot{z} \ll \dot{y}\)</span> a jedinou významnou Coriolisovou silou je složka <span class="math notranslate nohighlight">\(2m\omega\dot{y}\)</span> směřující na východ, kterou jsem nakreslil. Jiným způsobem, jak vyjádřit tuto aproximaci, je říci, že složka Coriolisovy síly směřující nahoru je zanedbatelná ve srovnání s tíhou <span class="math notranslate nohighlight">\(mg\)</span> kamene.</p>
+<p>Po pádu po dobu <span class="math notranslate nohighlight">\(t\)</span> se souřadnice <span class="math notranslate nohighlight">\(y\)</span> kamene určí obvyklým způsobem:</p>
+<div class="math notranslate nohighlight">
+\[\ddot{y} = g, \quad \dot{y} = gt, \quad y = \frac{1}{2}gt^2\]</div>
+<p>A souřadnice <span class="math notranslate nohighlight">\(x\)</span> se určí z:</p>
+<div class="math notranslate nohighlight">
+\[\ddot{x} = 2\omega\dot{y} = 2\omega gt, \quad \dot{x} = \omega gt^2, \quad x = \frac{1}{3}\omega gt^3\]</div>
+<p>Takto můžete zjistit, jak daleko na východ kámen padl po dvou sekundách, nebo jak daleko na východ padl, pokud je výška věže 100 metrů. Rovnice trajektorie by byla <span class="math notranslate nohighlight">\(t\)</span>-eliminantou:</p>
+<div class="math notranslate nohighlight">
+\[x^2 = \frac{8\omega^2}{9g}y^3\]</div>
+<p>Pro Zemi je <span class="math notranslate nohighlight">\(\omega = 7.292 \times 10^{-5} \, \text{rad s}^{-1}\)</span> a na rovníku <span class="math notranslate nohighlight">\(g = 9.780 \, \text{m s}^{-2}\)</span>, takže:</p>
+<div class="math notranslate nohighlight">
+\[\frac{8\omega^2}{9g} = 4.788 \times 10^{-10} \, \text{m}^{-1}\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Prednasky"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="4_3_Pohyb_po_kru%C5%BEnici.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Pohyb po kružnici</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="4_6_Moment_sily.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Moment síly</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inercialni-vztazna-soustava">Inerciální vztažná soustava</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-alembertuv-princip">D´Alembertův princip</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inercialni-referencni-ramec-newtonuv-zakon">Inerciální referenční rámec (Newtonův zákon)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#neinercialni-referencni-ramec-d-alembertuv-princip">Neinerciální referenční rámec (D’Alembertův princip)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotujici-souradnicove-systemy">Rotující souřadnicové systémy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coriolisova-sila-myslenkovy-experiment">Coriolisova síla - myšlenkový experiment</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

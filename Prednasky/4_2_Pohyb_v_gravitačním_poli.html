@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Mechanická práce &#8212; Mechanika</title>
+    <title>Pohyb v gravitačním poli &#8212; Mechanika</title>
   
   
   
@@ -62,11 +62,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/1_4_Energie';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/4_2_Pohyb_v_gravitačním_poli';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Princip minimální akce a Lagrange-Eulerovy rovnice" href="1_5_Lagrange_Eulerovy_rovnice.html" />
-    <link rel="prev" title="Dynamika" href="1_3_Dynamika_pohybu_v_1D.html" />
+    <link rel="next" title="Pohyb po kružnici" href="4_3_Pohyb_po_kru%C5%BEnici.html" />
+    <link rel="prev" title="Pohyb ve 2D prostoru" href="4_1_2D_pohyb_DOF.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -189,10 +189,10 @@
 
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="1_2_Kinematika_v_1D.html">Kinematika v 1DOF prostoru</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="1_2_Kinematika_v_1D.html">Kinematika v 1DOF prostoru</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="1_3_Dynamika_pohybu_v_1D.html">Dynamika</a></li>
 
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Mechanická práce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_4_Energie.html">Mechanická práce</a></li>
 
 
 <li class="toctree-l2"><a class="reference internal" href="1_5_Lagrange_Eulerovy_rovnice.html">Princip minimální akce a Lagrange-Eulerovy rovnice</a></li>
@@ -222,8 +222,8 @@
 
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="4_1_2D_pohyb_DOF.html">Pohyb ve 2D prostoru</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html">Pohyb v gravitačním poli</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="4_1_2D_pohyb_DOF.html">Pohyb ve 2D prostoru</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Pohyb v gravitačním poli</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="4_3_Pohyb_po_kru%C5%BEnici.html">Pohyb po kružnici</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4_4_Fiktivn%C3%AD_s%C3%ADly.html">Fiktivní síly</a></li>
@@ -316,7 +316,7 @@
       
       
       
-      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/1_4_Energie.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/4_2_Pohyb_v_gravitačním_poli.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -346,7 +346,7 @@
       
       
       
-      <li><a href="../_sources/Prednasky/1_4_Energie.ipynb" target="_blank"
+      <li><a href="../_sources/Prednasky/4_2_Pohyb_v_gravitačním_poli.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -422,7 +422,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Mechanická práce</h1>
+    <h1>Pohyb v gravitačním poli</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -432,14 +432,17 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Mechanická práce</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#energie">Energie</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kineticka-energie">Kinetická energie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potencialni-energie">Potenciální energie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prace-a-energie">Práce a energie</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pohyb v gravitačním poli</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#doba-letu">Doba letu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maximalni-vyska">Maximální výška</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vykon">Výkon</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dosah">Dosah</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trajektorie">Trajektorie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimalizace-trajektorie">Optimalizace trajektorie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interaktivni-simulace">Interaktivní simulace</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -452,103 +455,94 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="mechanicka-prace">
-<h1>Mechanická práce<a class="headerlink" href="#mechanicka-prace" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="pohyb-v-gravitacnim-poli">
+<h1>Pohyb v gravitačním poli<a class="headerlink" href="#pohyb-v-gravitacnim-poli" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> notebook
+</pre></div>
+</div>
+</div>
+</div>
+<p>Odvoďme pohybové rovnice pro vrh šikmý a prozkoumejme jejich charakteristiky. Pro zjednodušení uvažujme prozatím rovinný pohyb, zanedbejme odpor vzduchu a gravitační zrychlení, <span class="math notranslate nohighlight">\(g\)</span>=9.8m/s<span class="math notranslate nohighlight">\(^2\)</span>. Uvažujme těleso (které budeme považovat za hmotný bod) vržené do vzduchu s počátečním úhlem <span class="math notranslate nohighlight">\(\theta\)</span> vzhledem k horizontále (směr <span class="math notranslate nohighlight">\(x\)</span>) a počáteční rychlostí <span class="math notranslate nohighlight">\(\vec{v_0}\)</span>.</p>
 <blockquote>
-<div><p>Pohybuje-li se těleso působením síly, koná se mechanická práce.</p>
+<div><p>Superpozice pohybu je princip, který říká, že pokud na těleso působí několik nezávislých pohybů současně, výsledný pohyb tělesa je součtem (superpozicí) těchto jednotlivých pohybů.</p>
 </div></blockquote>
-<p><strong>Značení:</strong></p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Princip superpozice platí, pokud jsou jednotlivé pohyby nezávislé na sobě. To znamená, že jeden pohyb neovlivňuje ostatní.</p>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+&amp; x(t) = x_0 + v_0\cos(\theta)\:t \\
+&amp; y(t) = y_0 + v_0\sin(\theta)\:t - \frac{g\:t^2}{2} \\
+&amp; v_x(t) = v_0\cos(\theta) \\
+&amp; v_y(t) = v_0\sin(\theta) - g\:t \\
+&amp; a_x(t) = 0 \\
+&amp; a_y(t) = -g
+\label{eq_1}
+\end{align}
+\end{split}\]</div>
+<section id="doba-letu">
+<h2>Doba letu<a class="headerlink" href="#doba-letu" title="Link to this heading">#</a></h2>
+<p>Z rovnice pro vertikální rychlost lze vypočítat dobu letu, přičemž se využije vlastnosti, že v maximální výšce je vertikální rychlost nulová a doba stoupání se rovná době klesání.</p>
+<div class="math notranslate nohighlight">
+\[ t_{flight} = \frac{2v_0\sin(\theta)}{g}\]</div>
+</section>
+<section id="maximalni-vyska">
+<h2>Maximální výška<a class="headerlink" href="#maximalni-vyska" title="Link to this heading">#</a></h2>
+<p>Použitím právě vypočítané hodnoty doby letu a opětovným využitím faktu, že v maximální výšce má těleso nulovou vertikální rychlost, lze maximální výšku, <span class="math notranslate nohighlight">\(h\)</span>, získat z rovnice pro vertikální polohu:</p>
+<div class="math notranslate nohighlight">
+\[h = \frac{v_0^2\sin^2(\theta)}{2g} \]</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="dosah">
+<h1>Dosah<a class="headerlink" href="#dosah" title="Link to this heading">#</a></h1>
+<p>Dosah <span class="math notranslate nohighlight">\(L\)</span> můžeme určit z doby letu</p>
+<div class="math notranslate nohighlight">
+\[ L = v_0\cos(\theta)\:t_{flight}\]</div>
+<div class="math notranslate nohighlight">
+\[ L = v_0\cos(\theta)\ \frac{2 v_0^2\sin(\theta)}{g} = \frac{v_0^2\sin(2\theta)}{g}\]</div>
+<section id="trajektorie">
+<h2>Trajektorie<a class="headerlink" href="#trajektorie" title="Link to this heading">#</a></h2>
+<p>Rovnice pro horizontální polohu v závislosti na čase je rovnicí přímky a pro vertikální polohu je rovnicí paraboly. Můžeme dokázat, že prostorová trajektorie (vertikální poloha v závislosti na horizontální poloze) je také parabolou, pokud použijeme obě rovnice pro polohu a eliminujeme proměnnou čas:</p>
+<div class="math notranslate nohighlight">
+\[  y = y_0 + \tan(\theta)(x-x_0) - \frac{g}{2v_0^2cos^2(\theta)}(x-x_0)^2\]</div>
+<p>kde <span class="math notranslate nohighlight">\(y_0,\: x_0,\: \theta,\: v_0,\: g\)</span> jsou konstanty a rovnice je rovnicí paraboly.</p>
+</section>
+<section id="optimalizace-trajektorie">
+<h2>Optimalizace trajektorie<a class="headerlink" href="#optimalizace-trajektorie" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Mechanická práce se obvykle značí písmenem <strong>W</strong> (z anglického “work”).</p></li>
-</ul>
-<p><strong>Jednotka:</strong></p>
-<ul class="simple">
-<li><p>V soustavě SI (Mezinárodní soustava jednotek) je jednotkou mechanické práce <strong>joule</strong> (čti džaul).</p></li>
-<li><p>Značka joulu je <strong>J</strong>.</p></li>
-</ul>
-<p><strong>Definice joulu:</strong></p>
-<ul class="simple">
-<li><p>1 joule (1 J) je práce vykonaná silou 1 newtonu (1 N) při posunutí tělesa o 1 metr (1 m) ve směru působící síly.</p></li>
-<li><p>Matematicky: 1 J = 1 N ⋅ m</p></li>
-</ul>
-<p><strong>Další jednotky (méně časté):</strong></p>
-<ul class="simple">
-<li><p><strong>erg</strong>: Používá se v soustavě CGS (centimetr-gram-sekunda). 1 erg = 10⁻⁷ J.</p></li>
-<li><p><strong>kilowatthodina (kWh)</strong>: Používá se pro měření spotřeby elektrické energie. 1 kWh = 3,6 × 10⁶ J.</p></li>
-</ul>
-<ol class="arabic">
-<li><p><strong>Síla působí ve stejném směru jako pohyb tělesa</strong></p>
-<div class="math notranslate nohighlight">
-\[W = F s \]</div>
-<p>kde <span class="math notranslate nohighlight">\(F\)</span> je velikost síly a <span class="math notranslate nohighlight">\(s\)</span> délka dráhy</p>
-</li>
-<li><p><strong>Síla působí v jiném směru než pohyb tělesa</strong></p>
-<div class="math notranslate nohighlight">
-\[W = \vec{\mathbf{F}} \cdot \vec{\mathbf{s}} \]</div>
-<p>kde <span class="math notranslate nohighlight">\(\vec{\mathbf{F}}\)</span> je vektor síly a <span class="math notranslate nohighlight">\(\vec{\mathbf{s}}\)</span> je vektor posunutí. Jinými slovy práci koná složka síly rovnoběžná s trajektorií tělesa. V případě, že je síla konstatní a trajektorie je úsečka můžeme vyjádřit.</p>
-<div class="math notranslate nohighlight">
-\[W = F s \cos \alpha\]</div>
-<p>kde <span class="math notranslate nohighlight">\(\alpha\)</span> je je úhel mezi silou a trajektorií pohybu.</p>
-</li>
-<li><p><strong>Síla se mění nebo dráha je zakřivena</strong></p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[W = \int\limits_0^s \vec{\mathbf{F}} \cdot \mathrm{d}\vec{\mathbf{s}}  \]</div>
-</section>
-<section id="energie">
-<h1>Energie<a class="headerlink" href="#energie" title="Link to this heading">#</a></h1>
-<section id="kineticka-energie">
-<h2>Kinetická energie<a class="headerlink" href="#kineticka-energie" title="Link to this heading">#</a></h2>
-<p>Kinetická energie je energie spojená s pohybem objektu. Těleso v pohybu má kinetickou energii. Kinetická energie částice o hmotnosti m pohybující se rychlostí v je dána vztahem:</p>
-<div class="math notranslate nohighlight">
-\[E_k = \frac{1}{2} m \vec{\mathbf{v}} \cdot \vec{\mathbf{v}}= \frac{1}{2} m v^2\]</div>
-<p>kde <span class="math notranslate nohighlight">\(v=|∣\vec{\mathbf{v}}∣|\)</span> je velikost rychlosti. Pro systém částic je celková kinetická energie součtem kinetických energií všech jednotlivých částic:</p>
-<div class="math notranslate nohighlight">
-\[E_k = \sum_i \frac{1}{2} m_i \dot{\vec{\mathbf{r}}}_i \cdot \dot{\vec{\mathbf{r}}}_i = \sum_i \frac{1}{2} m_i v_i^2\]</div>
-<p>kde <span class="math notranslate nohighlight">\(m_i\)</span> je hmotnost <span class="math notranslate nohighlight">\(i\)</span>-té částice a <span class="math notranslate nohighlight">\(\dot{\vec{\mathbf{r}}_i}\)</span> je její rychlost</p>
-</section>
-<section id="potencialni-energie">
-<h2>Potenciální energie<a class="headerlink" href="#potencialni-energie" title="Link to this heading">#</a></h2>
-<p>Potenciální energie je energie spojená s konfigurací systému objektů. Představuje schopnost konat práci v důsledku polohy objektu v silovém poli. Potenciální energie je často spojena s konzervativními silami. Síla <span class="math notranslate nohighlight">\(F\)</span> je konzervativní, pokud práce vykonaná touto silou na částici pohybující se mezi dvěma body nezávisí na dráze.</p>
-<p>Potenciální energie <span class="math notranslate nohighlight">\(U\)</span> spojená s konzervativní silou <span class="math notranslate nohighlight">\(F\)</span> je definována tak, že:</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{\vec{F}} = -\nabla U\]</div>
-<p>kde <span class="math notranslate nohighlight">\(\nabla\)</span> je operátor gradientu. To znamená, že síla je záporný gradient potenciální energie. Změna potenciální energie mezi dvěma body se rovná záporné práci vykonané konzervativní silou při pohybu mezi těmito body.</p>
-<p>Mezi běžné příklady potenciální energie patří:</p>
-<ul>
-<li><p><strong>Gravitační potenciální energie:</strong> Pro objekt o hmotnosti m blízko povrchu Země je gravitační potenciální energie:</p>
-<div class="math notranslate nohighlight">
-\[E_p = mgh\]</div>
-</li>
-</ul>
-<p>kde <span class="math notranslate nohighlight">\(g\)</span> je zrychlení v důsledku gravitace a <span class="math notranslate nohighlight">\(h\)</span> je výška nad referenční úrovní.</p>
-<ul>
-<li><p><strong>Elastická potenciální energie:</strong> Pro pružinu s konstantou tuhosti <span class="math notranslate nohighlight">\(k\)</span> protaženou nebo stlačenou o vzdálenost <span class="math notranslate nohighlight">\(x\)</span> z její rovnovážné polohy je elastická potenciální energie:</p>
-<div class="math notranslate nohighlight">
-\[U_e = \frac{1}{2} k x^2\]</div>
-</li>
+<li><p><strong>Maximální délka</strong> <span class="math notranslate nohighlight">\(\sin(2\theta)=1\)</span> a tedy <span class="math notranslate nohighlight">\(\theta=45^\circ\)</span></p></li>
+<li><p><strong>Maximální výška</strong> <span class="math notranslate nohighlight">\(\sin^2(\theta)=1\)</span> a tedy <span class="math notranslate nohighlight">\(\theta=90^\circ\)</span></p></li>
 </ul>
 </section>
-<section id="prace-a-energie">
-<h2>Práce a energie<a class="headerlink" href="#prace-a-energie" title="Link to this heading">#</a></h2>
-<p>Práce <span class="math notranslate nohighlight">\(W\)</span> vykonaná výslednou silou na částici, když se pohybuje z bodu A do bodu B, se rovná změně její kinetické energie:</p>
-<div class="math notranslate nohighlight">
-\[ W = \Delta E_k = E_{kB} - E_{kA} \]</div>
-<p>Pokud práci konají pouze konzervativní síly, pak můžeme práci spojit i se změnou potenciální energie:</p>
-<div class="math notranslate nohighlight">
-\[ W = -\Delta U = -(U_B - U_A) = U_A - U_B\]</div>
-<p>Kombinací těchto vztahů získáme zákon zachování mechanické energie:</p>
-<div class="math notranslate nohighlight">
-\[\Delta E_k + \Delta U = 0  \quad \text{nebo} \quad E_{kA} + U_A =E_{kB} + U_B\]</div>
-<p>To znamená, že celková mechanická energie (<span class="math notranslate nohighlight">\(E=T+U\)</span>) systému zůstává konstantní, pokud práci konají pouze konzervativní síly.</p>
+<section id="interaktivni-simulace">
+<h2>Interaktivní simulace<a class="headerlink" href="#interaktivni-simulace" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+<span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html&#39;</span><span class="p">,</span>
+       <span class="n">width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="100%"
+            height="500"
+            src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
 </section>
-</section>
-<section id="vykon">
-<h1>Výkon<a class="headerlink" href="#vykon" title="Link to this heading">#</a></h1>
-<p>Výkon (<span class="math notranslate nohighlight">\(P\)</span>) je definován jako rychlost, s jakou je konána práce nebo se přenáší energie:</p>
-<div class="math notranslate nohighlight">
-\[P = \frac{dW}{dt} = \vec{\mathbf{F}} \cdot \vec{\mathbf{v}}\]</div>
-<p>Výkon se měří ve wattech (W), kde 1 W = 1 J/s.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -582,20 +576,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="1_3_Dynamika_pohybu_v_1D.html"
+       href="4_1_2D_pohyb_DOF.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Dynamika</p>
+        <p class="prev-next-title">Pohyb ve 2D prostoru</p>
       </div>
     </a>
     <a class="right-next"
-       href="1_5_Lagrange_Eulerovy_rovnice.html"
+       href="4_3_Pohyb_po_kru%C5%BEnici.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Princip minimální akce a Lagrange-Eulerovy rovnice</p>
+        <p class="prev-next-title">Pohyb po kružnici</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -616,14 +610,17 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Mechanická práce</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#energie">Energie</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kineticka-energie">Kinetická energie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potencialni-energie">Potenciální energie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prace-a-energie">Práce a energie</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pohyb v gravitačním poli</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#doba-letu">Doba letu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maximalni-vyska">Maximální výška</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vykon">Výkon</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dosah">Dosah</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trajektorie">Trajektorie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimalizace-trajektorie">Optimalizace trajektorie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interaktivni-simulace">Interaktivní simulace</a></li>
+</ul>
+</li>
 </ul>
 
   </nav></div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Mechanická práce &#8212; Mechanika</title>
+    <title>Pohyb po kružnici &#8212; Mechanika</title>
   
   
   
@@ -62,11 +62,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/1_4_Energie';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/4_3_Pohyb_po_kružnici';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Princip minimální akce a Lagrange-Eulerovy rovnice" href="1_5_Lagrange_Eulerovy_rovnice.html" />
-    <link rel="prev" title="Dynamika" href="1_3_Dynamika_pohybu_v_1D.html" />
+    <link rel="next" title="Fiktivní síly" href="4_4_Fiktivn%C3%AD_s%C3%ADly.html" />
+    <link rel="prev" title="Pohyb v gravitačním poli" href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -189,10 +189,10 @@
 
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="1_2_Kinematika_v_1D.html">Kinematika v 1DOF prostoru</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="1_2_Kinematika_v_1D.html">Kinematika v 1DOF prostoru</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="1_3_Dynamika_pohybu_v_1D.html">Dynamika</a></li>
 
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Mechanická práce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_4_Energie.html">Mechanická práce</a></li>
 
 
 <li class="toctree-l2"><a class="reference internal" href="1_5_Lagrange_Eulerovy_rovnice.html">Princip minimální akce a Lagrange-Eulerovy rovnice</a></li>
@@ -222,10 +222,10 @@
 
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="4_1_2D_pohyb_DOF.html">Pohyb ve 2D prostoru</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="4_1_2D_pohyb_DOF.html">Pohyb ve 2D prostoru</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html">Pohyb v gravitačním poli</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="4_3_Pohyb_po_kru%C5%BEnici.html">Pohyb po kružnici</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Pohyb po kružnici</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4_4_Fiktivn%C3%AD_s%C3%ADly.html">Fiktivní síly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4_6_Moment_sily.html">Moment síly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4_7_T%C4%9B%C5%BEi%C5%A1t%C4%9B.html">Težiště</a></li>
@@ -316,7 +316,7 @@
       
       
       
-      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/1_4_Energie.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/4_3_Pohyb_po_kružnici.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -346,7 +346,7 @@
       
       
       
-      <li><a href="../_sources/Prednasky/1_4_Energie.ipynb" target="_blank"
+      <li><a href="../_sources/Prednasky/4_3_Pohyb_po_kružnici.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -422,7 +422,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Mechanická práce</h1>
+    <h1>Pohyb po kružnici</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -432,16 +432,13 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Mechanická práce</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#energie">Energie</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kineticka-energie">Kinetická energie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potencialni-energie">Potenciální energie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prace-a-energie">Práce a energie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnomerny-pohyb-po-kruznici">Rovnoměrný pohyb po kružnici</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametry-rovnomerneho-kruhoveho-pohybu-1dof-skalarni-popis">Parametry rovnoměrného kruhového pohybu (1DOF - skalární popis)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dostredive-zrychleni">Dostředivé zrychlení</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vykon">Výkon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nerovnomerny-pohyb-po-kruznici">Nerovnoměřný pohyb po kružnici</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -452,103 +449,118 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="mechanicka-prace">
-<h1>Mechanická práce<a class="headerlink" href="#mechanicka-prace" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="pohyb-po-kruznici">
+<h1>Pohyb po kružnici<a class="headerlink" href="#pohyb-po-kruznici" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="rovnomerny-pohyb-po-kruznici">
+<h2>Rovnoměrný pohyb po kružnici<a class="headerlink" href="#rovnomerny-pohyb-po-kruznici" title="Link to this heading">#</a></h2>
 <blockquote>
-<div><p>Pohybuje-li se těleso působením síly, koná se mechanická práce.</p>
+<div><p>Rovnoměrný pohyb po kružnici je specifický typ pohybu, při kterém se objekt pohybuje po kružnici konstantní rychlostí.</p>
 </div></blockquote>
-<p><strong>Značení:</strong></p>
-<ul class="simple">
-<li><p>Mechanická práce se obvykle značí písmenem <strong>W</strong> (z anglického “work”).</p></li>
-</ul>
-<p><strong>Jednotka:</strong></p>
-<ul class="simple">
-<li><p>V soustavě SI (Mezinárodní soustava jednotek) je jednotkou mechanické práce <strong>joule</strong> (čti džaul).</p></li>
-<li><p>Značka joulu je <strong>J</strong>.</p></li>
-</ul>
-<p><strong>Definice joulu:</strong></p>
-<ul class="simple">
-<li><p>1 joule (1 J) je práce vykonaná silou 1 newtonu (1 N) při posunutí tělesa o 1 metr (1 m) ve směru působící síly.</p></li>
-<li><p>Matematicky: 1 J = 1 N ⋅ m</p></li>
-</ul>
-<p><strong>Další jednotky (méně časté):</strong></p>
-<ul class="simple">
-<li><p><strong>erg</strong>: Používá se v soustavě CGS (centimetr-gram-sekunda). 1 erg = 10⁻⁷ J.</p></li>
-<li><p><strong>kilowatthodina (kWh)</strong>: Používá se pro měření spotřeby elektrické energie. 1 kWh = 3,6 × 10⁶ J.</p></li>
-</ul>
-<ol class="arabic">
-<li><p><strong>Síla působí ve stejném směru jako pohyb tělesa</strong></p>
-<div class="math notranslate nohighlight">
-\[W = F s \]</div>
-<p>kde <span class="math notranslate nohighlight">\(F\)</span> je velikost síly a <span class="math notranslate nohighlight">\(s\)</span> délka dráhy</p>
-</li>
-<li><p><strong>Síla působí v jiném směru než pohyb tělesa</strong></p>
-<div class="math notranslate nohighlight">
-\[W = \vec{\mathbf{F}} \cdot \vec{\mathbf{s}} \]</div>
-<p>kde <span class="math notranslate nohighlight">\(\vec{\mathbf{F}}\)</span> je vektor síly a <span class="math notranslate nohighlight">\(\vec{\mathbf{s}}\)</span> je vektor posunutí. Jinými slovy práci koná složka síly rovnoběžná s trajektorií tělesa. V případě, že je síla konstatní a trajektorie je úsečka můžeme vyjádřit.</p>
-<div class="math notranslate nohighlight">
-\[W = F s \cos \alpha\]</div>
-<p>kde <span class="math notranslate nohighlight">\(\alpha\)</span> je je úhel mezi silou a trajektorií pohybu.</p>
-</li>
-<li><p><strong>Síla se mění nebo dráha je zakřivena</strong></p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[W = \int\limits_0^s \vec{\mathbf{F}} \cdot \mathrm{d}\vec{\mathbf{s}}  \]</div>
-</section>
-<section id="energie">
-<h1>Energie<a class="headerlink" href="#energie" title="Link to this heading">#</a></h1>
-<section id="kineticka-energie">
-<h2>Kinetická energie<a class="headerlink" href="#kineticka-energie" title="Link to this heading">#</a></h2>
-<p>Kinetická energie je energie spojená s pohybem objektu. Těleso v pohybu má kinetickou energii. Kinetická energie částice o hmotnosti m pohybující se rychlostí v je dána vztahem:</p>
-<div class="math notranslate nohighlight">
-\[E_k = \frac{1}{2} m \vec{\mathbf{v}} \cdot \vec{\mathbf{v}}= \frac{1}{2} m v^2\]</div>
-<p>kde <span class="math notranslate nohighlight">\(v=|∣\vec{\mathbf{v}}∣|\)</span> je velikost rychlosti. Pro systém částic je celková kinetická energie součtem kinetických energií všech jednotlivých částic:</p>
-<div class="math notranslate nohighlight">
-\[E_k = \sum_i \frac{1}{2} m_i \dot{\vec{\mathbf{r}}}_i \cdot \dot{\vec{\mathbf{r}}}_i = \sum_i \frac{1}{2} m_i v_i^2\]</div>
-<p>kde <span class="math notranslate nohighlight">\(m_i\)</span> je hmotnost <span class="math notranslate nohighlight">\(i\)</span>-té částice a <span class="math notranslate nohighlight">\(\dot{\vec{\mathbf{r}}_i}\)</span> je její rychlost</p>
-</section>
-<section id="potencialni-energie">
-<h2>Potenciální energie<a class="headerlink" href="#potencialni-energie" title="Link to this heading">#</a></h2>
-<p>Potenciální energie je energie spojená s konfigurací systému objektů. Představuje schopnost konat práci v důsledku polohy objektu v silovém poli. Potenciální energie je často spojena s konzervativními silami. Síla <span class="math notranslate nohighlight">\(F\)</span> je konzervativní, pokud práce vykonaná touto silou na částici pohybující se mezi dvěma body nezávisí na dráze.</p>
-<p>Potenciální energie <span class="math notranslate nohighlight">\(U\)</span> spojená s konzervativní silou <span class="math notranslate nohighlight">\(F\)</span> je definována tak, že:</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{\vec{F}} = -\nabla U\]</div>
-<p>kde <span class="math notranslate nohighlight">\(\nabla\)</span> je operátor gradientu. To znamená, že síla je záporný gradient potenciální energie. Změna potenciální energie mezi dvěma body se rovná záporné práci vykonané konzervativní silou při pohybu mezi těmito body.</p>
-<p>Mezi běžné příklady potenciální energie patří:</p>
+<p>Například jakýkoli bod na vrtuli rotující konstantní rychlostí vykonává rovnoměrný kruhový pohyb. Dalšími příklady jsou sekundová, minutová a hodinová ručička hodinek. Je pozoruhodné, že body na těchto rotujících objektech skutečně zrychlují, i když je rychlost rotace konstantní. Abychom to pochopili, musíme analyzovat pohyb pomocí vektorů.</p>
+<section id="parametry-rovnomerneho-kruhoveho-pohybu-1dof-skalarni-popis">
+<h3>Parametry rovnoměrného kruhového pohybu (1DOF - skalární popis)<a class="headerlink" href="#parametry-rovnomerneho-kruhoveho-pohybu-1dof-skalarni-popis" title="Link to this heading">#</a></h3>
 <ul>
-<li><p><strong>Gravitační potenciální energie:</strong> Pro objekt o hmotnosti m blízko povrchu Země je gravitační potenciální energie:</p>
-<div class="math notranslate nohighlight">
-\[E_p = mgh\]</div>
-</li>
+<li><p><strong>Úhlová poloha (<span class="math notranslate nohighlight">\(\varphi\)</span>):</strong></p>
+<ul class="simple">
+<li><p>Udává polohu tělesa na kružnici vzhledem k referenčnímu bodu (obvykle počátek).</p></li>
+<li><p>Měří se v radiánech (rad).</p></li>
+<li><p>Změna úhlové polohy s časem popisuje pohyb tělesa po kružnici.</p></li>
 </ul>
-<p>kde <span class="math notranslate nohighlight">\(g\)</span> je zrychlení v důsledku gravitace a <span class="math notranslate nohighlight">\(h\)</span> je výška nad referenční úrovní.</p>
+</li>
+<li><p><strong>Úhlová rychlost (<span class="math notranslate nohighlight">\(\omega\)</span>):</strong></p>
 <ul>
-<li><p><strong>Elastická potenciální energie:</strong> Pro pružinu s konstantou tuhosti <span class="math notranslate nohighlight">\(k\)</span> protaženou nebo stlačenou o vzdálenost <span class="math notranslate nohighlight">\(x\)</span> z její rovnovážné polohy je elastická potenciální energie:</p>
+<li><p>Udává změnu úhlové polohy za jednotku času.</p>
 <div class="math notranslate nohighlight">
-\[U_e = \frac{1}{2} k x^2\]</div>
+\[\omega = \frac{d\varphi}{dt}\]</div>
+</li>
+<li><p>Měří se v radiánech za sekundu (rad/s).</p></li>
+<li><p>Při rovnoměrném pohybu po kružnici je úhlová rychlost konstantní.</p></li>
+</ul>
+</li>
+<li><p><strong>Frekvence (<span class="math notranslate nohighlight">\(f\)</span>):</strong></p>
+<ul>
+<li><p>Udává počet oběhů za jednotku času.</p>
+<div class="math notranslate nohighlight">
+\[f = \frac{\omega}{2\pi}\]</div>
+</li>
+<li><p>Měří se v hertzích (Hz).</p></li>
+<li><p>Frekvence je převrácená hodnota periody.</p></li>
+</ul>
+</li>
+<li><p><strong>Perioda (<span class="math notranslate nohighlight">\(T\)</span>):</strong></p>
+<ul>
+<li><p>Udává dobu potřebnou k vykonání jednoho oběhu.</p>
+<div class="math notranslate nohighlight">
+\[T = \frac{1}{f} = \frac{2\pi}{\omega}\]</div>
+</li>
+<li><p>Měří se v sekundách (s).</p></li>
+</ul>
+</li>
+<li><p><strong>Obvodová rychlost (<span class="math notranslate nohighlight">\(v\)</span>):</strong></p>
+<div class="math notranslate nohighlight">
+\[v = r\omega\]</div>
+<p>, kde <span class="math notranslate nohighlight">\(r\)</span> je poloměr kružnice.</p>
+<ul class="simple">
+<li><p>Obvodová rychlost je tečná k trajektorii.</p></li>
+</ul>
 </li>
 </ul>
+<p>Pohyb tělesa lze popsat pomocí úhlové polohy jako funkce času:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varphi(t) = \varphi_0 + \omega t\)</span></p></li>
+</ul>
+<p>Kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varphi(t)\)</span> je úhlová poloha v čase <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\varphi_0\)</span> je počáteční úhlová poloha (fáze pohybu)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega\)</span> je úhlová rychlost</p></li>
+</ul>
 </section>
-<section id="prace-a-energie">
-<h2>Práce a energie<a class="headerlink" href="#prace-a-energie" title="Link to this heading">#</a></h2>
-<p>Práce <span class="math notranslate nohighlight">\(W\)</span> vykonaná výslednou silou na částici, když se pohybuje z bodu A do bodu B, se rovná změně její kinetické energie:</p>
+<section id="dostredive-zrychleni">
+<h3>Dostředivé zrychlení<a class="headerlink" href="#dostredive-zrychleni" title="Link to this heading">#</a></h3>
+<img alt="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185650/CNX_UPhysics_04_04_Circle.jpg" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185650/CNX_UPhysics_04_04_Circle.jpg" />
+<p>V jednorozměrné kinematice mají objekty s konstantní rychlostí nulové zrychlení. Nicméně, ve dvou a trojrozměrné kinematice, i když je rychlost konstantní, může mít částice zrychlení, pokud se pohybuje po zakřivené trajektorii, jako je kružnice. V tomto případě se vektor rychlosti mění, nebo</p>
 <div class="math notranslate nohighlight">
-\[ W = \Delta E_k = E_{kB} - E_{kA} \]</div>
-<p>Pokud práci konají pouze konzervativní síly, pak můžeme práci spojit i se změnou potenciální energie:</p>
+\[ d\vec{v}\text{/}dt\ne 0. \]</div>
+<p>Jak se částice pohybuje proti směru hodinových ručiček v čase <span class="math notranslate nohighlight">\(\Delta t\)</span> po kruhové dráze, její polohový vektor se posouvá z <span class="math notranslate nohighlight">\( \vec{r}(t)\)</span> na <span class="math notranslate nohighlight">\(\vec{r}(t+\Delta t)\)</span>. Vektor rychlosti má konstantní velikost a je tečnou k dráze, když se mění z <span class="math notranslate nohighlight">\(\vec{v}(t)\)</span> na <span class="math notranslate nohighlight">\(\vec{v}(t+\Delta t)\)</span> mění se pouze jeho směr. Protože vektor rychlosti <span class="math notranslate nohighlight">\(\vec{v}(t)\)</span> je kolmý k polohovému vektoru <span class="math notranslate nohighlight">\(\vec{r}(t)\)</span> jsou trojúhelníky tvořené polohovými vektory a <span class="math notranslate nohighlight">\(\Delta\vec{r}\)</span> a vektory rychlosti <span class="math notranslate nohighlight">\(\Delta \vec{v}\)</span> podobné. Navíc, protože <span class="math notranslate nohighlight">\( |\vec {r}(t)|=|\vec{r}(t+\Delta t)|\)</span> a <span class="math notranslate nohighlight">\(|\vec{v}(t)|=|\vec{v}(t+\Delta t)|\)</span> jsou oba trojúhelníky rovnoramenné. Z těchto skutečností můžeme učinit tvrzení</p>
 <div class="math notranslate nohighlight">
-\[ W = -\Delta U = -(U_B - U_A) = U_A - U_B\]</div>
-<p>Kombinací těchto vztahů získáme zákon zachování mechanické energie:</p>
+\[\frac{\Delta v}{v}=\frac{\Delta r}{r} \]</div>
+<p>nebo</p>
 <div class="math notranslate nohighlight">
-\[\Delta E_k + \Delta U = 0  \quad \text{nebo} \quad E_{kA} + U_A =E_{kB} + U_B\]</div>
-<p>To znamená, že celková mechanická energie (<span class="math notranslate nohighlight">\(E=T+U\)</span>) systému zůstává konstantní, pokud práci konají pouze konzervativní síly.</p>
+\[ \Delta v=\frac{v}{r}\Delta r\]</div>
+<p>Velikost zrychlení můžeme najít z:</p>
+<div class="math notranslate nohighlight">
+\[a=\underset{\Delta t\to 0}{\text{lim}}\left(\frac{\Delta v}{\Delta t}\right)=\frac{v}{r}\left(\underset{\Delta t\to 0}{\text{lim}}\frac{\text{Δ}r}{\text{Δ}t}\right)=\frac{{v}^{2}}{r}.\]</div>
+<p>Směr zrychlení lze také najít pozorováním, že když se <span class="math notranslate nohighlight">\( \text{Δ}t \)</span> a tedy <span class="math notranslate nohighlight">\( \text{Δ}\theta \)</span> blíží nule, vektor <span class="math notranslate nohighlight">\( \text{Δ}\overset{\to }{v} \)</span> se blíží směru kolmému na <span class="math notranslate nohighlight">\( \overset{\to }{v}. \)</span> V limitě <span class="math notranslate nohighlight">\( \text{Δ}t\to 0,\)</span> <span class="math notranslate nohighlight">\( \text{Δ}\overset{\to }{v} \)</span> je kolmý na <span class="math notranslate nohighlight">\( \overset{\to }{v}. \)</span> Protože <span class="math notranslate nohighlight">\( \overset{\to }{v} \)</span> je tečna ke kružnici, zrychlení <span class="math notranslate nohighlight">\( \frac{d\overset{\to }{v}}{dt} \)</span> směřuje do středu kružnice. Shrnutím, částice pohybující se po kružnici konstantní rychlostí má zrychlení o velikosti</p>
+<div class="math notranslate nohighlight">
+\[{a}_{\text{C}}=\frac{{v}^{2}}{r}.\]</div>
+<p>Směr vektoru zrychlení směřuje do středu kružnice. Toto je radiální zrychlení a nazývá se dostředivé (centropetální) zrychlení, proto mu dáváme dolní index c.</p>
+<img alt="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185654/CNX_UPhysics_04_04_Cenacc.jpg" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185654/CNX_UPhysics_04_04_Cenacc.jpg" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Slovo centripetální pochází z latinských slov <em>centrum</em> (což znamená „střed“) a <em>petere</em> (což znamená „hledat“), a má tedy význam „hledající střed“.</p>
+</div>
 </section>
 </section>
-<section id="vykon">
-<h1>Výkon<a class="headerlink" href="#vykon" title="Link to this heading">#</a></h1>
-<p>Výkon (<span class="math notranslate nohighlight">\(P\)</span>) je definován jako rychlost, s jakou je konána práce nebo se přenáší energie:</p>
+<section id="nerovnomerny-pohyb-po-kruznici">
+<h2>Nerovnoměřný pohyb po kružnici<a class="headerlink" href="#nerovnomerny-pohyb-po-kruznici" title="Link to this heading">#</a></h2>
+<p>Kruhový pohyb nemusí být nutně konstantní rychlostí. Částice se může pohybovat po kružnici a zrychlovat nebo zpomalovat, což ukazuje zrychlení ve směru pohybu.</p>
+<p>V rovnoměrném kruhovém pohybu má částice vykonávající kruhový pohyb konstantní rychlost a kružnice má pevný poloměr. Pokud se rychlost částice také mění, pak zavádíme další zrychlení ve směru tečném ke kružnici. Taková zrychlení se vyskytují v bodě na setrvačníku, který mění svou rychlost otáčení, nebo u jakéhokoli zrychlujícího rotoru. Pokud se rychlost částice mění, pak má <strong>tečné zrychlení</strong>, které je časovou rychlostí změny velikosti rychlosti:</p>
 <div class="math notranslate nohighlight">
-\[P = \frac{dW}{dt} = \vec{\mathbf{F}} \cdot \vec{\mathbf{v}}\]</div>
-<p>Výkon se měří ve wattech (W), kde 1 W = 1 J/s.</p>
+\[ {a}_{\text{T}}=\frac{d|\overset{\to }{v}|}{dt}. \]</div>
+<p>Směr tečného zrychlení je tečný ke kružnici, zatímco směr dostředivého zrychlení je radiálně dovnitř směrem ke středu kružnice. Částice v kruhovém pohybu s tečným zrychlením má tedy <strong>celkové zrychlení</strong>, které je vektorovým součtem dostředivého a tečného zrychlení:</p>
+<div class="math notranslate nohighlight">
+\[ \overset{\to }{a}={\overset{\to }{a}}_{\text{C}}+{\overset{\to }{a}}_{\text{T}}. \]</div>
+<p>Vektory zrychlení jsou znázorněny na (Obrázku). Všimněte si, že oba vektory zrychlení <span class="math notranslate nohighlight">\( {\overset{\to }{a}}_{\text{C}} \)</span> a <span class="math notranslate nohighlight">\( {\overset{\to }{a}}_{\text{T}} \)</span> jsou navzájem kolmé, s <span class="math notranslate nohighlight">\( {\overset{\to }{a}}_{\text{C}} \)</span> v radiálním směru a <span class="math notranslate nohighlight">\( {\overset{\to }{a}}_{\text{T}} \)</span> v tečném směru. Celkové zrychlení <span class="math notranslate nohighlight">\( \overset{\to }{a} \)</span> směřuje pod úhlem mezi <span class="math notranslate nohighlight">\( {\overset{\to }{a}}_{\text{C}} \)</span> a <span class="math notranslate nohighlight">\( {\overset{\to }{a}}_{\text{T}}.\)</span></p>
+<img alt="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185702/CNX_UPhysics_04_04_Circleacc.jpg" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185702/CNX_UPhysics_04_04_Circleacc.jpg" />
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -582,20 +594,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="1_3_Dynamika_pohybu_v_1D.html"
+       href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Dynamika</p>
+        <p class="prev-next-title">Pohyb v gravitačním poli</p>
       </div>
     </a>
     <a class="right-next"
-       href="1_5_Lagrange_Eulerovy_rovnice.html"
+       href="4_4_Fiktivn%C3%AD_s%C3%ADly.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Princip minimální akce a Lagrange-Eulerovy rovnice</p>
+        <p class="prev-next-title">Fiktivní síly</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -616,16 +628,13 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Mechanická práce</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#energie">Energie</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kineticka-energie">Kinetická energie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potencialni-energie">Potenciální energie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prace-a-energie">Práce a energie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnomerny-pohyb-po-kruznici">Rovnoměrný pohyb po kružnici</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametry-rovnomerneho-kruhoveho-pohybu-1dof-skalarni-popis">Parametry rovnoměrného kruhového pohybu (1DOF - skalární popis)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dostredive-zrychleni">Dostředivé zrychlení</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vykon">Výkon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nerovnomerny-pohyb-po-kruznici">Nerovnoměřný pohyb po kružnici</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Pohyb ve 2D prostoru &#8212; Mechanika</title>
+    <title>Odvození šikmého vrhu z Lagrange-Eulerových rovnic &#8212; Mechanika</title>
   
   
   
@@ -62,11 +62,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/4_1_2D_pohyb_DOF';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/4_9_Šikmý_vrh_Lagrange';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Pohyb v gravitačním poli" href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html" />
-    <link rel="prev" title="Nucené kmitání" href="3_4_Nucen%C3%A9_harmonick%C3%A9_kmit%C3%A1n%C3%AD.html" />
+    <link rel="next" title="Pohyb po kružnici" href="4_3_Pohyb_po_kru%C5%BEnici.html" />
+    <link rel="prev" title="Pohyb v gravitačním poli" href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -222,10 +222,10 @@
 
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Pohyb ve 2D prostoru</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="4_1_2D_pohyb_DOF.html">Pohyb ve 2D prostoru</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html">Pohyb v gravitačním poli</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="4_9_%C5%A0ikm%C3%BD_vrh_Lagrange.html">Odvození šikmého vrhu z Lagrange-Eulerových rovnic</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Odvození šikmého vrhu z Lagrange-Eulerových rovnic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4_3_Pohyb_po_kru%C5%BEnici.html">Pohyb po kružnici</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4_4_Fiktivn%C3%AD_s%C3%ADly.html">Fiktivní síly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4_6_Moment_sily.html">Moment síly</a></li>
@@ -317,7 +317,7 @@
       
       
       
-      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/4_1_2D_pohyb_DOF.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/4_9_Šikmý_vrh_Lagrange.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -347,7 +347,7 @@
       
       
       
-      <li><a href="../_sources/Prednasky/4_1_2D_pohyb_DOF.ipynb" target="_blank"
+      <li><a href="../_sources/Prednasky/4_9_Šikmý_vrh_Lagrange.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -410,9 +410,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -423,19 +421,11 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Pohyb ve 2D prostoru</h1>
+    <h1>Odvození šikmého vrhu z Lagrange-Eulerových rovnic</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#popis-pohybu">Popis pohybu</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -445,61 +435,97 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="pohyb-ve-2d-prostoru">
-<h1>Pohyb ve 2D prostoru<a class="headerlink" href="#pohyb-ve-2d-prostoru" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>V dvourozměrném (2D) prostoru je pohyb bodu popsán pomocí dvou souřadnic, obvykle označených jako <em>x</em> a <em>y</em>. Tyto souřadnice určují polohu bodu v rovině. Pohyb bodu pak představuje změnu těchto souřadnic v čase.</p>
-<p>Stupeň volnosti (DOF) udává počet nezávislých parametrů, které jsou potřeba k jednoznačnému určení polohy a orientace tělesa v prostoru.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="odvozeni-sikmeho-vrhu-z-lagrange-eulerovych-rovnic">
+<h1>Odvození šikmého vrhu z Lagrange-Eulerových rovnic<a class="headerlink" href="#odvozeni-sikmeho-vrhu-z-lagrange-eulerovych-rovnic" title="Link to this heading">#</a></h1>
+<p>Odvodíme rovnice vrhu šikmého pomocí Lagrange-Eulerových rovnic.</p>
+<p>Uvažujme projektil o hmotnosti <span class="math notranslate nohighlight">\(m\)</span> pohybující se v 2D rovině (x, y) pod vlivem gravitace <span class="math notranslate nohighlight">\(g\)</span>. Lagrangiánský přístup používá zobecněné souřadnice, které jsou v tomto případě jednoduše kartézské souřadnice <em>x</em> a <em>y</em>.</p>
+<ul>
+<li><p><strong>Kinetická energie (Ek):</strong> Kinetická energie projektilu je dána vztahem:</p>
+<div class="math notranslate nohighlight">
+\[E_k = \frac{1}{2}m(\dot{x}^2 + \dot{y}^2)\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\dot{x}\)</span> a <span class="math notranslate nohighlight">\(\dot{y}\)</span> jsou časové derivace <em>x</em> a <em>y</em> (tj. rychlosti ve směru x a y).</p>
+</li>
+<li><p><strong>Potenciální energie (U):</strong> Potenciální energie projektilu vlivem gravitace je dána vztahem:</p>
+<div class="math notranslate nohighlight">
+\[U = mgy\]</div>
+<p>kde <em>y</em> je vertikální souřadnice.</p>
+</li>
+</ul>
+<p><strong>Definice Lagrangiánu (L):</strong></p>
+<ul>
+<li><p>Lagrangián je definován jako rozdíl mezi kinetickou a potenciální energií:</p>
+<div class="math notranslate nohighlight">
+\[L = E_k - U = \frac{1}{2}m(\dot{x}^2 + \dot{y}^2) - mgy\]</div>
+</li>
+</ul>
+<p><strong>Aplikace Lagrange-Eulerových rovnic:</strong></p>
+<ul>
+<li><p>Lagrange-Eulerovy rovnice jsou dány vztahem:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}\right) - \frac{\partial L}{\partial q_i} = 0\]</div>
+<p>kde <span class="math notranslate nohighlight">\(q_i\)</span> jsou zobecněné souřadnice (v tomto případě <em>x</em> a <em>y</em>).</p>
+</li>
+</ul>
+<p><strong>Odvození rovnic pohybu pro x:</strong></p>
+<ul>
+<li><p>Pro souřadnici <em>x</em> máme:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial L}{\partial \dot{x}} = m\dot{x}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}}\right) = m\ddot{x}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{\partial L}{\partial x} = 0\]</div>
+<p>Dosazením těchto hodnot do Lagrange-Eulerovy rovnice:</p>
+<div class="math notranslate nohighlight">
+\[m\ddot{x} - 0 = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\ddot{x} = 0\]</div>
+<p>Tato rovnice znamená, že zrychlení ve směru x je nulové, což implikuje konstantní rychlost.</p>
+</li>
+</ul>
+<p><strong>Odvození rovnic pohybu pro y:</strong></p>
+<ul>
+<li><p>Pro souřadnici <em>y</em> máme:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial L}{\partial \dot{y}} = m\dot{y}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{y}}\right) = m\ddot{y}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{\partial L}{\partial y} = -mg\]</div>
+<p>Dosazením těchto hodnot do Lagrange-Eulerovy rovnice:</p>
+<div class="math notranslate nohighlight">
+\[m\ddot{y} - (-mg) = 0\]</div>
+<div class="math notranslate nohighlight">
+\[m\ddot{y} + mg = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\ddot{y} = -g\]</div>
+<p>Tato rovnice znamená, že zrychlení ve směru y je -g, což je zrychlení vlivem gravitace.</p>
+</li>
+</ul>
+<p><strong>Řešení diferenciálních rovnic:</strong></p>
+<ul>
+<li><p>Z <span class="math notranslate nohighlight">\(\ddot{x} = 0\)</span> dostaneme:</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} = v_{0x}\]</div>
+<div class="math notranslate nohighlight">
+\[x = v_{0x}t + x_0\]</div>
+<p>kde <span class="math notranslate nohighlight">\(v_{0x}\)</span> je počáteční rychlost ve směru x a <span class="math notranslate nohighlight">\(x_0\)</span> je počáteční souřadnice x.</p>
+</li>
+<li><p>Z <span class="math notranslate nohighlight">\(\ddot{y} = -g\)</span> dostaneme:</p>
+<div class="math notranslate nohighlight">
+\[\dot{y} = -gt + v_{0y}\]</div>
+<div class="math notranslate nohighlight">
+\[y = -\frac{1}{2}gt^2 + v_{0y}t + y_0\]</div>
+<p>kde <span class="math notranslate nohighlight">\(v_{0y}\)</span> je počáteční rychlost ve směru y a <span class="math notranslate nohighlight">\(y_0\)</span> je počáteční souřadnice y.</p>
+</li>
+</ul>
+<p><strong>Závěr:</strong></p>
+<p>Odvozené rovnice:</p>
 <ul class="simple">
-<li><p><strong>Bod:</strong> V 2D prostoru má bod dva stupně volnosti. To znamená, že k určení jeho polohy jsou potřeba dvě souřadnice (x, y). V 3D prostoru má bod tři stupně volnosti (x, y, z).</p></li>
-<li><p><strong>Těleso:</strong> V 2D prostoru má tuhé těleso tři stupně volnosti: dvě translační (posunutí ve směru osy x a y) a jeden rotační (otáčení kolem osy kolmé k rovině). V 3D prostoru má tuhé těleso šest stupňů volnosti: tři translační a tři rotační.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x = v_{0x}t + x_0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y = -\frac{1}{2}gt^2 + v_{0y}t + y_0\)</span></p></li>
 </ul>
-<section id="popis-pohybu">
-<h2>Popis pohybu<a class="headerlink" href="#popis-pohybu" title="Link to this heading">#</a></h2>
-<p>Pohyb bodu ve 2D prostoru lze popsat různými způsoby:</p>
-<ul>
-<li><p><strong>Trajektorie:</strong> Trajektorie je křivka, kterou bod opisuje během svého pohybu. Matematicky ji lze vyjádřit jako funkci času:</p>
-<ul>
-<li><div class="math notranslate nohighlight">
-\[ x = f(t) \]</div>
-</li>
-<li><div class="math notranslate nohighlight">
-\[ y = g(t) \]</div>
-</li>
-</ul>
-</li>
-<li><p><strong>Vektor polohy:</strong> Vektor polohy <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> udává polohu bodu vzhledem k počátku souřadnicového systému. V 2D prostoru má tvar:</p>
-<ul>
-<li><div class="math notranslate nohighlight">
-\[ \vec{r} = (x, y) \]</div>
-</li>
-</ul>
-</li>
-<li><p><strong>Rychlost:</strong> Rychlost <span class="math notranslate nohighlight">\(\vec{v} = \dot{\vec{r}}\)</span> udává změnu vektoru polohy v čase:</p>
-<ul>
-<li><div class="math notranslate nohighlight">
-\[ \mathbf{v} = \frac{d\vec{r}}{dt} = \left( \frac{dx}{dt}, \frac{dy}{dt} \right) \]</div>
-</li>
-</ul>
-</li>
-<li><p><strong>Zrychlení:</strong> Zrychlení <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> udává změnu vektoru rychlosti v čase:</p>
-<ul>
-<li><div class="math notranslate nohighlight">
-\[ \mathbf{a} = \frac{d\mathbf{v}}{dt} = \left( \frac{d^2x}{dt^2}, \frac{d^2y}{dt^2} \right) \]</div>
-</li>
-</ul>
-</li>
-</ul>
-</section>
-<div class="toctree-wrapper compound">
-</div>
+<p>jsou standardní rovnice vrhu šikmého vrhu, které ukazují, že horizontální pohyb je rovnoměrný a vertikální pohyb je rovnoměrně zrychlený vlivem gravitace. To ukazuje, jak lze Lagrange-Eulerovy rovnice použít k odvození rovnic pohybu pro jednoduchý projektil.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -533,20 +559,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="3_4_Nucen%C3%A9_harmonick%C3%A9_kmit%C3%A1n%C3%AD.html"
+       href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Nucené kmitání</p>
+        <p class="prev-next-title">Pohyb v gravitačním poli</p>
       </div>
     </a>
     <a class="right-next"
-       href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html"
+       href="4_3_Pohyb_po_kru%C5%BEnici.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Pohyb v gravitačním poli</p>
+        <p class="prev-next-title">Pohyb po kružnici</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -556,22 +582,6 @@
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#popis-pohybu">Popis pohybu</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

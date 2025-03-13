@@ -1,0 +1,691 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pohyb po kružnici &#8212; Mechanika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/4_3_Pohyb_po_kružnici';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Fiktivní síly" href="4_4_Fiktivn%C3%AD_s%C3%ADly.html" />
+    <link rel="prev" title="Pohyb v gravitačním poli" href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Mechanika - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Mechanika - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Kurz mechaniky
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">O předmětu</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Podm%C3%ADnky_z%C3%A1po%C4%8Dtu_a_zkou%C5%A1ky.html">Zápočet:</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Sylabus_LS2025.html">Mechanika FBMI sylabus LS 2024/2025</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0_1_Definice_a_historie_mechaniky.html">Úvod do mechaniky</a></li>
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="0_2_Skal%C3%A1ry_a_vektory.html">Skalár a vektor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html">Souřadnicové systémy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_1_Stupe%C5%88_volnosti.html">Stupně volnosti</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1_2_Kinematika_v_1D.html">Kinematika v 1DOF prostoru</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_3_Dynamika_pohybu_v_1D.html">Dynamika</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="1_4_Energie.html">Mechanická práce</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="1_5_Lagrange_Eulerovy_rovnice.html">Princip minimální akce a Lagrange-Eulerovy rovnice</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_1_Mechanick%C3%A9_vlastnosti_materi%C3%A1lu.html">Mechanické vlastnosti materiálu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_2_Hooke%C5%AFv_z%C3%A1kon.html">Hookeův zákon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_3_Tahov%C3%A1_zkou%C5%A1ka.html">Tahová zkouška</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="2_4_P%C5%99ehled_mechanick%C3%BDch_vlastnost%C3%AD.html">Přehled mechanických vlastností vybraných materiálů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_7_P%C5%99%C3%ADklad%20_tahov%C3%A9_zkou%C5%A1ky.html">Analýza dat z tahového diagramu</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="2_5_Metoda_%C5%99ezu.html">Určení vnitřních sil a napětí - metoda řezun</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="2_6_In%C5%BEen%C3%BDrsk%C3%A9_a_skute%C4%8Dn%C3%A9_nap%C4%9Bt%C3%AD.html">Skutečné a smluvní napětí a deformace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_8_Dimenzovani.html">Dimenzování součástí namáhaných v tahu a tlaku</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_1_Kmitani.html">Kmitání</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_2_Dynamika_oscil%C3%A1toru.html">Dynamika oscilátoru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_3_Tlumen%C3%A9_vibrace.html">Tlumené vibrace</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="3_4_Nucen%C3%A9_harmonick%C3%A9_kmit%C3%A1n%C3%AD.html">Nucené kmitání</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="4_1_2D_pohyb_DOF.html">Pohyb ve 2D prostoru</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html">Pohyb v gravitačním poli</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Pohyb po kružnici</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_4_Fiktivn%C3%AD_s%C3%ADly.html">Fiktivní síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_6_Moment_sily.html">Moment síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_7_T%C4%9B%C5%BEi%C5%A1t%C4%9B.html">Težiště</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_8_Statick%C3%A9_rovnice_rovnov%C3%A1hy.html">Statické rovnice rovnováhy v rovině</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_5_Vazby.html">Vazby v rovině</a></li>
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C1.html">1. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C2.html">2. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C3.html">3. cvičení</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/4_3_Pohyb_po_kružnici.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Prednasky/4_3_Pohyb_po_kružnici.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Pohyb po kružnici</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnomerny-pohyb-po-kruznici">Rovnoměrný pohyb po kružnici</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametry-rovnomerneho-kruhoveho-pohybu-1dof-skalarni-popis">Parametry rovnoměrného kruhového pohybu (1DOF - skalární popis)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dostredive-zrychleni">Dostředivé zrychlení</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nerovnomerny-pohyb-po-kruznici">Nerovnoměřný pohyb po kružnici</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="pohyb-po-kruznici">
+<h1>Pohyb po kružnici<a class="headerlink" href="#pohyb-po-kruznici" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="rovnomerny-pohyb-po-kruznici">
+<h2>Rovnoměrný pohyb po kružnici<a class="headerlink" href="#rovnomerny-pohyb-po-kruznici" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Rovnoměrný pohyb po kružnici je specifický typ pohybu, při kterém se objekt pohybuje po kružnici konstantní rychlostí.</p>
+</div></blockquote>
+<p>Například jakýkoli bod na vrtuli rotující konstantní rychlostí vykonává rovnoměrný kruhový pohyb. Dalšími příklady jsou sekundová, minutová a hodinová ručička hodinek. Je pozoruhodné, že body na těchto rotujících objektech skutečně zrychlují, i když je rychlost rotace konstantní. Abychom to pochopili, musíme analyzovat pohyb pomocí vektorů.</p>
+<section id="parametry-rovnomerneho-kruhoveho-pohybu-1dof-skalarni-popis">
+<h3>Parametry rovnoměrného kruhového pohybu (1DOF - skalární popis)<a class="headerlink" href="#parametry-rovnomerneho-kruhoveho-pohybu-1dof-skalarni-popis" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Úhlová poloha (<span class="math notranslate nohighlight">\(\varphi\)</span>):</strong></p>
+<ul class="simple">
+<li><p>Udává polohu tělesa na kružnici vzhledem k referenčnímu bodu (obvykle počátek).</p></li>
+<li><p>Měří se v radiánech (rad).</p></li>
+<li><p>Změna úhlové polohy s časem popisuje pohyb tělesa po kružnici.</p></li>
+</ul>
+</li>
+<li><p><strong>Úhlová rychlost (<span class="math notranslate nohighlight">\(\omega\)</span>):</strong></p>
+<ul>
+<li><p>Udává změnu úhlové polohy za jednotku času.</p>
+<div class="math notranslate nohighlight">
+\[\omega = \frac{d\varphi}{dt}\]</div>
+</li>
+<li><p>Měří se v radiánech za sekundu (rad/s).</p></li>
+<li><p>Při rovnoměrném pohybu po kružnici je úhlová rychlost konstantní.</p></li>
+</ul>
+</li>
+<li><p><strong>Frekvence (<span class="math notranslate nohighlight">\(f\)</span>):</strong></p>
+<ul>
+<li><p>Udává počet oběhů za jednotku času.</p>
+<div class="math notranslate nohighlight">
+\[f = \frac{\omega}{2\pi}\]</div>
+</li>
+<li><p>Měří se v hertzích (Hz).</p></li>
+<li><p>Frekvence je převrácená hodnota periody.</p></li>
+</ul>
+</li>
+<li><p><strong>Perioda (<span class="math notranslate nohighlight">\(T\)</span>):</strong></p>
+<ul>
+<li><p>Udává dobu potřebnou k vykonání jednoho oběhu.</p>
+<div class="math notranslate nohighlight">
+\[T = \frac{1}{f} = \frac{2\pi}{\omega}\]</div>
+</li>
+<li><p>Měří se v sekundách (s).</p></li>
+</ul>
+</li>
+<li><p><strong>Obvodová rychlost (<span class="math notranslate nohighlight">\(v\)</span>):</strong></p>
+<div class="math notranslate nohighlight">
+\[v = r\omega\]</div>
+<p>, kde <span class="math notranslate nohighlight">\(r\)</span> je poloměr kružnice.</p>
+<ul class="simple">
+<li><p>Obvodová rychlost je tečná k trajektorii.</p></li>
+</ul>
+</li>
+</ul>
+<p>Pohyb tělesa lze popsat pomocí úhlové polohy jako funkce času:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varphi(t) = \varphi_0 + \omega t\)</span></p></li>
+</ul>
+<p>Kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varphi(t)\)</span> je úhlová poloha v čase <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\varphi_0\)</span> je počáteční úhlová poloha (fáze pohybu)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega\)</span> je úhlová rychlost</p></li>
+</ul>
+</section>
+<section id="dostredive-zrychleni">
+<h3>Dostředivé zrychlení<a class="headerlink" href="#dostredive-zrychleni" title="Link to this heading">#</a></h3>
+<img alt="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185650/CNX_UPhysics_04_04_Circle.jpg" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185650/CNX_UPhysics_04_04_Circle.jpg" />
+<p>V jednorozměrné kinematice mají objekty s konstantní rychlostí nulové zrychlení. Nicméně, ve dvou a trojrozměrné kinematice, i když je rychlost konstantní, může mít částice zrychlení, pokud se pohybuje po zakřivené trajektorii, jako je kružnice. V tomto případě se vektor rychlosti mění, nebo</p>
+<div class="math notranslate nohighlight">
+\[ d\vec{v}\text{/}dt\ne 0. \]</div>
+<p>Jak se částice pohybuje proti směru hodinových ručiček v čase <span class="math notranslate nohighlight">\(\Delta t\)</span> po kruhové dráze, její polohový vektor se posouvá z <span class="math notranslate nohighlight">\( \vec{r}(t)\)</span> na <span class="math notranslate nohighlight">\(\vec{r}(t+\Delta t)\)</span>. Vektor rychlosti má konstantní velikost a je tečnou k dráze, když se mění z <span class="math notranslate nohighlight">\(\vec{v}(t)\)</span> na <span class="math notranslate nohighlight">\(\vec{v}(t+\Delta t)\)</span> mění se pouze jeho směr. Protože vektor rychlosti <span class="math notranslate nohighlight">\(\vec{v}(t)\)</span> je kolmý k polohovému vektoru <span class="math notranslate nohighlight">\(\vec{r}(t)\)</span> jsou trojúhelníky tvořené polohovými vektory a <span class="math notranslate nohighlight">\(\Delta\vec{r}\)</span> a vektory rychlosti <span class="math notranslate nohighlight">\(\Delta \vec{v}\)</span> podobné. Navíc, protože <span class="math notranslate nohighlight">\( |\vec {r}(t)|=|\vec{r}(t+\Delta t)|\)</span> a <span class="math notranslate nohighlight">\(|\vec{v}(t)|=|\vec{v}(t+\Delta t)|\)</span> jsou oba trojúhelníky rovnoramenné. Z těchto skutečností můžeme učinit tvrzení</p>
+<div class="math notranslate nohighlight">
+\[\frac{\Delta v}{v}=\frac{\Delta r}{r} \]</div>
+<p>nebo</p>
+<div class="math notranslate nohighlight">
+\[ \Delta v=\frac{v}{r}\Delta r\]</div>
+<p>Velikost zrychlení můžeme najít z:</p>
+<div class="math notranslate nohighlight">
+\[a=\underset{\Delta t\to 0}{\text{lim}}\left(\frac{\Delta v}{\Delta t}\right)=\frac{v}{r}\left(\underset{\Delta t\to 0}{\text{lim}}\frac{\text{Δ}r}{\text{Δ}t}\right)=\frac{{v}^{2}}{r}.\]</div>
+<p>Směr zrychlení lze také najít pozorováním, že když se <span class="math notranslate nohighlight">\( \text{Δ}t \)</span> a tedy <span class="math notranslate nohighlight">\( \text{Δ}\theta \)</span> blíží nule, vektor <span class="math notranslate nohighlight">\( \text{Δ}\overset{\to }{v} \)</span> se blíží směru kolmému na <span class="math notranslate nohighlight">\( \overset{\to }{v}. \)</span> V limitě <span class="math notranslate nohighlight">\( \text{Δ}t\to 0,\)</span> <span class="math notranslate nohighlight">\( \text{Δ}\overset{\to }{v} \)</span> je kolmý na <span class="math notranslate nohighlight">\( \overset{\to }{v}. \)</span> Protože <span class="math notranslate nohighlight">\( \overset{\to }{v} \)</span> je tečna ke kružnici, zrychlení <span class="math notranslate nohighlight">\( \frac{d\overset{\to }{v}}{dt} \)</span> směřuje do středu kružnice. Shrnutím, částice pohybující se po kružnici konstantní rychlostí má zrychlení o velikosti</p>
+<div class="math notranslate nohighlight">
+\[{a}_{\text{C}}=\frac{{v}^{2}}{r}.\]</div>
+<p>Směr vektoru zrychlení směřuje do středu kružnice. Toto je radiální zrychlení a nazývá se dostředivé (centropetální) zrychlení, proto mu dáváme dolní index c.</p>
+<img alt="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185654/CNX_UPhysics_04_04_Cenacc.jpg" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185654/CNX_UPhysics_04_04_Cenacc.jpg" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Slovo centripetální pochází z latinských slov <em>centrum</em> (což znamená „střed“) a <em>petere</em> (což znamená „hledat“), a má tedy význam „hledající střed“.</p>
+</div>
+</section>
+</section>
+<section id="nerovnomerny-pohyb-po-kruznici">
+<h2>Nerovnoměřný pohyb po kružnici<a class="headerlink" href="#nerovnomerny-pohyb-po-kruznici" title="Link to this heading">#</a></h2>
+<p>Kruhový pohyb nemusí být nutně konstantní rychlostí. Částice se může pohybovat po kružnici a zrychlovat nebo zpomalovat, což ukazuje zrychlení ve směru pohybu.</p>
+<p>V rovnoměrném kruhovém pohybu má částice vykonávající kruhový pohyb konstantní rychlost a kružnice má pevný poloměr. Pokud se rychlost částice také mění, pak zavádíme další zrychlení ve směru tečném ke kružnici. Taková zrychlení se vyskytují v bodě na setrvačníku, který mění svou rychlost otáčení, nebo u jakéhokoli zrychlujícího rotoru. Pokud se rychlost částice mění, pak má <strong>tečné zrychlení</strong>, které je časovou rychlostí změny velikosti rychlosti:</p>
+<div class="math notranslate nohighlight">
+\[ {a}_{\text{T}}=\frac{d|\overset{\to }{v}|}{dt}. \]</div>
+<p>Směr tečného zrychlení je tečný ke kružnici, zatímco směr dostředivého zrychlení je radiálně dovnitř směrem ke středu kružnice. Částice v kruhovém pohybu s tečným zrychlením má tedy <strong>celkové zrychlení</strong>, které je vektorovým součtem dostředivého a tečného zrychlení:</p>
+<div class="math notranslate nohighlight">
+\[ \overset{\to }{a}={\overset{\to }{a}}_{\text{C}}+{\overset{\to }{a}}_{\text{T}}. \]</div>
+<p>Vektory zrychlení jsou znázorněny na (Obrázku). Všimněte si, že oba vektory zrychlení <span class="math notranslate nohighlight">\( {\overset{\to }{a}}_{\text{C}} \)</span> a <span class="math notranslate nohighlight">\( {\overset{\to }{a}}_{\text{T}} \)</span> jsou navzájem kolmé, s <span class="math notranslate nohighlight">\( {\overset{\to }{a}}_{\text{C}} \)</span> v radiálním směru a <span class="math notranslate nohighlight">\( {\overset{\to }{a}}_{\text{T}} \)</span> v tečném směru. Celkové zrychlení <span class="math notranslate nohighlight">\( \overset{\to }{a} \)</span> směřuje pod úhlem mezi <span class="math notranslate nohighlight">\( {\overset{\to }{a}}_{\text{C}} \)</span> a <span class="math notranslate nohighlight">\( {\overset{\to }{a}}_{\text{T}}.\)</span></p>
+<img alt="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185702/CNX_UPhysics_04_04_Circleacc.jpg" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185702/CNX_UPhysics_04_04_Circleacc.jpg" />
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Prednasky"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Pohyb v gravitačním poli</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="4_4_Fiktivn%C3%AD_s%C3%ADly.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Fiktivní síly</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnomerny-pohyb-po-kruznici">Rovnoměrný pohyb po kružnici</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametry-rovnomerneho-kruhoveho-pohybu-1dof-skalarni-popis">Parametry rovnoměrného kruhového pohybu (1DOF - skalární popis)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dostredive-zrychleni">Dostředivé zrychlení</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nerovnomerny-pohyb-po-kruznici">Nerovnoměřný pohyb po kružnici</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

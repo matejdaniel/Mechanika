@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -65,7 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/3_4_Nucené_harmonické_kmitání';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. cvičení" href="../Cviceni/C1.html" />
+    <link rel="next" title="Pohyb ve 2D prostoru" href="4_1_2D_pohyb_DOF.html" />
     <link rel="prev" title="Tlumené vibrace" href="3_3_Tlumen%C3%A9_vibrace.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -222,11 +222,24 @@
 
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_1_2D_pohyb_DOF.html">Pohyb ve 2D prostoru</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html">Pohyb v gravitačním poli</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="4_3_Pohyb_po_kru%C5%BEnici.html">Pohyb po kružnici</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_4_Fiktivn%C3%AD_s%C3%ADly.html">Fiktivní síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_6_Moment_sily.html">Moment síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_7_T%C4%9B%C5%BEi%C5%A1t%C4%9B.html">Težiště</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_8_Statick%C3%A9_rovnice_rovnov%C3%A1hy.html">Statické rovnice rovnováhy v rovině</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_5_Vazby.html">Vazby v rovině</a></li>
+
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Cviceni/C1.html">1. cvičení</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Cviceni/C2.html">2. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C3.html">3. cvičení</a></li>
 </ul>
 
     </div>
@@ -435,9 +448,9 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-rovnice">Řešení rovnice</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenni-reseni">Homogenní řešení</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partikularni-reseni">Partikulární řešení</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Celkové řešení</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dosazeni-do-pohybove-rovnice">Dosazení do pohybové rovnice</a></li>
 </ul>
 </li>
 </ul>
@@ -526,7 +539,7 @@ m \ddot{x} + kx = F_0 \cos(\omega t)
 \[
    -A \omega^2 \cos(\omega t) - B \omega^2 \sin(\omega t) + \omega_0^2 (A \cos(\omega t) + B \sin(\omega t)) = \frac{F_0}{m} \cos(\omega t)
    \]</div>
-<p>Porovnáním koeficientů u <span class="math notranslate nohighlight">\(\cos(\omega t)\)</span> a <span class="math notranslate nohighlight">\(\sin(\omega t)\)</span> dostáváme soustavu:</p>
+<p>Porovnáním koeficientů u (\cos(\omega t)) a (\sin(\omega t)) dostáváme soustavu:</p>
 <div class="math notranslate nohighlight">
 \[
    (\omega_0^2 - \omega^2) A = \frac{F_0}{m}, \quad (\omega_0^2 - \omega^2) B = 0
@@ -536,7 +549,7 @@ m \ddot{x} + kx = F_0 \cos(\omega t)
 \[
    A = \frac{F_0 / m}{\omega_0^2 - \omega^2}
    \]</div>
-<p>za předpokladu, že <span class="math notranslate nohighlight">\(\omega \neq \omega_0\)</span> (tj. nejsme v rezonanci).</p>
+<p>za předpokladu, že (\omega \neq \omega_0) (tj. nejsme v rezonanci).</p>
 </li>
 </ol>
 </section>
@@ -619,17 +632,23 @@ m \ddot{x} + b \dot{x} + k x = F_0 \cos(\omega t).
 <p>Charakteristická rovnice:</p>
 <div class="math notranslate nohighlight">
 \[
-r^2 + 2\zeta\omega_0 r + \omega_0^2 = 0.
+\lambda^2 + 2\zeta\omega_0 \lambda + \omega_0^2 = 0.
 \]</div>
 <p>Řešení závisí na velikosti <span class="math notranslate nohighlight">\(\zeta\)</span>:</p>
 <ul>
-<li><p><strong>Podkritické tlumení</strong> $<span class="math notranslate nohighlight">\(\zeta &lt; 1\)</span>$: oscilace s exponenciálním útlumem,</p>
+<li><p><strong>Podkritické tlumení</strong> <span class="math notranslate nohighlight">\(\zeta &lt; 1\)</span>: oscilace s exponenciálním útlumem,</p>
 <div class="math notranslate nohighlight">
 \[
   x_h(t) = e^{-\zeta \omega_0 t} (C_1 \cos(\omega_d t) + C_2 \sin(\omega_d t)),
   \]</div>
-<p>kde <span class="math notranslate nohighlight">\(\omega_d = \omega_0 \sqrt{1 - \zeta^2}\)</span> je tlumená frekvence.</p>
 </li>
+</ul>
+<p>nebo
+$<span class="math notranslate nohighlight">\(
+  x_h(t) = e^{-\zeta \omega_0 t} C \cos(\omega_d t + \psi),
+  \)</span>$</p>
+<p>kde $<span class="math notranslate nohighlight">\(\omega_d = \omega_0 \sqrt{1 - \zeta^2}\)</span>$ je tlumená frekvence.</p>
+<ul class="simple">
 <li><p><strong>Kritické a nadkritické tlumení</strong>: neoscilující pohyb.</p></li>
 </ul>
 </section>
@@ -640,19 +659,16 @@ r^2 + 2\zeta\omega_0 r + \omega_0^2 = 0.
 \[
 x_p(t) = A \cos(\omega t) + B \sin(\omega t).
 \]</div>
-<p>PRvní derivace</p>
+<p>První derivace:</p>
 <div class="math notranslate nohighlight">
-\[\dot{x}_p(t) = -A \omega \sin(\omega t) + B \omega \cos(\omega t).
+\[
+\dot{x}_p(t) = -A \omega \sin(\omega t) + B \omega \cos(\omega t)
 \]</div>
 <p>Druhá derivace:</p>
 <div class="math notranslate nohighlight">
 \[
 \ddot{x}_p(t) = -A \omega^2 \cos(\omega t) - B \omega^2 \sin(\omega t).
 \]</div>
-</section>
-</section>
-<section id="dosazeni-do-pohybove-rovnice">
-<h2>Dosazení do pohybové rovnice<a class="headerlink" href="#dosazeni-do-pohybove-rovnice" title="Link to this heading">#</a></h2>
 <p>Nyní dosadíme <span class="math notranslate nohighlight">\(x_p(t)\)</span>, <span class="math notranslate nohighlight">\(\dot{x}_p(t)\)</span> a <span class="math notranslate nohighlight">\(\ddot{x}_p(t)\)</span> do rovnice:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -675,35 +691,40 @@ x_p(t) = A \cos(\omega t) + B \sin(\omega t).
 + (B (\omega_0^2 - \omega^2) - 2\zeta\omega_0 A \omega) \sin(\omega t)
 = f \cos(\omega t).
 \]</div>
-<p>Protože rovnice musí platit pro všechna <span class="math notranslate nohighlight">\(t\)</span>, porovnáme koeficienty u <span class="math notranslate nohighlight">\(\cos(\omega t)\)</span> a <span class="math notranslate nohighlight">\(\sin(\omega t)\)</span>:</p>
-<ol class="arabic simple">
-<li><p>Pro <span class="math notranslate nohighlight">\(\cos(\omega t)\)</span>:</p></li>
-</ol>
+<p>Protože rovnice musí platit pro všechna ( t ), porovnáme koeficienty u (\cos(\omega t)) a (\sin(\omega t)):</p>
+<ol class="arabic">
+<li><p>Pro <span class="math notranslate nohighlight">\(\cos(\omega t)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-   A (\omega_0^2 - \omega^2) + 2\zeta\omega_0 B \omega = f.
-\]</div>
-<ol class="arabic">
+   A (\omega_0^2 - \omega^2) + 2\zeta\omega_0 B \omega = f
+   \]</div>
+</li>
 <li><p>Pro <span class="math notranslate nohighlight">\(\sin(\omega t)\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[B (\omega_0^2 - \omega^2) - 2\zeta\omega_0 A \omega = 0.
+\[
+   B (\omega_0^2 - \omega^2) - 2\zeta\omega_0 A \omega = 0
    \]</div>
 </li>
 </ol>
 <p>Z druhé rovnice vyjádříme <span class="math notranslate nohighlight">\(B\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[B = \frac{2\zeta\omega_0 A \omega}{\omega_0^2 - \omega^2}\]</div>
+\[
+B = \frac{2\zeta\omega_0 A \omega}{\omega_0^2 - \omega^2}
+\]</div>
 <p>Dosadíme do první rovnice:</p>
 <div class="math notranslate nohighlight">
-\[A (\omega_0^2 - \omega^2) + 2\zeta\omega_0 \cdot \frac{2\zeta\omega_0 A \omega}{\omega_0^2 - \omega^2} \omega = f.
+\[
+A (\omega_0^2 - \omega^2) + 2\zeta\omega_0 \cdot \frac{2\zeta\omega_0 A \omega}{\omega_0^2 - \omega^2} \omega = f
 \]</div>
 <p>Vytkneme <span class="math notranslate nohighlight">\(A\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[A \left( (\omega_0^2 - \omega^2) + \frac{4\zeta^2\omega_0^2\omega^2}{\omega_0^2 - \omega^2} \right) = f\]</div>
+\[
+A \left( (\omega_0^2 - \omega^2) + \frac{4\zeta^2\omega_0^2\omega^2}{\omega_0^2 - \omega^2} \right) = f
+\]</div>
 <p>Dáme na společného jmenovatele:</p>
 <div class="math notranslate nohighlight">
 \[
-A \frac{(\omega_0^2 - \omega^2)^2 + (2\zeta\omega_0\omega)^2}{\omega_0^2 - \omega^2} = f.
+A \frac{(\omega_0^2 - \omega^2)^2 + (2\zeta\omega_0\omega)^2}{\omega_0^2 - \omega^2} = f
 \]</div>
 <p>Odtud vyjádříme <span class="math notranslate nohighlight">\(A\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -720,26 +741,26 @@ D = (\omega_0^2 - \omega^2)^2 + (2\zeta\omega_0\omega)^2.
 \[
 B = \frac{f (2\zeta\omega_0\omega)}{D}.
 \]</div>
-<p>Celkové partikulární řešení:</p>
+<p>Celková amplituda:</p>
 <div class="math notranslate nohighlight">
 \[
-x_p(t) = A \cos(\omega t) + B \sin(\omega t),
+X = \frac{f}{\sqrt{(\omega_0^2 - \omega^2)^2 + (2\zeta\omega_0\omega)^2}}.
 \]</div>
-<p>s amplitudou:</p>
+<p>Fázový posun:</p>
 <div class="math notranslate nohighlight">
 \[
-X = \sqrt{A^2 + B^2} = \frac{f}{\sqrt{(\omega_0^2 - \omega^2)^2 + (2\zeta\omega_0\omega)^2}}.
+\tan \phi = \frac{2\zeta\omega_0\omega}{\omega_0^2 - \omega^2}.
 \]</div>
-<p>a fázovým posunem:</p>
-<div class="math notranslate nohighlight">
-\[
-\tan \phi = \frac{B}{A} = \frac{2\zeta\omega_0\omega}{\omega_0^2 - \omega^2}.
-\]</div>
+</section>
+<section id="id2">
+<h3>Celkové řešení<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Celkové řešení je:</p>
 <div class="math notranslate nohighlight">
 \[
 x(t) = e^{-\zeta \omega_0 t} (C_1 \cos(\omega_d t) + C_2 \sin(\omega_d t)) + X \cos(\omega t - \phi).
 \]</div>
-<p>V ustáleném stavu dojde k postupnému útlumu vlastní složky a převažuje nucená složka <span class="math notranslate nohighlight">\(X \cos(\omega t - \phi)\)</span>. Při rezonanci <span class="math notranslate nohighlight">\((\omega \approx \omega_0)\)</span> se amplituda maximálně zvětší, ale není nekonečná díky tlumení.</p>
+<p>V ustáleném stavu převažuje nucená složka <span class="math notranslate nohighlight">\(X \cos(\omega t - \phi)\)</span>. Při rezonanci <span class="math notranslate nohighlight">\((\omega \approx \omega_0)\)</span> se amplituda maximálně zvětší, ale není nekonečná díky tlumení.</p>
+</section>
 </section>
 </section>
 
@@ -783,11 +804,11 @@ x(t) = e^{-\zeta \omega_0 t} (C_1 \cos(\omega_d t) + C_2 \sin(\omega_d t)) + X \
       </div>
     </a>
     <a class="right-next"
-       href="../Cviceni/C1.html"
+       href="4_1_2D_pohyb_DOF.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">1. cvičení</p>
+        <p class="prev-next-title">Pohyb ve 2D prostoru</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -824,9 +845,9 @@ x(t) = e^{-\zeta \omega_0 t} (C_1 \cos(\omega_d t) + C_2 \sin(\omega_d t)) + X \
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-rovnice">Řešení rovnice</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenni-reseni">Homogenní řešení</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partikularni-reseni">Partikulární řešení</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Celkové řešení</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dosazeni-do-pohybove-rovnice">Dosazení do pohybové rovnice</a></li>
 </ul>
 </li>
 </ul>

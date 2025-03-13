@@ -34,6 +34,16 @@ parts:
       - file: Prednasky/3_2_Dynamika_oscilátoru
       - file: Prednasky/3_3_Tlumené_vibrace
       - file: Prednasky/3_4_Nucené_harmonické_kmitání
+    - file: Prednasky/4_1_2D_pohyb_DOF
+      sections:
+      - file: Prednasky/4_2_Pohyb_v_gravitačním_poli
+      - file: Prednasky/4_9_Šikmý_vrh_Lagrange
+      - file: Prednasky/4_3_Pohyb_po_kružnici
+      - file: Prednasky/4_4_Fiktivní_síly
+      - file: Prednasky/4_6_Moment_sily
+      - file: Prednasky/4_7_Těžiště
+      - file: Prednasky/4_8_Statické_rovnice_rovnováhy
+      - file: Prednasky/4_5_Vazby
   - caption: Cvičení
     chapters:
     - file: Cviceni/C1

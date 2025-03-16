@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Kmitání &#8212; Mechanika</title>
+    <title>Steinerova věta &#8212; Mechanika</title>
   
   
   
@@ -62,11 +62,9 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/3_1_Kmitani';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/5_3_Steinerova_věta';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Dynamika oscilátoru" href="3_2_Dynamika_oscil%C3%A1toru.html" />
-    <link rel="prev" title="Dimenzování součástí namáhaných v tahu a tlaku" href="2_8_Dimenzovani.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -117,6 +115,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
@@ -177,19 +177,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../Misc/Sylabus_LS2025.html">Mechanika FBMI sylabus LS 2024/2025</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="0_1_Definice_a_historie_mechaniky.html">Úvod do mechaniky</a></li>
 
 
 
 
-<li class="toctree-l1 has-children"><a class="reference internal" href="0_2_Skal%C3%A1ry_a_vektory.html">Typy veličin v mechanice, souřadnicové systémy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="0_2_Skal%C3%A1ry_a_vektory.html">Skalár a vektor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html">Souřadnicové systémy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1_1_Stupe%C5%88_volnosti.html">Stupně volnosti</a></li>
 
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="1_2_Kinematika_v_1D.html">Pohyb v 1D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1_2_Kinematika_v_1D.html">Kinematika v 1DOF prostoru</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="1_3_Dynamika_pohybu_v_1D.html">Dynamika</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="1_4_Energie.html">Mechanická práce</a></li>
@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="1_5_Lagrange_Eulerovy_rovnice.html">Princip minimální akce a Lagrange-Eulerovy rovnice</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="2_1_Mechanick%C3%A9_vlastnosti_materi%C3%A1lu.html">Deformace v 1D - tah-tlak</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_1_Mechanick%C3%A9_vlastnosti_materi%C3%A1lu.html">Mechanické vlastnosti materiálu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="2_2_Hooke%C5%AFv_z%C3%A1kon.html">Hookeův zákon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2_3_Tahov%C3%A1_zkou%C5%A1ka.html">Tahová zkouška</a></li>
 
@@ -213,7 +213,7 @@
 <li class="toctree-l2"><a class="reference internal" href="2_8_Dimenzovani.html">Dimenzování součástí namáhaných v tahu a tlaku</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Periodický pohyb v 1D</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_1_Kmitani.html">Kmitání</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="3_2_Dynamika_oscil%C3%A1toru.html">Dynamika oscilátoru</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3_3_Tlumen%C3%A9_vibrace.html">Tlumené vibrace</a></li>
 
@@ -222,7 +222,7 @@
 
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="4_1_2D_pohyb_DOF.html">Pohyb v 2D - kinematika</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_1_2D_pohyb_DOF.html">Pohyb ve 2D prostoru</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html">Pohyb v gravitačním poli</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="4_9_%C5%A0ikm%C3%BD_vrh_Lagrange.html">Odvození šikmého vrhu z Lagrange-Eulerových rovnic</a></li>
@@ -319,7 +319,7 @@
       
       
       
-      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/3_1_Kmitani.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/5_3_Steinerova_věta.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -349,7 +349,7 @@
       
       
       
-      <li><a href="../_sources/Prednasky/3_1_Kmitani.ipynb" target="_blank"
+      <li><a href="../_sources/Prednasky/5_3_Steinerova_věta.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -425,7 +425,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Kmitání</h1>
+    <h1>Steinerova věta</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -435,19 +435,9 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodicky-pohyb-a-jeho-charakteristiky">Periodický pohyb a jeho charakteristiky</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frekvence">Frekvence</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonicky-periodicky-pohyb">Harmonický periodický pohyb</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uhlova-frekvence">Úhlová frekvence</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#faze-harmonickeho-pohybu">Fáze harmonického pohybu</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vztah-mezi-harmonickym-pohybem-a-pohybem-po-kruznici">Vztah mezi harmonickým pohybem a pohybem po kružnici</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rychlost-harmonickeho-oscilatoru">Rychlost harmonického oscilátoru</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zrychleni-harmonickeho-oscilatoru">Zrychlení harmonického oscilátoru</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pojmy-kinematiky-periodickeho-pohybu">Pojmy kinematiky periodického pohybu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definice-steinerovy-vety">Definice Steinerovy věty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odvozeni-steinerovy-vety">Odvození Steinerovy věty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-steinerovy-vety">Aplikace Steinerovy věty</a></li>
 </ul>
             </nav>
         </div>
@@ -459,203 +449,93 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="kmitani">
-<h1>Kmitání<a class="headerlink" href="#kmitani" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="periodicky-pohyb-a-jeho-charakteristiky">
-<h2>Periodický pohyb a jeho charakteristiky<a class="headerlink" href="#periodicky-pohyb-a-jeho-charakteristiky" title="Link to this heading">#</a></h2>
-<blockquote>
-<div><p>Periodický pohyb je druh pohybu, při kterém se těleso nebo systém vrací do stejného stavu po určité časové periodě.</p>
-</div></blockquote>
-<p>Doba potřebná pro jedno úplné opakování pohybu se nazývá <strong>perioda</strong> a obvykle se označuje písmenem <span class="math notranslate nohighlight">\(T\)</span>. Symbol <span class="math notranslate nohighlight">\(P\)</span> se nepoužívá, protože by mohl být zaměněn za hybnost. Jedno úplné opakování pohybu se nazývá <strong>cyklus</strong>.
-Jednotkou periody v <strong>SI soustavě</strong> je sekunda <strong>(s)</strong>.</p>
-<p>Matematicky lze periodický pohyb popsat funkcí:</p>
-<div class="math notranslate nohighlight">
-\[x(t+T)=x(t)\]</div>
-<p>kde kde <span class="math notranslate nohighlight">\(x(t)\)</span> představuje polohu popisující pohyb v čase <span class="math notranslate nohighlight">\(t\)</span></p>
-<section id="frekvence">
-<h3>Frekvence<a class="headerlink" href="#frekvence" title="Link to this heading">#</a></h3>
-<blockquote>
-<div><p><strong>Frekvence</strong> je definována jako počet cyklů za jednotku času.</p>
-</div></blockquote>
-<p>Obvykle se značí latinským písmenem <span class="math notranslate nohighlight">\(f\)</span> nebo řeckým písmenem <span class="math notranslate nohighlight">\(\nu\)</span> (<em>ni</em>). Perioda a frekvence jsou vzájemně <strong>reciproční veličiny</strong>:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="steinerova-veta">
+<h1>Steinerova věta<a class="headerlink" href="#steinerova-veta" title="Link to this heading">#</a></h1>
+<section id="definice-steinerovy-vety">
+<h2>Definice Steinerovy věty<a class="headerlink" href="#definice-steinerovy-vety" title="Link to this heading">#</a></h2>
+<p>Steinerova věta (také známá jako věta o posunutí osy) umožňuje vypočítat moment setrvačnosti tělesa vzhledem k libovolné ose, pokud je znám moment setrvačnosti vůči ose procházející těžištěm.</p>
+<p>Matematicky se vyjadřuje jako:</p>
 <div class="math notranslate nohighlight">
 \[
-f = \frac{1}{T}
-\]</div>
-<p>Například pokud srdce novorozence bije s frekvencí <strong>120 úderů za minutu</strong>, pak jeho perioda (čas mezi dvěma údery) je <strong>0,5 sekundy</strong>. Obecně platí, že <strong>vyšší frekvence odpovídá kratší periodě</strong> a naopak.</p>
-<p>V <strong>SI soustavě</strong> je jednotkou frekvence <strong>hertz (Hz)</strong>, pojmenovaný po německém fyzikovi Heinrichu Hertzovi. <strong>1 Hz</strong> znamená, že se daná událost opakuje <strong>jednou za sekundu</strong>.</p>
-<p>U rotačních zařízení se často používá tradiční jednotka <strong>otáčky za minutu (RPM)</strong>:</p>
-<div class="math notranslate nohighlight">
-\[
-60 \text{ RPM} = 1 \text{ Hz}
-\]</div>
-</section>
-</section>
-<section id="harmonicky-periodicky-pohyb">
-<h2>Harmonický periodický pohyb<a class="headerlink" href="#harmonicky-periodicky-pohyb" title="Link to this heading">#</a></h2>
-<blockquote>
-<div><p>Harmonický periodický pohyb je zvláštní typ periodického pohybu, při kterém je možné popsat polohu tělesa v čase podle sinusové nebo kosinusové funkce.</p>
-</div></blockquote>
-<div class="math notranslate nohighlight">
-\[x(t) = A \cos \left(\omega t + \varphi_0 \right)\]</div>
-<p>kde</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(x(t)\)</span> je okamžitá poloha oscilujícího tělesa</p></li>
-<li><p><span class="math notranslate nohighlight">\(t\)</span> je čas</p></li>
-<li><p><span class="math notranslate nohighlight">\(A\)</span> je <strong>amplituda</strong> – maximální výchylka z rovnovážné polohy,</p></li>
-<li><p><span class="math notranslate nohighlight">\(\omega,\varphi_0\)</span> jsou konstanty popisující pohyb</p></li>
-</ul>
-<section id="uhlova-frekvence">
-<h3>Úhlová frekvence<a class="headerlink" href="#uhlova-frekvence" title="Link to this heading">#</a></h3>
-<p>Periodický pohyb se často lépe popisuje pomocí <strong>úhlové frekvence</strong>, která se značí řeckým písmenem <span class="math notranslate nohighlight">\(\omega\)</span> (<em>omega</em>). Úhlová frekvence představuje <strong>úhlový posun za jednotku času</strong> (například při rotaci) nebo rychlost změny fáze sinusového signálu.</p>
-<div class="math notranslate nohighlight">
-\[
-y(t) = \sin(\varphi(t)) = \cos(\omega t) = \cos(2\pi f t) 
-\]</div>
-<p>Vzorec pro úhlovou frekvenci:</p>
-<div class="math notranslate nohighlight">
-\[
-\omega = 2\pi f \quad 
-\]</div>
-<p>Úhlová frekvence se obvykle vyjadřuje v jednotkách <strong>radián za sekundu</strong> (<strong>rad/s</strong>), přičemž jeden plný kruh obsahuje <strong>2 <span class="math notranslate nohighlight">\(\pi\)</span> radiánů</strong>.</p>
-</section>
-<section id="faze-harmonickeho-pohybu">
-<h3>Fáze harmonického pohybu<a class="headerlink" href="#faze-harmonickeho-pohybu" title="Link to this heading">#</a></h3>
-<blockquote>
-<div><p><strong>Fáze harmonického pohybu</strong> určuje okamžitý stav oscilátoru v daném čase ( t ). Vyjadřuje se jako argument trigonometrické funkce v rovnici harmonického pohybu:</p>
-</div></blockquote>
-<div class="math notranslate nohighlight">
-\[
-\varphi(t) = \omega t + \varphi_0
+I = I_C + M d^2
 \]</div>
 <p>kde:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\varphi(t)\)</span> je <strong>okamžitá fáze</strong> oscilátoru,</p></li>
-<li><p><span class="math notranslate nohighlight">\(\omega\)</span> je <strong>úhlová frekvence</strong>,</p></li>
-<li><p><span class="math notranslate nohighlight">\(t\)</span> je <strong>čas</strong>,</p></li>
-<li><p><span class="math notranslate nohighlight">\(\varphi_0\)</span> je <strong>počáteční fáze</strong>, která určuje stav oscilátoru v čase <span class="math notranslate nohighlight">\(t = 0\)</span>.</p></li>
-</ul>
-<p>Fáze harmonického pohybu určuje, <strong>v jaké části cyklu se oscilátor nachází</strong>.</p>
-<ul class="simple">
-<li><p>Pokud <span class="math notranslate nohighlight">\(\varphi_0 = 0\)</span>, oscilátor začíná v <strong>maximální výchylce</strong> (při pohybu podle kosinové funkce).</p></li>
-<li><p>Pokud <span class="math notranslate nohighlight">\(\varphi_0 = \frac{\pi}{2}\)</span>, oscilátor začíná v <strong>rovnovážné poloze</strong> a pohybuje se směrem nahoru.</p></li>
-</ul>
-<p>Harmonický pohyb lze vyjádřit jako:</p>
-<div class="math notranslate nohighlight">
-\[
-x(t) = A \cos(\omega t + \varphi_0)
-\]</div>
-<p>Fáze <span class="math notranslate nohighlight">\(\varphi(t) = \omega t + \varphi_0\)</span> se <strong>lineárně zvětšuje v čase</strong>, což odpovídá periodicitě pohybu. Fáze se měří v <strong>radiánech</strong> nebo <strong>stupních</strong>:</p>
-<ul class="simple">
-<li><p>Pokud fáze dosáhne hodnoty <span class="math notranslate nohighlight">\(2\pi\)</span>, oscilátor dokončil jeden úplný cyklus.</p></li>
+<li><p><span class="math notranslate nohighlight">\( I \)</span> je moment setrvačnosti vzhledem k nové ose,</p></li>
+<li><p><span class="math notranslate nohighlight">\( I_C \)</span> je moment setrvačnosti vzhledem k ose procházející těžištěm,</p></li>
+<li><p><span class="math notranslate nohighlight">\( M \)</span> je celková hmotnost tělesa,</p></li>
+<li><p><span class="math notranslate nohighlight">\( d \)</span> je vzdálenost mezi těžišťovou osou a novou osou.</p></li>
 </ul>
 </section>
+<section id="odvozeni-steinerovy-vety">
+<h2>Odvození Steinerovy věty<a class="headerlink" href="#odvozeni-steinerovy-vety" title="Link to this heading">#</a></h2>
+<p>Předpokládejme tuhý objekt složený z malých hmotných elementů <span class="math notranslate nohighlight">\( dm \)</span>, jejichž moment setrvačnosti chceme určit vůči ose posunuté o vzdálenost <span class="math notranslate nohighlight">\( d \)</span> od těžiště.</p>
+<p>Každý hmotný element <span class="math notranslate nohighlight">\( dm \)</span> má souřadnice <span class="math notranslate nohighlight">\( x_C, y_C \)</span> v těžišťové soustavě a <span class="math notranslate nohighlight">\( x, y \)</span> v nové soustavě. Vztah mezi nimi je:</p>
+<div class="math notranslate nohighlight">
+\[
+x = x_C + d
+\]</div>
+<p>Moment setrvačnosti vůči nové ose je:</p>
+<div class="math notranslate nohighlight">
+\[
+I = \int x^2 \, dm
+\]</div>
+<p>Dosadíme <span class="math notranslate nohighlight">\( x = x_C + d \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+I = \int (x_C + d)^2 \, dm
+\]</div>
+<p>Rozepíšeme druhou mocninu:</p>
+<div class="math notranslate nohighlight">
+\[
+I = \int (x_C^2 + 2 d x_C + d^2) \, dm
+\]</div>
+<p>Rozdělíme integrál:</p>
+<div class="math notranslate nohighlight">
+\[
+I = \int x_C^2 \, dm + 2d \int x_C \, dm + d^2 \int dm
+\]</div>
+<p>První člen <span class="math notranslate nohighlight">\( \int x_C^2 \, dm \)</span> je moment setrvačnosti vůči těžišťové ose:</p>
+<div class="math notranslate nohighlight">
+\[
+I_C = \int x_C^2 \, dm
+\]</div>
+<p>Druhý člen <span class="math notranslate nohighlight">\( \int x_C \, dm \)</span> odpovídá prvnímu momentu hmotnosti vzhledem k těžišti, který je nulový:</p>
+<div class="math notranslate nohighlight">
+\[
+\int x_C \, dm = 0
+\]</div>
+<p>Třetí člen <span class="math notranslate nohighlight">\( \int dm \)</span> je celková hmotnost tělesa <span class="math notranslate nohighlight">\( M \)</span>, takže:</p>
+<div class="math notranslate nohighlight">
+\[
+I = I_C + M d^2
+\]</div>
+<p>což je právě Steinerova věta.</p>
 </section>
-<section id="vztah-mezi-harmonickym-pohybem-a-pohybem-po-kruznici">
-<h2>Vztah mezi harmonickým pohybem a pohybem po kružnici<a class="headerlink" href="#vztah-mezi-harmonickym-pohybem-a-pohybem-po-kruznici" title="Link to this heading">#</a></h2>
-<p>Harmonický pohyb lze chápat jako <strong>projekci pohybu po kružnici</strong> do jednoho z jeho souřadných směrů. Představme si hmotný bod, který se pohybuje <strong>rovnoměrně po kružnici</strong> s úhlovou rychlostí <span class="math notranslate nohighlight">\(\omega\)</span>. Jeho polohu můžeme popsat pomocí parametrických rovnic:</p>
-<div class="math notranslate nohighlight">
-\[
-x(t) = R \cos(\omega t + \varphi_0)
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-y(t) = R \sin(\omega t + \varphi_0)
-\]</div>
-<p>Pokud budeme sledovat pouze souřadnici <span class="math notranslate nohighlight">\(x(t)\)</span>, vidíme, že se chová jako harmonický oscilátor s amplitudou <span class="math notranslate nohighlight">\(A = R\)</span>.</p>
-<img alt="https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0263-shm-graph-position_4.gif" src="https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0263-shm-graph-position_4.gif" />
-</section>
-<section id="rychlost-harmonickeho-oscilatoru">
-<h2>Rychlost harmonického oscilátoru<a class="headerlink" href="#rychlost-harmonickeho-oscilatoru" title="Link to this heading">#</a></h2>
-<p>Rychlost je první časová derivace polohy:</p>
-<div class="math notranslate nohighlight">
-\[
-v(t) = \dot{x} = \frac{dx(t)}{dt} = - A \omega \sin(\omega t + \varphi_0)
-\]</div>
-<ul class="simple">
-<li><p><strong>Amplituda rychlosti</strong> je <span class="math notranslate nohighlight">\(v_{\max} = A \omega\)</span>.</p></li>
-<li><p>Rychlost je <strong>fázově posunuta</strong> o <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span> oproti poloze – když je výchylka maximální, rychlost je nulová.</p></li>
-<li><p>Znaménko rychlosti závisí na směru pohybu:</p>
+<hr class="docutils" />
+<section id="aplikace-steinerovy-vety">
+<h2>Aplikace Steinerovy věty<a class="headerlink" href="#aplikace-steinerovy-vety" title="Link to this heading">#</a></h2>
+<p>Steinerova věta je užitečná při výpočtech momentů setrvačnosti těles v případech, kdy osa rotace neprochází těžištěm. Například:</p>
 <ul>
-<li><p>Při pohybu <strong>k rovnovážné poloze</strong> je rychlost kladná nebo záporná dle směru.</p></li>
-<li><p>Při pohybu <strong>od rovnovážné polohy</strong> má opačné znaménko.</p></li>
-</ul>
+<li><p><strong>Tenká tyč délky <span class="math notranslate nohighlight">\( L \)</span>, rotující kolem konce:</strong><br />
+Moment setrvačnosti kolem středu tyče je:</p>
+<div class="math notranslate nohighlight">
+\[
+  I_C = \frac{1}{12} M L^2
+  \]</div>
+<p>Pokud se osa posune o <span class="math notranslate nohighlight">\( d = \frac{L}{2} \)</span>, pak:</p>
+<div class="math notranslate nohighlight">
+\[
+  I = \frac{1}{12} M L^2 + M \left(\frac{L}{2}\right)^2
+  \]</div>
+<div class="math notranslate nohighlight">
+\[
+  I = \frac{1}{12} M L^2 + \frac{1}{4} M L^2 = \frac{1}{3} M L^2
+  \]</div>
+<p>což odpovídá známému výsledku pro tyč rotující kolem jednoho konce.</p>
 </li>
 </ul>
 </section>
-<section id="zrychleni-harmonickeho-oscilatoru">
-<h2>Zrychlení harmonického oscilátoru<a class="headerlink" href="#zrychleni-harmonickeho-oscilatoru" title="Link to this heading">#</a></h2>
-<p>Zrychlení je první derivace rychlosti, tedy druhá derivace polohy:</p>
-<div class="math notranslate nohighlight">
-\[
-a(t) = \ddot{x} = \frac{dv(t)}{dt} = - A \omega^2 \cos(\omega t + \varphi_0)
-\]</div>
-<ul class="simple">
-<li><p><strong>Amplituda zrychlení</strong> je <span class="math notranslate nohighlight">\(a_{\max} = A \omega^2\)</span>.</p></li>
-<li><p>Zrychlení je <strong>fázově posunuto o <span class="math notranslate nohighlight">\(\pi\)</span></strong> oproti poloze – vždy směřuje k rovnovážné poloze.</p></li>
-<li><p>Znaménko zrychlení:</p>
-<ul>
-<li><p>Je <strong>kladné</strong>, když je výchylka záporná <span class="math notranslate nohighlight">\(x &lt; 0\)</span> – směřuje zpět k rovnovážné poloze.</p></li>
-<li><p>Je <strong>záporné</strong>, když je výchylka kladná <span class="math notranslate nohighlight">\(x &gt; 0\)</span> – opět směřuje zpět k rovnovážné poloze.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="pojmy-kinematiky-periodickeho-pohybu">
-<h2>Pojmy kinematiky periodického pohybu<a class="headerlink" href="#pojmy-kinematiky-periodickeho-pohybu" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p><strong>Veličina</strong></p></th>
-<th class="head"><p><strong>Označení</strong></p></th>
-<th class="head"><p><strong>Jednotka (SI)</strong></p></th>
-<th class="head"><p><strong>Popis</strong></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Perioda</strong></p></td>
-<td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
-<td><p>sekunda (s)</p></td>
-<td><p>Čas potřebný pro jeden cyklus pohybu.</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Frekvence</strong></p></td>
-<td><p><span class="math notranslate nohighlight">\(f\)</span> nebo <span class="math notranslate nohighlight">\(\nu\)</span></p></td>
-<td><p>hertz (Hz)</p></td>
-<td><p>Počet cyklů za sekundu. Vztahuje se k periodě jako <span class="math notranslate nohighlight">\(f = \frac{1}{T}\)</span>.</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Úhlová frekvence</strong></p></td>
-<td><p><span class="math notranslate nohighlight">\(\omega\)</span></p></td>
-<td><p>rad/s</p></td>
-<td><p>Udává rychlost změny fáze oscilátoru: <span class="math notranslate nohighlight">\(\omega = 2\pi f\)</span>.</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Amplituda</strong></p></td>
-<td><p><span class="math notranslate nohighlight">\(A\)</span></p></td>
-<td><p>metr (m)</p></td>
-<td><p>Maximální výchylka z rovnovážné polohy.</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Fáze</strong></p></td>
-<td><p><span class="math notranslate nohighlight">\(\varphi(t)\)</span></p></td>
-<td><p>radián (rad)</p></td>
-<td><p>Okamžitý stav oscilátoru: <span class="math notranslate nohighlight">\(\varphi(t) = \omega t + \varphi_0\)</span>.</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Počáteční fáze</strong></p></td>
-<td><p><span class="math notranslate nohighlight">\(\varphi_0\)</span></p></td>
-<td><p>radián (rad)</p></td>
-<td><p>Fázový posun při <span class="math notranslate nohighlight">\(t = 0\)</span>.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -688,24 +568,6 @@ a(t) = \ddot{x} = \frac{dv(t)}{dt} = - A \omega^2 \cos(\omega t + \varphi_0)
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="2_8_Dimenzovani.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Dimenzování součástí namáhaných v tahu a tlaku</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="3_2_Dynamika_oscil%C3%A1toru.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Dynamika oscilátoru</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -723,19 +585,9 @@ a(t) = \ddot{x} = \frac{dv(t)}{dt} = - A \omega^2 \cos(\omega t + \varphi_0)
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodicky-pohyb-a-jeho-charakteristiky">Periodický pohyb a jeho charakteristiky</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frekvence">Frekvence</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonicky-periodicky-pohyb">Harmonický periodický pohyb</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uhlova-frekvence">Úhlová frekvence</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#faze-harmonickeho-pohybu">Fáze harmonického pohybu</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vztah-mezi-harmonickym-pohybem-a-pohybem-po-kruznici">Vztah mezi harmonickým pohybem a pohybem po kružnici</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rychlost-harmonickeho-oscilatoru">Rychlost harmonického oscilátoru</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zrychleni-harmonickeho-oscilatoru">Zrychlení harmonického oscilátoru</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pojmy-kinematiky-periodickeho-pohybu">Pojmy kinematiky periodického pohybu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definice-steinerovy-vety">Definice Steinerovy věty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odvozeni-steinerovy-vety">Odvození Steinerovy věty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-steinerovy-vety">Aplikace Steinerovy věty</a></li>
 </ul>
   </nav></div>
 

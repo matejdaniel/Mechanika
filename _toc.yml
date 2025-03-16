@@ -12,15 +12,18 @@ parts:
     chapters:
     - file: Prednasky/0_1_Definice_a_historie_mechaniky
     - file: Prednasky/0_2_Skaláry_a_vektory
+      title: Typy veličin v mechanice, souřadnicové systémy
       sections:
       - file: Prednasky/0_3_Souřadnicové_systémy
       - file: Prednasky/1_1_Stupeň_volnosti
     - file: Prednasky/1_2_Kinematika_v_1D
+      title: Pohyb v 1D
       sections:
       - file: Prednasky/1_3_Dynamika_pohybu_v_1D
       - file: Prednasky/1_4_Energie
       - file: Prednasky/1_5_Lagrange_Eulerovy_rovnice
     - file: Prednasky/2_1_Mechanické_vlastnosti_materiálu
+      title: Deformace v 1D - tah-tlak
       sections:
       - file: Prednasky/2_2_Hookeův_zákon
       - file: Prednasky/2_3_Tahová_zkouška
@@ -30,11 +33,13 @@ parts:
       - file: Prednasky/2_6_Inženýrské_a_skutečné_napětí
       - file: Prednasky/2_8_Dimenzovani
     - file: Prednasky/3_1_Kmitani
+      title: Periodický pohyb v 1D
       sections:
       - file: Prednasky/3_2_Dynamika_oscilátoru
       - file: Prednasky/3_3_Tlumené_vibrace
       - file: Prednasky/3_4_Nucené_harmonické_kmitání
     - file: Prednasky/4_1_2D_pohyb_DOF
+      title: Pohyb v 2D - kinematika
       sections:
       - file: Prednasky/4_2_Pohyb_v_gravitačním_poli
       - file: Prednasky/4_9_Šikmý_vrh_Lagrange
@@ -44,6 +49,18 @@ parts:
       - file: Prednasky/4_7_Těžiště
       - file: Prednasky/4_8_Statické_rovnice_rovnováhy
       - file: Prednasky/4_5_Vazby
+    - file: Prednasky/5_1_Dynamika_rotace
+      title: Pohyb v 2D - dynamika
+      sections:
+      - file: Prednasky/5_2_Moment_setrvačnosti
+      - file: Prednasky/5_3_Steinerova_věta
+      - file: Prednasky/5_7_Dynamické_rovnice_pohybu
+      - file: Prednasky/5_4_Zákon_zachování_momentu_hybnosti
+      - file: Prednasky/5_5_Kineticka_energie_rotačního_pohybu
+      - file: Prednasky/5_6_Analogie_rotační_translační
+      - file: Prednasky/5_8_Příklady
+      - file: Prednasky/5_9_Příklad_2
+      - file: Prednasky/5_10_Válec_na_nakloněné_rovině
   - caption: Cvičení
     chapters:
     - file: Cviceni/C1

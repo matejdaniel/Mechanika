@@ -17,7 +17,7 @@ parts:
       - file: Prednasky/0_3_Souřadnicové_systémy
       - file: Prednasky/1_1_Stupeň_volnosti
     - file: Prednasky/1_2_Kinematika_v_1D
-      title: Pohyb v 1D
+      title: Pohyb v 1D prostoru
       sections:
       - file: Prednasky/1_3_Dynamika_pohybu_v_1D
       - file: Prednasky/1_4_Energie
@@ -67,3 +67,4 @@ parts:
     - file: Cviceni/C2
     - file: Cviceni/C3
     - file: Cviceni/C4
+    - file: Cviceni/C5

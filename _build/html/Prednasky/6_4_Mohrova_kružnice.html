@@ -1,0 +1,938 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mohrova kružnice &#8212; Mechanika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/6_4_Mohrova_kružnice';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Konstrukce Mohrovy kružnice" href="6_5_Konstrukce_Mohrovy_kru%C5%BEnice.html" />
+    <link rel="prev" title="Rozšířený Hookeův zákon pro rovinnou napjatost" href="6_3_Hooke%C5%AFv_z%C3%A1kon_pro_rovinnou_napjatost.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Mechanika - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Mechanika - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Kurz mechaniky
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">O předmětu</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Podm%C3%ADnky_z%C3%A1po%C4%8Dtu_a_zkou%C5%A1ky.html">Zápočet:</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Sylabus_LS2025.html">Mechanika FBMI sylabus LS 2024/2025</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0_1_Definice_a_historie_mechaniky.html">Úvod do mechaniky</a></li>
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="0_2_Skal%C3%A1ry_a_vektory.html">Typy veličin v mechanice, souřadnicové systémy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html">Souřadnicové systémy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_1_Stupe%C5%88_volnosti.html">Stupně volnosti</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1_2_Kinematika_v_1D.html">Pohyb v 1D prostoru</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_3_Dynamika_pohybu_v_1D.html">Dynamika</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="1_4_Energie.html">Mechanická práce</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="1_5_Lagrange_Eulerovy_rovnice.html">Princip minimální akce a Lagrange-Eulerovy rovnice</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_1_Mechanick%C3%A9_vlastnosti_materi%C3%A1lu.html">Deformace v 1D - tah-tlak</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_2_Hooke%C5%AFv_z%C3%A1kon.html">Hookeův zákon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_3_Tahov%C3%A1_zkou%C5%A1ka.html">Tahová zkouška</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="2_4_P%C5%99ehled_mechanick%C3%BDch_vlastnost%C3%AD.html">Přehled mechanických vlastností vybraných materiálů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_7_P%C5%99%C3%ADklad%20_tahov%C3%A9_zkou%C5%A1ky.html">Analýza dat z tahového diagramu</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="2_5_Metoda_%C5%99ezu.html">Určení vnitřních sil a napětí - metoda řezu</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="2_6_In%C5%BEen%C3%BDrsk%C3%A9_a_skute%C4%8Dn%C3%A9_nap%C4%9Bt%C3%AD.html">Skutečné a smluvní napětí a deformace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_8_Dimenzovani.html">Dimenzování součástí namáhaných v tahu a tlaku</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_1_Kmitani.html">Periodický pohyb v 1D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_2_Dynamika_oscil%C3%A1toru.html">Dynamika oscilátoru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_3_Tlumen%C3%A9_vibrace.html">Tlumené vibrace</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="3_4_Nucen%C3%A9_harmonick%C3%A9_kmit%C3%A1n%C3%AD.html">Nucené kmitání</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_1_2D_pohyb_DOF.html">Pohyb v 2D - kinematika</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html">Pohyb v gravitačním poli</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="4_9_%C5%A0ikm%C3%BD_vrh_Lagrange.html">Odvození šikmého vrhu z Lagrange-Eulerových rovnic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_3_Pohyb_po_kru%C5%BEnici.html">Pohyb po kružnici</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_4_Fiktivn%C3%AD_s%C3%ADly.html">Fiktivní síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_6_Moment_sily.html">Moment síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_7_T%C4%9B%C5%BEi%C5%A1t%C4%9B.html">Težiště</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_8_Statick%C3%A9_rovnice_rovnov%C3%A1hy.html">Statické rovnice rovnováhy v rovině</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_5_Vazby.html">Vazby v rovině</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_1_Dynamika_rotace.html">Pohyb v 2D - dynamika</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_2_Moment_setrva%C4%8Dnosti.html">Moment setrvačnosti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_3_Steinerova_v%C4%9Bta.html">Steinerova věta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_7_Dynamick%C3%A9_rovnice_pohybu.html">Dynamické rovnice pohybu v rovině a rotační pohyb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_4_Z%C3%A1kon_zachov%C3%A1n%C3%AD_momentu_hybnosti.html">Zákon zachování momentu hybnosti</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_5_Kineticka_energie_rota%C4%8Dn%C3%ADho_pohybu.html">Kinetická energie rotačního pohybu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_6_Analogie_rota%C4%8Dn%C3%AD_transla%C4%8Dn%C3%AD.html">Analogie mezi kinematickými a dynamickými parametry rotačního a translačního pohybu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_8_P%C5%99%C3%ADklady.html">Dynamika v rovině - člověk v zatáčce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_9_P%C5%99%C3%ADklad_2.html">Příklad - dynamika jojo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_10_V%C3%A1lec_na_naklon%C4%9Bn%C3%A9_rovin%C4%9B.html">Pohyb válce na nakloněné rovině</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="6_1_Deformace_ve_2D_prostoru.html">Deformace ve 2D</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="6_2_Smykov%C3%A9%20nap%C4%9Bt%C3%AD.html">Smykové napětí</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_3_Hooke%C5%AFv_z%C3%A1kon_pro_rovinnou_napjatost.html">Rozšířený Hookeův zákon pro rovinnou napjatost</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Mohrova kružnice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_5_Konstrukce_Mohrovy_kru%C5%BEnice.html">Konstrukce Mohrovy kružnice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_6_Pevnostn%C3%AD_hypot%C3%A9za.html">Pevnostní hypotézy a redukované napětí při rovinné napjatosti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_7_Nap%C4%9Bt%C3%AD_p%C5%99i_krutu.html">Napětí při krutu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_8_Nap%C4%9Bt%C3%AD_p%C5%99i%20ohybu.html">Napětí při ohybu</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C1.html">1. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C2.html">2. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C3.html">3. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C4.html">4. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C5.html">5. cvičení</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/6_4_Mohrova_kružnice.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Prednasky/6_4_Mohrova_kružnice.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mohrova kružnice</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hlavni-napeti">Hlavní napětí</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnovaha-sil">Rovnováha sil</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnovaha-sil-ve-vodorovnem-smeru">Rovnováha sil ve vodorovném směru:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnovaha-sil-ve-svislem-smeru">Rovnováha sil ve svislém směru:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-pro-normalove-napeti-sigma">Řešení pro normálové napětí <span class="math notranslate nohighlight">\( \sigma \)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-pro-smykove-napeti-tau">Řešení pro smykové napětí <span class="math notranslate nohighlight">\( \tau \)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnice-mohrovy-kruznice">Rovnice Mohrovy kružnice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Rovnice Mohrovy kružnice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vyznam-mohrovy-kruznice">Význam Mohrovy kružnice</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="mohrova-kruznice">
+<h1>Mohrova kružnice<a class="headerlink" href="#mohrova-kruznice" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="nn">mt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+<span class="o">%</span><span class="k">config</span> InlineBackend.print_figure_kwargs = {&#39;bbox_inches&#39;:None}
+<span class="o">%</span><span class="k">config</span> InlineBackend.rc = {&#39;font.size&#39;: 10, &#39;figure.figsize&#39;: (10.0, 6.0), &#39;figure.facecolor&#39;: (1, 1, 1, 0), &#39;figure.subplot.bottom&#39;: 0.125, &#39;figure.edgecolor&#39;: (1, 1, 1, 0), &#39;figure.dpi&#39;: 72}
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<section id="hlavni-napeti">
+<h2>Hlavní napětí<a class="headerlink" href="#hlavni-napeti" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Hlavní napětí</strong> jsou taková normálová napětí působící na vzájemně kolmých rovinách, na nichž se nevyskytují smyková napětí. Jinými slovy, hlavní napětí jsou vlastní hodnoty tenzoru napětí a jejich směry (hlavní směry) odpovídají vlastním vektorům tohoto tenzoru.</p>
+</div></blockquote>
+<p>Při odvozování Mohrovy kružnice se předpokládá, že svislé napětí <span class="math notranslate nohighlight">\(\sigma_v\)</span> a vodorovné napětí <span class="math notranslate nohighlight">\(\sigma_h\)</span> jsou hlavními napětími. Ve skutečnosti však mohou mít tato napětí libovolnou orientaci.</p>
+<img alt="https://eng.libretexts.org/&#64;api/deki/files/28219/Screen_Shot_2020-08-14_at_10.45.20_PM.png?revision=1&amp;size=bestfit&amp;width=800&amp;height=397" src="https://eng.libretexts.org/&#64;api/deki/files/28219/Screen_Shot_2020-08-14_at_10.45.20_PM.png?revision=1&amp;size=bestfit&amp;width=800&amp;height=397" />
+<p>Nyní uvažujme nekonečně malý element tělesa v podmínkách rovinné deformace, jak je znázorněno na obrázku. Na tento element působí svislé napětí <span class="math notranslate nohighlight">\( \sigma_v \)</span> a vodorovné napětí <span class="math notranslate nohighlight">\( \sigma_h \)</span>. Na vodorovných a svislých rovinách se předpokládá nulové smykové napětí.</p>
+<p>Otázkou je, jaké budou normálové napětí <span class="math notranslate nohighlight">\( \sigma \)</span> a smykové napětí <span class="math notranslate nohighlight">\( \tau \)</span> na rovině, která svírá úhel <span class="math notranslate nohighlight">\( \alpha \)</span> s vodorovným směrem? Pro řešení tohoto problému se odvodí podmínky rovnováhy sil. Rovnováha napětí neexistuje, protože povrchy trojúhelníku na obrázku nejsou stejné.</p>
+<p>Pokud je délka povrchu pod úhlem <span class="math notranslate nohighlight">\( \alpha \)</span> považována za 1, pak délka vodorovné strany je <span class="math notranslate nohighlight">\( \cos(\alpha) \)</span> a délka svislé strany <span class="math notranslate nohighlight">\( \sin(\alpha) \)</span>. Napětí musí být vynásobena jejich plochou, aby bylo možné získat síly potřebné pro rovnováhu sil (viz obrázek 2-45).</p>
+</section>
+<section id="rovnovaha-sil">
+<h2>Rovnováha sil<a class="headerlink" href="#rovnovaha-sil" title="Link to this heading">#</a></h2>
+<img alt="https://eng.libretexts.org/&#64;api/deki/files/28220/Screen_Shot_2020-08-14_at_10.46.13_PM.png?revision=1&amp;size=bestfit&amp;width=800&amp;height=398" src="https://eng.libretexts.org/&#64;api/deki/files/28220/Screen_Shot_2020-08-14_at_10.46.13_PM.png?revision=1&amp;size=bestfit&amp;width=800&amp;height=398" />
+<p>Protože rovnováha napětí neexistuje a existuje pouze rovnováha sil, musí být známy síly působící na element tělesa nebo jejich poměr.</p>
+<p>Pro síly platí (za předpokladu délky strany pod úhlem <span class="math notranslate nohighlight">\( \alpha \)</span> rovné 1):</p>
+<div class="math notranslate nohighlight">
+\[
+F_h = \sigma_h   \sin(\alpha), \quad F_v = \sigma_v   \cos(\alpha)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+F_n = \sigma, \quad F_s = \tau
+\]</div>
+<section id="rovnovaha-sil-ve-vodorovnem-smeru">
+<h3>Rovnováha sil ve vodorovném směru:<a class="headerlink" href="#rovnovaha-sil-ve-vodorovnem-smeru" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+F_h = F_n   \sin(\alpha) - F_s   \cos(\alpha)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\sigma_h   \sin(\alpha) = \sigma   \sin(\alpha) - \tau   \cos(\alpha)
+\]</div>
+</section>
+<section id="rovnovaha-sil-ve-svislem-smeru">
+<h3>Rovnováha sil ve svislém směru:<a class="headerlink" href="#rovnovaha-sil-ve-svislem-smeru" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+F_v = F_n   \cos(\alpha) + F_s   \sin(\alpha)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\sigma_v   \cos(\alpha) = \sigma   \cos(\alpha) + \tau   \sin(\alpha)
+\]</div>
+</section>
+</section>
+<section id="reseni-pro-normalove-napeti-sigma">
+<h2>Řešení pro normálové napětí <span class="math notranslate nohighlight">\( \sigma \)</span><a class="headerlink" href="#reseni-pro-normalove-napeti-sigma" title="Link to this heading">#</a></h2>
+<p>Rovnice se upraví tak, aby eliminovaly smykové napětí <span class="math notranslate nohighlight">\( \tau \)</span>. První rovnici vynásobíme <span class="math notranslate nohighlight">\( \sin(\alpha) \)</span> a druhou <span class="math notranslate nohighlight">\( \cos(\alpha) \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_h   \sin^2(\alpha) = \sigma   \sin^2(\alpha) - \tau   \cos(\alpha) \sin(\alpha)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\sigma_v   \cos^2(\alpha) = \sigma   \cos^2(\alpha) + \tau   \sin(\alpha) \cos(\alpha)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+ \sigma_v   \cos^2(\alpha)+ \sigma_h   \sin^2(\alpha) = \sigma
+\]</div>
+<p>Využijeme vztah z trigonometrie</p>
+<div class="math notranslate nohighlight">
+\[\cos (2 \alpha) = \cos^2 \alpha - \sin^2 \alpha\]</div>
+<p>co můžeme vyjádřit ve tvaru</p>
+<div class="math notranslate nohighlight">
+\[\cos ^{2}(\alpha)=\frac{1+\cos (2 \cdot \alpha)}{2}\]</div>
+<div class="math notranslate nohighlight">
+\[\sin ^{2}(\alpha)=\frac{1-\cos (2 \cdot \alpha)}{2}\]</div>
+<p>Sečtením těchto rovnic dojde k eliminaci členů s <span class="math notranslate nohighlight">\( \tau \)</span> a získáme vztah pro <span class="math notranslate nohighlight">\( \sigma \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma = \frac{\sigma_v + \sigma_h}{2} + \frac{\sigma_v - \sigma_h}{2}   \cos(2\alpha)
+\]</div>
+</section>
+<section id="reseni-pro-smykove-napeti-tau">
+<h2>Řešení pro smykové napětí <span class="math notranslate nohighlight">\( \tau \)</span><a class="headerlink" href="#reseni-pro-smykove-napeti-tau" title="Link to this heading">#</a></h2>
+<p>První rovnici vynásobíme <span class="math notranslate nohighlight">\( -\cos(\alpha) \)</span> a druhou <span class="math notranslate nohighlight">\( \sin(\alpha) \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+-\sigma_h   \sin(\alpha) \cos(\alpha) = -\sigma   \sin(\alpha) \cos(\alpha) + \tau   \cos^2(\alpha)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\sigma_v   \cos(\alpha) \sin(\alpha) = \sigma   \cos(\alpha) \sin(\alpha) + \tau   \sin^2(\alpha)
+\]</div>
+<p>Sečtením rovnic eliminujeme <span class="math notranslate nohighlight">\( \sigma \)</span> a dostaneme:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \frac{\sigma_v - \sigma_h}{2}   \sin(2\alpha)
+\]</div>
+</section>
+<section id="rovnice-mohrovy-kruznice">
+<h2>Rovnice Mohrovy kružnice<a class="headerlink" href="#rovnice-mohrovy-kruznice" title="Link to this heading">#</a></h2>
+<p>Umocněním předchozích rovnic a jejich sečtením získáme:</p>
+<div class="math notranslate nohighlight">
+\[
+(\sigma - \frac{\sigma_v + \sigma_h}{2})^2 + \tau^2 = \left(\frac{\sigma_v - \sigma_h}{2}\right)^2
+\]</div>
+<p>Tato rovnice odpovídá obecné rovnici kruhu:</p>
+<div class="math notranslate nohighlight">
+\[
+(x - x_C)^2 + (y - y_C)^2 = R^2
+\]</div>
+<p>S následujícími hodnotami:</p>
+<div class="math notranslate nohighlight">
+\[
+x = \sigma, \quad x_C = \frac{\sigma_v + \sigma_h}{2}, \quad y = \tau, \quad y_C = 0, \quad R = \frac{\sigma_v - \sigma_h}{2}
+\]</div>
+</section>
+<section id="id1">
+<h2>Rovnice Mohrovy kružnice<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Mohrůva kružnice popisuje stav napjatosti v bodě a umožňuje grafickou analýzu napětí v libovolně orientované rovině. Rovnice Mohrovy kružnice pro rovinnou napjatost je:</p>
+<div class="math notranslate nohighlight">
+\[
+\left( \sigma - \frac{\sigma_x + \sigma_y}{2} \right)^2 + \tau^2 = \left( \frac{\sigma_x - \sigma_y}{2} \right)^2 + \tau_{xy}^2
+\]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sigma_x, \sigma_y\)</span> jsou normálová napětí v hlavních směrech souřadnicového systému,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\tau_{xy}\)</span> je smykové napětí v rovině ( xy ),</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span> a <span class="math notranslate nohighlight">\(\tau\)</span> jsou normálové a smykové složky napětí na obecné rovině.</p></li>
+</ul>
+</section>
+<section id="vyznam-mohrovy-kruznice">
+<h2>Význam Mohrovy kružnice<a class="headerlink" href="#vyznam-mohrovy-kruznice" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p><strong>Určení hlavních napětí:</strong> Hlavní napětí <span class="math notranslate nohighlight">\(\sigma_1\)</span> a <span class="math notranslate nohighlight">\(\sigma_2\)</span> odpovídají průsečíkům kružnice s osou <span class="math notranslate nohighlight">\(\sigma\)</span> a udávají maximální a minimální normálové napětí.</p></li>
+<li><p><strong>Stanovení maximálního smykového napětí:</strong> Maximální smykové napětí <span class="math notranslate nohighlight">\(\tau_{\max}\)</span> odpovídá poloměru kružnice a je určeno vztahem:</p>
+<p><span class="math notranslate nohighlight">\(
+\tau_{\max} = \frac{\sigma_1 - \sigma_2}{2}
+\)</span></p>
+</li>
+<li><p><strong>Grafická interpretace napětí:</strong> Mohrův kruh umožňuje snadno určit hodnoty napětí v libovolně orientované rovině bez nutnosti složitého výpočtu.</p></li>
+<li><p><strong>Určení orientace hlavních a smykových rovin:</strong> Úhel hlavních rovin vzhledem k původní soustavě souřadnic je dán vztahem:</p>
+<p><span class="math notranslate nohighlight">\(
+\tan 2\theta_p = \frac{2\tau_{xy}}{\sigma_x - \sigma_y}
+\)</span></p>
+<p>kde ( \theta_p ) je úhel hlavních napětí vůči ose ( x ).</p>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;https://www.geogebra.org/classic/DDkrSne2?embed&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="100%"
+            height="800"
+            src="https://www.geogebra.org/classic/DDkrSne2?embed"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mohr_circle</span><span class="p">():</span>
+    <span class="c1"># from https://github.com/ProfessorKazarinoff/mohrs_circle/blob/master/mohrs_circle.ipynb</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;PLEASE CONSIDER SIGNS BEFORE ENTERING YOUR VALUES&#39;</span><span class="p">)</span>
+    <span class="n">stress_x</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the stress in the x-direction: &#39;</span><span class="p">))</span>
+    <span class="n">stress_y</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the stress in the y-direction: &#39;</span><span class="p">))</span>
+    <span class="n">shear</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the shear: &#39;</span><span class="p">))</span>
+    
+    <span class="n">stress_avg</span><span class="o">=</span><span class="p">(</span><span class="n">stress_x</span><span class="o">+</span><span class="n">stress_y</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+    <span class="n">stress_max</span><span class="o">=</span><span class="n">stress_avg</span><span class="o">+</span><span class="p">(((</span><span class="n">stress_x</span><span class="o">-</span><span class="n">stress_y</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">shear</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+    <span class="n">stress_min</span><span class="o">=</span><span class="n">stress_avg</span><span class="o">-</span><span class="p">(((</span><span class="n">stress_x</span><span class="o">-</span><span class="n">stress_y</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">shear</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+    <span class="n">R</span><span class="o">=</span><span class="p">((((</span><span class="n">stress_x</span><span class="o">-</span><span class="n">stress_y</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="n">shear</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>     <span class="c1">#Also max shear</span>
+    <span class="n">circle_eqn</span><span class="o">=</span><span class="p">((</span><span class="n">stress_x</span><span class="o">-</span><span class="n">stress_avg</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="n">shear</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span>
+    
+    <span class="k">if</span> <span class="n">shear</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">theta_p</span><span class="o">=</span><span class="mi">0</span>
+        <span class="n">theta_s</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">theta_p</span><span class="o">=</span><span class="mf">0.5</span><span class="o">*</span><span class="n">mt</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">atan</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">shear</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">stress_x</span><span class="o">-</span><span class="n">stress_y</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="n">theta_p</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">a</span><span class="o">=-</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">a</span><span class="o">=</span><span class="mi">1</span>
+        <span class="n">theta_s</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="mf">0.5</span><span class="o">*</span><span class="n">mt</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">atan</span><span class="p">((</span><span class="n">stress_x</span><span class="o">-</span><span class="n">stress_y</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">shear</span><span class="p">)))</span>
+        
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">stress_min</span><span class="p">)</span><span class="o">&gt;</span><span class="nb">abs</span><span class="p">(</span><span class="n">stress_max</span><span class="p">):</span>
+        <span class="n">maxi</span><span class="o">=</span><span class="n">stress_min</span>
+        <span class="n">mini</span><span class="o">=</span><span class="n">stress_max</span>
+    <span class="k">elif</span> <span class="nb">abs</span><span class="p">(</span><span class="n">stress_max</span><span class="p">)</span><span class="o">&gt;</span><span class="nb">abs</span><span class="p">(</span><span class="n">stress_min</span><span class="p">):</span>
+        <span class="n">maxi</span><span class="o">=</span><span class="n">stress_max</span>
+        <span class="n">mini</span><span class="o">=</span><span class="n">stress_min</span>
+        
+        <span class="c1">#principle planes</span>
+        
+    <span class="n">shear_lim_p</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">R</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">shear_lim_n</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">R</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    
+    
+    <span class="n">princ_x_slope</span><span class="o">=</span><span class="p">(</span><span class="n">theta_p</span><span class="o">/</span><span class="nb">abs</span><span class="p">(</span><span class="n">theta_p</span><span class="p">))</span><span class="o">*</span><span class="n">mt</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">theta_p</span><span class="p">))</span>
+    <span class="n">princ_y_slope</span><span class="o">=</span><span class="p">(</span><span class="n">theta_p</span><span class="o">/</span><span class="nb">abs</span><span class="p">(</span><span class="n">theta_p</span><span class="p">))</span><span class="o">*</span><span class="n">mt</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">radians</span><span class="p">((</span><span class="n">theta_p</span><span class="o">+</span><span class="mi">90</span><span class="p">)))</span>
+    
+    
+    <span class="c1">#princ_x=princ_x_slope*shear_lim+stress_avg</span>
+    <span class="c1">#princ_y=princ_y_slope*shear_lim+stress_avg</span>
+    
+    <span class="k">if</span> <span class="n">princ_x_slope</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">range_x</span><span class="o">=</span><span class="n">shear_lim_n</span>
+        <span class="n">princ_x</span><span class="o">=</span><span class="n">princ_x_slope</span><span class="o">*</span><span class="n">range_x</span><span class="o">+</span><span class="n">stress_avg</span>
+        
+    <span class="k">elif</span> <span class="n">princ_x_slope</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">range_x</span><span class="o">=</span><span class="n">shear_lim_p</span>
+        <span class="n">princ_x</span><span class="o">=</span><span class="n">princ_x_slope</span><span class="o">*</span><span class="n">range_x</span><span class="o">+</span><span class="n">stress_avg</span>
+        
+    <span class="k">if</span> <span class="n">princ_y_slope</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">range_y</span><span class="o">=</span><span class="n">shear_lim_n</span>
+        <span class="n">princ_y</span><span class="o">=</span><span class="n">princ_y_slope</span><span class="o">*</span><span class="n">range_y</span><span class="o">+</span><span class="n">stress_avg</span>
+        
+    <span class="k">elif</span> <span class="n">princ_y_slope</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">range_y</span><span class="o">=</span><span class="n">shear_lim_p</span>
+        <span class="n">princ_y</span><span class="o">=</span><span class="n">princ_y_slope</span><span class="o">*</span><span class="n">range_y</span><span class="o">+</span><span class="n">stress_avg</span>
+        
+    
+    <span class="n">n</span><span class="o">=</span><span class="mi">100</span>
+    <span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">R</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">+</span><span class="n">stress_avg</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">R</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Axial Stress&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Shearing Stress&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Mohr Circle&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">princ_x</span><span class="p">,</span><span class="n">range_x</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">princ_y</span><span class="p">,</span><span class="n">range_y</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">stress_avg</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">stress_x</span><span class="o">-</span><span class="n">stress_avg</span><span class="p">),</span><span class="o">-</span><span class="n">shear</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">stress_avg</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">stress_y</span><span class="o">-</span><span class="n">stress_avg</span><span class="p">),</span><span class="n">shear</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">60</span><span class="p">,</span><span class="mi">40</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">,</span>
+                <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">stress_x</span><span class="p">,</span><span class="o">-</span><span class="n">shear</span><span class="p">),</span>
+                <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span>
+                <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">stress_y</span><span class="p">,</span><span class="n">shear</span><span class="p">),</span>
+                <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;Max Stress&#39;</span><span class="p">,</span>
+                 <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">maxi</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
+                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">maxi</span><span class="p">,</span><span class="mf">0.5</span><span class="o">*</span><span class="n">shear</span><span class="p">),</span>
+                 <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;Min Stress&#39;</span><span class="p">,</span>
+                 <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">mini</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
+                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">mini</span><span class="p">,</span><span class="mf">0.5</span><span class="o">*</span><span class="n">shear</span><span class="p">),</span>
+                 <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span>
+    
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Max shear: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">R</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Max stress: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">maxi</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s1">Min stress: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">mini</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Average normal stress: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">stress_avg</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Principal angle: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">theta_p</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1"> degrees&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Principal planes: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">theta_p</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1"> degrees and </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">theta_p</span><span class="o">+</span><span class="mi">90</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1"> degrees&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Angle to the shear plane: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">theta_s</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1"> degrees&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mohr_circle</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PLEASE CONSIDER SIGNS BEFORE ENTERING YOUR VALUES
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_135338</span><span class="o">/</span><span class="mf">2115935711.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">mohr_circle</span><span class="p">()</span>
+
+<span class="nn">/tmp/ipykernel_135338/2500666430.py</span> in <span class="ni">mohr_circle</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="c1"># from https://github.com/ProfessorKazarinoff/mohrs_circle/blob/master/mohrs_circle.ipynb</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;PLEASE CONSIDER SIGNS BEFORE ENTERING YOUR VALUES&#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">stress_x</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the stress in the x-direction: &#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">stress_y</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the stress in the y-direction: &#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">shear</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the shear: &#39;</span><span class="p">))</span>
+
+<span class="nn">~/.local/lib/python3.10/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1279</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1280</span>             <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1281</span>             <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1282</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1283</span>             <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Prednasky"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="6_3_Hooke%C5%AFv_z%C3%A1kon_pro_rovinnou_napjatost.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Rozšířený Hookeův zákon pro rovinnou napjatost</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="6_5_Konstrukce_Mohrovy_kru%C5%BEnice.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Konstrukce Mohrovy kružnice</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hlavni-napeti">Hlavní napětí</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnovaha-sil">Rovnováha sil</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnovaha-sil-ve-vodorovnem-smeru">Rovnováha sil ve vodorovném směru:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnovaha-sil-ve-svislem-smeru">Rovnováha sil ve svislém směru:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-pro-normalove-napeti-sigma">Řešení pro normálové napětí <span class="math notranslate nohighlight">\( \sigma \)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-pro-smykove-napeti-tau">Řešení pro smykové napětí <span class="math notranslate nohighlight">\( \tau \)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnice-mohrovy-kruznice">Rovnice Mohrovy kružnice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Rovnice Mohrovy kružnice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vyznam-mohrovy-kruznice">Význam Mohrovy kružnice</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

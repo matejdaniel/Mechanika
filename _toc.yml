@@ -61,6 +61,16 @@ parts:
       - file: Prednasky/5_8_Příklady
       - file: Prednasky/5_9_Příklad_2
       - file: Prednasky/5_10_Válec_na_nakloněné_rovině
+    - file: Prednasky/6_1_Deformace_ve_2D_prostoru
+      sections:
+      - file: Prednasky/6_2_Smykové napětí
+      - file: Prednasky/6_3_Hookeův_zákon_pro_rovinnou_napjatost
+      - file: Prednasky/6_4_Mohrova_kružnice
+      - file: Prednasky/6_5_Konstrukce_Mohrovy_kružnice
+      - file: Prednasky/6_6_Pevnostní_hypotéza
+      - file: Prednasky/6_7_Napětí_při_krutu
+      - file: Prednasky/6_8_Napětí_při ohybu
+
   - caption: Cvičení
     chapters:
     - file: Cviceni/C1

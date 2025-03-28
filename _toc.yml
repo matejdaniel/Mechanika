@@ -78,3 +78,5 @@ parts:
     - file: Cviceni/C3
     - file: Cviceni/C4
     - file: Cviceni/C5
+    - file: Cviceni/C6
+

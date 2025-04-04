@@ -24,10 +24,10 @@ PLEASE CONSIDER SIGNS BEFORE ENTERING YOUR VALUES
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
-[0;32m/tmp/ipykernel_22137/2115935711.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_343469/2115935711.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mmohr_circle[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
-[0;32m/tmp/ipykernel_22137/2500666430.py[0m in [0;36mmohr_circle[0;34m()[0m
+[0;32m/tmp/ipykernel_343469/2500666430.py[0m in [0;36mmohr_circle[0;34m()[0m
 [1;32m      2[0m     [0;31m# from https://github.com/ProfessorKazarinoff/mohrs_circle/blob/master/mohrs_circle.ipynb[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      3[0m     [0mprint[0m[0;34m([0m[0;34m'PLEASE CONSIDER SIGNS BEFORE ENTERING YOUR VALUES'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 4[0;31m     [0mstress_x[0m[0;34m=[0m[0mfloat[0m[0;34m([0m[0minput[0m[0;34m([0m[0;34m'Enter the stress in the x-direction: '[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m

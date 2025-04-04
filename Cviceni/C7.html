@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>7. cvičení &#8212; Mechanika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Cviceni/C7';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="6. cvičení" href="C6.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Mechanika - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Mechanika - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Kurz mechaniky
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">O předmětu</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Podm%C3%ADnky_z%C3%A1po%C4%8Dtu_a_zkou%C5%A1ky.html">Zápočet:</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Sylabus_LS2025.html">Mechanika FBMI sylabus LS 2024/2025</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Prednasky/0_1_Definice_a_historie_mechaniky.html">Úvod do mechaniky</a></li>
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Prednasky/0_2_Skal%C3%A1ry_a_vektory.html">Typy veličin v mechanice, souřadnicové systémy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html">Souřadnicové systémy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/1_1_Stupe%C5%88_volnosti.html">Stupně volnosti</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Prednasky/1_2_Kinematika_v_1D.html">Pohyb v 1D prostoru</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/1_3_Dynamika_pohybu_v_1D.html">Dynamika</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/1_4_Energie.html">Mechanická práce</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/1_5_Lagrange_Eulerovy_rovnice.html">Princip minimální akce a Lagrange-Eulerovy rovnice</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Prednasky/2_1_Mechanick%C3%A9_vlastnosti_materi%C3%A1lu.html">Deformace v 1D - tah-tlak</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/2_2_Hooke%C5%AFv_z%C3%A1kon.html">Hookeův zákon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/2_3_Tahov%C3%A1_zkou%C5%A1ka.html">Tahová zkouška</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/2_4_P%C5%99ehled_mechanick%C3%BDch_vlastnost%C3%AD.html">Přehled mechanických vlastností vybraných materiálů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/2_7_P%C5%99%C3%ADklad%20_tahov%C3%A9_zkou%C5%A1ky.html">Analýza dat z tahového diagramu</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/2_5_Metoda_%C5%99ezu.html">Určení vnitřních sil a napětí - metoda řezu</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/2_6_In%C5%BEen%C3%BDrsk%C3%A9_a_skute%C4%8Dn%C3%A9_nap%C4%9Bt%C3%AD.html">Skutečné a smluvní napětí a deformace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/2_8_Dimenzovani.html">Dimenzování součástí namáhaných v tahu a tlaku</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Prednasky/3_1_Kmitani.html">Periodický pohyb v 1D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/3_2_Dynamika_oscil%C3%A1toru.html">Dynamika oscilátoru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/3_3_Tlumen%C3%A9_vibrace.html">Tlumené vibrace</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/3_4_Nucen%C3%A9_harmonick%C3%A9_kmit%C3%A1n%C3%AD.html">Nucené kmitání</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Prednasky/4_1_2D_pohyb_DOF.html">Pohyb v 2D - kinematika</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html">Pohyb v gravitačním poli</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/4_9_%C5%A0ikm%C3%BD_vrh_Lagrange.html">Odvození šikmého vrhu z Lagrange-Eulerových rovnic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/4_3_Pohyb_po_kru%C5%BEnici.html">Pohyb po kružnici</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/4_4_Fiktivn%C3%AD_s%C3%ADly.html">Fiktivní síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/4_6_Moment_sily.html">Moment síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/4_7_T%C4%9B%C5%BEi%C5%A1t%C4%9B.html">Težiště</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/4_8_Statick%C3%A9_rovnice_rovnov%C3%A1hy.html">Statické rovnice rovnováhy v rovině</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/4_5_Vazby.html">Vazby v rovině</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Prednasky/5_1_Dynamika_rotace.html">Pohyb v 2D - dynamika</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/5_2_Moment_setrva%C4%8Dnosti.html">Moment setrvačnosti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/5_3_Steinerova_v%C4%9Bta.html">Steinerova věta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/5_7_Dynamick%C3%A9_rovnice_pohybu.html">Dynamické rovnice pohybu v rovině a rotační pohyb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/5_4_Z%C3%A1kon_zachov%C3%A1n%C3%AD_momentu_hybnosti.html">Zákon zachování momentu hybnosti</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/5_5_Kineticka_energie_rota%C4%8Dn%C3%ADho_pohybu.html">Kinetická energie rotačního pohybu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/5_6_Analogie_rota%C4%8Dn%C3%AD_transla%C4%8Dn%C3%AD.html">Analogie mezi kinematickými a dynamickými parametry rotačního a translačního pohybu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/5_8_P%C5%99%C3%ADklady.html">Dynamika v rovině - člověk v zatáčce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/5_9_P%C5%99%C3%ADklad_2.html">Příklad - dynamika jojo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/5_10_V%C3%A1lec_na_naklon%C4%9Bn%C3%A9_rovin%C4%9B.html">Pohyb válce na nakloněné rovině</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Prednasky/6_1_Deformace_ve_2D_prostoru.html">Deformace ve 2D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/6_2_Smykov%C3%A9%20nap%C4%9Bt%C3%AD.html">Smykové napětí</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/6_3_Hooke%C5%AFv_z%C3%A1kon_pro_rovinnou_napjatost.html">Rozšířený Hookeův zákon pro rovinnou napjatost</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/6_4_Mohrova_kru%C5%BEnice.html">Mohrova kružnice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/6_5_Konstrukce_Mohrovy_kru%C5%BEnice.html">Konstrukce Mohrovy kružnice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/6_6_Pevnostn%C3%AD_hypot%C3%A9za.html">Pevnostní hypotézy a redukované napětí při rovinné napjatosti</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Prednasky/7_2_Tensometry.html">Měření napjatosti</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/7_1_Laplaceova_rovnice.html">Napětí v tenkostěnných nádobách</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/6_7_Nap%C4%9Bt%C3%AD_p%C5%99i_krutu.html">Napětí při krutu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/6_8_Nap%C4%9Bt%C3%AD_p%C5%99i%20ohybu.html">Napětí při ohybu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Prednasky/7_3_Vzp%C4%9Br.html">Vzpěr</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="C1.html">1. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C2.html">2. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C3.html">3. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C4.html">4. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C5.html">5. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C6.html">6. cvičení</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. cvičení</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FCviceni/C7.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Cviceni/C7.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>7. cvičení</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momenty-stervacnosti-geometrickych-teles">Momenty stervačnosti geometrických těles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moment-setrvacnosti">Moment setrvačnosti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohybove-rovnice">Pohybové rovnice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energie-rotacniho-pohybu">Energie rotačního pohybu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zakon-zachovani-momentu-hybnosti">Zákon zachování momentu hybnosti</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="cviceni">
+<h1>7. cvičení<a class="headerlink" href="#cviceni" title="Link to this heading">#</a></h1>
+<section id="momenty-stervacnosti-geometrickych-teles">
+<h2>Momenty stervačnosti geometrických těles<a class="headerlink" href="#momenty-stervacnosti-geometrickych-teles" title="Link to this heading">#</a></h2>
+<p><img alt="J" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/648/2016/11/04025642/Figure_11_03_06-1.jpg" /></p>
+</section>
+<section id="moment-setrvacnosti">
+<h2>Moment setrvačnosti<a class="headerlink" href="#moment-setrvacnosti" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Určete momenty setrvačností tenké homogenní tyče hmotnosti m a délky L s osou otáčení procházející:</p>
+<ul class="simple">
+<li><p>středem tyče (analyticky)</p></li>
+<li><p>koncem tyče (analyticky)</p></li>
+<li><p>koncem tyče pomocí Steinerovy věty</p></li>
+<li><p>bodem v jedné čtvrtině délky tyče metodou podle své volby</p></li>
+</ul>
+<p><a class="reference external" href="https://reseneulohy.cz/516/moment-setrvacnosti-tyce">Řešení</a></p>
+</li>
+<li><p>Určete moment setrvačnosti u tělesa podle obrázku když <span class="math notranslate nohighlight">\(m_1=2m_2=m_3-2=2m_4=2kg\)</span>. Když se otáčí</p>
+<ul class="simple">
+<li><p>kolem osi <span class="math notranslate nohighlight">\(x\)</span></p></li>
+<li><p>kolem osi <span class="math notranslate nohighlight">\(y\)</span></p></li>
+<li><p>kolem osi <span class="math notranslate nohighlight">\(z\)</span></p></li>
+</ul>
+<p>Velikost koulí můžete zanedbat.</p>
+<p><img alt="koule" src="https://homework.study.com/cimages/multimages/16/71682062970899694004561048.png" /></p>
+</li>
+</ol>
+</section>
+<section id="pohybove-rovnice">
+<h2>Pohybové rovnice<a class="headerlink" href="#pohybove-rovnice" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Uvažujme otce, jak tlačí kolotoč na hřišti na obrázku 4. Působí silou 250 N na okraj 50,0 kg vážícího kolotoče, který má poloměr 1,50 m. Vypočítejte úhlové zrychlení vzniklé</p>
+<ul class="simple">
+<li><p>když na kolotoči nikdo není, a</p></li>
+<li><p>když 18,0 kg vážící dítě sedí 1,25 m od středu. Samotný kolotoč považujte za jednolitý kotouč se zanedbatelným retardačním třením.</p></li>
+</ul>
+<p><img alt="kolotoč" src="https://s3-us-west-2.amazonaws.com/courses-images-archive-read-only/wp-content/uploads/sites/222/2014/12/20103449/Figure_11_03_03a.jpg" /></p>
+<p><a class="reference external" href="https://courses.lumenlearning.com/suny-physics/chapter/10-3-dynamics-of-rotational-motion-rotational-inertia/">Řešení</a></p>
+</li>
+<li><p>Betonová válcová skruž o hmotnosti <span class="math notranslate nohighlight">\(M\)</span> se valí bez smýkání dolů po svahu, který svírá s vodorovnou rovinou úhel <span class="math notranslate nohighlight">\(\alpha\)</span></p></li>
+</ol>
+<ul class="simple">
+<li><p>Určete moment setrvačnosti skruže, je-li její vnější poloměr <span class="math notranslate nohighlight">\(R\)</span>, vnitřní poloměr <span class="math notranslate nohighlight">\(r\)</span></p></li>
+<li><p>Určete zrychlení hmotného středu skruže. Řešte pmocí pohybových rovnic, viz. přednášky.</p></li>
+</ul>
+<p><img alt="skruž" src="https://reseneulohy.cz/media/02288/2288_1.page.tagged.gif" /></p>
+<p><a class="reference external" href="https://reseneulohy.cz/2288/valici-se-skruz">Řešení</a></p>
+<ol class="arabic" start="3">
+<li><p>Tyč o délce <span class="math notranslate nohighlight">\(3l\)</span>, jejíž hmotnost zanedbáváme, je zavěšena ve vodorovné poloze pomocí dvou vláken, upevněných na koncích tyče. Na tyči jsou nasazeny malé koule o hmotnostech <span class="math notranslate nohighlight">\(m\)</span> a <span class="math notranslate nohighlight">\(2m\)</span> tak, že jejich středy leží v jedné, resp. dvou třetinách délky tyče. Poloměry koulí jsou malé oproti délce tyče.</p>
+<p><img alt="tyč" src="https://reseneulohy.cz/media/01252/zadani.page.tagged.png" /></p>
+<p><a class="reference external" href="https://reseneulohy.cz/1252/nuzky-a-zavesena-tyc">Řešení</a></p>
+</li>
+<li><p>Automobilový motor může produkovat točivý moment 200 Nm. Vypočítejte úhlové zrychlení kola, pokud 95,0 % tohoto točivého momentu působí na hnací hřídel, nápravu a zadní kola automobilu, s ohledem na následující informace. Auto je zavěšeno tak, aby se kola mohla volně otáčet. Každé kolo se chová jako 15,0 kg disk s poloměrem 0,180 m. Stěny každé pneumatiky fungují jako 2,00 kg vážící prstenec, který má vnitřní poloměr 0,180 m a vnější poloměr 0,320 m. Běhoun každé pneumatiky působí jako 10,0 kg obruč o poloměru 0,330 m. Osa kol o hmotnosti 14,0 kg funguje jako tyč s poloměrem 2,00 cm. Hnací hřídel o hmotnosti 30,0 kg funguje jako tyč s poloměrem 3,20 cm.</p></li>
+</ol>
+</section>
+<section id="energie-rotacniho-pohybu">
+<h2>Energie rotačního pohybu<a class="headerlink" href="#energie-rotacniho-pohybu" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Osoba, jejíž noha je znázorněna na obrázku, kopne nohou vyvinutím svalové síly 2000 N. Účinné kolmé rameno svalu je 2,20 cm. Vzhledem k tomu, že moment setrvačnosti bérce je 1,25 kg⋅m<span class="math notranslate nohighlight">\(^2\)</span></p>
+<ul class="simple">
+<li><p>najděte úhlové zrychlení nohy.</p></li>
+<li><p>Zanedbáme-li gravitační sílu, jaká je rotační kinetická energie nohy poté, co se otočila o 57,3<span class="math notranslate nohighlight">\(^\circ\)</span> (1,00 rad)?</p></li>
+</ul>
+<p><img alt="noha" src="https://s3-us-west-2.amazonaws.com/courses-images-archive-read-only/wp-content/uploads/sites/222/2014/12/20103545/Figure_11_05_02a.jpg" /></p>
+<p><a class="reference external" href="https://courses.lumenlearning.com/suny-physics/chapter/10-5-angular-momentum-and-its-conservation/">Řešení</a></p>
+</li>
+<li><p>Homogenní půlválec o poloměru r a hmotnosti m leží na vodorovné rovině.</p>
+<ul class="simple">
+<li><p>Určete moment setrvačnosti půlválce vzhledem k přímce, ve které se půlválec dotýká roviny.</p></li>
+<li><p>Půlválec vykloníme o malý úhel z rovnovážné polohy a pustíme. S jakou periodou se bude kolébat?</p></li>
+</ul>
+<p><img alt="valec" src="https://reseneulohy.cz/media/00537/002_kolebka.page.tagged.gif" /></p>
+<p><a class="reference external" href="https://reseneulohy.cz/537/kolebani-pulvalce">Řešení</a></p>
+</li>
+</ol>
+</section>
+<section id="zakon-zachovani-momentu-hybnosti">
+<h2>Zákon zachování momentu hybnosti<a class="headerlink" href="#zakon-zachovani-momentu-hybnosti" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Obrázek ukazuje otáčivý podnos s jídlem. Předpokládejme, že osoba vyvíjí sílu 2,50 N kolmo na poloměr podnosu 0,260 m po dobu 0,150 s.</p>
+<ul class="simple">
+<li><p>Jaký je konečný moment hybnosti, pokud začíná z klidu, za předpokladu, že tření je zanedbatelné?</p></li>
+<li><p>Jaká je konečná úhlová rychlost podnosu za předpokladu, že její hmotnost je 4,00 kg a za předpokladu, že její moment setrvačnosti je momentem setrvačnosti disku?</p></li>
+</ul>
+<p><img alt="podnos" src="https://s3-us-west-2.amazonaws.com/courses-images-archive-read-only/wp-content/uploads/sites/222/2014/12/20103539/Figure_11_05_01a.jpg" /></p>
+<p><a class="reference external" href="https://courses.lumenlearning.com/suny-physics/chapter/10-5-angular-momentum-and-its-conservation/">Řešení</a></p>
+</li>
+<li><p>Předpokládejme, že bruslařka, jako je ta na obrázku, se točí rychlostí 0,800 ot/s s nataženými pažemi. Má moment setrvačnosti 2,34 kg m<span class="math notranslate nohighlight">\(^2\)</span> s nataženými pažemi a 0,363 kg m<span class="math notranslate nohighlight">\(^2\)</span> s rukama u těla. (Tyto momenty setrvačnosti jsou založeny na rozumných předpokladech o bruslaři o hmotnosti 60,0 kg.)</p>
+<ul class="simple">
+<li><p>Jaká je její úhlová rychlost v otáčkách za sekundu poté, co přitáhne ruce?</p></li>
+<li><p>Jaká je její rotační kinetická energie před a poté, co to udělá?</p></li>
+<li><p>Proč se kinetická energie změnila?</p></li>
+</ul>
+<p><img alt="krasobluslařka" src="https://s3-us-west-2.amazonaws.com/courses-images-archive-read-only/wp-content/uploads/sites/222/2014/12/20103553/Figure_11_05_03a.jpg" /></p>
+<p><a class="reference external" href="https://courses.lumenlearning.com/suny-physics/chapter/10-5-angular-momentum-and-its-conservation/">Řešení</a></p>
+</li>
+<li><p>Dřevěná tyč délky 40 cm a hmotnosti 1 kg se může otáčet kolem osy kolmé na tyč a procházející jejím středem. Na konec tyče narazí střela o hmotnosti 10 g a rychlosti 200 m·s<span class="math notranslate nohighlight">\(^{-1}\)</span> ve směru kolmém na osu i na tyč. Určete úhlovou rychlost, kterou se tyč dá do pohybu, když v ní střela uvázne.</p>
+<p><img alt="tyc" src="https://reseneulohy.cz/media/00489/tyc_a_strela_zakladni.page.tagged.png" /></p>
+<p><a class="reference external" href="https://reseneulohy.cz/489/naraz-strely-na-konec-otocne-tyce">Řešení</a></p>
+</li>
+<li><p>Na obvodu nehybné vodorovné homogenní kruhové desky o hmotnosti 140 kg a poloměru 4 m, volně otáčivé kolem svislé osy ve středu, stojí punker o hmotnosti 79 kg se dvěma kilogramovými závažími v rukou.</p>
+<ul class="simple">
+<li><p>S jakou úhlovou rychlostí se začne deska otáčet, odhodí-li punker jedno závaží ve směru tečném k obvodu desky s počáteční rychlostí 20 m·s<span class="math notranslate nohighlight">\(^{-1}\)</span>?</p></li>
+<li><p>Jaká bude úhlová rychlost desky, přejde-li punker poté o 2 m blíž k ose?</p></li>
+<li><p>Jaká bude úhlová rychlost desky, odhodí-li punker druhé závaží podobně jako to první, rychlostí 20 m·s-1 vzhledem k rotující desce?</p></li>
+</ul>
+<p><img alt="punker" src="https://reseneulohy.cz/media/00531/810_punker_b_unmarked.page.tagged.png" /></p>
+<p><a class="reference external" href="https://reseneulohy.cz/531/punker-na-desce">Řešení</a></p>
+</li>
+<li><p>Astronaut utahuje šroub na satelitu na oběžné dráze. Otáčí se v opačném směru, než je směr šroubu, a satelit se otáčí stejným směrem jako šroub. Vysvětlete proč. Pokud je na satelitu k dispozici držadlo, lze této protirotaci zabránit? Vysvětlete svou odpověď.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Cviceni"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="C6.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">6. cvičení</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momenty-stervacnosti-geometrickych-teles">Momenty stervačnosti geometrických těles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moment-setrvacnosti">Moment setrvačnosti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohybove-rovnice">Pohybové rovnice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energie-rotacniho-pohybu">Energie rotačního pohybu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zakon-zachovani-momentu-hybnosti">Zákon zachování momentu hybnosti</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

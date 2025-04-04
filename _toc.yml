@@ -68,9 +68,12 @@ parts:
       - file: Prednasky/6_4_Mohrova_kružnice
       - file: Prednasky/6_5_Konstrukce_Mohrovy_kružnice
       - file: Prednasky/6_6_Pevnostní_hypotéza
+    - file: Prednasky/7_2_Tensometry
+      sections:
+      - file: Prednasky/7_1_Laplaceova_rovnice
       - file: Prednasky/6_7_Napětí_při_krutu
       - file: Prednasky/6_8_Napětí_při ohybu
-
+      - file: Prednasky/7_3_Vzpěr
   - caption: Cvičení
     chapters:
     - file: Cviceni/C1
@@ -79,4 +82,4 @@ parts:
     - file: Cviceni/C4
     - file: Cviceni/C5
     - file: Cviceni/C6
-
+    - file: Cviceni/C7

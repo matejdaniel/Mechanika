@@ -1,0 +1,1410 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Prostorová napjatost &#8212; Mechanika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Prednasky/8_1_Prostorová_napjatost';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Redukované napětí při prostorové napjatosti" href="8_2_3D_Mises.html" />
+    <link rel="prev" title="Vzpěr" href="7_3_Vzp%C4%9Br.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Mechanika - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Mechanika - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Kurz mechaniky
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">O předmětu</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Podm%C3%ADnky_z%C3%A1po%C4%8Dtu_a_zkou%C5%A1ky.html">Zápočet:</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Misc/Sylabus_LS2025.html">Mechanika FBMI sylabus LS 2024/2025</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0_1_Definice_a_historie_mechaniky.html">Úvod do mechaniky</a></li>
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="0_2_Skal%C3%A1ry_a_vektory.html">Typy veličin v mechanice, souřadnicové systémy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="0_3_Sou%C5%99adnicov%C3%A9_syst%C3%A9my.html">Souřadnicové systémy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_1_Stupe%C5%88_volnosti.html">Stupně volnosti</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1_2_Kinematika_v_1D.html">Pohyb v 1D prostoru</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_3_Dynamika_pohybu_v_1D.html">Dynamika</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="1_4_Energie.html">Mechanická práce</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="1_5_Lagrange_Eulerovy_rovnice.html">Princip minimální akce a Lagrange-Eulerovy rovnice</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_1_Mechanick%C3%A9_vlastnosti_materi%C3%A1lu.html">Deformace v 1D - tah-tlak</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_2_Hooke%C5%AFv_z%C3%A1kon.html">Hookeův zákon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_3_Tahov%C3%A1_zkou%C5%A1ka.html">Tahová zkouška</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="2_4_P%C5%99ehled_mechanick%C3%BDch_vlastnost%C3%AD.html">Přehled mechanických vlastností vybraných materiálů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_7_P%C5%99%C3%ADklad%20_tahov%C3%A9_zkou%C5%A1ky.html">Analýza dat z tahového diagramu</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="2_5_Metoda_%C5%99ezu.html">Určení vnitřních sil a napětí - metoda řezu</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="2_6_In%C5%BEen%C3%BDrsk%C3%A9_a_skute%C4%8Dn%C3%A9_nap%C4%9Bt%C3%AD.html">Skutečné a smluvní napětí a deformace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_8_Dimenzovani.html">Dimenzování součástí namáhaných v tahu a tlaku</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_1_Kmitani.html">Periodický pohyb v 1D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_2_Dynamika_oscil%C3%A1toru.html">Dynamika oscilátoru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_3_Tlumen%C3%A9_vibrace.html">Tlumené vibrace</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="3_4_Nucen%C3%A9_harmonick%C3%A9_kmit%C3%A1n%C3%AD.html">Nucené kmitání</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_1_2D_pohyb_DOF.html">Pohyb v 2D - kinematika</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_2_Pohyb_v_gravita%C4%8Dn%C3%ADm_poli.html">Pohyb v gravitačním poli</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="4_9_%C5%A0ikm%C3%BD_vrh_Lagrange.html">Odvození šikmého vrhu z Lagrange-Eulerových rovnic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_3_Pohyb_po_kru%C5%BEnici.html">Pohyb po kružnici</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_4_Fiktivn%C3%AD_s%C3%ADly.html">Fiktivní síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_6_Moment_sily.html">Moment síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_7_T%C4%9B%C5%BEi%C5%A1t%C4%9B.html">Težiště</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_8_Statick%C3%A9_rovnice_rovnov%C3%A1hy.html">Statické rovnice rovnováhy v rovině</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_5_Vazby.html">Vazby v rovině</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_1_Dynamika_rotace.html">Pohyb v 2D - dynamika</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_2_Moment_setrva%C4%8Dnosti.html">Moment setrvačnosti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_3_Steinerova_v%C4%9Bta.html">Steinerova věta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_7_Dynamick%C3%A9_rovnice_pohybu.html">Dynamické rovnice pohybu v rovině a rotační pohyb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_4_Z%C3%A1kon_zachov%C3%A1n%C3%AD_momentu_hybnosti.html">Zákon zachování momentu hybnosti</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_5_Kineticka_energie_rota%C4%8Dn%C3%ADho_pohybu.html">Kinetická energie rotačního pohybu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_6_Analogie_rota%C4%8Dn%C3%AD_transla%C4%8Dn%C3%AD.html">Analogie mezi kinematickými a dynamickými parametry rotačního a translačního pohybu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_8_P%C5%99%C3%ADklady.html">Dynamika v rovině - člověk v zatáčce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_9_P%C5%99%C3%ADklad_2.html">Příklad - dynamika jojo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_10_V%C3%A1lec_na_naklon%C4%9Bn%C3%A9_rovin%C4%9B.html">Pohyb válce na nakloněné rovině</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="6_1_Deformace_ve_2D_prostoru.html">Deformace ve 2D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_2_Smykov%C3%A9%20nap%C4%9Bt%C3%AD.html">Smykové napětí</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_3_Hooke%C5%AFv_z%C3%A1kon_pro_rovinnou_napjatost.html">Rozšířený Hookeův zákon pro rovinnou napjatost</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_4_Mohrova_kru%C5%BEnice.html">Mohrova kružnice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_5_Konstrukce_Mohrovy_kru%C5%BEnice.html">Konstrukce Mohrovy kružnice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_6_Pevnostn%C3%AD_hypot%C3%A9za.html">Pevnostní hypotézy a redukované napětí při rovinné napjatosti</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="7_2_Tensometry.html">Měření napjatosti</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="7_1_Laplaceova_rovnice.html">Napětí v tenkostěnných nádobách</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_7_Nap%C4%9Bt%C3%AD_p%C5%99i_krutu.html">Napětí při krutu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_8_Nap%C4%9Bt%C3%AD_p%C5%99i%20ohybu.html">Napětí při ohybu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_3_Vzp%C4%9Br.html">Vzpěr</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Prostorová napjatost</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="8_2_3D_Mises.html">Redukované napětí při prostorové napjatosti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_3_Dimenzov%C3%A1n%C3%AD_ohyb_ohyb.html">Dimenzování nosníků při kombinaci ohybu - ohyb ve dvou různých rovinách</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_4_Dimenzov%C3%A1n%C3%AD_ohyb_tlak.html">Dimenzování nosníků při kombinaci ohybu - tlak</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_5_Dimenzov%C3%A1n%C3%AD_ohyb_krut.html">Dimenzování nosníků při kombinaci ohybu a krutu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_6_Deforma%C4%8Dn%C3%AD_energie.html">Deformační energie a její hustota při prostorové napjatosti</a></li>
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C1.html">1. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C2.html">2. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C3.html">3. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C4.html">4. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C5.html">5. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C6.html">6. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C7.html">7. cvičení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cviceni/C8.html">8. cvičení</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Mechanika/issues/new?title=Issue%20on%20page%20%2FPrednasky/8_1_Prostorová_napjatost.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Prednasky/8_1_Prostorová_napjatost.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Prostorová napjatost</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definice-napjatosti">Definice napjatosti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principy-prostorove-napjatosti">Principy prostorové napjatosti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cauchyho-tenzor-napeti">Cauchyho tenzor napětí</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slozky-vektoru-napeti-trakcniho-vektoru-v-dane-rovine">Složky vektoru napětí (trakčního vektoru) v dané rovině</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#priklad-osove-zatizene-tyce-1d-a-2d">Příklad osově zatížené tyče (1D a 2D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dvourozmerny-priklad-sikmy-rez">Dvourozměrný příklad: Šikmý řez</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symetrie-tenzoru-napeti">Symetrie tenzoru napětí</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specialni-stavy-napjatosti">Speciální stavy napjatosti</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-tah-tlak">a) Tah / Tlak</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-rovinna-napjatost">b) Rovinná napjatost</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#posunuti-a-deformace-ve-3d">Posunutí a deformace ve 3D</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor-posunuti">Vektor posunutí</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tenzor-deformace">Tenzor deformace</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slozky-tenzoru-deformace">Složky tenzoru deformace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hookeuv-zakon">Hookeův zákon</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obecny-linearne-pruzny-material">Obecný lineárně pružný materiál</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matice-tuhosti">11. Matice tuhosti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hlavni-napeti">Hlavní napětí</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hlavni-napeti-a-deformace-ve-3d">Hlavní napětí a deformace ve 3D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objemova-deformace-je-stopou-tenzoru-deformace">Objemová deformace je stopou tenzoru deformace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objemova-slozka-napeti-a-objemovy-modul-pruznosti">Objemová složka napětí a objemový modul pružnosti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dalsi-informace-a-reference">Další informace a reference</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="prostorova-napjatost">
+<h1>Prostorová napjatost<a class="headerlink" href="#prostorova-napjatost" title="Link to this heading">#</a></h1>
+<section id="definice-napjatosti">
+<h2>Definice napjatosti<a class="headerlink" href="#definice-napjatosti" title="Link to this heading">#</a></h2>
+<p>Napjatost popisuje stav vnitřního namáhání materiálu způsobeného vnějšími zatíženími. Je charakterizována <strong>napětím</strong>, což je síla připadající na jednotkovou plochu. Vektor napětí na určité ploše v těle závisí na orientaci této plochy a bodě v tělese.</p>
+</section>
+<section id="principy-prostorove-napjatosti">
+<h2>Principy prostorové napjatosti<a class="headerlink" href="#principy-prostorove-napjatosti" title="Link to this heading">#</a></h2>
+<p>Uvažujme prut se čtvercovým průřezem, který je vystaven tahové síle <strong>F</strong>. Tato síla v prutu způsobé napětí</p>
+<img alt="https://eng.libretexts.org/&#64;api/deki/files/19903/2.1.1.png?revision=1" src="https://eng.libretexts.org/&#64;api/deki/files/19903/2.1.1.png?revision=1" />
+<div class="math notranslate nohighlight">
+\[
+T = \sigma = \frac{\text{síla}}{\text{plocha}} = \frac{F}{A_0} \quad [\text{N}/\text{mm}^2] 
+\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\vec{T}\)</span> definujeme také jako vektor napětí neboli trakční vektor</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{T} = \frac{\vec{F}}{A_0}
+\]</div>
+<p>V jednoosém případě je povrchové napětí jedinou složkou tenzoru napětí v globálním souřadném systému, běžně označovanou jako <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Jak aplikovat sílu na konec prutu?</p>
+<p>To lze provést několika různými způsoby (viz obrázek níže). Ke konci prutu může být přilepena (nebo přivařena) spojka s čepem, nebo může být skrz prut provrtán otvor pro uchycení čepem.</p>
+<p><img alt="Způsoby aplikace tahové síly" src="https://eng.libretexts.org/&#64;api/deki/files/19909/2.1.2.png?revision=1" /></p>
+<p>Alternativně může být vyroben vnitřní či vnější závit. Nakonec může být axiální síla aplikována pomocí třecích nebo mechanických čelistí.</p>
+<p>Kromě případů s přivařenou nebo přilepenou spojkou vzniká v oblasti konců prutu složitý stav napjatosti, který je vícesložkový (multiaxiální). Takový stav napětí je omezen na poměrně krátký úsek prutu, srovnatelný s jeho výškou nebo průměrem. V tomto úseku dochází k postupnému přechodu z vícesložkového stavu napjatosti do jednoosého stavu, pro který platí rovnice (2.1.1).</p>
+<p>Výše uvedený příklad může sloužit jako praktická aplikace <strong>Saint-Venantova principu</strong> (1856). Tento princip, pojmenovaný po francouzském teoretikovi pružnosti <strong>Jeanu Claudu Barrém de Saint-Venant</strong>, lze formulovat následovně:</p>
+<blockquote>
+<div><p>„Rozdíl mezi účinky dvou různých, ale staticky ekvivalentních zatížení se stává velmi malým ve dostatečně velké vzdálenosti od místa zatížení.“</p>
+</div></blockquote>
+</div>
+<p>Zamysleme se – jaká jsou „dvě“ staticky ekvivalentní zatížení aplikovaná na konce prutu? Obvykle uvažujeme průřez kolmý na osu prutu. Nyní však zvažme dva řezy pod úhly <span class="math notranslate nohighlight">\(\theta\)</span> a <span class="math notranslate nohighlight">\(\pi/2-\theta\)</span> vůči normálnímu směru. Tyto roviny jsou definovány jednotkovým normálovým vektorem <span class="math notranslate nohighlight">\(\vec{n}\)</span>.</p>
+<p><img alt="Obrázek 2.1.3: Síly na šikmém řezu" src="https://eng.libretexts.org/&#64;api/deki/files/19910/2.1.3.png?revision=1" /></p>
+<p>Z uvolnění tělesa dostáváme složky normálové a tečné síly:</p>
+<div class="math notranslate nohighlight">
+\[
+F_N = F \cos\theta 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+F_n = F \cos\left(\frac{\pi}{2} - \theta\right) 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+F_T = F \sin\theta 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+F_t = F \sin\left(\frac{\pi}{2} - \theta\right) 
+\]</div>
+<p>Šikmý průřez <strong>A</strong> je větší a souvisí s referenčním průřezem následovně:</p>
+<div class="math notranslate nohighlight">
+\[
+A_0 = A_A \cos\theta,\quad A_0 = A_B \cos\left(\frac{\pi}{2} - \theta\right) 
+\]</div>
+<p>Zvažme nyní jednotkový objemový krychlový prvek umístěný v průsečíku řezů A-A a B-B.</p>
+<p>Objemový prvek s povrchovým napětím působícím na dvou sousedních stěnách.</p>
+<p><img alt="Obrázek 2.1.4: Povrchové napětí na sousedních plochách" src="https://eng.libretexts.org/&#64;api/deki/files/19904/2.1.4.png?revision=1" /></p>
+<p>Povrchové napětí (síla na jednotku plochy) na dvou kolmých rovinách jsou:</p>
+<ul class="simple">
+<li><p>Rovina rovnoběžná s A-A:
+$<span class="math notranslate nohighlight">\( T_N = T \cos^2 \theta \)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( T_T = T \sin \theta \cos \theta \)</span>$</p></li>
+<li><p>Rovina rovnoběžná s B-B:
+$<span class="math notranslate nohighlight">\( T_n = T \cos^2 \left(\frac{\pi}{2}) - \theta \right) \)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( T_t = T \sin \left(\frac{\pi}{2}) - \theta  \right) \cos \left(\frac{\pi}{2}) - \theta 
+\right) \)</span>$</p></li>
+</ul>
+<p>Lze si všimnout, že tečné složky vektoru povrchové trakce na řezech A-A a B-B jsou totožné. Normalizované grafy výše uvedených veličin v závislosti na úhlu orientace řezu jsou znázorněny na obrázku.</p>
+<p><img alt="Obrázek 2.1.5" src="https://eng.libretexts.org/&#64;api/deki/files/19905/2.1.5.png?revision=1" /></p>
+<p>Lze si všimnout, že tangenciální složka dosahuje maxima při úhlu 45°. To znamená, že pokud materiál selže v důsledku smykového zatížení, bude lomová plocha vždy orientována pod úhlem 45°. Výše uvedený příklad nás učí, že existuje nekonečně mnoho kombinací normálové a tečné složky povrchových tahů, které jsou v rovnováze s působícím zatížením. Pro každou orientaci průřezu existuje jiná dvojice <span class="math notranslate nohighlight">\(\{T_n, T_t\}\)</span>.</p>
+<p>Orientace povrchového prvku je jednoznačně určena jednotkovým normálovým vektorem <span class="math notranslate nohighlight">\(\mathbf{n} = [n_1, n_2, n_3]\)</span>. Současně jsou složky povrchového vektoru napětí (trakčního vektoru) působícího na tentýž prvek <span class="math notranslate nohighlight">\(\mathbf{T} = [T_1, T_2, T_3]\)</span>.</p>
+</section>
+<section id="cauchyho-tenzor-napeti">
+<h2>Cauchyho tenzor napětí<a class="headerlink" href="#cauchyho-tenzor-napeti" title="Link to this heading">#</a></h2>
+<p>Stav napjatosti materiálu je tedy definován množinou všech vektorů napětí <span class="math notranslate nohighlight">\(\vec{T}^n\)</span> spojených s někonečným počtem rovin protínající daný body. Ve dvou rozměrech byla řešením problému Mohrova kružince, kde ze znalosti dvou rovin bylo možné dopočítat napětí v libovolné jiné rovině. Ve třech rozměrech je logické předpokládat, že budeme potřebovat tři roviny. Z důvodu jedoduchosti uvažujme stav, kdy jednotlivé roviny jsou navzájem kolmé a tvoří tak elementární hranol. Napětí v libovolné jiné rovině tak můžeme získat prostřednictvím transformace souřadnic.</p>
+<p>Pro sjednodušení, uvažujeme-li na čtyřstěn, kde tři z jeho stran jsou definovány rovinami souřadnicového systému a čtvrtá strana je defonována jednotkovým vektorem <span class="math notranslate nohighlight">\(\vec{n}\)</span> a velikostí <span class="math notranslate nohighlight">\(\mathrm{d}A\)</span></p>
+<img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Cauchy_tetrahedron.svg/495px-Cauchy_tetrahedron.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Cauchy_tetrahedron.svg/495px-Cauchy_tetrahedron.svg.png" />
+<p>Vektor napětí v dané rovinš je definován jako <span class="math notranslate nohighlight">\(\vec{T}_n\)</span>. Podobně můžeme definovat vektory zbylých rovin jako <span class="math notranslate nohighlight">\(\vec{T}_i\)</span>, <span class="math notranslate nohighlight">\(\vec{T}_j\)</span> a <span class="math notranslate nohighlight">\(\vec{T}_k\)</span>, kde <span class="math notranslate nohighlight">\(\vec{i}, \vec{j}, \vec{k}\)</span> jsou jednotkové vektory (verzory) ve směru <span class="math notranslate nohighlight">\(x, y\)</span> a <span class="math notranslate nohighlight">\(z\)</span>. Tento čtyřstěn je někdy označován jako <em>Cauchyho čtyřstěn</em>. Když budeme předpokládat, že objem čtyřstěnu je malý, můžeme zanedbat jeho tíhu a pro rovnováhu sil plyne</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{T}_n dA - \vec{T}_i  dA_x  - \vec{T}_j  dA_y - \vec{T}_k  dA_z = 0    
+\]</div>
+<p>Kde záporné znaménka značí, žě normála je ve směru záporného směru dané osi. PRop jednotlivé plochy platí, že velikost plochy je dána průmětem do plochy <span class="math notranslate nohighlight">\(\mathrm{d}A\)</span> do dané roviny.</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d}A_x = (\vec{n} \cdot \vec{i}) \mathrm{d}A = n_x \mathrm{d}A
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d}A_y = (\vec{n} \cdot \vec{j}) \mathrm{d}A = n_y \mathrm{d}A
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d}A_z = (\vec{n} \cdot \vec{k}) \mathrm{d}A = n_z \mathrm{d}A
+\]</div>
+<p>Rovnováhu sil tak můžeme sjednodušit do tvaru</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{T}_n = \vec{T}_i  n_x  + \vec{T}_j  n_y - \vec{T}_k  n_z = 0    
+\]</div>
+<p>kde jednotlivé vektory napětí (trakční vektory) můžeme vyjádřit pomocí jejich složek</p>
+<div class="math notranslate nohighlight">
+\[\vec{T}_x = T_{xx} \vec{i} +  T_{xy} \vec{j} + T_{xz} \vec{k} = \sigma_{xx} \vec{i} +  \sigma_{xy} \vec{j} + \sigma_{xz} \vec{k}\]</div>
+<div class="math notranslate nohighlight">
+\[\vec{T}_y = T_{yx} \vec{i} +  T_{yy} \vec{j} + T_{yz} \vec{k} = \sigma_{yx} \vec{i} +  \sigma_{yy} \vec{j} + \sigma_{yz} \vec{k}\]</div>
+<div class="math notranslate nohighlight">
+\[\vec{T}_z = T_{zx} \vec{i} +  T_{zy} \vec{j} + T_{zz} \vec{k} = \sigma_{zx} \vec{i} +  \sigma_{zy} \vec{j} + \sigma_{zz} \vec{k}\]</div>
+<p>Děvet složek vektorů napětí je možné zapsat ve tvaru tenzoru druhého řádu</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol{\sigma} = \sigma_{ij} = \begin{bmatrix}
+\vec{T}_x \\
+\vec{T}_y \\
+\vec{T}_z
+\end{bmatrix}
+=  \begin{bmatrix}
+\sigma_{xx} &amp; \sigma_{xy} &amp; \sigma_{xz} \\
+\sigma_{yx} &amp; \sigma_{yy} &amp; \tau_{yz} \\
+\sigma_{zx} &amp; \sigma_{zy} &amp; \sigma_{zz}
+\end{bmatrix} =
+\begin{bmatrix}
+\sigma_{xx} &amp; \tau_{xy} &amp; \tau_{xz} \\
+\tau_{yx} &amp; \sigma_{yy} &amp; \tau_{yz} \\
+\tau_{zx} &amp; \tau_{zy} &amp; \sigma_{zz}
+\end{bmatrix}
+\end{split}\]</div>
+<p>Vektor napětí v lobvolné rovině můžeme určit</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{T}_n = \vec{T}_i  n_x  + \vec{T}_j  n_y - \vec{T}_k  n_z = \sum\limits_i \left(\sum\limits_j \sigma_{ij} \vec{e}_j\right) n_i = 
+\sum\limits_j \left(\sum\limits_i \sigma_{ij} {n}_i\right) \vec{e}_j = \sum_j T^n_j \vec{e}_j
+\]</div>
+<p>Případně to můžeme napsat ve maticovém zápisu</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[T_x, T_y, T_z\right] = \left[ n_x, n_y, n_z \right]  \begin{bmatrix}
+\sigma_{xx} &amp; \sigma_{xy} &amp; \sigma_{xz} \\
+\sigma_{yx} &amp; \sigma_{yy} &amp; \tau_{yz} \\
+\sigma_{zx} &amp; \sigma_{zy} &amp; \sigma_{zz}
+\end{bmatrix} 
+\end{split}\]</div>
+<p>nebo jednoduše</p>
+<div class="math notranslate nohighlight">
+\[\vec{T_n} = \vec{n} \cdot \boldsymbol{\sigma}\]</div>
+<section id="slozky-vektoru-napeti-trakcniho-vektoru-v-dane-rovine">
+<h3>Složky vektoru napětí (trakčního vektoru) v dané rovině<a class="headerlink" href="#slozky-vektoru-napeti-trakcniho-vektoru-v-dane-rovine" title="Link to this heading">#</a></h3>
+<p>Složky povrchového trakčního vektoru působícího na rovinu jsou <span class="math notranslate nohighlight">\(\mathbf{T} = [T_1, T_2, T_3]\)</span>. Například orientace rovin jednotkové hmotné krychle je znázorněna na obrázku.</p>
+<img alt="https://eng.libretexts.org/&#64;api/deki/files/19906/2.1.6.png?revision=1)" src="https://eng.libretexts.org/&#64;api/deki/files/19906/2.1.6.png?revision=1)" />
+<p>Vztah mezi vektory napětí v daných rovinách, jednotkovým normálovým vektorem definujícím rovinu a tenzorem napětí je dán slavným Cauchyho vzorcem:</p>
+<div class="math notranslate nohighlight">
+\[ T_i = \sum\limits_i \sigma_{ij} n_i \]</div>
+<p>nebo v rozšířeném zápisu:</p>
+<div class="math notranslate nohighlight">
+\[ T_1 = \sigma_{j1} n_j = \sigma_{11} n_1 + \sigma_{21} n_2 + \sigma_{31} n_3 \]</div>
+<div class="math notranslate nohighlight">
+\[ T_2 = \sigma_{j1} n_j = \sigma_{12} n_1 + \sigma_{22} n_2 + \sigma_{32} n_3 \]</div>
+<div class="math notranslate nohighlight">
+\[ T_3 = \sigma_{j1} n_j = \sigma_{13} n_1 + \sigma_{23} n_2 + \sigma_{33} n_3 \]</div>
+</section>
+<section id="priklad-osove-zatizene-tyce-1d-a-2d">
+<h3>Příklad osově zatížené tyče (1D a 2D)<a class="headerlink" href="#priklad-osove-zatizene-tyce-1d-a-2d" title="Link to this heading">#</a></h3>
+<p>Uvažujme nejprve normálový řez tyčí s podélnou osou jako osou 1. Složky povrchových tahů jsou uvedeny na obrázku (2.1.7).</p>
+<img alt="https://eng.libretexts.org/&#64;api/deki/files/19912/2.1.7.png?revision=1" src="https://eng.libretexts.org/&#64;api/deki/files/19912/2.1.7.png?revision=1" />
+<p>Dosazením hodnot složek obou vektorů do rovnice 2.1.13 získáme následující výrazy:</p>
+<ul class="simple">
+<li><p>rovina (1,0,0): $<span class="math notranslate nohighlight">\( \sigma_0 = \sigma_{11}; 0 = \sigma_{21}; 0 = \sigma_{31} \)</span>$</p></li>
+<li><p>rovina (0,1,0): $<span class="math notranslate nohighlight">\( 0 = \sigma_{12}; 0 = \sigma_{22}; 0 = \sigma_{32} \)</span>$</p></li>
+<li><p>rovina (0,0,1): $<span class="math notranslate nohighlight">\( 0 = \sigma_{13}; 0 = \sigma_{23}; 0 = \sigma_{33} \)</span>$</p></li>
+</ul>
+<p>Složky matice napětí <span class="math notranslate nohighlight">\(3 \times 3\)</span> v globálním souřadném systému jsou tedy:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \boldsymbol{\sigma} = \begin{bmatrix} \sigma_0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{bmatrix} \end{split}\]</div>
+<p>To představuje jednoosý stav napětí.</p>
+</section>
+<section id="dvourozmerny-priklad-sikmy-rez">
+<h3>Dvourozměrný příklad: Šikmý řez<a class="headerlink" href="#dvourozmerny-priklad-sikmy-rez" title="Link to this heading">#</a></h3>
+<p>V tomto případě se použije lokální souřadnicový systém otočený vzhledem k 3-osé ose. V tomto systému jsou složky <span class="math notranslate nohighlight">\(n\)</span> stejné jako v globálním systému. V daném řezu platí pro složky vektoru <span class="math notranslate nohighlight">\(\vec{n}\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\vec{n} = [\cos \theta, \sin \theta, 0]
+\]</div>
+<p>Dosazením výše uvedených hodnot do Cauchyho vzorce získáme:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{T}_n = [\sigma_0 \cos \theta, 0, 0]
+\]</div>
+<p>kde složky jsou vyjádřeny v původní souřadnicové soustavě. Když chceme vyjádřit normálovou a smykovou složku napětí, musíme promítnout složky tensoru napětí do jednotlivých os, t.j. rozložit vektor napětí do dvou složek <span class="math notranslate nohighlight">\([T_N, T_T]\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[T_N = \vec{T}_n \cdot \vec{n}\]</div>
+<div class="math notranslate nohighlight">
+\[T_T = \vec{T}_n \cdot \vec{m}\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\vec{m} \perp \vec{n}\)</span>, a tedy <span class="math notranslate nohighlight">\(\vec{m} = [\sin \theta, -\cos \theta, 0]\)</span></p>
+<div class="math notranslate nohighlight">
+\[T_N = \sigma_0 \cos^2 \theta\]</div>
+<div class="math notranslate nohighlight">
+\[T_T = \sigma_0 \cos \theta \sin \theta \]</div>
+</section>
+<section id="symetrie-tenzoru-napeti">
+<h3>Symetrie tenzoru napětí<a class="headerlink" href="#symetrie-tenzoru-napeti" title="Link to this heading">#</a></h3>
+<img alt="https://www.pasqualerobustini.com/wp-content/uploads/2014/10/geodin-plane-stress.gif" src="https://www.pasqualerobustini.com/wp-content/uploads/2014/10/geodin-plane-stress.gif" />
+<p>Symetrie tenzoru napětí vychází z rovnice momentové rovnováhy nekonečně malého objemového prvku.</p>
+<p>Představme si nekonečně malý kvádr o stranách <span class="math notranslate nohighlight">\(dx\)</span>, <span class="math notranslate nohighlight">\(dy\)</span> a <span class="math notranslate nohighlight">\(dz\)</span>. Pro zjednodušení uvažujme momentovou rovnováhu kolem osy <span class="math notranslate nohighlight">\(z\)</span>. Síly působící na stěny kolmé k osám <span class="math notranslate nohighlight">\(x\)</span> a <span class="math notranslate nohighlight">\(y\)</span> generují momenty kolem osy <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<ul class="simple">
+<li><p>Moment od napětí <span class="math notranslate nohighlight">\(\sigma_{yx}\)</span>: <span class="math notranslate nohighlight">\(M_y = \sigma_{yx} \, dx \, dy \, dz\)</span></p></li>
+<li><p>Moment od napětí <span class="math notranslate nohighlight">\(\sigma_{xy}\)</span>: <span class="math notranslate nohighlight">\(M_x = -\sigma_{xy} \, dx \, dy \, dz\)</span></p></li>
+</ul>
+<p>Podmínka momentové rovnováhy kolem osy <span class="math notranslate nohighlight">\(z\)</span> (<span class="math notranslate nohighlight">\(\sum M_z = 0\)</span>) dává:</p>
+<p><span class="math notranslate nohighlight">\(\sigma_{yx} \, dx \, dy \, dz - \sigma_{xy} \, dx \, dy \, dz = 0\)</span></p>
+<p>Za předpokladu <span class="math notranslate nohighlight">\(dx \, dy \, dz \neq 0\)</span>, z toho plyne:</p>
+<p><span class="math notranslate nohighlight">\(\sigma_{xy} = \sigma_{yx}\)</span></p>
+<p>Analogicky lze odvodit symetrii i pro ostatní složky tenzoru napětí z momentové rovnováhy kolem os <span class="math notranslate nohighlight">\(x\)</span> a <span class="math notranslate nohighlight">\(y\)</span>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sigma_{yz} = \sigma_{zy}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma_{xz} = \sigma_{zx}\)</span></p></li>
+</ul>
+<p>Symetrie tenzoru napětí (<span class="math notranslate nohighlight">\(\sigma_{ij} = \sigma_{ji}\)</span>) je nutnou podmínkou pro momentovou rovnováhu nekonečně malého objemového prvku. Nerespektování této symetrie by vedlo k nenulovému výslednému momentu a tedy nekonečně velkému úhlovému zrychlení prvku, což je fyzikálně nemožné v statickém nebo kvazistatickém stavu.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Toto odvození platí za předpokladu absence objemových momentů působících na prvek. V inženýrských aplikacích je tento předpoklad obvykle splněn.</p>
+</div>
+<p>Symetrie tenzoru napětí vychází z rovnice momentové rovnováhy nekonečně malého objemového prvku. Obecně:</p>
+<div class="math notranslate nohighlight">
+\[\sigma_{ij} = \sigma_{ji} \]</div>
+<p>Tím se devět složek matice <span class="math notranslate nohighlight">\(3 imes 3\)</span> redukuje na pouhých šest nezávislých složek.</p>
+</section>
+</section>
+<section id="specialni-stavy-napjatosti">
+<h2>Speciální stavy napjatosti<a class="headerlink" href="#specialni-stavy-napjatosti" title="Link to this heading">#</a></h2>
+<section id="a-tah-tlak">
+<h3>a) Tah / Tlak<a class="headerlink" href="#a-tah-tlak" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol{\sigma} =
+\begin{bmatrix}
+\sigma &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="b-rovinna-napjatost">
+<h3>b) Rovinná napjatost<a class="headerlink" href="#b-rovinna-napjatost" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol{\sigma} =
+\begin{bmatrix}
+\sigma_{xx} &amp; \tau_{xy} &amp; 0 \\
+\tau_{xy} &amp; \sigma_{yy} &amp; 0 \\
+0 &amp; 0 &amp; 0
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+</section>
+<section id="posunuti-a-deformace-ve-3d">
+<h2>Posunutí a deformace ve 3D<a class="headerlink" href="#posunuti-a-deformace-ve-3d" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dodatečná informace - nebude součástí zkoušky</p>
+</div>
+<section id="vektor-posunuti">
+<h3>Vektor posunutí<a class="headerlink" href="#vektor-posunuti" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{u} = \begin{bmatrix} u(x,y,z) \\ v(x,y,z) \\ w(x,y,z) \end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="tenzor-deformace">
+<h3>Tenzor deformace<a class="headerlink" href="#tenzor-deformace" title="Link to this heading">#</a></h3>
+<p>Definice tenzoru deformace <span class="math notranslate nohighlight">\(\varepsilon_{ij}\)</span> v mechanice kontinua popisuje lokální deformaci materiálu a je úzce spjata s polem posunutí <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>, jehož složky jsou <span class="math notranslate nohighlight">\(u_i\)</span> (kde <span class="math notranslate nohighlight">\(i = 1, 2, 3\)</span> odpovídá osám <span class="math notranslate nohighlight">\(x_1, x_2, x_3\)</span>).</p>
+<p>Uvažujme nekonečně malý vektorový element <span class="math notranslate nohighlight">\(d\mathbf{x}\)</span> v nedeformovaném tělese, spojující dva blízké body s souřadnicemi <span class="math notranslate nohighlight">\(x_i\)</span> a <span class="math notranslate nohighlight">\(x_i + dx_i\)</span>. Po deformaci se tyto body posunou o <span class="math notranslate nohighlight">\(\mathbf{u}(x_i)\)</span> a <span class="math notranslate nohighlight">\(\mathbf{u}(x_i + dx_i)\)</span>, a vektorový element se transformuje na <span class="math notranslate nohighlight">\(d\mathbf{x}'\)</span>.</p>
+<p>Posunutí koncového bodu elementu <span class="math notranslate nohighlight">\(d\mathbf{x}\)</span> lze vyjádřit pomocí Taylorova rozvoje pole posunutí kolem počátečního bodu:</p>
+<div class="math notranslate nohighlight">
+\[
+u_i(x_j + dx_j) = u_i(x_j) + \frac{\partial u_i}{\partial x_j} dx_j + O((dx)^2)
+\]</div>
+<p>Zanedbáme členy vyššího řádu, protože uvažujeme nekonečně malý element.</p>
+<p>Deformovaný vektorový element <span class="math notranslate nohighlight">\(d\mathbf{x}'\)</span> spojuje body s souřadnicemi <span class="math notranslate nohighlight">\(x_i + u_i(x_j)\)</span> a <span class="math notranslate nohighlight">\(x_i + dx_i + u_i(x_j + dx_j)\)</span>. Lze jej vyjádřit jako:</p>
+<div class="math notranslate nohighlight">
+\[
+dx'_i = (x_i + dx_i + u_i(x_j + dx_j)) - (x_i + u_i(x_j))
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+dx'_i = dx_i + u_i(x_j + dx_j) - u_i(x_j)
+\]</div>
+<p>Dosazením Taylorova rozvoje pro <span class="math notranslate nohighlight">\(u_i(x_j + dx_j)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+dx'_i = dx_i + \left( u_i(x_j) + \frac{\partial u_i}{\partial x_j} dx_j \right) - u_i(x_j)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+dx'_i = dx_i + \frac{\partial u_i}{\partial x_j} dx_j
+\]</div>
+<p>Tento vztah lze zapsat v tenzorové notaci jako:</p>
+<div class="math notranslate nohighlight">
+\[
+dx'_i = (\delta_{ij} + \frac{\partial u_i}{\partial x_j}) dx_j = F_{ij} dx_j
+\]</div>
+<p>kde <span class="math notranslate nohighlight">\(F_{ij} = \delta_{ij} + \frac{\partial u_i}{\partial x_j}\)</span> je <strong>tenzor gradientu deformace</strong>. Tento tenzor popisuje lineární transformaci nedeformovaného elementu <span class="math notranslate nohighlight">\(d\mathbf{x}\)</span> na deformovaný element <span class="math notranslate nohighlight">\(d\mathbf{x}'\)</span>.</p>
+<p>Pro kvantifikaci samotné deformace, tedy změny tvaru a velikosti, je užitečné zavést <strong>tenzor pravé míry deformace (Cauchy-Greenův tenzor deformace)</strong> <span class="math notranslate nohighlight">\(\mathbf{C}\)</span>, definovaný jako:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{C} = \mathbf{F}^T \mathbf{F} \implies C_{ij} = F_{ki} F_{kj} = \left( \delta_{ki} + \frac{\partial u_k}{\partial x_i} \right) \left( \delta_{kj} + \frac{\partial u_k}{\partial x_j} \right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+C_{ij} = \delta_{ij} + \frac{\partial u_j}{\partial x_i} + \frac{\partial u_i}{\partial x_j} + \frac{\partial u_k}{\partial x_i} \frac{\partial u_k}{\partial x_j}
+\]</div>
+<p><strong>Tenzor inženýrské míry deformace</strong> <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> je definován jako rozdíl mezi deformovaným a nedeformovaným metrickým tenzorem (kterým je pro karteziánské souřadnice Kroneckerovo delta <span class="math notranslate nohighlight">\(\delta_{ij}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{E} = \frac{1}{2} (\mathbf{C} - \mathbf{I}) \implies E_{ij} = \frac{1}{2} (C_{ij} - \delta_{ij})
+\]</div>
+<p>Dosazením za <span class="math notranslate nohighlight">\(C_{ij}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{ij} = \frac{1}{2} \left( \delta_{ij} + \frac{\partial u_j}{\partial x_i} + \frac{\partial u_i}{\partial x_j} + \frac{\partial u_k}{\partial x_i} \frac{\partial u_k}{\partial x_j} - \delta_{ij} \right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+E_{ij} = \frac{1}{2} \left( \frac{\partial u_i}{\partial x_j} + \frac{\partial u_j}{\partial x_i} + \frac{\partial u_k}{\partial x_i} \frac{\partial u_k}{\partial x_j} \right)
+\]</div>
+<p>Pro <strong>malé deformace</strong>, kdy jsou gradienty posunutí <span class="math notranslate nohighlight">\(\frac{\partial u_k}{\partial x_i}\)</span> malé ve srovnání s jedničkou, lze zanedbat kvadratický člen <span class="math notranslate nohighlight">\(\frac{\partial u_k}{\partial x_i} \frac{\partial u_k}{\partial x_j}\)</span>. V tomto případě se tenzor inženýrské míry deformace redukuje na <strong>tenzor malých deformací</strong> nebo <strong>linearizovaný tenzor deformace</strong> <span class="math notranslate nohighlight">\(\varepsilon_{ij}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_{ij} \approx \frac{1}{2} \left( \frac{\partial u_i}{\partial x_j} + \frac{\partial u_j}{\partial x_i} \right)
+\]</div>
+<p>Tato definice, kterou jste uvedl, je tedy <strong>linearizovanou definicí tenzoru deformace</strong>, platnou pro případy malých deformací. Představuje symetrickou část gradientu posunutí. Symetrická část souvisí se změnou tvaru a velikosti, zatímco antisymetrická část (rotační tenzor) souvisí s rotací elementu bez změny jeho tvaru a velikosti v prvním řádu aproximace.</p>
+</section>
+</section>
+<section id="slozky-tenzoru-deformace">
+<h2>Složky tenzoru deformace<a class="headerlink" href="#slozky-tenzoru-deformace" title="Link to this heading">#</a></h2>
+<p>V trojrozměrném stavu napjatosti má symetrický tenzor deformace <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> druhého řádu v kartézských souřadnicích (x, y, z nebo <span class="math notranslate nohighlight">\(x_1, x_2, x_3\)</span>) následujících šest nezávislých složek:</p>
+<p><strong>Normálové deformace (diagonální složky):</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{xx} = \varepsilon_{11} = \frac{\partial u_x}{\partial x} = \frac{\partial u_1}{\partial x_1}\)</span>: Poměrná změna délky elementu ve směru osy x.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{yy} = \varepsilon_{22} = \frac{\partial u_y}{\partial y} = \frac{\partial u_2}{\partial x_2}\)</span>: Poměrná změna délky elementu ve směru osy y.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{zz} = \varepsilon_{33} = \frac{\partial u_z}{\partial z} = \frac{\partial u_3}{\partial x_3}\)</span>: Poměrná změna délky elementu ve směru osy z.</p></li>
+</ul>
+<p><strong>Smykové deformace (nediagonální složky):</strong></p>
+<p>Tenzorové smykové deformace (<span class="math notranslate nohighlight">\(\varepsilon_{ij}\)</span> pro <span class="math notranslate nohighlight">\(i \neq j\)</span>) souvisejí s poloviční změnou úhlu mezi původně kolmými liniovými elementy. Inženýrská smyková deformace (<span class="math notranslate nohighlight">\(\gamma_{ij}\)</span>) je <span class="math notranslate nohighlight">\(\gamma_{ij} = 2 \varepsilon_{ij}\)</span>.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{xy} = \varepsilon_{yx} = \varepsilon_{12} = \varepsilon_{21} = \frac{1}{2} \left( \frac{\partial u_x}{\partial y} + \frac{\partial u_y}{\partial x} \right) = \frac{1}{2} \gamma_{xy}\)</span>: Polovina změny úhlu mezi původně kolmými liniemi ve směrech x a y.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{yz} = \varepsilon_{zy} = \varepsilon_{23} = \varepsilon_{32} = \frac{1}{2} \left( \frac{\partial u_y}{\partial z} + \frac{\partial u_z}{\partial y} \right) = \frac{1}{2} \gamma_{yz}\)</span>: Polovina změny úhlu mezi původně kolmými liniemi ve směrech y a z.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{zx} = \varepsilon_{xz} = \varepsilon_{31} = \varepsilon_{13} = \frac{1}{2} \left( \frac{\partial u_z}{\partial x} + \frac{\partial u_x}{\partial z} \right) = \frac{1}{2} \gamma_{zx}\)</span>: Polovina změny úhlu mezi původně kolmými liniemi ve směrech z a x.</p></li>
+</ul>
+<p>kde <span class="math notranslate nohighlight">\(u_x, u_y, u_z\)</span> (nebo <span class="math notranslate nohighlight">\(u_1, u_2, u_3\)</span>) jsou složky vektoru posunutí.</p>
+<p>Maticově lze tenzor deformace zapsat jako:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol{\varepsilon} = \begin{pmatrix}
+\varepsilon_{xx} &amp; \varepsilon_{xy} &amp; \varepsilon_{xz} \\
+\varepsilon_{yx} &amp; \varepsilon_{yy} &amp; \varepsilon_{yz} \\
+\varepsilon_{zx} &amp; \varepsilon_{zy} &amp; \varepsilon_{zz}
+\end{pmatrix} =
+\begin{pmatrix}
+\frac{\partial u_x}{\partial x} &amp; \frac{1}{2} \left( \frac{\partial u_x}{\partial y} + \frac{\partial u_y}{\partial x} \right) &amp; \frac{1}{2} \left( \frac{\partial u_x}{\partial z} + \frac{\partial u_z}{\partial x} \right) \\
+\frac{1}{2} \left( \frac{\partial u_y}{\partial x} + \frac{\partial u_x}{\partial y} \right) &amp; \frac{\partial u_y}{\partial y} &amp; \frac{1}{2} \left( \frac{\partial u_y}{\partial z} + \frac{\partial u_z}{\partial y} \right) \\
+\frac{1}{2} \left( \frac{\partial u_z}{\partial x} + \frac{\partial u_x}{\partial z} \right) &amp; \frac{1}{2} \left( \frac{\partial u_z}{\partial y} + \frac{\partial u_y}{\partial z} \right) &amp; \frac{\partial u_z}{\partial z}
+\end{pmatrix}
+\end{split}\]</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Tato definice platí pro <strong>malé deformace</strong>.</p>
+</div>
+</section>
+<section id="hookeuv-zakon">
+<h2>Hookeův zákon<a class="headerlink" href="#hookeuv-zakon" title="Link to this heading">#</a></h2>
+<p>Pro lineárně elastický materiál platí Hookův zákon v trojrozměrné podobě:</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon_x = \frac{1}{E} [\sigma_x - \nu (\sigma_y + \sigma_z)]\]</div>
+<div class="math notranslate nohighlight">
+\[\varepsilon_y = \frac{1}{E} [\sigma_y - \nu (\sigma_x + \sigma_z)]\]</div>
+<div class="math notranslate nohighlight">
+\[\varepsilon_z = \frac{1}{E} [\sigma_z - \nu (\sigma_x + \sigma_y)]\]</div>
+<div class="math notranslate nohighlight">
+\[\gamma_{xy} = \frac{\tau_{xy}}{G}\]</div>
+<div class="math notranslate nohighlight">
+\[\gamma_{yz} = \frac{\tau_{yz}}{G}\]</div>
+<div class="math notranslate nohighlight">
+\[\gamma_{zx} = \frac{\tau_{zx}}{G}\]</div>
+<p>kde</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(E\)</span> je Youngův modul pružnosti,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\nu\)</span> je Poissonovo číslo a</p></li>
+<li><p><span class="math notranslate nohighlight">\(G = \frac{E}{2(1+\nu)}\)</span> je modul pružnosti ve smyku.</p></li>
+</ul>
+<section id="obecny-linearne-pruzny-material">
+<h3>Obecný lineárně pružný materiál<a class="headerlink" href="#obecny-linearne-pruzny-material" title="Link to this heading">#</a></h3>
+<p>V lineárně elastickém materiálu popisuje Hookův zákon vztah mezi tenzorem napětí <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}\)</span> a tenzorem deformace <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span>. V obecném trojrozměrném stavu napjatosti a deformace lze tento vztah vyjádřit v tenzorové formě jako:</p>
+<div class="math notranslate nohighlight">
+\[
+\boldsymbol{\varepsilon} = \mathbf{S} : \boldsymbol{\sigma}
+\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\mathbf{S}\)</span> je <strong>tenzor poddajnosti</strong> (často se značí také jako <span class="math notranslate nohighlight">\(\mathbf{C}^{-1}\)</span>, kde <span class="math notranslate nohighlight">\(\mathbf{C}\)</span> je tenzor tuhosti). Dvojtečka (<span class="math notranslate nohighlight">\(:\)</span>) značí dvojitou kontrakci tenzorů.</p>
+<p>V maticové formě, při použití Voigtovy notace pro vektor napětí <span class="math notranslate nohighlight">\(\{\sigma\} = [\sigma_x, \sigma_y, \sigma_z, \tau_{xy}, \tau_{yz}, \tau_{zx}]^T\)</span> a vektor deformace <span class="math notranslate nohighlight">\(\{\varepsilon\} = [\varepsilon_x, \varepsilon_y, \varepsilon_z, \gamma_{xy}, \gamma_{yz}, \gamma_{zx}]^T\)</span>, se Hookův zákon zapisuje jako:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}
+\varepsilon_x \\
+\varepsilon_y \\
+\varepsilon_z \\
+\gamma_{xy} \\
+\gamma_{yz} \\
+\gamma_{zx}
+\end{pmatrix} =
+\begin{pmatrix}
+S_{11} &amp; S_{12} &amp; S_{13} &amp; S_{14} &amp; S_{15} &amp; S_{16} \\
+S_{21} &amp; S_{22} &amp; S_{23} &amp; S_{24} &amp; S_{25} &amp; S_{26} \\
+S_{31} &amp; S_{32} &amp; S_{33} &amp; S_{34} &amp; S_{35} &amp; S_{36} \\
+S_{41} &amp; S_{42} &amp; S_{43} &amp; S_{44} &amp; S_{45} &amp; S_{46} \\
+S_{51} &amp; S_{52} &amp; S_{53} &amp; S_{54} &amp; S_{55} &amp; S_{56} \\
+S_{61} &amp; S_{62} &amp; S_{63} &amp; S_{64} &amp; S_{65} &amp; S_{66}
+\end{pmatrix}
+\begin{pmatrix}
+\sigma_x \\
+\sigma_y \\
+\sigma_z \\
+\tau_{xy} \\
+\tau_{yz} \\
+\tau_{zx}
+\end{pmatrix}
+\end{split}\]</div>
+<p>Matice poddajnosti <span class="math notranslate nohighlight">\([S]\)</span> je symetrická, což znamená <span class="math notranslate nohighlight">\(S_{ij} = S_{ji}\)</span>, a má tedy maximálně 21 nezávislých konstant pro obecně anizotropní materiál.</p>
+<p><strong>Pro izotropní materiál</strong> (jehož vlastnosti jsou stejné ve všech směrech) se matice poddajnosti výrazně zjednodušuje a je vyjádřena pomocí dvou nezávislých materiálových konstant, Youngova modulu pružnosti (<span class="math notranslate nohighlight">\(E\)</span>) a Poissonova čísla (<span class="math notranslate nohighlight">\(\nu\)</span>), nebo pomocí Youngova modulu (<span class="math notranslate nohighlight">\(E\)</span>) a modulu pružnosti ve smyku (<span class="math notranslate nohighlight">\(G = \frac{E}{2(1+\nu)}\)</span>), případně pomocí Laméových konstant (<span class="math notranslate nohighlight">\(\lambda\)</span> a <span class="math notranslate nohighlight">\(\mu = G\)</span>). Matice poddajnosti pro izotropní materiál má tvar:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+[S] =
+\begin{pmatrix}
+1/E &amp; -\nu/E &amp; -\nu/E &amp; 0 &amp; 0 &amp; 0 \\
+-\nu/E &amp; 1/E &amp; -\nu/E &amp; 0 &amp; 0 &amp; 0 \\
+-\nu/E &amp; -\nu/E &amp; 1/E &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1/G &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1/G &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1/G
+\end{pmatrix}
+\end{split}\]</div>
+<p>kde diagonální prvky souvisejí s normálovými deformacemi vyvolanými normálovými napětími a nediagonální prvky (mimo nuly) souvisejí s příčnými deformacemi (Poissonův jev) a smykovými deformacemi vyvolanými smykovými napětími.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+[S] = \frac{1}{E}
+\begin{bmatrix}
+1 &amp; -\nu &amp; -\nu &amp; 0 &amp; 0 &amp; 0 \\
+-\nu &amp; 1 &amp; -\nu &amp; 0 &amp; 0 &amp; 0 \\
+-\nu &amp; -\nu &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 2(1+\nu) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 2(1+\nu) &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 2(1+\nu)
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+</section>
+<section id="matice-tuhosti">
+<h2>11. Matice tuhosti<a class="headerlink" href="#matice-tuhosti" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+[K] = \frac{E}{(1+\nu)(1-2\nu)}
+\begin{bmatrix}
+1-\nu &amp; \nu &amp; \nu &amp; 0 &amp; 0 &amp; 0 \\
+\nu &amp; 1-\nu &amp; \nu &amp; 0 &amp; 0 &amp; 0 \\
+\nu &amp; \nu &amp; 1-\nu &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \frac{1-2\nu}{2} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{1-2\nu}{2} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{1-2\nu}{2}
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="hlavni-napeti">
+<h2>Hlavní napětí<a class="headerlink" href="#hlavni-napeti" title="Link to this heading">#</a></h2>
+<p>Uvažujme rovinný stav napětí (2D), kde je tenzor napětí <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}\)</span> redukován na matici 2x2:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol{\sigma} = \begin{pmatrix}
+\sigma_x &amp; \tau_{xy} \\
+\tau_{yx} &amp; \sigma_y
+\end{pmatrix}
+\end{split}\]</div>
+<p>Vlivem momentové rovnováhy platí <span class="math notranslate nohighlight">\(\tau_{xy} = \tau_{yx}\)</span>, takže tenzor napětí je symetrický.</p>
+<p>Hlavní napětí (<span class="math notranslate nohighlight">\(\sigma_1, \sigma_2\)</span>) jsou vlastní čísla tenzoru napětí. Lze je nalézt řešením charakteristické rovnice:</p>
+<div class="math notranslate nohighlight">
+\[
+\det(\boldsymbol{\sigma} - \lambda \mathbf{I}) = 0
+\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\lambda\)</span> představuje hlavní napětí a <span class="math notranslate nohighlight">\(\mathbf{I}\)</span> je jednotková matice 2x2. Rozepsáním determinantu:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\det \begin{pmatrix}
+\sigma_x - \lambda &amp; \tau_{xy} \\
+\tau_{xy} &amp; \sigma_y - \lambda
+\end{pmatrix} = (\sigma_x - \lambda)(\sigma_y - \lambda) - (\tau_{xy})^2 = 0
+\end{split}\]</div>
+<p>Rozvinutím této rovnice dostaneme kvadratickou rovnici pro <span class="math notranslate nohighlight">\(\lambda\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda^2 - (\sigma_x + \sigma_y) \lambda + (\sigma_x \sigma_y - \tau_{xy}^2) = 0
+\]</div>
+<p>Řešení této kvadratické rovnice pomocí vzorce pro kořeny dává hlavní napětí <span class="math notranslate nohighlight">\(\sigma_1\)</span> a <span class="math notranslate nohighlight">\(\sigma_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda_{1,2} = \frac{(\sigma_x + \sigma_y) \pm \sqrt{(\sigma_x + \sigma_y)^2 - 4(\sigma_x \sigma_y - \tau_{xy}^2)}}{2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\lambda_{1,2} = \frac{(\sigma_x + \sigma_y) \pm \sqrt{\sigma_x^2 + 2\sigma_x \sigma_y + \sigma_y^2 - 4\sigma_x \sigma_y + 4\tau_{xy}^2}}{2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\lambda_{1,2} = \frac{(\sigma_x + \sigma_y) \pm \sqrt{\sigma_x^2 - 2\sigma_x \sigma_y + \sigma_y^2 + 4\tau_{xy}^2}}{2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\lambda_{1,2} = \frac{(\sigma_x + \sigma_y) \pm \sqrt{(\sigma_x - \sigma_y)^2 + (2\tau_{xy})^2}}{2}
+\]</div>
+<p>Označme hlavní napětí jako <span class="math notranslate nohighlight">\(\sigma_1\)</span> a <span class="math notranslate nohighlight">\(\sigma_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_1 = \frac{(\sigma_x + \sigma_y)}{2} + \sqrt{\left(\frac{\sigma_x - \sigma_y}{2}\right)^2 + \tau_{xy}^2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\sigma_2 = \frac{(\sigma_x + \sigma_y)}{2} - \sqrt{\left(\frac{\sigma_x - \sigma_y}{2}\right)^2 + \tau_{xy}^2}
+\]</div>
+<p>Nyní zavedeme průměrné normálové napětí <span class="math notranslate nohighlight">\(\sigma_m\)</span> a poloměr kružnice <span class="math notranslate nohighlight">\(R\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_m = \frac{\sigma_x + \sigma_y}{2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+R = \sqrt{\left(\frac{\sigma_x - \sigma_y}{2}\right)^2 + \tau_{xy}^2}
+\]</div>
+<p>Pomocí těchto definic lze hlavní napětí zapsat jako:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_1 = \sigma_m + R
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\sigma_2 = \sigma_m - R
+\]</div>
+<p>Nyní se zaměřme na napětí (<span class="math notranslate nohighlight">\(\sigma_n, \tau_t\)</span>) působící na rovinu otočenou o úhel <span class="math notranslate nohighlight">\(\theta\)</span> od osy <span class="math notranslate nohighlight">\(x\)</span>. Transformace napětí pro rovinný stav napětí je dána rovnicemi:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_n = \frac{\sigma_x + \sigma_y}{2} + \frac{\sigma_x - \sigma_y}{2} \cos(2\theta) + \tau_{xy} \sin(2\theta)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\tau_t = -\frac{\sigma_x - \sigma_y}{2} \sin(2\theta) + \tau_{xy} \cos(2\theta)
+\]</div>
+<p>Naším cílem je ukázat, že body <span class="math notranslate nohighlight">\((\sigma_n, \tau_t)\)</span> leží na kružnici v rovině <span class="math notranslate nohighlight">\(\sigma - \tau\)</span>. Přeuspořádejme transformační rovnice:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_n - \frac{\sigma_x + \sigma_y}{2} = \frac{\sigma_x - \sigma_y}{2} \cos(2\theta) + \tau_{xy} \sin(2\theta)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\tau_t = -\frac{\sigma_x - \sigma_y}{2} \sin(2\theta) + \tau_{xy} \cos(2\theta)
+\]</div>
+<p>Nyní umocníme obě rovnice na druhou a sečteme je:</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\sigma_n - \frac{\sigma_x + \sigma_y}{2}\right)^2 + \tau_t^2 = \left( \frac{\sigma_x - \sigma_y}{2} \cos(2\theta) + \tau_{xy} \sin(2\theta) \right)^2 + \left( -\frac{\sigma_x - \sigma_y}{2} \sin(2\theta) + \tau_{xy} \cos(2\theta) \right)^2
+\]</div>
+<p>Rozvinutím pravé strany:</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{\sigma_x - \sigma_y}{2}\right)^2 \cos^2(2\theta) + \tau_{xy}^2 \sin^2(2\theta) + 2 \frac{\sigma_x - \sigma_y}{2} \tau_{xy} \cos(2\theta) \sin(2\theta) + \left(\frac{\sigma_x - \sigma_y}{2}\right)^2 \sin^2(2\theta) + \tau_{xy}^2 \cos^2(2\theta) - 2 \frac{\sigma_x - \sigma_y}{2} \tau_{xy} \sin(2\theta) \cos(2\theta)
+\]</div>
+<p>Střední členy se odečtou a zbývá:</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{\sigma_x - \sigma_y}{2}\right)^2 (\cos^2(2\theta) + \sin^2(2\theta)) + \tau_{xy}^2 (\sin^2(2\theta) + \cos^2(2\theta))
+\]</div>
+<p>Použitím goniometrické identity <span class="math notranslate nohighlight">\(\sin^2(\alpha) + \cos^2(\alpha) = 1\)</span> dostaneme:</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{\sigma_x - \sigma_y}{2}\right)^2 + \tau_{xy}^2
+\]</div>
+<p>Levá strana rovnice je:</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\sigma_n - \frac{\sigma_x + \sigma_y}{2}\right)^2 + \tau_t^2
+\]</div>
+<p>Spojením obou stran:</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\sigma_n - \frac{\sigma_x + \sigma_y}{2}\right)^2 + \tau_t^2 = \left(\frac{\sigma_x - \sigma_y}{2}\right)^2 + \tau_{xy}^2
+\]</div>
+<p>Substitucí dříve definovaného průměrného normálového napětí <span class="math notranslate nohighlight">\(\sigma_m = \frac{\sigma_x + \sigma_y}{2}\)</span> a poloměru kružnice <span class="math notranslate nohighlight">\(R = \sqrt{\left(\frac{\sigma_x - \sigma_y}{2}\right)^2 + \tau_{xy}^2}\)</span> dostaneme rovnici kružnice:</p>
+<div class="math notranslate nohighlight">
+\[
+(\sigma_n - \sigma_m)^2 + \tau_t^2 = R^2
+\]</div>
+<p>Tato rovnice představuje <strong>Mohrovu kružnici</strong> v rovině <span class="math notranslate nohighlight">\(\sigma - \tau\)</span>, kde:</p>
+<ul class="simple">
+<li><p>Střed kružnice leží na ose normálového napětí <span class="math notranslate nohighlight">\(\sigma\)</span> v bodě <span class="math notranslate nohighlight">\((\sigma_m, 0) = \left(\frac{\sigma_x + \sigma_y}{2}, 0\right)\)</span>.</p></li>
+<li><p>Poloměr kružnice je <span class="math notranslate nohighlight">\(R = \sqrt{\left(\frac{\sigma_x - \sigma_y}{2}\right)^2 + \tau_{xy}^2}\)</span>.</p></li>
+</ul>
+<p>Hlavní napětí <span class="math notranslate nohighlight">\(\sigma_1\)</span> a <span class="math notranslate nohighlight">\(\sigma_2\)</span> odpovídají průsečíkům Mohrovy kružnice s osou normálového napětí (<span class="math notranslate nohighlight">\(\tau_t = 0\)</span>), kde <span class="math notranslate nohighlight">\(\sigma_n = \sigma_m \pm R\)</span>. Maximální smykové napětí <span class="math notranslate nohighlight">\(\tau_{max}\)</span> odpovídá hornímu a dolnímu bodu kružnice a má velikost rovnou poloměru <span class="math notranslate nohighlight">\(R\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau_{max} = R = \sqrt{\left(\frac{\sigma_x - \sigma_y}{2}\right)^2 + \tau_{xy}^2} = \frac{\sigma_1 - \sigma_2}{2}
+\]</div>
+<p>Tímto jsme odvodili rovnici Mohrovy kružnice jako geometrickou reprezentaci hlavních čísel (a obecně transformovaných složek) tenzoru napětí ve 2D.</p>
+</section>
+<section id="hlavni-napeti-a-deformace-ve-3d">
+<h2>Hlavní napětí a deformace ve 3D<a class="headerlink" href="#hlavni-napeti-a-deformace-ve-3d" title="Link to this heading">#</a></h2>
+<p>Podobně můžeme postupovat ve třech rozměrech.</p>
+<div class="math notranslate nohighlight">
+\[
+\det(\boldsymbol{\sigma} - \lambda \mathbf{I}) = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\det(\boldsymbol{\varepsilon} - \lambda \mathbf{I}) = 0
+\]</div>
+<p>V tomto případě platí, že řešení determinantu vede na kubickou rovnici, která má tři řešení: tři hlavní napětí <span class="math notranslate nohighlight">\(\sigma_1, \sigma_2, \sigma_3\)</span> nebo <span class="math notranslate nohighlight">\(\epsilon_1, \epsilon_2, \epsilon_3\)</span>.</p>
+</section>
+<section id="objemova-deformace-je-stopou-tenzoru-deformace">
+<h2>Objemová deformace je stopou tenzoru deformace<a class="headerlink" href="#objemova-deformace-je-stopou-tenzoru-deformace" title="Link to this heading">#</a></h2>
+<p>Uvažujme infinitezimální objemový element ve tvaru kvádru s počátečními rozměry <span class="math notranslate nohighlight">\(dx_1, dx_2, dx_3\)</span>. Jeho počáteční objem je <span class="math notranslate nohighlight">\(dV_0 = dx_1 \, dx_2 \, dx_3\)</span>.</p>
+<p>Po deformaci se rozměry elementu změní. Pro <strong>malé deformace</strong> můžeme změnu délky hrany ve směru osy <span class="math notranslate nohighlight">\(x_i\)</span> aproximovat jako <span class="math notranslate nohighlight">\((1 + \varepsilon_{ii}) dx_i\)</span>, kde <span class="math notranslate nohighlight">\(\varepsilon_{ii}\)</span> je normálová složka tenzoru deformace ve směru <span class="math notranslate nohighlight">\(x_i\)</span>.</p>
+<p>Deformované rozměry elementu jsou tedy přibližně:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(dx'_1 = (1 + \varepsilon_{11}) dx_1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(dx'_2 = (1 + \varepsilon_{22}) dx_2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(dx'_3 = (1 + \varepsilon_{33}) dx_3\)</span></p></li>
+</ul>
+<p>Objem deformovaného elementu <span class="math notranslate nohighlight">\(dV\)</span> je dán součinem těchto deformovaných rozměrů (zanedbáváme členy vyšších řádů pro malé deformace):</p>
+<div class="math notranslate nohighlight">
+\[
+dV = dx'_1 \, dx'_2 \, dx'_3 = (1 + \varepsilon_{11}) dx_1 \, (1 + \varepsilon_{22}) dx_2 \, (1 + \varepsilon_{33}) dx_3
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+dV = (1 + \varepsilon_{11} + \varepsilon_{22} + \varepsilon_{33} + \text{členy vyšších řádů}) \, dx_1 \, dx_2 \, dx_3
+\]</div>
+<p>Pro malé deformace zanedbáme členy vyšších řádů:</p>
+<div class="math notranslate nohighlight">
+\[
+dV \approx (1 + \varepsilon_{11} + \varepsilon_{22} + \varepsilon_{33}) \, dV_0
+\]</div>
+<p>Objemová deformace <span class="math notranslate nohighlight">\(\varepsilon_v\)</span> je definována jako relativní změna objemu:</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_v = \frac{dV - dV_0}{dV_0} = \frac{(1 + \varepsilon_{11} + \varepsilon_{22} + \varepsilon_{33}) dV_0 - dV_0}{dV_0}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_v = \varepsilon_{11} + \varepsilon_{22} + \varepsilon_{33}
+\]</div>
+<p>Stopa tenzoru deformace <span class="math notranslate nohighlight">\(\text{Tr}(\boldsymbol{\varepsilon})\)</span> je součet jeho diagonálních prvků:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Tr}(\boldsymbol{\varepsilon}) = \varepsilon_{11} + \varepsilon_{22} + \varepsilon_{33}
+\]</div>
+<p>Porovnáním obou výrazů dostáváme:</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_v = \text{Tr}(\boldsymbol{\varepsilon})
+\]</div>
+<p>Tím jsme prokázali, že pro malé deformace je objemová deformace rovna stopě tenzoru deformace.</p>
+</section>
+<section id="objemova-slozka-napeti-a-objemovy-modul-pruznosti">
+<h2>Objemová složka napětí a objemový modul pružnosti<a class="headerlink" href="#objemova-slozka-napeti-a-objemovy-modul-pruznosti" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Objemový modul pružnosti <span class="math notranslate nohighlight">\(K\)</span> charakterizuje odpor materiálu ke změně objemu při rovnoměrném všesměrném zatížení (hydrostatickém tlaku). Je definován jako poměr mezi objemovou složkou napětí (<span class="math notranslate nohighlight">\(\sigma_m\)</span>) a objemovou deformací (<span class="math notranslate nohighlight">\(\varepsilon_v\)</span>):</p>
+</div></blockquote>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[
+K = \frac{\sigma_m}{\varepsilon_v}
+\]</div>
+</div></blockquote>
+<p>Pro lineárně elastický izotropní materiál platí Hookův zákon:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\varepsilon_{xx} = \frac{1}{E} [\sigma_{xx} - \nu (\sigma_{yy} + \sigma_{zz})] \\
+\varepsilon_{yy} = \frac{1}{E} [\sigma_{yy} - \nu (\sigma_{xx} + \sigma_{zz})] \\
+\varepsilon_{zz} = \frac{1}{E} [\sigma_{zz} - \nu (\sigma_{xx} + \sigma_{yy})]
+\end{split}\]</div>
+<p>kde <span class="math notranslate nohighlight">\(E\)</span> je Youngův modul pružnosti a <span class="math notranslate nohighlight">\(\nu\)</span> je Poissonovo číslo.</p>
+<p>Objemová deformace <span class="math notranslate nohighlight">\(\varepsilon_v\)</span> je stopou tenzoru deformace:</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_v = \varepsilon_{xx} + \varepsilon_{yy} + \varepsilon_{zz}
+\]</div>
+<p>Sečtením rovnic Hookova zákona pro normálové deformace dostaneme:</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_{xx} + \varepsilon_{yy} + \varepsilon_{zz} = \frac{1}{E} [(\sigma_{xx} + \sigma_{yy} + \sigma_{zz}) - 2\nu (\sigma_{xx} + \sigma_{yy} + \sigma_{zz})]
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_v = \frac{1}{E} (1 - 2\nu) (\sigma_{xx} + \sigma_{yy} + \sigma_{zz})
+\]</div>
+<p>Objemová složka napětí <span class="math notranslate nohighlight">\(\sigma_m\)</span> (pro hydrostatické zatížení <span class="math notranslate nohighlight">\(\sigma_{xx} = \sigma_{yy} = \sigma_{zz} = -p\)</span>, kde <span class="math notranslate nohighlight">\(p\)</span> je tlak, ale obecně):</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_m = \frac{1}{3} (\sigma_{xx} + \sigma_{yy} + \sigma_{zz})
+\]</div>
+<p>Z rovnice pro objemovou deformaci vyjádříme součet normálových napětí:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_{xx} + \sigma_{yy} + \sigma_{zz} = E \frac{\varepsilon_v}{1 - 2\nu}
+\]</div>
+<p>Dosadíme tento výraz do definice objemové složky napětí:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_m = \frac{1}{3} \left( E \frac{\varepsilon_v}{1 - 2\nu} \right)
+\]</div>
+<p>Nyní použijeme definici objemového modulu pružnosti <span class="math notranslate nohighlight">\(K = \frac{\sigma_m}{\varepsilon_v}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+K = \frac{\frac{1}{3} E \frac{\varepsilon_v}{1 - 2\nu}}{\varepsilon_v}
+\]</div>
+<p>Po zkrácení <span class="math notranslate nohighlight">\(\varepsilon_v\)</span> získáme výsledný vztah:</p>
+<div class="math notranslate nohighlight">
+\[
+K = \frac{E}{3(1 - 2\nu)}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_v = \text{Tr}(\boldsymbol{\varepsilon})
+\]</div>
+</section>
+<section id="dalsi-informace-a-reference">
+<h2>Další informace a reference<a class="headerlink" href="#dalsi-informace-a-reference" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Detailní popis transformace a vyjádření vektorů napětí v rovině je možné najít na odkazu z MIT <a class="reference external" href="https://web.mit.edu/course/3/3.11/www/modules/trans.pdf">David Roylance: Transformation of Stresses and Strains</a>.</p></li>
+<li><p>Popis tenzoru je možné najít <a class="reference external" href="https://ocw.tudelft.nl/wp-content/uploads/Principles_of_Rock_Mechanics_Ch10.pdf">v kapitole z TU Delft</a>.</p></li>
+<li><p>Tato kapitola částečně vychází z textu <a class="reference external" href="https://eng.libretexts.org/Bookshelves/Mechanical_Engineering/Structural_Mechanics_(Wierzbicki)/02%3A_The_Concept_of_Stress%2C_Generalized_Stresses_and_Equilibrium/2.01%3A_Stress_Tensor">Stress Tensor, Tomasz Wierzbicki, Massachusetts Institute of Technology via MIT OpenCourseWare</a></p></li>
+</ul>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Prednasky"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="7_3_Vzp%C4%9Br.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Vzpěr</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="8_2_3D_Mises.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Redukované napětí při prostorové napjatosti</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definice-napjatosti">Definice napjatosti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principy-prostorove-napjatosti">Principy prostorové napjatosti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cauchyho-tenzor-napeti">Cauchyho tenzor napětí</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slozky-vektoru-napeti-trakcniho-vektoru-v-dane-rovine">Složky vektoru napětí (trakčního vektoru) v dané rovině</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#priklad-osove-zatizene-tyce-1d-a-2d">Příklad osově zatížené tyče (1D a 2D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dvourozmerny-priklad-sikmy-rez">Dvourozměrný příklad: Šikmý řez</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symetrie-tenzoru-napeti">Symetrie tenzoru napětí</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specialni-stavy-napjatosti">Speciální stavy napjatosti</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-tah-tlak">a) Tah / Tlak</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-rovinna-napjatost">b) Rovinná napjatost</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#posunuti-a-deformace-ve-3d">Posunutí a deformace ve 3D</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor-posunuti">Vektor posunutí</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tenzor-deformace">Tenzor deformace</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slozky-tenzoru-deformace">Složky tenzoru deformace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hookeuv-zakon">Hookeův zákon</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obecny-linearne-pruzny-material">Obecný lineárně pružný materiál</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matice-tuhosti">11. Matice tuhosti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hlavni-napeti">Hlavní napětí</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hlavni-napeti-a-deformace-ve-3d">Hlavní napětí a deformace ve 3D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objemova-deformace-je-stopou-tenzoru-deformace">Objemová deformace je stopou tenzoru deformace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objemova-slozka-napeti-a-objemovy-modul-pruznosti">Objemová složka napětí a objemový modul pružnosti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dalsi-informace-a-reference">Další informace a reference</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

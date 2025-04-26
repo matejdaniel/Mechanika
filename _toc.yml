@@ -74,6 +74,13 @@ parts:
       - file: Prednasky/6_7_Napětí_při_krutu
       - file: Prednasky/6_8_Napětí_při ohybu
       - file: Prednasky/7_3_Vzpěr
+    - file: Prednasky/8_1_Prostorová_napjatost
+      sections:
+      - file: Prednasky/8_2_3D_Mises
+      - file: Prednasky/8_3_Dimenzování_ohyb_ohyb
+      - file: Prednasky/8_4_Dimenzování_ohyb_tlak
+      - file: Prednasky/8_5_Dimenzování_ohyb_krut
+      - file: Prednasky/8_6_Deformační_energie
   - caption: Cvičení
     chapters:
     - file: Cviceni/C1

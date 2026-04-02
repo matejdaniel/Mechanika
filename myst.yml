@@ -1,0 +1,15 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 532ab1ea-24eb-48bd-ba7a-d23b64e8160b
+  title: Úvod do mechaniky
+  description: Kurz mechaniky na FBMI CVUT
+  # keywords: []
+  authors: Matej Daniel
+  github: https://github.com/matejdaniel/Mechanika
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png

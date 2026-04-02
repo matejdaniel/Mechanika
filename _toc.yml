@@ -92,3 +92,6 @@ parts:
     - file: Cviceni/C7
     - file: Cviceni/C8
     - file: Cviceni/C9
+  - caption: Zkoušky
+    chapters:
+    - file: Zkousky/2025

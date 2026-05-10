@@ -20,12 +20,10 @@ bodů, minimum 10 bodů). Účast na testech je povinná.
 Zkoušky se lze účastnit pouze při zapsaném zápočtu v KOSu a po zaspání na termín. Zkouška je převážně písemná a obsahuje
 jak teoretické, tak početní otázky z přednášek, cvičení a domácích úkolů. Zkouška se skládá z těchto
 částí:
-1. Test o délce cca 60 minut obsahuje krátké otázky z teorie a jednoduché výpočetní úlohy
-s maximálním ziskem 40 bodů. Ze 40 možných bodů je nutné získat alespoň 50%. Test probíhá na počítačích a student volí správnou odpověď z možných odpovědí.
-2. Příkladová část o délce cca 80 minut obvykle obsahuje dva až tři příklady s maximálním ziskem 40 bodů.
+1. Příkladová část o délce cca 80 minut obvykle obsahuje dva až tři příklady s maximálním ziskem 80 bodů.
     * Ze 40 možných bodů je nutné získat alespoň 50%. Lze používat seznamy vzorců bez dalších vepsaných poznámek (oficiální tahák).
     * Ani jeden příklad nesmí být hodnocen 0 body. V případě hodnocení příkladu za 0 bodů student neuspěl. 
-3. Ústní část. Lze získat 20 bodů. Při špatně zodpovězené otázce a prokázání neznalosti ztráta max. 20 bodů.
+2. Ústní část. Lze získat 20 bodů. Při špatně zodpovězené otázce a prokázání neznalosti ztráta max. 30 bodů. 
 
 Součtem bodů ze zápočtového testu a ze všech částí zkoušky vznikne výsledná známka. 
 

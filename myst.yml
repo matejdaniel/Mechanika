@@ -82,6 +82,16 @@ project:
             - file: Prednasky/8_4_Dimenzování_ohyb_tlak.ipynb
             - file: Prednasky/8_5_Dimenzování_ohyb_krut.ipynb
             - file: Prednasky/8_6_Deformační_energie.ipynb
+        - file: Prednasky/9_1_Klikovy_mechanismus.ipynb
+        - file: Prednasky/9_2_Kinematika_a_dynamika_ve_3D.ipynb
+        - file: Prednasky/10_Mechanika_tekutin.ipynb
+          children:
+            - file: Prednasky/10_1_Vlastnostnosti_tekutin.ipynb
+            - file: Prednasky/10_2_Síly_v_tekutinách.ipynb
+            - file: Prednasky/10_3_Tok_kapaliny.ipynb
+            - file: Prednasky/10_4_Laminární_a_turbulentní_prodění.ipynb
+            - file: Prednasky/10_5_Odporová_síla.ipynb
+      sections:
     - title: Cvičení
       children:
         - file: Cviceni/C1.ipynb
@@ -99,6 +109,6 @@ project:
     
 site:
   template: book-theme
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+  options:
+     favicon: mechanika_favicon.svg
+     logo: mechanika_logo_transparent.svg

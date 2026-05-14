@@ -91,6 +91,18 @@ project:
             - file: Prednasky/10_3_Tok_kapaliny.ipynb
             - file: Prednasky/10_4_Laminární_a_turbulentní_prodění.ipynb
             - file: Prednasky/10_5_Odporová_síla.ipynb
+        - file: Prednasky/11_Termodynamika_uvod.ipynb
+          children:
+            - file: Prednasky/11_1_Statistická_mechanika.ipynb
+            - file: Prednasky/11_2_Energie_a_práce.ipynb
+            - file: Prednasky/11_3_Bilance_energie.ipynb
+            - file: Prednasky/11_4_pVT.ipynb
+            - file: Prednasky/11_5_Entalpie_a_tepelna_kapacita.ipynb
+            - file: Prednasky/11_6_Ideální_plyn.ipynb
+            - file: Prednasky/11_7_2_veta_termodynamicka.ipynb
+            - file: Prednasky/11_8_Entropie.ipynb
+            - file: Prednasky/11_9_Exergie.ipynb
+            - file: Prednasky/11_10_Shrnuti.ipynb
       sections:
     - title: Cvičení
       children:
